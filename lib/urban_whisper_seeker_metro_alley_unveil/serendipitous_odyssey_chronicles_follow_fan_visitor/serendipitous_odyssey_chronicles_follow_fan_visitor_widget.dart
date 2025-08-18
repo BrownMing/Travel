@@ -154,7 +154,7 @@ class _SerendipitousOdysseyChroniclesFollowFanVisitorWidgetState
                               decoration: BoxDecoration(
                                 image: DecorationImage(
                                   fit: BoxFit.cover,
-                                  image: Image.network(
+                                  image: Image.asset(
                                     FFAppState()
                                         .aurorascapePeregrinatorUsers
                                         .elementAtOrNull(

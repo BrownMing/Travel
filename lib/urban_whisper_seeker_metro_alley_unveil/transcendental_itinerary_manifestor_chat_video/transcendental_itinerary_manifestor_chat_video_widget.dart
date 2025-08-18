@@ -71,7 +71,7 @@ class _TranscendentalItineraryManifestorChatVideoWidgetState
                   decoration: BoxDecoration(
                     image: DecorationImage(
                       fit: BoxFit.cover,
-                      image: Image.network(
+                      image: Image.asset(
                         FFAppState()
                             .aurorascapePeregrinatorUsers
                             .elementAtOrNull(

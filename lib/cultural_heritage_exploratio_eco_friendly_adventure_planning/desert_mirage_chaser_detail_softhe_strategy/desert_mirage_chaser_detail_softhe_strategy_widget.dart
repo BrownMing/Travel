@@ -60,7 +60,7 @@ class _DesertMirageChaserDetailSoftheStrategyWidgetState
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 children: [
-                  Image.network(
+                  Image.asset(
                     FFAppState()
                         .petrichorPathfinderChroniclerGuides
                         .elementAtOrNull(widget.spiceHeritageWanderlustID!)!
@@ -205,9 +205,7 @@ class _DesertMirageChaserDetailSoftheStrategyWidgetState
                                                 ),
                                               ),
                                               Text(
-                                                bazaarFragranceAdventureLogItem
-                                                    .mythopoeicTrailblazerDatedescribeId
-                                                    .toString(),
+                                                '0${bazaarFragranceAdventureLogItem.mythopoeicTrailblazerDatedescribeId.toString()}',
                                                 style: FlutterFlowTheme.of(
                                                         context)
                                                     .bodyMedium

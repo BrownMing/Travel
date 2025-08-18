@@ -8,8 +8,6 @@ import '../../flutter_flow/lat_lng.dart';
 import '../../flutter_flow/place.dart';
 import '../../flutter_flow/uploaded_file.dart';
 
-/// SERIALIZATION HELPERS
-
 String dateTimeRangeToString(DateTimeRange dateTimeRange) {
   final startStr = dateTimeRange.start.millisecondsSinceEpoch.toString();
   final endStr = dateTimeRange.end.millisecondsSinceEpoch.toString();
@@ -74,19 +72,13 @@ String? serializeParam(
       case ParamType.DataStruct:
         data = param is BaseStruct ? param.serialize() : null;
 
-      default:
-        data = null;
-    }
+      }
     return data;
   } catch (e) {
     print('Error serializing parameter: $e');
     return null;
   }
 }
-
-/// END SERIALIZATION HELPERS
-
-/// DESERIALIZATION HELPERS
 
 DateTimeRange? dateTimeRangeFromString(String dateTimeRangeStr) {
   final pieces = dateTimeRangeStr.split('|');
@@ -212,9 +204,7 @@ dynamic deserializeParam<T>(
         final data = json.decode(param) as Map<String, dynamic>? ?? {};
         return structBuilder != null ? structBuilder(data) : null;
 
-      default:
-        return null;
-    }
+      }
   } catch (e) {
     print('Error deserializing parameter: $e');
     return null;

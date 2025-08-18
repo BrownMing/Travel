@@ -232,7 +232,7 @@ class _SetOffFrontierQuestTideRushNavigatorHomepageWidgetState
                                             mainAxisAlignment:
                                                 MainAxisAlignment.start,
                                             children: [
-                                              Image.network(
+                                              Image.asset(
                                                 sublimarePeregrinHeterotopologySeerItem
                                                     .luminiferousSomnamTypePhoto,
                                                 width: 74.0,
@@ -494,7 +494,7 @@ class _SetOffFrontierQuestTideRushNavigatorHomepageWidgetState
                                                                 DecorationImage(
                                                               fit: BoxFit.cover,
                                                               image:
-                                                                  Image.network(
+                                                                  Image.asset(
                                                                 exoticMarketplaceOdysseyItem
                                                                     .sensoryAromaDiscoveryPathDiscoverShow,
                                                               ).image,

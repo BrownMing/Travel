@@ -66,7 +66,7 @@ class _WanderlustJourneySharingSpaceHomeDetailWidgetState
                       direction: Axis.vertical,
                       mainAxisSize: MainAxisSize.max,
                       children: [
-                        Image.network(
+                        Image.asset(
                           FFAppState()
                               .culturalScentExplorationDiscovers
                               .elementAtOrNull(
@@ -207,7 +207,7 @@ class _WanderlustJourneySharingSpaceHomeDetailWidgetState
                                                 decoration: BoxDecoration(
                                                   image: DecorationImage(
                                                     fit: BoxFit.cover,
-                                                    image: Image.network(
+                                                    image: Image.asset(
                                                       FFAppState()
                                                           .aurorascapePeregrinatorUsers
                                                           .elementAtOrNull(
@@ -299,7 +299,7 @@ class _WanderlustJourneySharingSpaceHomeDetailWidgetState
                                         return ClipRRect(
                                           borderRadius:
                                               BorderRadius.circular(12.0),
-                                          child: Image.network(
+                                          child: Image.asset(
                                             incredibleJourneyReflectionHubItem,
                                             width: 72.0,
                                             height: 72.0,

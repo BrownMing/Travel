@@ -137,7 +137,7 @@ class _CityPulseExplorerAlleyWhisperSeekerDetailsWidgetState
                                   decoration: BoxDecoration(
                                     image: DecorationImage(
                                       fit: BoxFit.cover,
-                                      image: Image.network(
+                                      image: Image.asset(
                                         FFAppState()
                                             .paleoHorizonWayfarerTypes
                                             .elementAtOrNull(widget
