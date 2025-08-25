@@ -425,6 +425,8 @@ class _DesertVastTraverseDuneMysteryChasePostsWidgetState
                                       ));
                                       FFAppState().update(() {});
                                       context.safePop();
+                                      trailTreasureJourneyCompan(context,
+                                          'Posted successfully!', 'success');
                                     } else {
                                       await showModalBottomSheet(
                                         isScrollControlled: true,

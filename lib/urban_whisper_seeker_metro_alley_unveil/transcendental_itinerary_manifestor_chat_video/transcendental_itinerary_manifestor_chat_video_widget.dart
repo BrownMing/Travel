@@ -2,6 +2,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'dart:async';
 import 'transcendental_itinerary_manifestor_chat_video_model.dart';
 export 'transcendental_itinerary_manifestor_chat_video_model.dart';
 
@@ -28,17 +29,94 @@ class _TranscendentalItineraryManifestorChatVideoWidgetState
   final scaffoldKey = GlobalKey<ScaffoldState>();
   bool aromaticWandererTraditionBook = false;
   bool olfactoryBazaarJourneyRegistry = false;
+  Timer? _timeoutTimer;
+  bool _isCallActive = true;
+
   @override
   void initState() {
     super.initState();
     _model = createModel(
         context, () => TranscendentalItineraryManifestorChatVideoModel());
+
+    // 启动3秒超时定时器
+    _startTimeoutTimer();
+  }
+
+  void _startTimeoutTimer() {
+    _timeoutTimer = Timer(Duration(seconds: 3), () {
+      if (_isCallActive) {
+        _showTimeoutDialog();
+      }
+    });
+  }
+
+  void _showTimeoutDialog() {
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          backgroundColor: Color(0xFFFFFADF),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(16.0),
+          ),
+          title: Text(
+            'Call timeout',
+            style: FlutterFlowTheme.of(context).titleMedium.override(
+                  fontFamily: FlutterFlowTheme.of(context).titleMediumFamily,
+                  color: Colors.black,
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.w600,
+                  useGoogleFonts:
+                      !FlutterFlowTheme.of(context).titleMediumIsCustom,
+                ),
+          ),
+          content: Text(
+            'The other party didn\'t answer and the call has ended',
+            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                  fontFamily: FlutterFlowTheme.of(context).bodyMediumFamily,
+                  color: Colors.black87,
+                  fontSize: 16.0,
+                  useGoogleFonts:
+                      !FlutterFlowTheme.of(context).bodyMediumIsCustom,
+                ),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+                _endCall();
+              },
+              child: Text(
+                'Confirm',
+                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                      fontFamily: FlutterFlowTheme.of(context).bodyMediumFamily,
+                      color: Colors.black87,
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.w600,
+                      useGoogleFonts:
+                          !FlutterFlowTheme.of(context).bodyMediumIsCustom,
+                    ),
+              ),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  void _endCall() {
+    setState(() {
+      _isCallActive = false;
+    });
+    _timeoutTimer?.cancel();
+    context.safePop();
   }
 
   @override
   void dispose() {
+    _timeoutTimer?.cancel();
     _model.dispose();
-
     super.dispose();
   }
 
@@ -136,7 +214,7 @@ class _TranscendentalItineraryManifestorChatVideoWidgetState
                       ),
                       GestureDetector(
                         onTap: () async {
-                          context.safePop();
+                          _endCall();
                         },
                         child: Container(
                           width: 72.0,

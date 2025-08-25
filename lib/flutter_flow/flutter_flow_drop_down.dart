@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 /// 自定义下拉选择框组件
-/// 支持多种样式、搜索功能、多选等特性
 class FlutterFlowDropDown extends StatefulWidget {
   const FlutterFlowDropDown({
     super.key,

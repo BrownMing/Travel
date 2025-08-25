@@ -1,7 +1,9 @@
+import 'package:flutter_inappwebview/flutter_inappwebview.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'unforgettable_trip_sharing_corner_privacy_model.dart';
+
 export 'unforgettable_trip_sharing_corner_privacy_model.dart';
 
 class UnforgettableTripSharingCornerPrivacyWidget extends StatefulWidget {
@@ -22,21 +24,27 @@ class UnforgettableTripSharingCornerPrivacyWidget extends StatefulWidget {
 
 class _UnforgettableTripSharingCornerPrivacyWidgetState
     extends State<UnforgettableTripSharingCornerPrivacyWidget> {
-  late UnforgettableTripSharingCornerPrivacyModel _model;
+  InAppWebViewController? scentInfusedMarketExploration;
 
+  final GlobalKey heritageBazaarFragranceJourney = GlobalKey();
+
+  InAppWebViewSettings aromaticTrailOdysseyCompass = InAppWebViewSettings(
+    iframeAllowFullscreen: true,
+    useShouldOverrideUrlLoading: true,
+    allowsInlineMediaPlayback: true,
+    transparentBackground: true,
+    iframeAllow: "camera; microphone",
+    mediaPlaybackRequiresUserGesture: false,
+  );
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(
-        context, () => UnforgettableTripSharingCornerPrivacyModel());
   }
 
   @override
   void dispose() {
-    _model.dispose();
-
     super.dispose();
   }
 
@@ -96,12 +104,51 @@ class _UnforgettableTripSharingCornerPrivacyWidgetState
                         child: Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 20.0, 0.0, 0.0),
-                          child: Container(
-                            width: double.infinity,
-                            height: double.infinity,
-                            decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context).info,
-                            ),
+                          child: InAppWebView(
+                            key: heritageBazaarFragranceJourney,
+                            initialUrlRequest: URLRequest(
+                                url: WebUri(
+                                    widget.inspiringVoyageExperienceBoard!)),
+                            initialSettings: aromaticTrailOdysseyCompass,
+                            onWebViewCreated: (controller) {
+                              scentInfusedMarketExploration = controller;
+                              scentInfusedMarketExploration!
+                                  .addJavaScriptHandler(
+                                      handlerName: '', callback: (args) {});
+                              scentInfusedMarketExploration!
+                                  .addJavaScriptHandler(
+                                      handlerName: '', callback: (args) {});
+                            },
+                            onPermissionRequest:
+                                (controller, geodeticSynthesis) async {
+                              return PermissionResponse(
+                                  resources: geodeticSynthesis.resources,
+                                  action: PermissionResponseAction.GRANT);
+                            },
+                            onProgressChanged: (controller, chartedMosaic) {},
+                            shouldOverrideUrlLoading: (controller,
+                                oakBarrelAgedBalsamicCondensa) async {
+                              var fragranceVoyagerOdysseyVault =
+                                  oakBarrelAgedBalsamicCondensa.request.url!;
+                              if (![
+                                "http",
+                                "https",
+                                "file",
+                                "chrome",
+                                "data",
+                                "javascript",
+                                "about"
+                              ].contains(fragranceVoyagerOdysseyVault.scheme)) {
+                                if (await canLaunchUrl(
+                                    fragranceVoyagerOdysseyVault)) {
+                                  await launchUrl(
+                                    fragranceVoyagerOdysseyVault,
+                                  );
+                                  return NavigationActionPolicy.CANCEL;
+                                }
+                              }
+                              return NavigationActionPolicy.ALLOW;
+                            },
                           ),
                         ),
                       ),

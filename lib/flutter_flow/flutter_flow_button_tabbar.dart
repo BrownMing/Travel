@@ -34,10 +34,7 @@ class _TabLabelBarRenderer extends RenderFlex {
   @override
   void performLayout() {
     super.performLayout();
-    // xOffsets will contain childCount+1 values, giving the offsets of the
-    // leading edge of the first tab as the first value, of the leading edge of
-    // the each subsequent tab as each subsequent value, and of the trailing
-    // edge of the last tab as the last value.
+
     RenderBox? child = firstChild;
     final List<double> xOffsets = <double>[];
     while (child != null) {
@@ -60,9 +57,6 @@ class _TabLabelBarRenderer extends RenderFlex {
   }
 }
 
-// This class and its renderer class only exist to report the widths of the tabs
-// upon layout. The tab widths are only used at paint time (see _IndicatorPainter)
-// or in response to input.
 class _TabLabelBar extends Flex {
   _TabLabelBar({
     required List<Widget> children,
@@ -114,9 +108,6 @@ class _IndicatorPainter extends CustomPainter {
 
   final List<GlobalKey> tabKeys;
 
-  // _currentTabOffsets and _currentTextDirection are set each time TabBar
-  // layout is completed. These values can be null when TabBar contains no
-  // tabs, since there are nothing to lay out.
   List<double>? _currentTabOffsets;
   TextDirection? _currentTextDirection;
 
@@ -135,8 +126,6 @@ class _IndicatorPainter extends CustomPainter {
     _currentTextDirection = textDirection;
   }
 
-  // _currentTabOffsets[index] is the offset of the start edge of the tab at index, and
-  // _currentTabOffsets[_currentTabOffsets.length] is the end edge of the last tab.
   int get maxTabIndex => _currentTabOffsets!.length - 2;
 
   double centerOf(int tabIndex) {
@@ -163,10 +152,6 @@ class _IndicatorPainter extends CustomPainter {
   }
 }
 
-// This class, and TabBarScrollController, only exist to handle the case
-// where a scrollable TabBar has a non-zero initialIndex. In that case we can
-// only compute the scroll position's initial scroll offset (the "correct"
-// pixels value) after the TabBar viewport width and scroll limits are known.
 
 class _TabBarScrollPosition extends ScrollPositionWithSingleContext {
   _TabBarScrollPosition({
