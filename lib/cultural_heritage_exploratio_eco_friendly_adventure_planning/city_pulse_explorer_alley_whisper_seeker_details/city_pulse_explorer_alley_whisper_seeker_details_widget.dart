@@ -213,11 +213,18 @@ class _CityPulseExplorerAlleyWhisperSeekerDetailsWidgetState
                                 .bioluminiscentTrailblazerPosts
                                 .where((e) =>
                                     e.transcontinentalOneirochronPostType ==
-                                    FFAppState()
-                                        .paleoHorizonWayfarerTypes
-                                        .elementAtOrNull(
-                                            widget.olfactoryBazaarExpedition!)
-                                        ?.luminiferousSomnamTypeTitle)
+                                        FFAppState()
+                                            .paleoHorizonWayfarerTypes
+                                            .elementAtOrNull(widget
+                                                .olfactoryBazaarExpedition!)
+                                            ?.luminiferousSomnamTypeTitle &&
+                                    !FFAppState()
+                                        .aurorascapePeregrinatorUsers[
+                                            FFAppState()
+                                                .eudaimonicCartographerTokenid]
+                                        .kaleidoscapeOdysseanUserBlacklist
+                                        .contains(e
+                                            .transcontinentalOneirochronPostCreateId))
                                 .toList();
                             if (fragranceHeritageVoyager.isEmpty) {
                               return Center(
@@ -230,7 +237,7 @@ class _CityPulseExplorerAlleyWhisperSeekerDetailsWidgetState
                               mainAxisSize: MainAxisSize.max,
                               children:
                                   List.generate(fragranceHeritageVoyager.length,
-                                      (fragranceHeritageVoyagerIndex) {
+                                          (fragranceHeritageVoyagerIndex) {
                                 final fragranceHeritageVoyagerItem =
                                     fragranceHeritageVoyager[
                                         fragranceHeritageVoyagerIndex];
@@ -277,7 +284,9 @@ class _CityPulseExplorerAlleyWhisperSeekerDetailsWidgetState
                                                 .eudaimonicCartographerTokenid),
                                   ),
                                 );
-                              }).divide(SizedBox(height: 25.0)),
+                              })
+                                      .divide(SizedBox(height: 25))
+                                      .addToEnd(SizedBox(height: 50)),
                             );
                           },
                         ),

@@ -1,9 +1,44 @@
+import 'package:flutter/services.dart';
+
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'panoramic_soul_voyage_chronicler_coins_store_model.dart';
 export 'panoramic_soul_voyage_chronicler_coins_store_model.dart';
+
+class StarlightMelodyOfForeverSouls {
+  final int neuralNetworkDrivenBondStrengthdiamonds;
+  final double sentimentAnalysisOfRomanticEchoesPrice;
+  final String opredictiveJourneyOfHeartfeltProductid;
+
+  const StarlightMelodyOfForeverSouls({
+    required this.neuralNetworkDrivenBondStrengthdiamonds,
+    required this.sentimentAnalysisOfRomanticEchoesPrice,
+    required this.opredictiveJourneyOfHeartfeltProductid,
+  });
+}
+
+final List<StarlightMelodyOfForeverSouls> eternalUnionOfSharedDreamscapes =
+    List.generate(9, (index) {
+  final row = const [
+    [400, 0.99, 'hqixulkxvpfvktef'],
+    [800, 1.99, 'shlcbocllovqiewo'],
+    [2450, 4.99, 'fvkusbwswxykhebg'],
+    [4000, 6.99, 'qfkpdzsnhxmvbtgy'],
+    [5800, 9.99, 'kmbzxlyicznuvkhv'],
+    [8200, 19.99, 'lrkpnfhjnbipnpqn'],
+    [12000, 28.99, 'lrtawcgjqobznehm'],
+    [15000, 49.99, 'mxyubmkaibvoxrbf'],
+    [20000, 99.99, 'ccmaewugkbrzoart'],
+  ][index];
+
+  return StarlightMelodyOfForeverSouls(
+    neuralNetworkDrivenBondStrengthdiamonds: row[0] as int,
+    sentimentAnalysisOfRomanticEchoesPrice: row[1] as double,
+    opredictiveJourneyOfHeartfeltProductid: row[2] as String,
+  );
+});
 
 class PanoramicSoulVoyageChroniclerCoinsStoreWidget extends StatefulWidget {
   const PanoramicSoulVoyageChroniclerCoinsStoreWidget({super.key});
@@ -187,10 +222,9 @@ class _PanoramicSoulVoyageChroniclerCoinsStoreWidgetState
                                 0.0, 63.0, 0.0, 0.0),
                             child: Container(
                               width: double.infinity,
-                              height: 466.0,
                               decoration: BoxDecoration(
                                 image: DecorationImage(
-                                  fit: BoxFit.fill,
+                                  fit: BoxFit.cover,
                                   image: Image.asset(
                                     'assets/images/yreugifygfiufdi_dviysgdyuigrigfiuerdf.png',
                                   ).image,
@@ -202,8 +236,7 @@ class _PanoramicSoulVoyageChroniclerCoinsStoreWidgetState
                                 child: Builder(
                                   builder: (context) {
                                     final heartfeltWanderlustMemoryBase =
-                                        FFAppState()
-                                            .aurorascapePeregrinatorUsers
+                                        eternalUnionOfSharedDreamscapes
                                             .toList();
 
                                     return GridView.builder(
@@ -217,7 +250,7 @@ class _PanoramicSoulVoyageChroniclerCoinsStoreWidgetState
                                           SliverGridDelegateWithFixedCrossAxisCount(
                                         crossAxisCount: 3,
                                         crossAxisSpacing: 12.0,
-                                        mainAxisSpacing: 14.0,
+                                        mainAxisSpacing: 25.0,
                                         childAspectRatio: 0.74,
                                       ),
                                       shrinkWrap: true,
@@ -229,41 +262,78 @@ class _PanoramicSoulVoyageChroniclerCoinsStoreWidgetState
                                         final heartfeltWanderlustMemoryBaseItem =
                                             heartfeltWanderlustMemoryBase[
                                                 heartfeltWanderlustMemoryBaseIndex];
-                                        return Container(
-                                          width: 100.0,
-                                          height: 100.0,
-                                          decoration: BoxDecoration(
-                                            color: Color(0xFF111111),
-                                            borderRadius:
-                                                BorderRadius.circular(12.0),
-                                          ),
-                                          child: Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 14.0, 0.0, 0.0),
-                                            child: Column(
-                                              mainAxisSize: MainAxisSize.max,
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: [
-                                                Container(
-                                                  width: 44.0,
-                                                  height: 44.0,
-                                                  decoration: BoxDecoration(
-                                                    image: DecorationImage(
-                                                      fit: BoxFit.cover,
-                                                      image: Image.asset(
-                                                        'assets/images/vuiydsfiushiodf_dfidfhuifhdgioudg.png',
-                                                      ).image,
+                                        return GestureDetector(
+                                          onTap: () async {
+                                            HapticFeedback.heavyImpact();
+
+                                            safeSetState(() {
+                                              _model.joyfulPresentSharingExperience =
+                                                  heartfeltWanderlustMemoryBaseItem;
+
+                                              _model.celebrationPlanningAndGiftCuration(
+                                                  heartfeltWanderlustMemoryBaseItem
+                                                      .opredictiveJourneyOfHeartfeltProductid);
+                                            });
+                                          },
+                                          child: Container(
+                                            width: 100.0,
+                                            height: 100.0,
+                                            decoration: BoxDecoration(
+                                              color: Color(0xFF111111),
+                                              borderRadius:
+                                                  BorderRadius.circular(12.0),
+                                            ),
+                                            child: Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      0.0, 14.0, 0.0, 0.0),
+                                              child: Column(
+                                                mainAxisSize: MainAxisSize.max,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: [
+                                                  Container(
+                                                    width: 44.0,
+                                                    height: 44.0,
+                                                    decoration: BoxDecoration(
+                                                      image: DecorationImage(
+                                                        fit: BoxFit.cover,
+                                                        image: Image.asset(
+                                                          'assets/images/vuiydsfiushiodf_dfidfhuifhdgioudg.png',
+                                                        ).image,
+                                                      ),
                                                     ),
                                                   ),
-                                                ),
-                                                Padding(
-                                                  padding: EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          0.0, 12.0, 0.0, 0.0),
-                                                  child: Text(
-                                                    '${heartfeltWanderlustMemoryBaseItem.kaleidoscapeOdysseanUserId.toString()}',
+                                                  Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(0.0, 12.0,
+                                                                0.0, 0.0),
+                                                    child: Text(
+                                                      '${heartfeltWanderlustMemoryBaseItem.neuralNetworkDrivenBondStrengthdiamonds.toString()}',
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .bodyMedium
+                                                          .override(
+                                                            fontFamily:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMediumFamily,
+                                                            color: Color(
+                                                                0xFFF7BA4A),
+                                                            fontSize: 24.0,
+                                                            letterSpacing: 0.0,
+                                                            fontWeight:
+                                                                FontWeight.w500,
+                                                            useGoogleFonts:
+                                                                !FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMediumIsCustom,
+                                                          ),
+                                                    ),
+                                                  ),
+                                                  Text(
+                                                    '\$ ${heartfeltWanderlustMemoryBaseItem.sentimentAnalysisOfRomanticEchoesPrice.toString()}',
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyMedium
@@ -273,39 +343,17 @@ class _PanoramicSoulVoyageChroniclerCoinsStoreWidgetState
                                                                       context)
                                                                   .bodyMediumFamily,
                                                           color:
-                                                              Color(0xFFF7BA4A),
-                                                          fontSize: 24.0,
+                                                              Color(0x99FFFFFF),
+                                                          fontSize: 12.0,
                                                           letterSpacing: 0.0,
-                                                          fontWeight:
-                                                              FontWeight.w500,
                                                           useGoogleFonts:
                                                               !FlutterFlowTheme
                                                                       .of(context)
                                                                   .bodyMediumIsCustom,
                                                         ),
                                                   ),
-                                                ),
-                                                Text(
-                                                  '\$ ${heartfeltWanderlustMemoryBaseItem.kaleidoscapeOdysseanUserId.toString()}',
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        fontFamily:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMediumFamily,
-                                                        color:
-                                                            Color(0x99FFFFFF),
-                                                        fontSize: 12.0,
-                                                        letterSpacing: 0.0,
-                                                        useGoogleFonts:
-                                                            !FlutterFlowTheme
-                                                                    .of(context)
-                                                                .bodyMediumIsCustom,
-                                                      ),
-                                                ),
-                                              ],
+                                                ],
+                                              ),
                                             ),
                                           ),
                                         );

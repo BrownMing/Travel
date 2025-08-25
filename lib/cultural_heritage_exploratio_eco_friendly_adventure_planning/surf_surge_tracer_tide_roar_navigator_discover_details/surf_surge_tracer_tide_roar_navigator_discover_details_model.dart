@@ -7,12 +7,9 @@ import 'package:flutter/material.dart';
 class SurfSurgeTracerTideRoarNavigatorDiscoverDetailsModel
     extends FlutterFlowModel<
         SurfSurgeTracerTideRoarNavigatorDiscoverDetailsWidget> {
-  ///  State fields for stateful widgets in this page.
 
-  // Model for WandererBazaarFragranceTales_details component.
   late WandererBazaarFragranceTalesDetailsModel
       wandererBazaarFragranceTalesDetailsModel;
-  // State field(s) for TextField widget.
   FocusNode? textFieldFocusNode;
   TextEditingController? textController;
   String? Function(BuildContext, String?)? textControllerValidator;

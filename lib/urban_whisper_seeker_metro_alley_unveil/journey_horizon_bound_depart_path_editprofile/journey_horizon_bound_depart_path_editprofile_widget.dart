@@ -1,7 +1,12 @@
+import 'package:travel/flutter_flow/flutter_flow_drop_down.dart';
+
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+
+import 'package:provider/provider.dart';
+
 import 'journey_horizon_bound_depart_path_editprofile_model.dart';
 export 'journey_horizon_bound_depart_path_editprofile_model.dart';
 
@@ -21,7 +26,25 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
   late JourneyHorizonBoundDepartPathEditprofileModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
-
+  final List<FlutterFlowDropDownOption> _countryOptions = [
+    FlutterFlowDropDownOption(value: 'Male', label: 'Male'),
+    FlutterFlowDropDownOption(value: 'Female', label: 'Female'),
+  ];
+  final List<FlutterFlowDropDownOption> _ageOptions = [
+    FlutterFlowDropDownOption(value: '18', label: '18'),
+    FlutterFlowDropDownOption(value: '19', label: '19'),
+    FlutterFlowDropDownOption(value: '20', label: '20'),
+    FlutterFlowDropDownOption(value: '21', label: '21'),
+    FlutterFlowDropDownOption(value: '22', label: '22'),
+    FlutterFlowDropDownOption(value: '23', label: '23'),
+    FlutterFlowDropDownOption(value: '24', label: '24'),
+    FlutterFlowDropDownOption(value: '25', label: '25'),
+    FlutterFlowDropDownOption(value: '26', label: '26'),
+    FlutterFlowDropDownOption(value: '27', label: '27'),
+    FlutterFlowDropDownOption(value: '28', label: '28'),
+    FlutterFlowDropDownOption(value: '29', label: '29'),
+    FlutterFlowDropDownOption(value: '30', label: '30'),
+  ];
   @override
   void initState() {
     super.initState();
@@ -33,6 +56,16 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
 
     _model.textController2 ??= TextEditingController();
     _model.textFieldFocusNode2 ??= FocusNode();
+
+    // Initialize original user data for comparison
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      final currentUser = FFAppState()
+          .aurorascapePeregrinatorUsers
+          .elementAtOrNull(FFAppState().eudaimonicCartographerTokenid);
+      if (currentUser != null) {
+        _model.initializeOriginalData(currentUser);
+      }
+    });
   }
 
   @override
@@ -44,6 +77,8 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
 
   @override
   Widget build(BuildContext context) {
+    context.watch<FFAppState>();
+
     return GestureDetector(
       onTap: () {
         FocusScope.of(context).unfocus();
@@ -57,15 +92,14 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
             Image.asset(
               'assets/images/sdyugyuasgyuisad_hxcvysudgfyasduiasyftyu.png',
               width: double.infinity,
-              height: 380.0,
+              height: 380,
               fit: BoxFit.cover,
             ),
             Column(
               mainAxisSize: MainAxisSize.max,
               children: [
                 Padding(
-                  padding:
-                      EdgeInsetsDirectional.fromSTEB(16.0, 60.0, 16.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(16, 60, 16, 0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -79,8 +113,8 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
                           context.safePop();
                         },
                         child: Container(
-                          width: 32.0,
-                          height: 32.0,
+                          width: 32,
+                          height: 32,
                           decoration: BoxDecoration(
                             image: DecorationImage(
                               fit: BoxFit.cover,
@@ -97,7 +131,7 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
                               fontFamily:
                                   FlutterFlowTheme.of(context).bodyMediumFamily,
                               color: Colors.black,
-                              fontSize: 20.0,
+                              fontSize: 20,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.bold,
                               useGoogleFonts: !FlutterFlowTheme.of(context)
@@ -105,8 +139,8 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
                             ),
                       ),
                       Container(
-                        width: 32.0,
-                        height: 32.0,
+                        width: 32,
+                        height: 32,
                         decoration: BoxDecoration(),
                       ),
                     ],
@@ -114,8 +148,7 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
                 ),
                 Expanded(
                   child: Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                    padding: EdgeInsetsDirectional.fromSTEB(16, 0, 16, 0),
                     child: SingleChildScrollView(
                       scrollDirection: Axis.vertical,
                       child: Flex(
@@ -123,27 +156,98 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 16.0, 0.0, 0.0),
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(0, 16, 0, 0),
                             child: Container(
-                              width: 125.0,
-                              height: 125.0,
+                              width: 125,
+                              height: 125,
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                               ),
                               child: Stack(
                                 children: [
                                   Align(
-                                    alignment: AlignmentDirectional(0.8, 0.9),
+                                    alignment: AlignmentDirectional(0, 0),
                                     child: Container(
-                                      width: 24.0,
-                                      height: 24.0,
+                                      width: 125,
+                                      height: 125,
                                       decoration: BoxDecoration(
-                                        image: DecorationImage(
-                                          fit: BoxFit.cover,
-                                          image: Image.asset(
-                                            'assets/images/sdyfgstydytedtfyus_weyufisyugdfyuweifgiuyg.png',
-                                          ).image,
+                                        image: _model.bazaarHeritageFragranceAnnals !=
+                                                    null &&
+                                                _model.bazaarHeritageFragranceAnnals !=
+                                                    ''
+                                            ? DecorationImage(
+                                                fit: BoxFit.cover,
+                                                image: Image.asset(
+                                                  _model
+                                                      .bazaarHeritageFragranceAnnals!,
+                                                ).image,
+                                              )
+                                            : DecorationImage(
+                                                fit: BoxFit.cover,
+                                                image: Image.asset(
+                                                  FFAppState()
+                                                      .aurorascapePeregrinatorUsers[
+                                                          FFAppState()
+                                                              .eudaimonicCartographerTokenid]
+                                                      .kaleidoscapeOdysseanUserPhoto,
+                                                ).image,
+                                              ),
+                                        shape: BoxShape.circle,
+                                      ),
+                                    ),
+                                  ),
+                                  Align(
+                                    alignment: AlignmentDirectional(0.8, 0.9),
+                                    child: GestureDetector(
+                                      onTap: () async {
+                                        await showModalBottomSheet(
+                                          isScrollControlled: true,
+                                          backgroundColor: Colors.transparent,
+                                          barrierColor: Color(0x4C000000),
+                                          enableDrag: false,
+                                          context: context,
+                                          builder: (context) {
+                                            return GestureDetector(
+                                              onTap: () {
+                                                FocusScope.of(context)
+                                                    .unfocus();
+                                                FocusManager
+                                                    .instance.primaryFocus
+                                                    ?.unfocus();
+                                              },
+                                              child: Padding(
+                                                padding:
+                                                    MediaQuery.viewInsetsOf(
+                                                        context),
+                                                child:
+                                                    InspireGiftTalesChatUpload(
+                                                  allowVideoUpload: false,
+                                                  allowMultipleImageSelect:
+                                                      false,
+                                                  onMediaSelected: (String path,
+                                                      MediaType type) {
+                                                    setState(() {
+                                                      _model.bazaarHeritageFragranceAnnals =
+                                                          path;
+                                                    });
+                                                  },
+                                                ),
+                                              ),
+                                            );
+                                          },
+                                        ).then((value) => safeSetState(() {}));
+                                      },
+                                      child: Container(
+                                        width: 24,
+                                        height: 24,
+                                        decoration: BoxDecoration(
+                                          image: DecorationImage(
+                                            fit: BoxFit.cover,
+                                            image: Image.asset(
+                                              'assets/images/sdyfgstydytedtfyus_weyufisyugdfyuweifgiuyg.png',
+                                            ).image,
+                                          ),
                                         ),
                                       ),
                                     ),
@@ -153,8 +257,8 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 16.0, 0.0, 0.0),
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(0, 16, 0, 0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -167,7 +271,7 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
                                         fontFamily: FlutterFlowTheme.of(context)
                                             .bodyMediumFamily,
                                         color: Color(0xF3000000),
-                                        fontSize: 18.0,
+                                        fontSize: 18,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
                                         useGoogleFonts:
@@ -177,13 +281,13 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
                                 ),
                                 Container(
                                   width: double.infinity,
-                                  height: 50.0,
+                                  height: 50,
                                   decoration: BoxDecoration(
                                     color: FlutterFlowTheme.of(context).info,
-                                    borderRadius: BorderRadius.circular(12.0),
+                                    borderRadius: BorderRadius.circular(12),
                                   ),
                                   child: Align(
-                                    alignment: AlignmentDirectional(-1.0, 0.0),
+                                    alignment: AlignmentDirectional(-1, 0),
                                     child: Container(
                                       width: double.infinity,
                                       child: TextFormField(
@@ -207,7 +311,8 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
                                                             context)
                                                         .labelMediumIsCustom,
                                               ),
-                                          hintText: 'TextField',
+                                          hintText:
+                                              '${FFAppState().aurorascapePeregrinatorUsers.elementAtOrNull(FFAppState().eudaimonicCartographerTokenid)?.kaleidoscapeOdysseanUserNickname}',
                                           hintStyle: FlutterFlowTheme.of(
                                                   context)
                                               .labelMedium
@@ -228,7 +333,7 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
                                               width: 1.0,
                                             ),
                                             borderRadius:
-                                                BorderRadius.circular(12.0),
+                                                BorderRadius.circular(12),
                                           ),
                                           focusedBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
@@ -236,7 +341,7 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
                                               width: 1.0,
                                             ),
                                             borderRadius:
-                                                BorderRadius.circular(12.0),
+                                                BorderRadius.circular(12),
                                           ),
                                           errorBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
@@ -244,7 +349,7 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
                                               width: 1.0,
                                             ),
                                             borderRadius:
-                                                BorderRadius.circular(12.0),
+                                                BorderRadius.circular(12),
                                           ),
                                           focusedErrorBorder:
                                               OutlineInputBorder(
@@ -253,7 +358,7 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
                                               width: 1.0,
                                             ),
                                             borderRadius:
-                                                BorderRadius.circular(12.0),
+                                                BorderRadius.circular(12),
                                           ),
                                         ),
                                         style: FlutterFlowTheme.of(context)
@@ -276,12 +381,12 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
                                     ),
                                   ),
                                 ),
-                              ].divide(SizedBox(height: 8.0)),
+                              ].divide(SizedBox(height: 8)),
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 24.0, 0.0, 0.0),
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(0, 24, 0, 0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -294,7 +399,7 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
                                         fontFamily: FlutterFlowTheme.of(context)
                                             .bodyMediumFamily,
                                         color: Color(0xF3000000),
-                                        fontSize: 18.0,
+                                        fontSize: 18,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
                                         useGoogleFonts:
@@ -309,13 +414,48 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
                                     color: FlutterFlowTheme.of(context).info,
                                     borderRadius: BorderRadius.circular(12.0),
                                   ),
+                                  child: FlutterFlowDropDown(
+                                    options: _countryOptions,
+                                    onChanged: (val) => safeSetState(
+                                        () => _model.dropDownValue1 = val),
+                                    width: double.infinity,
+                                    height: double.infinity,
+                                    textStyle: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          fontFamily:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMediumFamily,
+                                          color: Color(0xE5000000),
+                                          letterSpacing: 0.0,
+                                          useGoogleFonts:
+                                              !FlutterFlowTheme.of(context)
+                                                  .bodyMediumIsCustom,
+                                        ),
+                                    hintText:
+                                        '${FFAppState().aurorascapePeregrinatorUsers.elementAtOrNull(FFAppState().eudaimonicCartographerTokenid)?.kaleidoscapeOdysseanUserGender}',
+                                    icon: Icon(
+                                      Icons.keyboard_arrow_right,
+                                      color: Color(0xFF999999),
+                                      size: 24.0,
+                                    ),
+                                    fillColor:
+                                        FlutterFlowTheme.of(context).info,
+                                    elevation: 2.0,
+                                    borderColor: Colors.transparent,
+                                    borderWidth: 0.0,
+                                    borderRadius: 12.0,
+                                    margin: EdgeInsetsDirectional.fromSTEB(
+                                        12.0, 0.0, 12.0, 0.0),
+                                    hidesUnderline: true,
+                                  ),
                                 ),
-                              ].divide(SizedBox(height: 8.0)),
+                              ].divide(SizedBox(height: 8)),
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 24.0, 0.0, 0.0),
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(0, 24, 0, 0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -328,7 +468,7 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
                                         fontFamily: FlutterFlowTheme.of(context)
                                             .bodyMediumFamily,
                                         color: Color(0xF3000000),
-                                        fontSize: 18.0,
+                                        fontSize: 18,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
                                         useGoogleFonts:
@@ -338,18 +478,55 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
                                 ),
                                 Container(
                                   width: double.infinity,
-                                  height: 50.0,
+                                  height: 50,
                                   decoration: BoxDecoration(
                                     color: FlutterFlowTheme.of(context).info,
-                                    borderRadius: BorderRadius.circular(12.0),
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                  child: FlutterFlowDropDown(
+                                    options: _ageOptions,
+                                    menuMaxHeight: 220,
+                                    onChanged: (val) => safeSetState(
+                                        () => _model.dropDownValue2 = val),
+                                    width: double.infinity,
+                                    height: double.infinity,
+                                    textStyle: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          fontFamily:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMediumFamily,
+                                          color: Color(0xE5000000),
+                                          letterSpacing: 0.0,
+                                          useGoogleFonts:
+                                              !FlutterFlowTheme.of(context)
+                                                  .bodyMediumIsCustom,
+                                        ),
+                                    hintText:
+                                        '${FFAppState().aurorascapePeregrinatorUsers.elementAtOrNull(FFAppState().eudaimonicCartographerTokenid)?.kaleidoscapeOdysseanUserBirth}',
+                                    icon: Icon(
+                                      Icons.keyboard_arrow_right,
+                                      color: Color(0xFF999999),
+                                      size: 24.0,
+                                    ),
+                                    fillColor:
+                                        FlutterFlowTheme.of(context).info,
+                                    elevation: 2.0,
+                                    borderColor: Colors.transparent,
+                                    borderWidth: 0.0,
+                                    borderRadius: 12.0,
+                                    margin: EdgeInsetsDirectional.fromSTEB(
+                                        12.0, 0.0, 12.0, 0.0),
+                                    hidesUnderline: true,
+                                    isExpanded: false,
                                   ),
                                 ),
-                              ].divide(SizedBox(height: 8.0)),
+                              ].divide(SizedBox(height: 8)),
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 24.0, 0.0, 0.0),
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(0, 24, 0, 0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -362,7 +539,7 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
                                         fontFamily: FlutterFlowTheme.of(context)
                                             .bodyMediumFamily,
                                         color: Color(0xF3000000),
-                                        fontSize: 18.0,
+                                        fontSize: 18,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
                                         useGoogleFonts:
@@ -372,13 +549,13 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
                                 ),
                                 Container(
                                   width: double.infinity,
-                                  height: 66.0,
+                                  height: 66,
                                   decoration: BoxDecoration(
                                     color: FlutterFlowTheme.of(context).info,
-                                    borderRadius: BorderRadius.circular(12.0),
+                                    borderRadius: BorderRadius.circular(12),
                                   ),
                                   child: Align(
-                                    alignment: AlignmentDirectional(-1.0, 0.0),
+                                    alignment: AlignmentDirectional(-1, 0),
                                     child: Container(
                                       width: double.infinity,
                                       child: TextFormField(
@@ -402,7 +579,8 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
                                                             context)
                                                         .labelMediumIsCustom,
                                               ),
-                                          hintText: 'TextField',
+                                          hintText:
+                                              '${FFAppState().aurorascapePeregrinatorUsers.elementAtOrNull(FFAppState().eudaimonicCartographerTokenid)?.kaleidoscapeOdysseanUserBio}',
                                           hintStyle: FlutterFlowTheme.of(
                                                   context)
                                               .labelMedium
@@ -423,7 +601,7 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
                                               width: 1.0,
                                             ),
                                             borderRadius:
-                                                BorderRadius.circular(12.0),
+                                                BorderRadius.circular(12),
                                           ),
                                           focusedBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
@@ -431,7 +609,7 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
                                               width: 1.0,
                                             ),
                                             borderRadius:
-                                                BorderRadius.circular(12.0),
+                                                BorderRadius.circular(12),
                                           ),
                                           errorBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
@@ -439,7 +617,7 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
                                               width: 1.0,
                                             ),
                                             borderRadius:
-                                                BorderRadius.circular(12.0),
+                                                BorderRadius.circular(12),
                                           ),
                                           focusedErrorBorder:
                                               OutlineInputBorder(
@@ -448,7 +626,7 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
                                               width: 1.0,
                                             ),
                                             borderRadius:
-                                                BorderRadius.circular(12.0),
+                                                BorderRadius.circular(12),
                                           ),
                                         ),
                                         style: FlutterFlowTheme.of(context)
@@ -471,24 +649,40 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
                                     ),
                                   ),
                                 ),
-                              ].divide(SizedBox(height: 8.0)),
+                              ].divide(SizedBox(height: 8)),
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 64.0, 0.0, 0.0),
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(0, 64, 0, 0),
                             child: FFButtonWidget(
-                              onPressed: () {
-                                print('Button pressed ...');
+                              onPressed: () async {
+                                if (!_model.hasChanges()) {
+                                  return;
+                                }
+
+                                final result =
+                                    await _model.saveChanges(context);
+
+                                if (result['success']) {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(
+                                      content: Text(result['message']),
+                                      backgroundColor: Colors.green,
+                                    ),
+                                  );
+
+                                  context.safePop();
+                                } else {}
                               },
                               text: 'Done',
                               options: FFButtonOptions(
                                 width: double.infinity,
-                                height: 55.0,
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 0.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 0.0, 0.0),
+                                height: 55,
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                                iconPadding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                                 color: Color(0xFF111111),
                                 textStyle: FlutterFlowTheme.of(context)
                                     .titleSmall
@@ -496,19 +690,19 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
                                       fontFamily: FlutterFlowTheme.of(context)
                                           .titleSmallFamily,
                                       color: Color(0xFFF7BA4A),
-                                      fontSize: 22.0,
+                                      fontSize: 22,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.w500,
                                       useGoogleFonts:
                                           !FlutterFlowTheme.of(context)
                                               .titleSmallIsCustom,
                                     ),
-                                elevation: 0.0,
-                                borderRadius: BorderRadius.circular(12.0),
+                                elevation: 0,
+                                borderRadius: BorderRadius.circular(12),
                               ),
                             ),
                           ),
-                        ].addToEnd(SizedBox(height: 40.0)),
+                        ].addToEnd(SizedBox(height: 40)),
                       ),
                     ),
                   ),

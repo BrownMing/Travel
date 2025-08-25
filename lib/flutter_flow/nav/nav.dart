@@ -169,7 +169,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: WorldWonderWanderlustVoyagerUploadFileWidget.routeName,
           path: WorldWonderWanderlustVoyagerUploadFileWidget.routePath,
           builder: (context, params) =>
-              WorldWonderWanderlustVoyagerUploadFileWidget(),
+              WorldWonderWanderlustVoyagerUploadFileWidget(
+            aromaInfusedJourneyChronicleMaill: params.getParam(
+              'aromaInfusedJourneyChronicleMaill',
+              ParamType.String,
+            ),
+            bazaarOdysseyExperiencePassword: params.getParam(
+              'bazaarOdysseyExperiencePassword',
+              ParamType.String,
+            ),
+          ),
         ),
         FFRoute(
           name: SerendipitousOdysseyChroniclesFollowFanVisitorWidget.routeName,

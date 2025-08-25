@@ -141,7 +141,14 @@ class _KaleidoscopicDreamscapeWayfarerMessagesWidgetState
                                 ),
                               );
                             },
-                          ).then((value) => safeSetState(() {}));
+                          ).then((value) => safeSetState(() {
+                                if (value == true) {
+                                  Future.delayed(Duration(milliseconds: 1800),
+                                      () {
+                                    Navigator.pop(context);
+                                  });
+                                }
+                              }));
                         },
                         child: Container(
                           width: 32.0,
@@ -170,6 +177,8 @@ class _KaleidoscopicDreamscapeWayfarerMessagesWidgetState
                             .where((e) =>
                                 widget.magicalVoyageStorytellingArenaChat ==
                                 e.transcendentalExpeditionaryMessageChatref)
+                            .toList()
+                            .reversed
                             .toList();
 
                         return ListView.builder(
@@ -198,8 +207,8 @@ class _KaleidoscopicDreamscapeWayfarerMessagesWidgetState
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       if (romanticTravelMemoryCollectionItem
-                                                  .transcendentalExpeditionaryMessageMsg !=
-                                              '')
+                                              .transcendentalExpeditionaryMessageMsg !=
+                                          '')
                                         Row(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
@@ -279,8 +288,8 @@ class _KaleidoscopicDreamscapeWayfarerMessagesWidgetState
                                           CrossAxisAlignment.start,
                                       children: [
                                         if (romanticTravelMemoryCollectionItem
-                                                    .transcendentalExpeditionaryMessageMsg !=
-                                                '')
+                                                .transcendentalExpeditionaryMessageMsg !=
+                                            '')
                                           Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(

@@ -93,6 +93,9 @@ class _KaleidoscapeOdysseanDreamNotcoinsWidgetState
                 hoverColor: Colors.transparent,
                 highlightColor: Colors.transparent,
                 onTap: () async {
+                  await Future.delayed(Duration(milliseconds: 180), () async {
+                    Navigator.pop(context);
+                  });
                   context.pushNamed(
                     PanoramicSoulVoyageChroniclerCoinsStoreWidget.routeName,
                     extra: <String, dynamic>{

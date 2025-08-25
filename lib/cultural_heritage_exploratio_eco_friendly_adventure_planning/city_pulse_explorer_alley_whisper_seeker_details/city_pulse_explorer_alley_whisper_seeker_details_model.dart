@@ -6,9 +6,7 @@ import 'package:flutter/material.dart';
 
 class CityPulseExplorerAlleyWhisperSeekerDetailsModel
     extends FlutterFlowModel<CityPulseExplorerAlleyWhisperSeekerDetailsWidget> {
-  ///  State fields for stateful widgets in this page.
 
-  // Models for WandererBazaarFragranceTales_details dynamic component.
   late FlutterFlowDynamicModels<WandererBazaarFragranceTalesDetailsModel>
       wandererBazaarFragranceTalesDetailsModels;
 

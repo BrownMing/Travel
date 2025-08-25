@@ -1,3 +1,4 @@
+import '../set_off_frontier_quest_tide_rush_navigator_homepage/set_off_frontier_quest_tide_rush_navigator_homepage_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -40,6 +41,67 @@ class _GastronomicJourneyExperienceLoginWidgetState
     _model.dispose();
 
     super.dispose();
+  }
+
+  Future<void> _fragranceHeritageExplorationPath(BuildContext context) async {
+    if (_model.textController1.text.isEmpty) {
+      trailTreasureJourneyCompan(context, 'Please enter your email!', 'error');
+      safeSetState(() {});
+      return;
+    }
+
+    if (_model.textController2.text.isEmpty) {
+      trailTreasureJourneyCompan(
+          context, 'Please enter your password!', 'error');
+      safeSetState(() {});
+      return;
+    }
+
+    try {
+      final matchingUsers = FFAppState().aurorascapePeregrinatorUsers.where(
+          (e) =>
+              _model.textController1.text == e.kaleidoscapeOdysseanUserEmail);
+
+      if (matchingUsers.isEmpty) {
+        trailTreasureJourneyCompan(
+            context, 'The account does not exist!', 'error');
+        _model.textController1?.clear();
+        _model.textController2?.clear();
+        safeSetState(() {});
+        return;
+      }
+
+      final user = matchingUsers.first;
+      if (user.kaleidoscapeOdysseanUserPassword !=
+          _model.textController2.text) {
+        trailTreasureJourneyCompan(
+            context, 'The password is incorrect!', 'error');
+        _model.textController2?.clear();
+        safeSetState(() {});
+        return;
+      }
+
+      FFAppState().eudaimonicCartographerTokenid =
+          user.kaleidoscapeOdysseanUserId;
+      FFAppState().update(() {});
+
+      await Future.delayed(const Duration(milliseconds: 1600));
+
+      if (mounted) {
+        context.pushNamed(
+          SetOffFrontierQuestTideRushNavigatorHomepageWidget.routeName,
+          extra: <String, dynamic>{
+            kTransitionInfoKey: TransitionInfo(
+              hasTransition: true,
+              transitionType: PageTransitionType.fade,
+            ),
+          },
+        );
+      }
+    } catch (e) {
+    } finally {
+      safeSetState(() {});
+    }
   }
 
   @override
@@ -333,7 +395,7 @@ class _GastronomicJourneyExperienceLoginWidgetState
                                         focusNode: _model.textFieldFocusNode2,
                                         autofocus: false,
                                         textInputAction: TextInputAction.done,
-                                        obscureText: false,
+                                        obscureText: true,
                                         decoration: InputDecoration(
                                           isDense: true,
                                           labelStyle: FlutterFlowTheme.of(
@@ -427,8 +489,9 @@ class _GastronomicJourneyExperienceLoginWidgetState
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 129.0, 0.0, 0.0),
                             child: FFButtonWidget(
-                              onPressed: () {
-                                print('Button pressed ...');
+                              onPressed: () async {
+                                await _fragranceHeritageExplorationPath(
+                                    context);
                               },
                               text: 'Login',
                               options: FFButtonOptions(

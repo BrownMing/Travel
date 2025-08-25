@@ -5,13 +5,9 @@ import 'package:flutter/material.dart';
 
 class DesertVastTraverseDuneMysteryChasePostsModel
     extends FlutterFlowModel<DesertVastTraverseDuneMysteryChasePostsWidget> {
-  ///  Local state fields for this page.
 
   String? piicturesqueTravelExperienceLog;
 
-  ///  State fields for stateful widgets in this page.
-
-  // State field(s) for TextField widget.
   FocusNode? textFieldFocusNode;
   TextEditingController? textController;
   String? Function(BuildContext, String?)? textControllerValidator;

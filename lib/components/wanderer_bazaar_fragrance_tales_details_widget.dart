@@ -142,47 +142,51 @@ class _WandererBazaarFragranceTalesDetailsWidgetState
                     ].divide(SizedBox(height: 8.0)),
                   ),
                 ),
-                Flexible(
-                  child: Align(
-                    alignment: AlignmentDirectional(1.0, -1.0),
-                    child: InkWell(
-                      splashColor: Colors.transparent,
-                      focusColor: Colors.transparent,
-                      hoverColor: Colors.transparent,
-                      highlightColor: Colors.transparent,
-                      onTap: () async {
-                        await showModalBottomSheet(
-                          isScrollControlled: true,
-                          backgroundColor: Colors.transparent,
-                          enableDrag: false,
-                          context: context,
-                          builder: (context) {
-                            return Padding(
-                              padding: MediaQuery.viewInsetsOf(context),
-                              child:
-                                  WaveSwellPioneerOceanRoarVoyagerReportWidget(
-                                artisanAromaJourneyArchiveUserid:
-                                    widget.globalScentTrailAtlasUserid!,
-                              ),
-                            );
-                          },
-                        ).then((value) => safeSetState(() {}));
-                      },
-                      child: Container(
-                        width: 32.0,
-                        height: 32.0,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            fit: BoxFit.cover,
-                            image: Image.asset(
-                              'assets/images/fgswiueygysdgbsi_vghsydgfyitdgftustyu.png',
-                            ).image,
+                if (widget.globalScentTrailAtlasUserid !=
+                    FFAppState().eudaimonicCartographerTokenid)
+                  Flexible(
+                    child: Align(
+                      alignment: AlignmentDirectional(1.0, -1.0),
+                      child: InkWell(
+                        splashColor: Colors.transparent,
+                        focusColor: Colors.transparent,
+                        hoverColor: Colors.transparent,
+                        highlightColor: Colors.transparent,
+                        onTap: () async {
+                          await showModalBottomSheet(
+                            isScrollControlled: true,
+                            backgroundColor: Colors.transparent,
+                            enableDrag: false,
+                            context: context,
+                            builder: (context) {
+                              return Padding(
+                                padding: MediaQuery.viewInsetsOf(context),
+                                child:
+                                    WaveSwellPioneerOceanRoarVoyagerReportWidget(
+                                  artisanAromaJourneyArchiveUserid:
+                                      widget.globalScentTrailAtlasUserid!,
+                                ),
+                              );
+                            },
+                          ).then((value) => safeSetState(() {
+                            
+                          }));
+                        },
+                        child: Container(
+                          width: 32.0,
+                          height: 32.0,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: Image.asset(
+                                'assets/images/fgswiueygysdgbsi_vghsydgfyitdgftustyu.png',
+                              ).image,
+                            ),
                           ),
                         ),
                       ),
                     ),
                   ),
-                ),
               ],
             ),
             Padding(
@@ -208,14 +212,11 @@ class _WandererBazaarFragranceTalesDetailsWidgetState
                 ),
                 child: Stack(
                   children: [
-                    FlutterFlowVideoPlayer(
+                    ExploreXpressVoyageLinkBotVideo(
                       path: widget.globalScentTrailAtlasVideo!,
-                      videoType: VideoType.network,
                       autoPlay: false,
                       looping: true,
-                      showControls: false,
-                      allowFullScreen: false,
-                      allowPlaybackSpeedMenu: false,
+                      showControls: true,
                     ),
                   ],
                 ),
@@ -308,7 +309,10 @@ class _WandererBazaarFragranceTalesDetailsWidgetState
                                 .override(
                                   fontFamily: FlutterFlowTheme.of(context)
                                       .bodyMediumFamily,
-                                  color: Color(0xE6000000),
+                                  color:
+                                      widget.globalScentTrailAtlasUnlike ?? true
+                                          ? Color(0xE6000000)
+                                          : Color(0xFFDD5629),
                                   fontSize: 12.0,
                                   letterSpacing: 0.0,
                                   useGoogleFonts: !FlutterFlowTheme.of(context)

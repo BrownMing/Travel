@@ -230,7 +230,7 @@ class _SetOffFrontierQuestTideRushNavigatorHomepageWidgetState
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             mainAxisAlignment:
-                                                MainAxisAlignment.start,
+                                                MainAxisAlignment.spaceBetween,
                                             children: [
                                               Image.asset(
                                                 sublimarePeregrinHeterotopologySeerItem
@@ -269,7 +269,7 @@ class _SetOffFrontierQuestTideRushNavigatorHomepageWidgetState
                                               Padding(
                                                 padding: EdgeInsetsDirectional
                                                     .fromSTEB(
-                                                        0.0, 8.0, 0.0, 0.0),
+                                                        0.0, 8.0, 0.0, 16.0),
                                                 child: Container(
                                                   width: 55.0,
                                                   height: 26.0,
@@ -299,7 +299,7 @@ class _SetOffFrontierQuestTideRushNavigatorHomepageWidgetState
                               0.0, 24.0, 0.0, 0.0),
                           child: Container(
                             width: double.infinity,
-                            height: MediaQuery.sizeOf(context).height * 1.0,
+                            height: MediaQuery.sizeOf(context).height * 1,
                             decoration: BoxDecoration(
                               gradient: LinearGradient(
                                 colors: [
@@ -417,7 +417,7 @@ class _SetOffFrontierQuestTideRushNavigatorHomepageWidgetState
                                                           .culturalScentExplorationDiscovers
                                                           .sortedList(
                                                               keyOf: (e) => e
-                                                                  .sensoryAromaDiscoveryPathDiscoverCreatetime!,
+                                                                  .sensoryAromaDiscoveryPathDiscoverStar,
                                                               desc: true)
                                                           .toList();
                                                   if (exoticMarketplaceOdyssey
@@ -436,6 +436,8 @@ class _SetOffFrontierQuestTideRushNavigatorHomepageWidgetState
                                                     ),
                                                     crossAxisSpacing: 15.0,
                                                     mainAxisSpacing: 16.0,
+                                                    physics:
+                                                        const NeverScrollableScrollPhysics(),
                                                     itemCount:
                                                         exoticMarketplaceOdyssey
                                                             .length,
@@ -713,6 +715,8 @@ class _SetOffFrontierQuestTideRushNavigatorHomepageWidgetState
                                                   return ListView.separated(
                                                     padding: EdgeInsets.zero,
                                                     shrinkWrap: true,
+                                                    physics:
+                                                        const NeverScrollableScrollPhysics(),
                                                     scrollDirection:
                                                         Axis.vertical,
                                                     itemCount:
@@ -725,15 +729,7 @@ class _SetOffFrontierQuestTideRushNavigatorHomepageWidgetState
                                                       final nomadicAromaExperienceHubItem =
                                                           nomadicAromaExperienceHub[
                                                               nomadicAromaExperienceHubIndex];
-                                                      return InkWell(
-                                                        splashColor:
-                                                            Colors.transparent,
-                                                        focusColor:
-                                                            Colors.transparent,
-                                                        hoverColor:
-                                                            Colors.transparent,
-                                                        highlightColor:
-                                                            Colors.transparent,
+                                                      return GestureDetector(
                                                         onTap: () async {
                                                           if (FFAppState()
                                                                   .aurorascapePeregrinatorUsers
@@ -742,43 +738,86 @@ class _SetOffFrontierQuestTideRushNavigatorHomepageWidgetState
                                                                           .eudaimonicCartographerTokenid)!
                                                                   .kaleidoscapeOdysseanUserCoins >=
                                                               90) {
-                                                            FFAppState()
-                                                                .updatePetrichorPathfinderChroniclerGuidesAtIndex(
-                                                              nomadicAromaExperienceHubItem
-                                                                  .ethnoscapePilgrimageStrategyGuideId,
-                                                              (e) => e
-                                                                ..updateEthnoscapePilgrimageStrategyGuideUnlock(
-                                                                  (e) => e.add(
-                                                                      FFAppState()
-                                                                          .eudaimonicCartographerTokenid),
-                                                                ),
-                                                            );
-                                                            FFAppState()
-                                                                .update(() {});
-
-                                                            context.pushNamed(
-                                                              DesertMirageChaserDetailSoftheStrategyWidget
-                                                                  .routeName,
-                                                              queryParameters: {
-                                                                'spiceHeritageWanderlustID':
-                                                                    serializeParam(
-                                                                  nomadicAromaExperienceHubItem
-                                                                      .ethnoscapePilgrimageStrategyGuideId,
-                                                                  ParamType.int,
-                                                                ),
-                                                              }.withoutNulls,
-                                                              extra: <String,
-                                                                  dynamic>{
-                                                                kTransitionInfoKey:
-                                                                    TransitionInfo(
-                                                                  hasTransition:
-                                                                      true,
-                                                                  transitionType:
-                                                                      PageTransitionType
-                                                                          .rightToLeft,
-                                                                ),
-                                                              },
-                                                            );
+                                                            if (FFAppState()
+                                                                .petrichorPathfinderChroniclerGuides[
+                                                                    nomadicAromaExperienceHubItem
+                                                                        .ethnoscapePilgrimageStrategyGuideId]
+                                                                .ethnoscapePilgrimageStrategyGuideUnlock
+                                                                .contains(
+                                                                    FFAppState()
+                                                                        .eudaimonicCartographerTokenid)) {
+                                                              context.pushNamed(
+                                                                DesertMirageChaserDetailSoftheStrategyWidget
+                                                                    .routeName,
+                                                                queryParameters:
+                                                                    {
+                                                                  'spiceHeritageWanderlustID':
+                                                                      serializeParam(
+                                                                    nomadicAromaExperienceHubItem
+                                                                        .ethnoscapePilgrimageStrategyGuideId,
+                                                                    ParamType
+                                                                        .int,
+                                                                  ),
+                                                                }.withoutNulls,
+                                                                extra: <String,
+                                                                    dynamic>{
+                                                                  kTransitionInfoKey:
+                                                                      TransitionInfo(
+                                                                    hasTransition:
+                                                                        true,
+                                                                    transitionType:
+                                                                        PageTransitionType
+                                                                            .rightToLeft,
+                                                                  ),
+                                                                },
+                                                              );
+                                                            } else {
+                                                              FFAppState()
+                                                                  .updatePetrichorPathfinderChroniclerGuidesAtIndex(
+                                                                nomadicAromaExperienceHubItem
+                                                                    .ethnoscapePilgrimageStrategyGuideId,
+                                                                (e) => e
+                                                                  ..updateEthnoscapePilgrimageStrategyGuideUnlock(
+                                                                    (e) => e.add(
+                                                                        FFAppState()
+                                                                            .eudaimonicCartographerTokenid),
+                                                                  ),
+                                                              );
+                                                              FFAppState().updateAurorascapePeregrinatorUsersAtIndex(
+                                                                  FFAppState()
+                                                                      .eudaimonicCartographerTokenid,
+                                                                  (e) => e
+                                                                    ..incrementKaleidoscapeOdysseanUserCoins(
+                                                                        -90));
+                                                              FFAppState()
+                                                                  .update(
+                                                                      () {});
+                                                              context.pushNamed(
+                                                                DesertMirageChaserDetailSoftheStrategyWidget
+                                                                    .routeName,
+                                                                queryParameters:
+                                                                    {
+                                                                  'spiceHeritageWanderlustID':
+                                                                      serializeParam(
+                                                                    nomadicAromaExperienceHubItem
+                                                                        .ethnoscapePilgrimageStrategyGuideId,
+                                                                    ParamType
+                                                                        .int,
+                                                                  ),
+                                                                }.withoutNulls,
+                                                                extra: <String,
+                                                                    dynamic>{
+                                                                  kTransitionInfoKey:
+                                                                      TransitionInfo(
+                                                                    hasTransition:
+                                                                        true,
+                                                                    transitionType:
+                                                                        PageTransitionType
+                                                                            .rightToLeft,
+                                                                  ),
+                                                                },
+                                                              );
+                                                            }
                                                           } else {
                                                             await showModalBottomSheet(
                                                               isScrollControlled:
@@ -863,7 +902,7 @@ class _SetOffFrontierQuestTideRushNavigatorHomepageWidgetState
                                                                         fit: BoxFit
                                                                             .cover,
                                                                         image: Image
-                                                                            .network(
+                                                                            .asset(
                                                                           nomadicAromaExperienceHubItem
                                                                               .ethnoscapePilgrimageStrategyGuidePhoto,
                                                                         ).image,

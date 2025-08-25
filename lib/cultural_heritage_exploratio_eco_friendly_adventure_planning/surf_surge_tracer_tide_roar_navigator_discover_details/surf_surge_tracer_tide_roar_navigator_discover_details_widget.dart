@@ -124,55 +124,51 @@ class _SurfSurgeTracerTideRoarNavigatorDiscoverDetailsWidgetState
                                     .wandererBazaarFragranceTalesDetailsModel,
                                 updateCallback: () => safeSetState(() {}),
                                 updateOnChange: true,
-                                child: Hero(
-                                  tag: 'HeritageMarketFragranceGuide',
-                                  transitionOnUserGestures: true,
-                                  child: Material(
-                                    color: Colors.transparent,
-                                    child:
-                                        WandererBazaarFragranceTalesDetailsWidget(
-                                      globalScentTrailAtlasUserid: FFAppState()
-                                          .bioluminiscentTrailblazerPosts
-                                          .elementAtOrNull(
-                                              widget.sensoryBazaarOdysseyMap!)
-                                          ?.transcontinentalOneirochronPostCreateId,
-                                      globalScentTrailAtlasTime: dateTimeFormat(
-                                          "relative",
-                                          FFAppState()
-                                              .bioluminiscentTrailblazerPosts
-                                              .elementAtOrNull(widget
-                                                  .sensoryBazaarOdysseyMap!)!
-                                              .transcontinentalOneirochronPostCreateTime!),
-                                      globalScentTrailAtlasDescribe: FFAppState()
-                                          .bioluminiscentTrailblazerPosts
-                                          .elementAtOrNull(
-                                              widget.sensoryBazaarOdysseyMap!)
-                                          ?.transcontinentalOneirochronPostDesc,
-                                      globalScentTrailAtlasVideo: FFAppState()
-                                          .bioluminiscentTrailblazerPosts
-                                          .elementAtOrNull(
-                                              widget.sensoryBazaarOdysseyMap!)
-                                          ?.transcontinentalOneirochronPostVideo,
-                                      globalScentTrailAtlasUnlike: !FFAppState()
-                                          .bioluminiscentTrailblazerPosts
-                                          .elementAtOrNull(
-                                              widget.sensoryBazaarOdysseyMap!)!
-                                          .transcontinentalOneirochronPostLikeUsers
-                                          .contains(FFAppState()
-                                              .eudaimonicCartographerTokenid),
-                                      globalScentTrailAtlasPost: FFAppState()
-                                          .bioluminiscentTrailblazerPosts
-                                          .elementAtOrNull(
-                                              widget.sensoryBazaarOdysseyMap!)!
-                                          .transcontinentalOneirochronPostId,
-                                      globalScentTrailAtlasLike: FFAppState()
-                                          .bioluminiscentTrailblazerPosts
-                                          .elementAtOrNull(
-                                              widget.sensoryBazaarOdysseyMap!)
-                                          ?.transcontinentalOneirochronPostLikeUsers
-                                          .contains(FFAppState()
-                                              .eudaimonicCartographerTokenid),
-                                    ),
+                                child: Material(
+                                  color: Colors.transparent,
+                                  child:
+                                      WandererBazaarFragranceTalesDetailsWidget(
+                                    globalScentTrailAtlasUserid: FFAppState()
+                                        .bioluminiscentTrailblazerPosts
+                                        .elementAtOrNull(
+                                            widget.sensoryBazaarOdysseyMap!)
+                                        ?.transcontinentalOneirochronPostCreateId,
+                                    globalScentTrailAtlasTime: dateTimeFormat(
+                                        "relative",
+                                        FFAppState()
+                                            .bioluminiscentTrailblazerPosts
+                                            .elementAtOrNull(widget
+                                                .sensoryBazaarOdysseyMap!)!
+                                            .transcontinentalOneirochronPostCreateTime!),
+                                    globalScentTrailAtlasDescribe: FFAppState()
+                                        .bioluminiscentTrailblazerPosts
+                                        .elementAtOrNull(
+                                            widget.sensoryBazaarOdysseyMap!)
+                                        ?.transcontinentalOneirochronPostDesc,
+                                    globalScentTrailAtlasVideo: FFAppState()
+                                        .bioluminiscentTrailblazerPosts
+                                        .elementAtOrNull(
+                                            widget.sensoryBazaarOdysseyMap!)
+                                        ?.transcontinentalOneirochronPostVideo,
+                                    globalScentTrailAtlasUnlike: !FFAppState()
+                                        .bioluminiscentTrailblazerPosts
+                                        .elementAtOrNull(
+                                            widget.sensoryBazaarOdysseyMap!)!
+                                        .transcontinentalOneirochronPostLikeUsers
+                                        .contains(FFAppState()
+                                            .eudaimonicCartographerTokenid),
+                                    globalScentTrailAtlasPost: FFAppState()
+                                        .bioluminiscentTrailblazerPosts
+                                        .elementAtOrNull(
+                                            widget.sensoryBazaarOdysseyMap!)!
+                                        .transcontinentalOneirochronPostId,
+                                    globalScentTrailAtlasLike: FFAppState()
+                                        .bioluminiscentTrailblazerPosts
+                                        .elementAtOrNull(
+                                            widget.sensoryBazaarOdysseyMap!)
+                                        ?.transcontinentalOneirochronPostLikeUsers
+                                        .contains(FFAppState()
+                                            .eudaimonicCartographerTokenid),
                                   ),
                                 ),
                               ),

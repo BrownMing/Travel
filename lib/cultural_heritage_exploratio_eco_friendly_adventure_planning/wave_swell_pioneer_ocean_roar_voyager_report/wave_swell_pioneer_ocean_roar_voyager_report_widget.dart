@@ -83,11 +83,7 @@ class _WaveSwellPioneerOceanRoarVoyagerReportWidgetState
         child: Column(
           mainAxisSize: MainAxisSize.max,
           children: [
-            InkWell(
-              splashColor: Colors.transparent,
-              focusColor: Colors.transparent,
-              hoverColor: Colors.transparent,
-              highlightColor: Colors.transparent,
+            GestureDetector(
               onTap: () async {
                 FFAppState().updateAurorascapePeregrinatorUsersAtIndex(
                   FFAppState().eudaimonicCartographerTokenid,
@@ -97,7 +93,9 @@ class _WaveSwellPioneerOceanRoarVoyagerReportWidgetState
                     ),
                 );
                 FFAppState().update(() {});
-                Navigator.pop(context);
+                Navigator.pop(context, true);
+                trailTreasureJourneyCompan(
+                    context, 'Blocked successfully!', 'success');
               },
               child: Container(
                 width: double.infinity,
@@ -146,13 +144,11 @@ class _WaveSwellPioneerOceanRoarVoyagerReportWidgetState
                 ),
               ),
             ),
-            InkWell(
-              splashColor: Colors.transparent,
-              focusColor: Colors.transparent,
-              hoverColor: Colors.transparent,
-              highlightColor: Colors.transparent,
+            GestureDetector(
               onTap: () async {
                 Navigator.pop(context);
+                trailTreasureJourneyCompan(
+                    context, 'The report was successful!', 'success');
               },
               child: Container(
                 width: double.infinity,

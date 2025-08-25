@@ -314,29 +314,71 @@ class _DesertVastTraverseDuneMysteryChasePostsWidgetState
                                 children: [
                                   Align(
                                     alignment: AlignmentDirectional(0.0, 0.0),
-                                    child: Container(
-                                      width: 24.0,
-                                      height: 24.0,
-                                      decoration: BoxDecoration(
-                                        image: DecorationImage(
-                                          fit: BoxFit.cover,
-                                          image: Image.asset(
-                                            'assets/images/fstduyfwtyuefygadsij_vugbsdyufgxjvbgjsdfis.png',
-                                          ).image,
+                                    child: GestureDetector(
+                                      onTap: () async {
+                                        await showModalBottomSheet(
+                                          isScrollControlled: true,
+                                          backgroundColor: Colors.transparent,
+                                          barrierColor: Color(0x4C000000),
+                                          enableDrag: false,
+                                          context: context,
+                                          builder: (context) {
+                                            return GestureDetector(
+                                              onTap: () {
+                                                FocusScope.of(context)
+                                                    .unfocus();
+                                                FocusManager
+                                                    .instance.primaryFocus
+                                                    ?.unfocus();
+                                              },
+                                              child: Padding(
+                                                padding:
+                                                    MediaQuery.viewInsetsOf(
+                                                        context),
+                                                child:
+                                                    InspireGiftTalesChatUpload(
+                                                  allowVideoUpload: true,
+                                                  allowImageUpload: false,
+                                                  allowMultipleImageSelect:
+                                                      false,
+                                                  onMediaSelected: (String path,
+                                                      MediaType type) {
+                                                    setState(() {
+                                                      _model.piicturesqueTravelExperienceLog =
+                                                          path;
+                                                    });
+                                                  },
+                                                ),
+                                              ),
+                                            );
+                                          },
+                                        ).then((value) => safeSetState(() {}));
+                                      },
+                                      child: Container(
+                                        width: 24.0,
+                                        height: 24.0,
+                                        decoration: BoxDecoration(
+                                          image: DecorationImage(
+                                            fit: BoxFit.cover,
+                                            image: Image.asset(
+                                              'assets/images/fstduyfwtyuefygadsij_vugbsdyufgxjvbgjsdfis.png',
+                                            ).image,
+                                          ),
                                         ),
                                       ),
                                     ),
                                   ),
-                                  FlutterFlowVideoPlayer(
-                                    path:
-                                        _model.piicturesqueTravelExperienceLog!,
-                                    videoType: VideoType.network,
-                                    autoPlay: false,
-                                    looping: true,
-                                    showControls: false,
-                                    allowFullScreen: false,
-                                    allowPlaybackSpeedMenu: false,
-                                  ),
+                                  if (_model.piicturesqueTravelExperienceLog !=
+                                          null &&
+                                      _model.piicturesqueTravelExperienceLog !=
+                                          '')
+                                    ExploreXpressVoyageLinkBotVideo(
+                                      path: _model
+                                          .piicturesqueTravelExperienceLog!,
+                                      autoPlay: false,
+                                      looping: true,
+                                      showControls: true,
+                                    ),
                                 ],
                               ),
                             ),
@@ -407,7 +449,13 @@ class _DesertVastTraverseDuneMysteryChasePostsWidgetState
                                         },
                                       ).then((value) => safeSetState(() {}));
                                     }
+                                  } else {
+                                    trailTreasureJourneyCompan(context,
+                                        'Please upload the picture!', 'error');
                                   }
+                                } else {
+                                  trailTreasureJourneyCompan(context,
+                                      'Please fill in the describe!', 'error');
                                 }
                               },
                               text: 'Post',

@@ -163,7 +163,7 @@ class _SandStormVentureOasisWhisperTracerInfoWidgetState
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 8.0, 0.0, 0.0),
                             child: Text(
-                              'ID:${FFAppState().aurorascapePeregrinatorUsers.elementAtOrNull(FFAppState().eudaimonicCartographerTokenid)?.kaleidoscapeOdysseanUserCreateTime?.toString()}',
+                              'ID:${FFAppState().aurorascapePeregrinatorUsers.elementAtOrNull(FFAppState().eudaimonicCartographerTokenid)?.kaleidoscapeOdysseanUserCreateTime?.millisecondsSinceEpoch}',
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
@@ -182,7 +182,7 @@ class _SandStormVentureOasisWhisperTracerInfoWidgetState
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 24.0, 0.0, 0.0),
                             child: Container(
-                              width: double.infinity,
+                              width: 350,
                               height: 91.0,
                               decoration: BoxDecoration(
                                 color: FlutterFlowTheme.of(context).info,

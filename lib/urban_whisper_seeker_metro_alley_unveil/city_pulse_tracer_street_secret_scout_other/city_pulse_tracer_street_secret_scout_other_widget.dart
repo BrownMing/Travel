@@ -124,7 +124,14 @@ class _CityPulseTracerStreetSecretScoutOtherWidgetState
                                 ),
                               );
                             },
-                          ).then((value) => safeSetState(() {}));
+                          ).then((value) => safeSetState(() {
+                                if (value) {
+                                  Future.delayed(Duration(milliseconds: 1800),
+                                      () {
+                                    Navigator.pop(context);
+                                  });
+                                }
+                              }));
                         },
                         child: Container(
                           width: 32.0,
@@ -386,7 +393,10 @@ class _CityPulseTracerStreetSecretScoutOtherWidgetState
                                                   );
                                                   FFAppState().update(() {});
                                                 },
-                                                child: Container(
+                                                child: AnimatedContainer(
+                                                  duration: Duration(
+                                                      milliseconds: 340),
+                                                  curve: Curves.easeInOut,
                                                   width: 72.0,
                                                   height: 33.0,
                                                   decoration: BoxDecoration(
@@ -408,19 +418,34 @@ class _CityPulseTracerStreetSecretScoutOtherWidgetState
                                                     Colors.transparent,
                                                 onTap: () async {
                                                   HapticFeedback.heavyImpact();
-                                                  FFAppState()
-                                                      .updateAurorascapePeregrinatorUsersAtIndex(
+
+                                                  FFAppState().update(() {
                                                     FFAppState()
-                                                        .eudaimonicCartographerTokenid,
-                                                    (e) => e
-                                                      ..updateKaleidoscapeOdysseanUserFollowings(
-                                                        (e) => e.add(widget
-                                                            .bazaarOlfactoryExperienceVault!),
-                                                      ),
-                                                  );
-                                                  FFAppState().update(() {});
+                                                        .updateAurorascapePeregrinatorUsersAtIndex(
+                                                      FFAppState()
+                                                          .eudaimonicCartographerTokenid,
+                                                      (e) => e
+                                                        ..updateKaleidoscapeOdysseanUserFollowings(
+                                                          (e) => e.add(widget
+                                                              .bazaarOlfactoryExperienceVault!),
+                                                        ),
+                                                    );
+                                                    FFAppState()
+                                                        .updateAurorascapePeregrinatorUsersAtIndex(
+                                                      widget
+                                                          .bazaarOlfactoryExperienceVault!,
+                                                      (e) => e
+                                                        ..updateKaleidoscapeOdysseanUserFans(
+                                                          (e) => e.add(FFAppState()
+                                                              .eudaimonicCartographerTokenid),
+                                                        ),
+                                                    );
+                                                  });
                                                 },
-                                                child: Container(
+                                                child: AnimatedContainer(
+                                                  duration: Duration(
+                                                      milliseconds: 340),
+                                                  curve: Curves.easeInOut,
                                                   width: 72.0,
                                                   height: 33.0,
                                                   decoration: BoxDecoration(
@@ -436,15 +461,26 @@ class _CityPulseTracerStreetSecretScoutOtherWidgetState
                                             }
                                           },
                                         ),
-                                        Container(
-                                          width: 72.0,
-                                          height: 33.0,
-                                          decoration: BoxDecoration(
-                                            image: DecorationImage(
-                                              fit: BoxFit.cover,
-                                              image: Image.asset(
-                                                'assets/images/rtuygvsdatyrsd_vcbyustdfgstuydfsuy.png',
-                                              ).image,
+                                        GestureDetector(
+                                          onTap: () async {
+                                            presentCraftingZoneThoughtfulTreasures(
+                                              context: context,
+                                              currentUserId: FFAppState()
+                                                  .eudaimonicCartographerTokenid,
+                                              otherUserId: widget
+                                                  .bazaarOlfactoryExperienceVault!,
+                                            );
+                                          },
+                                          child: Container(
+                                            width: 72.0,
+                                            height: 33.0,
+                                            decoration: BoxDecoration(
+                                              image: DecorationImage(
+                                                fit: BoxFit.cover,
+                                                image: Image.asset(
+                                                  'assets/images/rtuygvsdatyrsd_vcbyustdfgstuydfsuy.png',
+                                                ).image,
+                                              ),
                                             ),
                                           ),
                                         ),
@@ -535,15 +571,12 @@ class _CityPulseTracerStreetSecretScoutOtherWidgetState
                                       ),
                                       child: Stack(
                                         children: [
-                                          FlutterFlowVideoPlayer(
+                                          ExploreXpressVoyageLinkBotVideo(
                                             path: remarkableAdventureSharingClubItem
                                                 .transcontinentalOneirochronPostVideo,
-                                            videoType: VideoType.network,
                                             autoPlay: false,
                                             looping: true,
-                                            showControls: false,
-                                            allowFullScreen: false,
-                                            allowPlaybackSpeedMenu: false,
+                                            showControls: true,
                                           ),
                                         ],
                                       ),

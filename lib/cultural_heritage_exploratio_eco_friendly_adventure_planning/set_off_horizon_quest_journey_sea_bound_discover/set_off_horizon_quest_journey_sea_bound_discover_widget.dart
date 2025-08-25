@@ -68,7 +68,6 @@ class _SetOffHorizonQuestJourneySeaBoundDiscoverWidgetState
             Container(
               width: double.infinity,
               height: double.infinity,
-              decoration: BoxDecoration(),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 children: [
@@ -165,8 +164,15 @@ class _SetOffHorizonQuestJourneySeaBoundDiscoverWidgetState
                                     .aurorascapePeregrinatorUsers
                                     .where((e) =>
                                         e.kaleidoscapeOdysseanUserId !=
-                                        FFAppState()
-                                            .eudaimonicCartographerTokenid)
+                                            FFAppState()
+                                                .eudaimonicCartographerTokenid &&
+                                        !FFAppState()
+                                            .aurorascapePeregrinatorUsers[
+                                                FFAppState()
+                                                    .eudaimonicCartographerTokenid]
+                                            .kaleidoscapeOdysseanUserBlacklist
+                                            .contains(
+                                                e.kaleidoscapeOdysseanUserId))
                                     .toList();
 
                                 return SingleChildScrollView(
@@ -263,10 +269,17 @@ class _SetOffHorizonQuestJourneySeaBoundDiscoverWidgetState
                               builder: (context) {
                                 final spiceLadenWandererChronicles = FFAppState()
                                     .bioluminiscentTrailblazerPosts
+                                    .where((e) => !FFAppState()
+                                        .aurorascapePeregrinatorUsers[
+                                            FFAppState()
+                                                .eudaimonicCartographerTokenid]
+                                        .kaleidoscapeOdysseanUserBlacklist
+                                        .contains(e
+                                            .transcontinentalOneirochronPostCreateId))
                                     .sortedList(
                                         keyOf: (e) => e
                                             .transcontinentalOneirochronPostCreateTime!,
-                                        desc: true)
+                                        desc: false)
                                     .toList();
                                 if (spiceLadenWandererChronicles.isEmpty) {
                                   return EpiphanySeekingGlobetrottingSagaEmptyWidget();
@@ -275,6 +288,7 @@ class _SetOffHorizonQuestJourneySeaBoundDiscoverWidgetState
                                 return ListView.separated(
                                   padding: EdgeInsets.zero,
                                   shrinkWrap: true,
+                                  physics: const NeverScrollableScrollPhysics(),
                                   scrollDirection: Axis.vertical,
                                   itemCount:
                                       spiceLadenWandererChronicles.length,
@@ -288,59 +302,51 @@ class _SetOffHorizonQuestJourneySeaBoundDiscoverWidgetState
                                     return Column(
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
-                                        Expanded(
-                                          child: wrapWithModel(
-                                            model: _model
-                                                .wandererBazaarFragranceTalesDetailsModels
-                                                .getModel(
-                                              spiceLadenWandererChroniclesItem
-                                                  .transcontinentalOneirochronPostId
-                                                  .toString(),
-                                              spiceLadenWandererChroniclesIndex,
-                                            ),
-                                            updateCallback: () =>
-                                                safeSetState(() {}),
-                                            updateOnChange: true,
-                                            child: Hero(
-                                              tag:
-                                                  'HeritageMarketFragranceGuide',
-                                              transitionOnUserGestures: true,
-                                              child: Material(
-                                                color: Colors.transparent,
-                                                child:
-                                                    WandererBazaarFragranceTalesDetailsWidget(
-                                                  key: Key(
-                                                    'Key42x_${spiceLadenWandererChroniclesItem.transcontinentalOneirochronPostId.toString()}',
-                                                  ),
-                                                  globalScentTrailAtlasUserid:
-                                                      spiceLadenWandererChroniclesItem
-                                                          .transcontinentalOneirochronPostCreateId,
-                                                  globalScentTrailAtlasTime:
-                                                      dateTimeFormat(
-                                                          "relative",
-                                                          spiceLadenWandererChroniclesItem
-                                                              .transcontinentalOneirochronPostCreateTime!),
-                                                  globalScentTrailAtlasDescribe:
-                                                      spiceLadenWandererChroniclesItem
-                                                          .transcontinentalOneirochronPostDesc,
-                                                  globalScentTrailAtlasVideo:
-                                                      spiceLadenWandererChroniclesItem
-                                                          .transcontinentalOneirochronPostVideo,
-                                                  globalScentTrailAtlasUnlike:
-                                                      !spiceLadenWandererChroniclesItem
-                                                          .transcontinentalOneirochronPostLikeUsers
-                                                          .contains(FFAppState()
-                                                              .eudaimonicCartographerTokenid),
-                                                  globalScentTrailAtlasPost:
-                                                      spiceLadenWandererChroniclesItem
-                                                          .transcontinentalOneirochronPostId,
-                                                  globalScentTrailAtlasLike:
-                                                      spiceLadenWandererChroniclesItem
-                                                          .transcontinentalOneirochronPostLikeUsers
-                                                          .contains(FFAppState()
-                                                              .eudaimonicCartographerTokenid),
-                                                ),
+                                        wrapWithModel(
+                                          model: _model
+                                              .wandererBazaarFragranceTalesDetailsModels
+                                              .getModel(
+                                            spiceLadenWandererChroniclesItem
+                                                .transcontinentalOneirochronPostId
+                                                .toString(),
+                                            spiceLadenWandererChroniclesIndex,
+                                          ),
+                                          updateCallback: () =>
+                                              safeSetState(() {}),
+                                          updateOnChange: true,
+                                          child: Material(
+                                            color: Colors.transparent,
+                                            child:
+                                                WandererBazaarFragranceTalesDetailsWidget(
+                                              key: Key(
+                                                'Key42x_${spiceLadenWandererChroniclesItem.transcontinentalOneirochronPostId.toString()}',
                                               ),
+                                              globalScentTrailAtlasUserid:
+                                                  spiceLadenWandererChroniclesItem
+                                                      .transcontinentalOneirochronPostCreateId,
+                                              globalScentTrailAtlasTime: dateTimeFormat(
+                                                  "relative",
+                                                  spiceLadenWandererChroniclesItem
+                                                      .transcontinentalOneirochronPostCreateTime!),
+                                              globalScentTrailAtlasDescribe:
+                                                  spiceLadenWandererChroniclesItem
+                                                      .transcontinentalOneirochronPostDesc,
+                                              globalScentTrailAtlasVideo:
+                                                  spiceLadenWandererChroniclesItem
+                                                      .transcontinentalOneirochronPostVideo,
+                                              globalScentTrailAtlasUnlike:
+                                                  !spiceLadenWandererChroniclesItem
+                                                      .transcontinentalOneirochronPostLikeUsers
+                                                      .contains(FFAppState()
+                                                          .eudaimonicCartographerTokenid),
+                                              globalScentTrailAtlasPost:
+                                                  spiceLadenWandererChroniclesItem
+                                                      .transcontinentalOneirochronPostId,
+                                              globalScentTrailAtlasLike:
+                                                  spiceLadenWandererChroniclesItem
+                                                      .transcontinentalOneirochronPostLikeUsers
+                                                      .contains(FFAppState()
+                                                          .eudaimonicCartographerTokenid),
                                             ),
                                           ),
                                         ),
@@ -351,7 +357,7 @@ class _SetOffHorizonQuestJourneySeaBoundDiscoverWidgetState
                               },
                             ),
                           ),
-                        ].addToEnd(SizedBox(height: 50.0)),
+                        ].addToEnd(SizedBox(height: 80.0)),
                       ),
                     ),
                   ),

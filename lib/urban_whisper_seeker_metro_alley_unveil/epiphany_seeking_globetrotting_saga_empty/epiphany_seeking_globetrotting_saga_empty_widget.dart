@@ -57,17 +57,20 @@ class _EpiphanySeekingGlobetrottingSagaEmptyWidgetState
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 200.0,
-      height: 237.71,
-      decoration: BoxDecoration(
-        image: DecorationImage(
-          fit: BoxFit.contain,
-          image: Image.asset(
-            'assets/images/sdgfysdgfuisdf_xcuvgudfgdgfsudfi.png',
-          ).image,
+    return Align(
+      alignment: Alignment(0, -0.5),
+      child: Container(
+        width: 343,
+        height: 280,
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            fit: BoxFit.contain,
+            image: Image.asset(
+              'assets/images/sdgfysdgfuisdf_xcuvgudfgdgfsudfi.png',
+            ).image,
+          ),
         ),
-      ),
-    ).animateOnPageLoad(animationsMap['containerOnPageLoadAnimation']!);
+      ).animateOnPageLoad(animationsMap['containerOnPageLoadAnimation']!),
+    );
   }
 }

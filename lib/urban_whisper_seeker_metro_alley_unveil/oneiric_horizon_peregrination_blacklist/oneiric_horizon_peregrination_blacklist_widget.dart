@@ -1,3 +1,5 @@
+import 'package:travel/urban_whisper_seeker_metro_alley_unveil/epiphany_seeking_globetrotting_saga_empty/epiphany_seeking_globetrotting_saga_empty_widget.dart';
+
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -121,7 +123,9 @@ class _OneiricHorizonPeregrinationBlacklistWidgetState
                                 ?.kaleidoscapeOdysseanUserBlacklist
                                 .toList() ??
                             [];
-
+                        if (fragranceDrivenExplorationLog.isEmpty) {
+                          return const EpiphanySeekingGlobetrottingSagaEmptyWidget();
+                        }
                         return ListView.separated(
                           padding: EdgeInsets.zero,
                           shrinkWrap: true,
@@ -156,7 +160,7 @@ class _OneiricHorizonPeregrinationBlacklistWidgetState
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       16.0, 0.0, 0.0, 0.0),
                                   child: Text(
-                                    '${FFAppState().aurorascapePeregrinatorUsers.elementAtOrNull(FFAppState().eudaimonicCartographerTokenid)?.kaleidoscapeOdysseanUserNickname}',
+                                    '${FFAppState().aurorascapePeregrinatorUsers.elementAtOrNull(fragranceDrivenExplorationLogItem)?.kaleidoscapeOdysseanUserNickname}',
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(

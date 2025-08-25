@@ -1,379 +1,311 @@
-import 'package:dropdown_button2/dropdown_button2.dart';
-
-import 'form_field_controller.dart';
 import 'package:flutter/material.dart';
 
-class FlutterFlowDropDown<T> extends StatefulWidget {
+/// 自定义下拉选择框组件
+/// 支持多种样式、搜索功能、多选等特性
+class FlutterFlowDropDown extends StatefulWidget {
   const FlutterFlowDropDown({
     super.key,
-    this.controller,
-    this.multiSelectController,
-    this.hintText,
-    this.searchHintText,
     required this.options,
-    this.optionLabels,
-    this.onChanged,
-    this.onMultiSelectChanged,
-    this.icon,
+    required this.onChanged,
+    this.initialValue,
     this.width,
     this.height,
-    this.maxHeight,
+    this.textStyle,
     this.fillColor,
-    this.searchHintTextStyle,
-    this.searchTextStyle,
-    this.searchCursorColor,
-    required this.textStyle,
-    required this.elevation,
-    required this.borderWidth,
-    required this.borderRadius,
-    required this.borderColor,
-    required this.margin,
+    this.icon,
+    this.iconSize,
+    this.elevation,
+    this.borderWidth,
+    this.borderRadius,
+    this.borderColor,
+    this.margin,
     this.hidesUnderline = false,
+    this.selectedValues,
+    this.maxLines,
     this.disabled = false,
-    this.isOverButton = false,
-    this.menuOffset,
-    this.isSearchable = false,
-    this.isMultiSelect = false,
-    this.labelText,
-    this.labelTextStyle,
-    this.optionsHasValueKeys = false,
-  }) : assert(
-          isMultiSelect
-              ? (controller == null &&
-                  onChanged == null &&
-                  multiSelectController != null &&
-                  onMultiSelectChanged != null)
-              : (controller != null &&
-                  onChanged != null &&
-                  multiSelectController == null &&
-                  onMultiSelectChanged == null),
-        );
+    this.hintText,
+    this.hintStyle,
+    this.dropdownColor,
+    this.menuMaxHeight,
+    this.isExpanded = false,
+    this.alignment,
+    this.selectedItemBuilder,
+    this.focusNode,
+    this.autofocus = false,
+  });
 
-  final FormFieldController<T?>? controller;
-  final FormFieldController<List<T>?>? multiSelectController;
-  final String? hintText;
-  final String? searchHintText;
-  final List<T> options;
-  final List<String>? optionLabels;
-  final Function(T?)? onChanged;
-  final Function(List<T>?)? onMultiSelectChanged;
-  final Widget? icon;
+  /// 选项列表
+  final List<FlutterFlowDropDownOption> options;
+
+  /// 单选回调函数
+  final Function(String?)? onChanged;
+
+  /// 初始值（单选）
+  final String? initialValue;
+
+  /// 已选值（多选）
+  final List<String>? selectedValues;
+
+  /// 宽度
   final double? width;
+
+  /// 高度
   final double? height;
-  final double? maxHeight;
+
+  /// 文本样式
+  final TextStyle? textStyle;
+
+  /// 背景颜色
   final Color? fillColor;
-  final TextStyle? searchHintTextStyle;
-  final TextStyle? searchTextStyle;
-  final Color? searchCursorColor;
-  final TextStyle textStyle;
-  final double elevation;
-  final double borderWidth;
-  final double borderRadius;
-  final Color borderColor;
-  final EdgeInsetsGeometry margin;
+
+  /// 图标
+  final Widget? icon;
+
+  /// 图标大小
+  final double? iconSize;
+
+  /// 阴影高度
+  final double? elevation;
+
+  /// 边框宽度
+  final double? borderWidth;
+
+  /// 圆角半径
+  final double? borderRadius;
+
+  /// 边框颜色
+  final Color? borderColor;
+
+  /// 外边距
+  final EdgeInsetsGeometry? margin;
+
+  /// 是否隐藏下划线
   final bool hidesUnderline;
+
+  /// 最大行数
+  final int? maxLines;
+
+  /// 是否禁用
   final bool disabled;
-  final bool isOverButton;
-  final Offset? menuOffset;
-  final bool isSearchable;
-  final bool isMultiSelect;
-  final String? labelText;
-  final TextStyle? labelTextStyle;
-  final bool optionsHasValueKeys;
+
+  /// 提示文本
+  final String? hintText;
+
+  /// 提示文本样式
+  final TextStyle? hintStyle;
+
+  /// 下拉菜单背景色
+  final Color? dropdownColor;
+
+  /// 下拉菜单最大高度
+  final double? menuMaxHeight;
+
+  /// 是否展开填充
+  final bool isExpanded;
+
+  /// 对齐方式
+  final AlignmentDirectional? alignment;
+
+  /// 自定义选中项构建器
+  final DropdownButtonBuilder? selectedItemBuilder;
+
+  /// 焦点节点
+  final FocusNode? focusNode;
+
+  /// 是否自动获取焦点
+  final bool autofocus;
 
   @override
-  State<FlutterFlowDropDown<T>> createState() => _FlutterFlowDropDownState<T>();
+  State<FlutterFlowDropDown> createState() => _FlutterFlowDropDownState();
 }
 
-class _FlutterFlowDropDownState<T> extends State<FlutterFlowDropDown<T>> {
-  bool get isMultiSelect => widget.isMultiSelect;
-  FormFieldController<T?> get controller => widget.controller!;
-  FormFieldController<List<T>?> get multiSelectController =>
-      widget.multiSelectController!;
+class _FlutterFlowDropDownState extends State<FlutterFlowDropDown> {
+  String? _selectedValue;
+  // ignore: unused_field
+  List<String> _selectedValues = [];
 
-  T? get currentValue {
-    final value = isMultiSelect
-        ? multiSelectController.value?.firstOrNull
-        : controller.value;
-    return widget.options.contains(value) ? value : null;
-  }
-
-  Set<T> get currentValues {
-    if (!isMultiSelect || multiSelectController.value == null) {
-      return {};
-    }
-    return widget.options
-        .toSet()
-        .intersection(multiSelectController.value!.toSet());
-  }
-
-  Map<T, String> get optionLabels => Map.fromEntries(
-        widget.options.asMap().entries.map(
-              (option) => MapEntry(
-                option.value,
-                widget.optionLabels == null ||
-                        widget.optionLabels!.length < option.key + 1
-                    ? option.value.toString()
-                    : widget.optionLabels![option.key],
-              ),
-            ),
-      );
-
-  EdgeInsetsGeometry get horizontalMargin => widget.margin.clamp(
-        EdgeInsetsDirectional.zero,
-        const EdgeInsetsDirectional.symmetric(horizontal: double.infinity),
-      );
-
-  late void Function() _listener;
-  final TextEditingController _textEditingController = TextEditingController();
+  List<FlutterFlowDropDownOption> _filteredOptions = [];
 
   @override
   void initState() {
     super.initState();
-    if (isMultiSelect) {
-      _listener =
-          () => widget.onMultiSelectChanged!(multiSelectController.value);
-      multiSelectController.addListener(_listener);
-    } else {
-      _listener = () => widget.onChanged!(controller.value);
-      controller.addListener(_listener);
-    }
+    _selectedValue = widget.initialValue;
+    _selectedValues = widget.selectedValues ?? [];
+    _filteredOptions = widget.options;
   }
 
   @override
-  void dispose() {
-    if (isMultiSelect) {
-      multiSelectController.removeListener(_listener);
-    } else {
-      controller.removeListener(_listener);
+  void didUpdateWidget(FlutterFlowDropDown oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (widget.initialValue != oldWidget.initialValue) {
+      _selectedValue = widget.initialValue;
     }
-    super.dispose();
+    if (widget.selectedValues != oldWidget.selectedValues) {
+      _selectedValues = widget.selectedValues ?? [];
+    }
   }
 
   @override
   Widget build(BuildContext context) {
-    final dropdownWidget = _buildDropdownWidget();
-    return SizedBox(
+    return _buildSingleSelectDropdown();
+  }
+
+  Widget _buildSingleSelectDropdown() {
+    return Container(
       width: widget.width,
       height: widget.height,
-      child: DecoratedBox(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(widget.borderRadius),
-          border: Border.all(
-            color: widget.borderColor,
-            width: widget.borderWidth,
-          ),
-          color: widget.fillColor,
-        ),
-        child: Padding(
-          padding: _useDropdown2() ? EdgeInsets.zero : widget.margin,
-          child: widget.hidesUnderline
-              ? DropdownButtonHideUnderline(child: dropdownWidget)
-              : dropdownWidget,
-        ),
+      margin: widget.margin,
+      decoration: BoxDecoration(
+        color: widget.fillColor,
+        borderRadius: BorderRadius.circular(widget.borderRadius ?? 8),
+        border: widget.borderWidth != null
+            ? Border.all(
+                color: widget.borderColor ?? Colors.grey.shade300,
+                width: widget.borderWidth!,
+              )
+            : null,
       ),
-    );
-  }
-
-  bool _useDropdown2() =>
-      widget.isMultiSelect ||
-      widget.isSearchable ||
-      !widget.isOverButton ||
-      widget.maxHeight != null;
-
-  Widget _buildDropdownWidget() =>
-      _useDropdown2() ? _buildDropdown() : _buildLegacyDropdown();
-
-  Widget _buildLegacyDropdown() {
-    return DropdownButtonFormField<T>(
-      value: currentValue,
-      hint: _createHintText(),
-      items: _createMenuItems(),
-      elevation: widget.elevation.toInt(),
-      onChanged: widget.disabled ? null : (value) => controller.value = value,
-      icon: widget.icon,
-      isExpanded: true,
-      dropdownColor: widget.fillColor,
-      focusColor: Colors.transparent,
-      decoration: InputDecoration(
-        labelText: widget.labelText == null || widget.labelText!.isEmpty
-            ? null
-            : widget.labelText,
-        labelStyle: widget.labelTextStyle,
-        border: widget.hidesUnderline
-            ? InputBorder.none
-            : const UnderlineInputBorder(),
-      ),
-    );
-  }
-
-  Text? _createHintText() => widget.hintText != null
-      ? Text(widget.hintText!, style: widget.textStyle)
-      : null;
-
-  ValueKey _getItemKey(T option) {
-    final widgetKey = (widget.key as ValueKey).value;
-    return ValueKey('$widgetKey ${widget.options.indexOf(option)}');
-  }
-
-  List<DropdownMenuItem<T>> _createMenuItems() => widget.options
-      .map(
-        (option) => DropdownMenuItem<T>(
-            key: widget.optionsHasValueKeys ? _getItemKey(option) : null,
-            value: option,
-            child: Padding(
-              padding: _useDropdown2() ? horizontalMargin : EdgeInsets.zero,
-              child: Text(optionLabels[option] ?? '', style: widget.textStyle),
-            )),
-      )
-      .toList();
-
-  List<DropdownMenuItem<T>> _createMultiselectMenuItems() => widget.options
-      .map(
-        (item) => DropdownMenuItem<T>(
-          key: widget.optionsHasValueKeys ? _getItemKey(item) : null,
-          value: item,
-          // Disable default onTap to avoid closing menu when selecting an item
-          enabled: false,
-          child: StatefulBuilder(
-            builder: (context, menuSetState) {
-              final isSelected =
-                  multiSelectController.value?.contains(item) ?? false;
-              return InkWell(
-                  onTap: () {
-                    multiSelectController.value ??= [];
-                    isSelected
-                        ? multiSelectController.value!.remove(item)
-                        : multiSelectController.value!.add(item);
-                    multiSelectController.update();
-                    // This rebuilds the StatefulWidget to update the button's text.
-                    setState(() {});
-                    // This rebuilds the dropdownMenu Widget to update the check mark.
-                    menuSetState(() {});
-                  },
-                  child: Container(
-                    height: double.infinity,
-                    padding: horizontalMargin,
-                    child: Row(
-                      children: [
-                        if (isSelected)
-                          const Icon(Icons.check_box_outlined)
-                        else
-                          const Icon(Icons.check_box_outline_blank),
-                        const SizedBox(width: 16),
-                        Expanded(
-                          child: Text(
-                            optionLabels[item]!,
-                            style: widget.textStyle,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ));
-            },
-          ),
-        ),
-      )
-      .toList();
-
-  Widget _buildDropdown() {
-    final overlayColor = WidgetStateProperty.resolveWith<Color?>((states) =>
-        states.contains(WidgetState.focused) ? Colors.transparent : null);
-    final iconStyleData = widget.icon != null
-        ? IconStyleData(icon: widget.icon!)
-        : const IconStyleData();
-    return DropdownButton2<T>(
-      value: currentValue,
-      hint: _createHintText(),
-      items: isMultiSelect ? _createMultiselectMenuItems() : _createMenuItems(),
-      iconStyleData: iconStyleData,
-      buttonStyleData: ButtonStyleData(
-        elevation: widget.elevation.toInt(),
-        overlayColor: overlayColor,
-        padding: widget.margin,
-      ),
-      menuItemStyleData: MenuItemStyleData(
-        overlayColor: overlayColor,
-        padding: EdgeInsets.zero,
-      ),
-      dropdownStyleData: DropdownStyleData(
-        elevation: widget.elevation.toInt(),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(4.0),
-          color: widget.fillColor,
-        ),
-        isOverButton: widget.isOverButton,
-        offset: widget.menuOffset ?? Offset.zero,
-        maxHeight: widget.maxHeight,
-        padding: EdgeInsets.zero,
-      ),
-      onChanged: widget.disabled
-          ? null
-          : (isMultiSelect ? (_) {} : (val) => widget.controller!.value = val),
-      isExpanded: true,
-      selectedItemBuilder: (context) => widget.options
-          .map(
-            (item) => Align(
-                alignment: AlignmentDirectional.centerStart,
+      child: DropdownButtonHideUnderline(
+        child: DropdownButton<String>(
+          value: _selectedValue,
+          onChanged: widget.disabled
+              ? null
+              : (String? newValue) {
+                  setState(() {
+                    _selectedValue = newValue;
+                  });
+                  widget.onChanged?.call(newValue);
+                },
+          items: _filteredOptions.map<DropdownMenuItem<String>>(
+            (FlutterFlowDropDownOption option) {
+              return DropdownMenuItem<String>(
+                value: option.value,
                 child: Text(
-                  isMultiSelect
-                      ? currentValues
-                          .where((v) => optionLabels.containsKey(v))
-                          .map((v) => optionLabels[v])
-                          .join(', ')
-                      : optionLabels[item]!,
+                  option.label,
                   style: widget.textStyle,
-                  maxLines: 1,
-                )),
-          )
-          .toList(),
-      dropdownSearchData: widget.isSearchable
-          ? DropdownSearchData<T>(
-              searchController: _textEditingController,
-              searchInnerWidgetHeight: 50,
-              searchInnerWidget: Container(
-                height: 50,
-                padding: const EdgeInsets.only(
-                  top: 8,
-                  bottom: 4,
-                  right: 8,
-                  left: 8,
                 ),
-                child: TextFormField(
-                  expands: true,
-                  maxLines: null,
-                  controller: _textEditingController,
-                  cursorColor: widget.searchCursorColor,
-                  style: widget.searchTextStyle,
-                  decoration: InputDecoration(
-                    isDense: true,
-                    contentPadding: const EdgeInsets.symmetric(
-                      horizontal: 10,
-                      vertical: 8,
-                    ),
-                    hintText: widget.searchHintText,
-                    hintStyle: widget.searchHintTextStyle,
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                  ),
-                ),
-              ),
-              searchMatchFn: (item, searchValue) {
-                return (optionLabels[item.value] ?? '')
-                    .toLowerCase()
-                    .contains(searchValue.toLowerCase());
-              },
-            )
-          : null,
-      // This is to clear the search value when you close the menu
-      onMenuStateChange: widget.isSearchable
-          ? (isOpen) {
-              if (!isOpen) {
-                _textEditingController.clear();
-              }
-            }
-          : null,
+              );
+            },
+          ).toList(),
+          icon:
+              widget.icon ?? Icon(Icons.arrow_drop_down, size: widget.iconSize),
+          elevation: widget.elevation?.toInt() ?? 8,
+          dropdownColor: widget.dropdownColor,
+          menuMaxHeight: widget.menuMaxHeight,
+          isExpanded: widget.isExpanded,
+          alignment: widget.alignment ?? AlignmentDirectional.centerStart,
+          selectedItemBuilder: widget.selectedItemBuilder,
+          focusNode: widget.focusNode,
+          autofocus: widget.autofocus,
+          hint: widget.hintText != null
+              ? Text(
+                  widget.hintText!,
+                  style: widget.hintStyle,
+                )
+              : null,
+        ),
+      ),
+    );
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+  }
+}
+
+/// 下拉选项数据模型
+class FlutterFlowDropDownOption {
+  const FlutterFlowDropDownOption({
+    required this.value,
+    required this.label,
+    this.icon,
+    this.description,
+    this.disabled = false,
+  });
+
+  /// 选项值
+  final String value;
+
+  /// 显示标签
+  final String label;
+
+  /// 图标
+  final Widget? icon;
+
+  /// 描述信息
+  final String? description;
+
+  /// 是否禁用
+  final bool disabled;
+}
+
+/// 预设样式
+class FlutterFlowDropDownStyles {
+  /// 默认样式
+  static FlutterFlowDropDown defaultStyle({
+    required List<FlutterFlowDropDownOption> options,
+    required Function(String?)? onChanged,
+    String? initialValue,
+    double? width,
+    String? hintText,
+  }) {
+    return FlutterFlowDropDown(
+      options: options,
+      onChanged: onChanged,
+      initialValue: initialValue,
+      width: width,
+      hintText: hintText,
+      fillColor: Colors.white,
+      borderWidth: 1,
+      borderColor: Colors.grey.shade300,
+      borderRadius: 8,
+      textStyle: TextStyle(fontSize: 16),
+    );
+  }
+
+  /// 圆角样式
+  static FlutterFlowDropDown roundedStyle({
+    required List<FlutterFlowDropDownOption> options,
+    required Function(String?)? onChanged,
+    String? initialValue,
+    double? width,
+    String? hintText,
+  }) {
+    return FlutterFlowDropDown(
+      options: options,
+      onChanged: onChanged,
+      initialValue: initialValue,
+      width: width,
+      hintText: hintText,
+      fillColor: Colors.white,
+      borderWidth: 2,
+      borderColor: Colors.blue.shade300,
+      borderRadius: 20,
+      textStyle: TextStyle(fontSize: 16, color: Colors.blue.shade700),
+      icon: Icon(Icons.keyboard_arrow_down, color: Colors.blue.shade500),
+    );
+  }
+
+  /// 扁平化样式
+  static FlutterFlowDropDown flatStyle({
+    required List<FlutterFlowDropDownOption> options,
+    required Function(String?)? onChanged,
+    String? initialValue,
+    double? width,
+    String? hintText,
+  }) {
+    return FlutterFlowDropDown(
+      options: options,
+      onChanged: onChanged,
+      initialValue: initialValue,
+      width: width,
+      hintText: hintText,
+      fillColor: Colors.grey.shade100,
+      borderWidth: 0,
+      borderRadius: 4,
+      textStyle: TextStyle(fontSize: 16, color: Colors.grey.shade800),
+      icon: Icon(Icons.expand_more, color: Colors.grey.shade600),
     );
   }
 }

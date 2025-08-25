@@ -26,7 +26,8 @@ class _TranscendentalItineraryManifestorChatVideoWidgetState
   late TranscendentalItineraryManifestorChatVideoModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
-
+  bool aromaticWandererTraditionBook = false;
+  bool olfactoryBazaarJourneyRegistry = false;
   @override
   void initState() {
     super.initState();
@@ -109,23 +110,31 @@ class _TranscendentalItineraryManifestorChatVideoWidgetState
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Container(
-                        width: 60.0,
-                        height: 60.0,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            fit: BoxFit.cover,
-                            image: Image.asset(
-                              'assets/images/ydfsydfgi_ysdgfyusdgfyuisgdyuigsid.png',
-                            ).image,
+                      GestureDetector(
+                        onTap: () async {
+                          setState(() {
+                            aromaticWandererTraditionBook =
+                                !aromaticWandererTraditionBook;
+                          });
+                        },
+                        child: AnimatedContainer(
+                          duration: Duration(milliseconds: 320),
+                          curve: Curves.easeInOut,
+                          width: 60.0,
+                          height: 60.0,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: Image.asset(
+                                aromaticWandererTraditionBook == false
+                                    ? 'assets/images/ydfsydfgi_ysdgfyusdgfyuisgdyuigsid.png'
+                                    : 'assets/images/dfghdufohduiofg_erisdfasuiogdaudofg.png',
+                              ).image,
+                            ),
                           ),
                         ),
                       ),
-                      InkWell(
-                        splashColor: Colors.transparent,
-                        focusColor: Colors.transparent,
-                        hoverColor: Colors.transparent,
-                        highlightColor: Colors.transparent,
+                      GestureDetector(
                         onTap: () async {
                           context.safePop();
                         },
@@ -142,15 +151,27 @@ class _TranscendentalItineraryManifestorChatVideoWidgetState
                           ),
                         ),
                       ),
-                      Container(
-                        width: 60.0,
-                        height: 60.0,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            fit: BoxFit.cover,
-                            image: Image.asset(
-                              'assets/images/dfghidufhuidfd_vcbiugdfuiaudfgyisdgfy.png',
-                            ).image,
+                      GestureDetector(
+                        onTap: () async {
+                          setState(() {
+                            olfactoryBazaarJourneyRegistry =
+                                !olfactoryBazaarJourneyRegistry;
+                          });
+                        },
+                        child: AnimatedContainer(
+                          duration: Duration(milliseconds: 320),
+                          curve: Curves.easeInOut,
+                          width: 60.0,
+                          height: 60.0,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: Image.asset(
+                                olfactoryBazaarJourneyRegistry == false
+                                    ? 'assets/images/dfghidufhuidfd_vcbiugdfuiaudfgyisdgfy.png'
+                                    : 'assets/images/adsfghudifohguiaoyuigr_sadiuuyaisdihifuisdohfi.png',
+                              ).image,
+                            ),
                           ),
                         ),
                       ),

@@ -1,3 +1,6 @@
+import 'package:flutter/services.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +14,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   GoRouter.optionURLReflectsImperativeAPIs = true;
   usePathUrlStrategy();
-
+  FlutterNativeSplash.removeAfter(emotionAnalysisOfFatedTogetherness);
   await FlutterFlowTheme.initialize();
 
   final appState = FFAppState(); // Initialize FFAppState
@@ -21,6 +24,10 @@ void main() async {
     create: (context) => appState,
     child: MyApp(),
   ));
+}
+
+Future<void> emotionAnalysisOfFatedTogetherness(BuildContext? context) async {
+  await Future.delayed(Duration(milliseconds: 600));
 }
 
 class MyApp extends StatefulWidget {
@@ -50,7 +57,6 @@ class _MyAppState extends State<MyApp> {
       _router.routerDelegate.currentConfiguration.matches
           .map((e) => getRoute(e))
           .toList();
-  bool displaySplashImage = true;
 
   @override
   void initState() {
@@ -70,6 +76,9 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+    ]);
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: 'Travel',
@@ -89,6 +98,7 @@ class _MyAppState extends State<MyApp> {
       ),
       themeMode: _themeMode,
       routerConfig: _router,
+      builder: FlutterSmartDialog.init(),
     );
   }
 }
@@ -128,10 +138,10 @@ class _NavBarPageState extends State<NavBarPage> {
           SetOffFrontierQuestTideRushNavigatorHomepageWidget(),
       'SetOffHorizonQuestJourneySeaBound_discover':
           SetOffHorizonQuestJourneySeaBoundDiscoverWidget(),
-      'SandStormVentureOasisWhisperTracer_info':
-          SandStormVentureOasisWhisperTracerInfoWidget(),
       'EudaimonicTraverseNarratives_chatsroom':
           EudaimonicTraverseNarrativesChatsroomWidget(),
+      'SandStormVentureOasisWhisperTracer_info':
+          SandStormVentureOasisWhisperTracerInfoWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
@@ -145,43 +155,73 @@ class _NavBarPageState extends State<NavBarPage> {
           _currentPageName = tabs.keys.toList()[i];
         }),
         backgroundColor: FlutterFlowTheme.of(context).info,
-        selectedItemColor: FlutterFlowTheme.of(context).primary,
-        unselectedItemColor: FlutterFlowTheme.of(context).secondaryText,
         showSelectedLabels: false,
         showUnselectedLabels: false,
         type: BottomNavigationBarType.fixed,
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home_outlined,
-              size: 24.0,
+            icon: AnimatedContainer(
+              duration: Duration(milliseconds: 280),
+              curve: Curves.easeInOut,
+              width: 32,
+              height: 32,
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: Image.asset(currentIndex != 0
+                              ? 'assets/images/sdgfuihuioegiyu_sdifygyewitusduhigsyduf.png'
+                              : 'assets/images/dgfuysgiyweug_vbydsugfytuweiydsustfd.png')
+                          .image)),
             ),
             label: 'Home',
-            tooltip: '',
           ),
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home_outlined,
-              size: 24.0,
+            icon: AnimatedContainer(
+              duration: Duration(milliseconds: 280),
+              curve: Curves.easeInOut,
+              width: 32,
+              height: 32,
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: Image.asset(currentIndex != 1
+                              ? 'assets/images/giyurgsydgfusidf_cvbysugfsiuyfdgys.png'
+                              : 'assets/images/wegfysgvdfiuasdygf_vygyfgieuffwfysgfiu.png')
+                          .image)),
             ),
-            label: 'Home',
-            tooltip: '',
+            label: 'discover',
           ),
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home_outlined,
-              size: 24.0,
+            icon: AnimatedContainer(
+              duration: Duration(milliseconds: 280),
+              curve: Curves.easeInOut,
+              width: 32,
+              height: 32,
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: Image.asset(currentIndex != 2
+                              ? 'assets/images/sgfyuiegyfgewiuygw_cvyuefgtwiegyuwueigouhw.png'
+                              : 'assets/images/wgfyugewyufuiyw_sdcvywuegiyuwge.png')
+                          .image)),
             ),
-            label: 'Home',
-            tooltip: '',
+            label: 'chat',
           ),
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home_outlined,
-              size: 24.0,
+            icon: AnimatedContainer(
+              duration: Duration(milliseconds: 280),
+              curve: Curves.easeInOut,
+              width: 32,
+              height: 32,
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: Image.asset(currentIndex != 3
+                              ? 'assets/images/gvywgfushiodf_vgygfiuygyiugy.png'
+                              : 'assets/images/werguyhsuidfgdyuif_vsbdysgdfigygiut.png')
+                          .image)),
             ),
-            label: 'Home',
-            tooltip: '',
+            label: 'info',
           )
         ],
       ),

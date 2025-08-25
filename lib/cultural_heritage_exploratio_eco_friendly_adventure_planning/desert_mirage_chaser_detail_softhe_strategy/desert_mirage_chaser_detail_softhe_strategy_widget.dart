@@ -81,6 +81,7 @@ class _DesertMirageChaserDetailSoftheStrategyWidgetState
                                 ?.ethnoscapePilgrimageStrategyGuideDatediray
                                 .toList() ??
                             [];
+
                         if (bazaarFragranceAdventureLog.isEmpty) {
                           return Center(
                             child:
@@ -99,163 +100,86 @@ class _DesertMirageChaserDetailSoftheStrategyWidgetState
                             final bazaarFragranceAdventureLogItem =
                                 bazaarFragranceAdventureLog[
                                     bazaarFragranceAdventureLogIndex];
-                            return Row(
-                              mainAxisSize: MainAxisSize.max,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Column(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Container(
-                                      width: 16.0,
-                                      height: 16.0,
-                                      decoration: BoxDecoration(
-                                        image: DecorationImage(
-                                          fit: BoxFit.cover,
-                                          image: Image.asset(
-                                            'assets/images/asdgyuiegyuisgdky_zxugcsdyufigsyudgfiuysd.png',
-                                          ).image,
-                                        ),
-                                      ),
-                                    ),
-                                    Container(
-                                      width: 2.0,
-                                      height: 117.0,
-                                      decoration: BoxDecoration(
-                                        image: DecorationImage(
-                                          fit: BoxFit.cover,
-                                          image: Image.asset(
-                                            'assets/images/sdfgsydgyuasidgysd_cvbsdyufgstuydfatyusfdtya.png',
-                                          ).image,
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                Flexible(
-                                  child: Container(
-                                    width: double.infinity,
-                                    height: 97.0,
-                                    decoration: BoxDecoration(
-                                      color: FlutterFlowTheme.of(context).info,
-                                      boxShadow: [
-                                        BoxShadow(
-                                          blurRadius: 6.0,
-                                          color: Color(0x3F000000),
-                                          offset: Offset(
-                                            0.0,
-                                            0.0,
+                            return Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 0.0, 0.0, 8.0),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Column(
+                                    mainAxisSize: MainAxisSize.max,
+                                    children: [
+                                      Container(
+                                        width: 12.0,
+                                        height: 12.0,
+                                        decoration: BoxDecoration(
+                                          image: DecorationImage(
+                                            fit: BoxFit.cover,
+                                            image: Image.asset(
+                                              'assets/images/asdgyuiegyuisgdky_zxugcsdyufigsyudgfiuysd.png',
+                                            ).image,
                                           ),
-                                        )
-                                      ],
-                                      borderRadius: BorderRadius.circular(12.0),
-                                    ),
-                                    child: Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      children: [
-                                        Container(
-                                          width: 59.0,
-                                          height: double.infinity,
-                                          decoration: BoxDecoration(
-                                            color: FlutterFlowTheme.of(context)
-                                                .secondaryBackground,
-                                            borderRadius: BorderRadius.only(
-                                              bottomLeft: Radius.circular(12.0),
-                                              bottomRight: Radius.circular(0.0),
-                                              topLeft: Radius.circular(12.0),
-                                              topRight: Radius.circular(0.0),
+                                        ),
+                                      ),
+                                      Container(
+                                        width: 2.0,
+                                        height: 117.0,
+                                        decoration: BoxDecoration(
+                                          image: DecorationImage(
+                                            fit: BoxFit.cover,
+                                            image: Image.asset(
+                                              'assets/images/sdfgsydgyuasidgysd_cvbsdyufgstuydfatyusfdtya.png',
+                                            ).image,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  Flexible(
+                                    child: Container(
+                                      width: double.infinity,
+                                      height: 100,
+                                      decoration: BoxDecoration(
+                                        color:
+                                            FlutterFlowTheme.of(context).info,
+                                        boxShadow: [
+                                          BoxShadow(
+                                            blurRadius: 6.0,
+                                            color: Color(0x3F000000),
+                                            offset: Offset(
+                                              0.0,
+                                              0.0,
                                             ),
-                                          ),
-                                          child: Column(
-                                            mainAxisSize: MainAxisSize.max,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            children: [
-                                              Text(
-                                                'Day',
-                                                style: FlutterFlowTheme.of(
-                                                        context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      fontFamily:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyMediumFamily,
-                                                      color: Color(0xFFF7BA4A),
-                                                      fontSize: 18.0,
-                                                      letterSpacing: 0.0,
-                                                      fontWeight:
-                                                          FontWeight.w900,
-                                                      useGoogleFonts:
-                                                          !FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyMediumIsCustom,
-                                                    ),
+                                          )
+                                        ],
+                                        borderRadius:
+                                            BorderRadius.circular(12.0),
+                                      ),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        children: [
+                                          Container(
+                                            width: 59.0,
+                                            height: 100,
+                                            decoration: BoxDecoration(
+                                              color: Colors.black,
+                                              borderRadius: BorderRadius.only(
+                                                bottomLeft:
+                                                    Radius.circular(12.0),
+                                                bottomRight:
+                                                    Radius.circular(0.0),
+                                                topLeft: Radius.circular(12.0),
+                                                topRight: Radius.circular(0.0),
                                               ),
-                                              Container(
-                                                width: 37.0,
-                                                height: 1.0,
-                                                decoration: BoxDecoration(
-                                                  image: DecorationImage(
-                                                    fit: BoxFit.cover,
-                                                    image: Image.asset(
-                                                      'assets/images/sdfgsysgcvsuytfsduy_weuiygefsbdcvsuvdifuysagd.png',
-                                                    ).image,
-                                                  ),
-                                                ),
-                                              ),
-                                              Text(
-                                                '0${bazaarFragranceAdventureLogItem.mythopoeicTrailblazerDatedescribeId.toString()}',
-                                                style: FlutterFlowTheme.of(
-                                                        context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      fontFamily:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyMediumFamily,
-                                                      color: Color(0xFFF7BA4A),
-                                                      fontSize: 18.0,
-                                                      letterSpacing: 0.0,
-                                                      fontWeight:
-                                                          FontWeight.w900,
-                                                      useGoogleFonts:
-                                                          !FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyMediumIsCustom,
-                                                    ),
-                                              ),
-                                            ].divide(SizedBox(height: 14.0)),
-                                          ),
-                                        ),
-                                        Flexible(
-                                          child: Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    12.0, 12.0, 12.0, 0.0),
+                                            ),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
                                               children: [
                                                 Text(
-                                                  bazaarFragranceAdventureLogItem
-                                                      .mythopoeicTrailblazerDatedescribeTitle,
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        fontFamily: 'hongmeng',
-                                                        color:
-                                                            Color(0xCD000000),
-                                                        fontSize: 16.0,
-                                                        letterSpacing: 0.0,
-                                                        fontWeight:
-                                                            FontWeight.w500,
-                                                      ),
-                                                ),
-                                                Text(
-                                                  '${bazaarFragranceAdventureLogItem.mythopoeicTrailblazerDatedescribeMsg}',
+                                                  'Day',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .bodyMedium
@@ -265,23 +189,116 @@ class _DesertMirageChaserDetailSoftheStrategyWidgetState
                                                                     context)
                                                                 .bodyMediumFamily,
                                                         color:
-                                                            Color(0x99000000),
+                                                            Color(0xFFF7BA4A),
+                                                        fontSize: 18.0,
                                                         letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FontWeight.w900,
                                                         useGoogleFonts:
                                                             !FlutterFlowTheme
                                                                     .of(context)
                                                                 .bodyMediumIsCustom,
                                                       ),
                                                 ),
-                                              ].divide(SizedBox(height: 6.0)),
+                                                Container(
+                                                  width: 37.0,
+                                                  height: 1.0,
+                                                  decoration: BoxDecoration(
+                                                    image: DecorationImage(
+                                                      fit: BoxFit.cover,
+                                                      image: Image.asset(
+                                                        'assets/images/sdfgsysgcvsuytfsduy_weuiygefsbdcvsuvdifuysagd.png',
+                                                      ).image,
+                                                    ),
+                                                  ),
+                                                ),
+                                                Text(
+                                                  '0${bazaarFragranceAdventureLogItem.mythopoeicTrailblazerDatedescribeId.toString()}',
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMediumFamily,
+                                                        color:
+                                                            Color(0xFFF7BA4A),
+                                                        fontSize: 18.0,
+                                                        letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FontWeight.w900,
+                                                        useGoogleFonts:
+                                                            !FlutterFlowTheme
+                                                                    .of(context)
+                                                                .bodyMediumIsCustom,
+                                                      ),
+                                                ),
+                                              ].divide(SizedBox(height: 14.0)),
                                             ),
                                           ),
-                                        ),
-                                      ],
+                                          Flexible(
+                                            child: Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      12.0, 8.0, 12.0, 8.0),
+                                              child: Column(
+                                                mainAxisSize: MainAxisSize.max,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
+                                                children: [
+                                                  Text(
+                                                    bazaarFragranceAdventureLogItem
+                                                        .mythopoeicTrailblazerDatedescribeTitle,
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'hongmeng',
+                                                          color:
+                                                              Color(0xCD000000),
+                                                          fontSize: 15.0,
+                                                          letterSpacing: 0.0,
+                                                          fontWeight:
+                                                              FontWeight.w500,
+                                                        ),
+                                                  ),
+                                                  Text(
+                                                    '${bazaarFragranceAdventureLogItem.mythopoeicTrailblazerDatedescribeMsg}'
+                                                        .maybeHandleOverflow(
+                                                            maxChars: 50,
+                                                            replacement: '...'),
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMediumFamily,
+                                                          color:
+                                                              Color(0x99000000),
+                                                          fontSize: 12.0,
+                                                          letterSpacing: 0.0,
+                                                          useGoogleFonts:
+                                                              !FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .bodyMediumIsCustom,
+                                                        ),
+                                                  ),
+                                                ].divide(SizedBox(height: 4.0)),
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
                                     ),
                                   ),
-                                ),
-                              ].divide(SizedBox(width: 16.0)),
+                                ].divide(SizedBox(width: 16.0)),
+                              ),
                             );
                           },
                         );

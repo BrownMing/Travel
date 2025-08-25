@@ -1,3 +1,4 @@
+import '../../urban_whisper_seeker_metro_alley_unveil/world_wonder_wanderlust_voyager_upload_file/world_wonder_wanderlust_voyager_upload_file_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -42,6 +43,55 @@ class _WanderlustItineraryVortexSignUpWidgetState
     _model.dispose();
 
     super.dispose();
+  }
+
+  Future<void> _nomadicScentVoyagerArchive(BuildContext context) async {
+    final email = _model.textController1.text.trim();
+    final password = _model.textController2.text.trim();
+    final confirmPassword = _model.textController3.text.trim();
+
+    if (email.isEmpty) {
+      trailTreasureJourneyCompan(
+          context, 'Please enter your email address.', 'error');
+      return;
+    }
+
+    if (password.isEmpty) {
+      trailTreasureJourneyCompan(
+          context, 'Please enter the password.', 'error');
+      return;
+    }
+
+    if (confirmPassword.isEmpty) {
+      trailTreasureJourneyCompan(
+          context, 'Please enter the password again!', 'error');
+      return;
+    }
+
+    if (password != confirmPassword) {
+      trailTreasureJourneyCompan(
+          context, 'The two inputs are inconsistent.', 'error');
+      setState(() {
+        _model.textController3?.clear();
+      });
+      return;
+    }
+
+    context.pushNamed(
+      WorldWonderWanderlustVoyagerUploadFileWidget.routeName,
+      queryParameters: {
+        'aromaInfusedJourneyChronicleMaill':
+            serializeParam(email, ParamType.String),
+        'bazaarOdysseyExperiencePassword':
+            serializeParam(password, ParamType.String),
+      }.withoutNulls,
+      extra: <String, dynamic>{
+        kTransitionInfoKey: TransitionInfo(
+          hasTransition: true,
+          transitionType: PageTransitionType.rightToLeft,
+        ),
+      },
+    );
   }
 
   @override
@@ -335,7 +385,7 @@ class _WanderlustItineraryVortexSignUpWidgetState
                                         focusNode: _model.textFieldFocusNode2,
                                         autofocus: false,
                                         textInputAction: TextInputAction.done,
-                                        obscureText: false,
+                                        obscureText: true,
                                         decoration: InputDecoration(
                                           isDense: true,
                                           labelStyle: FlutterFlowTheme.of(
@@ -438,7 +488,7 @@ class _WanderlustItineraryVortexSignUpWidgetState
                                         focusNode: _model.textFieldFocusNode3,
                                         autofocus: false,
                                         textInputAction: TextInputAction.done,
-                                        obscureText: false,
+                                        obscureText: true,
                                         decoration: InputDecoration(
                                           isDense: true,
                                           labelStyle: FlutterFlowTheme.of(
@@ -532,8 +582,8 @@ class _WanderlustItineraryVortexSignUpWidgetState
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 62.0, 0.0, 0.0),
                             child: FFButtonWidget(
-                              onPressed: () {
-                                print('Button pressed ...');
+                              onPressed: () async {
+                                await _nomadicScentVoyagerArchive(context);
                               },
                               text: 'Sign up',
                               options: FFButtonOptions(

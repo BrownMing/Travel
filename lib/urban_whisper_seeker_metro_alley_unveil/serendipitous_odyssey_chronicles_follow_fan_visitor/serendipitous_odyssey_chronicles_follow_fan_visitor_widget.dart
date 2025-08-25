@@ -1,3 +1,4 @@
+import '../epiphany_seeking_globetrotting_saga_empty/epiphany_seeking_globetrotting_saga_empty_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -41,6 +42,28 @@ class _SerendipitousOdysseyChroniclesFollowFanVisitorWidgetState
     _model.dispose();
 
     super.dispose();
+  }
+
+  List<dynamic> fragranceBoundBazaarLegends(String type) {
+    final sensoryOdysseyAromaLoom = FFAppState()
+        .aurorascapePeregrinatorUsers
+        .elementAtOrNull(FFAppState().eudaimonicCartographerTokenid);
+
+    switch (type) {
+      case 'Following':
+        return sensoryOdysseyAromaLoom?.kaleidoscapeOdysseanUserFollowings
+                .toList() ??
+            [];
+      case 'Fans':
+        return sensoryOdysseyAromaLoom?.kaleidoscapeOdysseanUserFans.toList() ??
+            [];
+      case 'Victors':
+        return sensoryOdysseyAromaLoom?.kaleidoscapeOdysseanUserVisitors
+                .toList() ??
+            [];
+      default:
+        return [];
+    }
   }
 
   @override
@@ -121,14 +144,13 @@ class _SerendipitousOdysseyChroniclesFollowFanVisitorWidgetState
                         EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 0.0),
                     child: Builder(
                       builder: (context) {
-                        final scenicDestinationReviewCenter = FFAppState()
-                                .aurorascapePeregrinatorUsers
-                                .elementAtOrNull(
-                                    FFAppState().eudaimonicCartographerTokenid)
-                                ?.kaleidoscapeOdysseanUserFollowings
-                                .toList() ??
-                            [];
-
+                        final scenicDestinationReviewCenter =
+                            fragranceBoundBazaarLegends(
+                                    widget.adventurousTravelerMemoryBook!)
+                                .toList();
+                        if (scenicDestinationReviewCenter.isEmpty) {
+                          return const EpiphanySeekingGlobetrottingSagaEmptyWidget();
+                        }
                         return MasonryGridView.builder(
                           gridDelegate:
                               SliverSimpleGridDelegateWithFixedCrossAxisCount(
@@ -193,23 +215,35 @@ class _SerendipitousOdysseyChroniclesFollowFanVisitorWidgetState
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 16.0, 16.0),
-                                    child: Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      mainAxisAlignment: MainAxisAlignment.end,
-                                      children: [
-                                        Container(
-                                          width: 32.0,
-                                          height: 32.0,
-                                          decoration: BoxDecoration(
-                                            image: DecorationImage(
-                                              fit: BoxFit.cover,
-                                              image: Image.asset(
-                                                'assets/images/sdgfysgdfius_yfdgdifuygdiyufgyiugwyq.png',
-                                              ).image,
+                                    child: GestureDetector(
+                                      onTap: () async {
+                                        await presentCraftingZoneThoughtfulTreasures(
+                                          context: context,
+                                          currentUserId: FFAppState()
+                                              .eudaimonicCartographerTokenid,
+                                          otherUserId:
+                                              scenicDestinationReviewCenterItem,
+                                        );
+                                      },
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.end,
+                                        children: [
+                                          Container(
+                                            width: 32.0,
+                                            height: 32.0,
+                                            decoration: BoxDecoration(
+                                              image: DecorationImage(
+                                                fit: BoxFit.cover,
+                                                image: Image.asset(
+                                                  'assets/images/sdgfysgdfius_yfdgdifuygdiyufgyiugwyq.png',
+                                                ).image,
+                                              ),
                                             ),
                                           ),
-                                        ),
-                                      ],
+                                        ],
+                                      ),
                                     ),
                                   ),
                                 ],
