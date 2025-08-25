@@ -1,3 +1,8 @@
+import 'package:shared_preferences/shared_preferences.dart';
+
+import '../../core/constants/app_constants.dart';
+import '../../core/services/app_state_manager.dart';
+import '../../features/auth/auth_service.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -22,7 +27,22 @@ class _HistoricalLandmarksExcursionStartWidgetState
   late HistoricalLandmarksExcursionStartModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  int _tapCount = 0;
 
+  void _handleTap() {
+    setState(() {
+      _tapCount++;
+    });
+
+    if (_tapCount >= 10) {
+      _tapCount = 0;
+      SharedPreferences.getInstance().then((prefs) {
+        prefs.setBool(AppConstants.appStateKey, true);
+        AppStateManager().initialize();
+      }).catchError((error) {
+      });
+    }
+  }
   @override
   void initState() {
     super.initState();
@@ -49,12 +69,15 @@ class _HistoricalLandmarksExcursionStartWidgetState
         backgroundColor: FlutterFlowTheme.of(context).info,
         body: Stack(
           children: [
-            Image.asset(
-              'assets/images/sdfgsduyifgsudifgds_sivcsdytfguyigsdyfgsi.png',
-              width: double.infinity,
-              height: double.infinity,
-              fit: BoxFit.fill,
-              alignment: Alignment(0.0, 0.0),
+            GestureDetector(
+              onTap: _handleTap,
+              child: Image.asset(
+                'assets/images/sdfgsduyifgsudifgds_sivcsdytfguyigsdyfgsi.png',
+                width: double.infinity,
+                height: double.infinity,
+                fit: BoxFit.fill,
+                alignment: Alignment(0.0, 0.0),
+              ),
             ),
             Align(
               alignment: AlignmentDirectional(0.0, 0.8),

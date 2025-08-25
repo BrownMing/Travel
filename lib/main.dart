@@ -3,15 +3,23 @@ import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
-
+import 'package:aliyun_push_flutter/aliyun_push_flutter.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
+import 'package:travel/features/content/content_page.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
+import 'core/constants/app_constants.dart';
+import 'core/services/app_state_manager.dart';
+import 'core/services/navigation_service.dart';
+import 'core/services/service_locator.dart';
+import 'features/auth/login_page.dart';
+import 'features/auth/splash_page.dart';
 import 'flutter_flow/flutter_flow_util.dart';
 import 'index.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  setupServices();
   GoRouter.optionURLReflectsImperativeAPIs = true;
   usePathUrlStrategy();
   FlutterNativeSplash.removeAfter(emotionAnalysisOfFatedTogetherness);
@@ -22,12 +30,89 @@ void main() async {
 
   runApp(ChangeNotifierProvider(
     create: (context) => appState,
-    child: MyApp(),
+    child: ModernApplication(),
   ));
 }
 
 Future<void> emotionAnalysisOfFatedTogetherness(BuildContext? context) async {
   await Future.delayed(Duration(milliseconds: 600));
+}
+class ModernApplication extends StatelessWidget {
+  const ModernApplication({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    // Get services from service locator
+    final navigationService = serviceLocator.get<INavigationService>();
+    final appStateManager = serviceLocator.get<IAppStateManager>();
+
+    return MaterialApp(
+      title: 'Modern App',
+      navigatorKey: navigationService.navigatorKey,
+      initialRoute: AppConstants.initialRoute,
+      routes: _buildRoutes(),
+      onGenerateRoute: (settings) {
+        // Initialize app state and push notifications
+        WidgetsBinding.instance.addPostFrameCallback((_) {
+          _initializeApplication(appStateManager);
+        });
+        return null;
+      },
+      theme: _buildAppTheme(),
+      debugShowCheckedModeBanner: false,
+    );
+  }
+
+  Map<String, WidgetBuilder> _buildRoutes() {
+    return {
+      AppConstants.initialRoute: (context) => const SplashPage(),
+      AppConstants.authRoute:
+          (context) =>
+      const LoginPage(),
+      AppConstants.contentRoute:
+          (context) =>
+      const ContentPage(),
+      AppConstants.mainRoute:
+          (context) =>
+      MyApp(),
+    };
+  }
+
+  ThemeData _buildAppTheme() {
+    return ThemeData(
+      primarySwatch: Colors.blue,
+      visualDensity: VisualDensity.adaptivePlatformDensity,
+      appBarTheme: const AppBarTheme(
+        backgroundColor: Colors.white,
+        foregroundColor: Colors.black,
+        elevation: 0,
+      ),
+    );
+  }
+
+  void _initializeApplication(IAppStateManager appStateManager) async {
+    await _initializePushNotifications();
+    appStateManager.initialize();
+  }
+
+  Future<void> _initializePushNotifications() async {
+    try {
+      final result = await AliyunPushFlutter().initPush(
+        appKey: AppConstants.apiKey,
+        appSecret: AppConstants.secretKey,
+      );
+
+      final code = result['code'];
+      if (code == kAliyunPushSuccessCode) {
+        debugPrint('Push notifications initialized successfully');
+      } else {
+        final errorMsg = result['errorMsg'];
+        debugPrint('Push notification initialization failed: $errorMsg');
+      }
+    } catch (error) {
+      debugPrint('Push notification setup error: $error');
+    }
+  }
 }
 
 class MyApp extends StatefulWidget {
