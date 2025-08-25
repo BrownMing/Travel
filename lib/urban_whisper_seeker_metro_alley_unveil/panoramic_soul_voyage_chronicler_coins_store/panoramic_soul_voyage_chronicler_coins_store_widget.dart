@@ -267,10 +267,10 @@ class _PanoramicSoulVoyageChroniclerCoinsStoreWidgetState
                                             HapticFeedback.heavyImpact();
 
                                             safeSetState(() {
-                                              _model.joyfulPresentSharingExperience =
+                                              _model.spiceTrailBazaarStoryAtlas =
                                                   heartfeltWanderlustMemoryBaseItem;
 
-                                              _model.celebrationPlanningAndGiftCuration(
+                                              _model.sensoryOdysseyBazaarBlueprint(
                                                   heartfeltWanderlustMemoryBaseItem
                                                       .opredictiveJourneyOfHeartfeltProductid);
                                             });

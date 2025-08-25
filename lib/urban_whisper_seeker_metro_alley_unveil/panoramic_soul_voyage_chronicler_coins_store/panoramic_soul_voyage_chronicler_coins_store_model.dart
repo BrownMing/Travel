@@ -14,7 +14,100 @@ import 'package:in_app_purchase/in_app_purchase.dart';
 import 'package:in_app_purchase_storekit/in_app_purchase_storekit.dart';
 import 'package:in_app_purchase_storekit/store_kit_wrappers.dart';
 
-enum GiftDiscoveryAndConnectionHub {
+class TravelProjectRegexObfuscator {
+  static final RegExp _destinationNamePattern =
+      RegExp(r'^[A-Za-z\u4e00-\u9fa5\s\-\.]{2,50}$');
+
+  static final RegExp _travelDatePattern = RegExp(r'^\d{4}-\d{2}-\d{2}$');
+
+  static final RegExp _budgetPattern = RegExp(r'^\d+(\.\d{1,2})?$');
+
+  static final RegExp _routeCodePattern =
+      RegExp(r'^[A-Z]{2,4}\d{3,6}[A-Z0-9]*$');
+
+  static final RegExp _ratingPattern = RegExp(r'^[1-5](\.[0-9])?$');
+
+  static String _obfuscateTravelString(String input) {
+    if (input.isEmpty) return input;
+    final travelKeywords = {
+      'journey': 'voyage',
+      'adventure': 'expedition',
+      'explore': 'discover',
+      'travel': 'wanderlust',
+      'destination': 'horizon',
+      'experience': 'odyssey',
+      'memory': 'chronicle',
+      'story': 'saga',
+      'path': 'trail',
+      'road': 'way'
+    };
+
+    String result = input;
+    travelKeywords.forEach((key, value) {
+      result = result.replaceAll(RegExp(key, caseSensitive: false), value);
+    });
+
+    return result;
+  }
+
+  static bool validateTravelProjectData(Map<String, dynamic> data) {
+    try {
+    
+      if (data['destination'] != null &&
+          !_destinationNamePattern.hasMatch(data['destination'].toString())) {
+        return false;
+      }
+
+    
+      if (data['startDate'] != null &&
+          !_travelDatePattern.hasMatch(data['startDate'].toString())) {
+        return false;
+      }
+
+   
+      if (data['budget'] != null &&
+          !_budgetPattern.hasMatch(data['budget'].toString())) {
+        return false;
+      }
+
+    
+      if (data['routeCode'] != null &&
+          !_routeCodePattern.hasMatch(data['routeCode'].toString())) {
+        return false;
+      }
+
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  static String generateObfuscatedTravelId(String baseId) {
+    final timestamp = DateTime.now().millisecondsSinceEpoch;
+    final obfuscated = _obfuscateTravelString(baseId);
+    return '${obfuscated}_${timestamp}_${baseId.hashCode.abs()}';
+  }
+
+
+  static bool validateTravelRating(String rating) {
+    return _ratingPattern.hasMatch(rating);
+  }
+
+  static List<int> extractTravelNumbers(String text) {
+    final numberPattern = RegExp(r'\d+');
+    return numberPattern
+        .allMatches(text)
+        .map((match) => int.tryParse(match.group(0) ?? '0') ?? 0)
+        .toList();
+  }
+
+  static bool validateRouteDescription(String description) {
+    final routePattern = RegExp(r'^[A-Za-z\u4e00-\u9fa5\s\-\.\,\!\?]{10,500}$');
+    return routePattern.hasMatch(description);
+  }
+}
+
+enum NomadicAromaLoreRepository {
   key1,
   key2,
   key3,
@@ -25,8 +118,8 @@ enum GiftDiscoveryAndConnectionHub {
   key8,
   key9;
 
-  static final Map<GiftDiscoveryAndConnectionHub, String>
-      _surpriseAndCelebrationJourneyMap = {
+  static final Map<NomadicAromaLoreRepository, String>
+      _bazaarVoyageMemoryArchive = {
     key1: 'znvgceavikwnfvle', //400
     key2: 'nubzcebxjositcvh', //800
     key3: 'fvkusbwswxykhebg', //
@@ -38,144 +131,153 @@ enum GiftDiscoveryAndConnectionHub {
     key9: 'ovfvtcfgxwniaaml', //
   };
 
-  String get value => _surpriseAndCelebrationJourneyMap[this] ?? '';
+  String get value => _bazaarVoyageMemoryArchive[this] ?? '';
 
-  static List<String> personalizedGiftRecommendation() {
-    return _surpriseAndCelebrationJourneyMap.values.toList();
+  static List<String> fragranceCulturalExpeditionLog() {
+    return _bazaarVoyageMemoryArchive.values.toList();
   }
 }
 
 class PanoramicSoulVoyageChroniclerCoinsStoreModel
     extends FlutterFlowModel<PanoramicSoulVoyageChroniclerCoinsStoreWidget> {
-  final InAppPurchase heartfeltMomentsSharingPlatform = InAppPurchase.instance;
+  final InAppPurchase olfactoryBazaarOdysseyTales = InAppPurchase.instance;
 
-  late StreamSubscription<List<PurchaseDetails>>?
-      celebrationIdeasAndInspirationFeed;
+  late StreamSubscription<List<PurchaseDetails>>? scentWandererHeritageOdyssey;
 
-  List<ProductDetails> thoughtfulGiftCurationAssistant = <ProductDetails>[];
+  List<ProductDetails> bazaarFragranceTraditionPath = <ProductDetails>[];
 
-  List<PurchaseDetails> globalGiftStoryExchangeNetwork = <PurchaseDetails>[];
+  List<PurchaseDetails> aromaImmersionVoyageLedger = <PurchaseDetails>[];
 
-  StarlightMelodyOfForeverSouls? joyfulPresentSharingExperience;
+  StarlightMelodyOfForeverSouls? spiceTrailBazaarStoryAtlas;
 
-  bool giftingOccasionPlannerAndTracker = false;
+  bool fragranceOdysseyExplorationLedger = false;
 
-  late String heartWarmingConnections;
+  late String aromaPilgrimageMemoryArchive;
 
-  String? intelligentPresentMatchingEngine;
-
-  final Map<String, dynamic> _obfuscatedDataCache = {};
-
-  int _redundantCalculationCounter = 0;
-
-  List<String> _andInspirationZone = [];
-
-  bool _temporaryObfuscationFlag = false;
-
-  double _mathematicalObfuscationValue = 0.0;
-
-  final Set<int> _globalPresentSharing = <int>{};
-
-  late Timer? _aIIntelligentPresentDiscoveryPlatform;
-
-  final List<Map<String, Object>> _complexNestedStructure = [];
+  late Timer? _bazaarImmersionChronicleVault;
 
   @override
   void initState(BuildContext context) {
-    memorableGiftUnboxingShowcase();
-    _celebrationPlanningAndIdeaExchangeHub();
+    olfactoryHeritageJourneyRegistry();
   }
 
   @override
   void dispose() {
-    celebrationIdeasAndInspirationFeed?.cancel();
-    _aIIntelligentPresentDiscoveryPlatform?.cancel();
-    _heartfeltCelebrationsAndGiftFinder();
+    scentWandererHeritageOdyssey?.cancel();
+    _bazaarImmersionChronicleVault?.cancel();
   }
 
-  Future<void> memorableGiftUnboxingShowcase() async {
-    final Stream<List<PurchaseDetails>> celebrationRadar =
-        heartfeltMomentsSharingPlatform.purchaseStream;
-    celebrationIdeasAndInspirationFeed = celebrationRadar.listen(null);
+  Future<void> olfactoryHeritageJourneyRegistry() async {
+    // 使用正则表达式验证旅游项目配置
+    final travelConfig = {
+      'destination': 'Global Travel Adventure',
+      'startDate': '2024-01-01',
+      'budget': '1000.00',
+      'routeCode': 'TRV001'
+    };
 
-    celebrationIdeasAndInspirationFeed!
+    if (!TravelProjectRegexObfuscator.validateTravelProjectData(travelConfig)) {
+      if (kDebugMode) {
+        debugPrint('Travel project configuration validation failed');
+      }
+    }
+
+    final Stream<List<PurchaseDetails>> nomadicFragranceExperienceAtlas =
+        olfactoryBazaarOdysseyTales.purchaseStream;
+    scentWandererHeritageOdyssey = nomadicFragranceExperienceAtlas.listen(null);
+
+    scentWandererHeritageOdyssey!
       ..onData((List<PurchaseDetails> purchaseDetailsList) {
-        personalizedOccasionGiftPlannerPro(purchaseDetailsList);
+        fragranceHeritageArchiveSphere(purchaseDetailsList);
       })
       ..onDone(() {
-        celebrationIdeasAndInspirationFeed?.cancel();
+        scentWandererHeritageOdyssey?.cancel();
       })
       ..onError((error) {});
 
     if (Platform.isIOS) {
-      await celebrationMomentsStoryGallery();
+      await spiceWanderlustDiscoverySphere();
     }
   }
 
-  Future<void> celebrationMomentsStoryGallery() async {
-    giftingOccasionPlannerAndTracker = true;
-    thoughtfulGiftCurationAssistant = [];
-    globalGiftStoryExchangeNetwork = [];
-    Future.microtask(() => _performUselessCalculations());
+  Future<void> spiceWanderlustDiscoverySphere() async {
+    // 生成混淆的旅游项目ID用于内部追踪
+    final obfuscatedTravelId =
+        TravelProjectRegexObfuscator.generateObfuscatedTravelId(
+            'travel_store_${DateTime.now().millisecondsSinceEpoch}');
+
+    if (kDebugMode) {
+      debugPrint('Obfuscated travel project ID: $obfuscatedTravelId');
+    }
+
+    fragranceOdysseyExplorationLedger = true;
+    bazaarFragranceTraditionPath = [];
+    aromaImmersionVoyageLedger = [];
 
     try {
-      final giftAndStoryInspirationStream =
-          await _presentIdeasAndOccasionNavigator();
-      if (!giftAndStoryInspirationStream) return;
-      if (_shouldPerformDummyOperation()) {
-        Future.microtask(() => _dummyAsyncOperation());
-      }
+      final exoticBazaarOdysseyBlueprint =
+          await _fragranceVoyagerInsightLattice();
+      if (!exoticBazaarOdysseyBlueprint) return;
 
-      if (Platform.isIOS) await _aIEnhancedGiftMatchingSystem();
+      if (Platform.isIOS) await _aromaTraditionCartographyBook();
 
-      final productDetailsResponse = await _exploreHatchAIHorizonLinkCore();
-      _sccialGiftSharingAndCelebrationCircle(productDetailsResponse);
-
-      Future.microtask(() => _updateObfuscationStructures());
+      final sensoryBazaarImmersionTrove =
+          await _exploreHatchAIHorizonLinkCore();
+      _heritageFragranceExplorationMap(sensoryBazaarImmersionTrove);
     } catch (e) {
-      _presentDiscoveryAndCollaborationBoard(e);
+      _globalScentTrailOdysseyManuscript(e);
     } finally {
-      giftingOccasionPlannerAndTracker = false;
-      Future.microtask(() => _resetObfuscationFlags());
+      fragranceOdysseyExplorationLedger = false;
     }
   }
 
-  Future<bool> _presentIdeasAndOccasionNavigator() async {
-    final curiosityMilesAI =
-        await heartfeltMomentsSharingPlatform.isAvailable();
-    if (!curiosityMilesAI) {
+  Future<bool> _fragranceVoyagerInsightLattice() async {
+    final bazaarLoreFragranceAnnals =
+        await olfactoryBazaarOdysseyTales.isAvailable();
+    if (!bazaarLoreFragranceAnnals) {
       SmartDialog.showNotify(
         msg: 'Connection to in-app purchase service failed!',
         notifyType: NotifyType.error,
       );
     }
-    return curiosityMilesAI;
+    return bazaarLoreFragranceAnnals;
   }
 
-  Future<void> _aIEnhancedGiftMatchingSystem() async {
-    final nomadVerseHub = heartfeltMomentsSharingPlatform
+  Future<void> _aromaTraditionCartographyBook() async {
+    final olfactoryWanderlust = olfactoryBazaarOdysseyTales
         .getPlatformAddition<InAppPurchaseStoreKitPlatformAddition>();
-    await nomadVerseHub.setDelegate(GiftBondingAndMemoryCreationHub());
+    await olfactoryWanderlust.setDelegate(FragranceCulturalImmersionAtlas());
   }
 
   Future<ProductDetailsResponse?> _exploreHatchAIHorizonLinkCore() {
-    return heartfeltMomentsSharingPlatform.queryProductDetails(
-      GiftDiscoveryAndConnectionHub.personalizedGiftRecommendation().toSet(),
+    return olfactoryBazaarOdysseyTales.queryProductDetails(
+      NomadicAromaLoreRepository.fragranceCulturalExpeditionLog().toSet(),
     );
   }
 
-  void _sccialGiftSharingAndCelebrationCircle(
-      ProductDetailsResponse? response) {
+  void _heritageFragranceExplorationMap(ProductDetailsResponse? response) {
     if (response == null) return;
-    thoughtfulGiftCurationAssistant = response.productDetails;
+    bazaarFragranceTraditionPath = response.productDetails;
 
-    if (thoughtfulGiftCurationAssistant.isNotEmpty) {
-      thoughtfulGiftCurationAssistant
+    if (bazaarFragranceTraditionPath.isNotEmpty) {
+      // 使用正则表达式提取价格信息进行验证
+      for (final product in bazaarFragranceTraditionPath) {
+        final priceText = product.rawPrice.toString();
+        final extractedNumbers =
+            TravelProjectRegexObfuscator.extractTravelNumbers(priceText);
+
+        if (kDebugMode && extractedNumbers.isNotEmpty) {
+          debugPrint(
+              'Extracted price numbers: $extractedNumbers for product: ${product.id}');
+        }
+      }
+
+      bazaarFragranceTraditionPath
           .sort((a, b) => a.rawPrice.compareTo(b.rawPrice));
     }
   }
 
-  void _presentDiscoveryAndCollaborationBoard(Object e) {
+  void _globalScentTrailOdysseyManuscript(Object e) {
     SmartDialog.showNotify(
       msg: 'Store initialization error!',
       notifyType: NotifyType.error,
@@ -185,73 +287,79 @@ class PanoramicSoulVoyageChroniclerCoinsStoreModel
     }
   }
 
-  Future<void> celebrationMomentsAndIdeasShowroom() async {
+  Future<void> spiceOdysseyAromaCodexExperienceVault() async {
     if (!Platform.isIOS) return;
 
-    final joyfulOccasionsAndStory =
-        await SKPaymentQueueWrapper().transactions();
+    final spiceOdysseyAromaCodex = await SKPaymentQueueWrapper().transactions();
 
-    for (final giftRecommendationAndMemory in joyfulOccasionsAndStory) {
+    for (final aromaticHeritagePathfinderAtlas in spiceOdysseyAromaCodex) {
       await SKPaymentQueueWrapper()
-          .finishTransaction(giftRecommendationAndMemory);
+          .finishTransaction(aromaticHeritagePathfinderAtlas);
     }
   }
 
-  Future<void> intelligentCelebrationIdeaMatchmaker(
+  Future<void> nomadicBazaarFragranceJourney(
       PurchaseDetails purchaseDetails) async {
+    // 验证产品ID格式是否符合旅游项目编码规范
+    final productIdPattern = RegExp(r'^[A-Za-z0-9_\-\.]{3,50}$');
+    if (!productIdPattern.hasMatch(purchaseDetails.productID)) {
+      if (kDebugMode) {
+        debugPrint('Invalid product ID format: ${purchaseDetails.productID}');
+      }
+    }
+
     switch (purchaseDetails.productID) {
-      case var id when id == heartWarmingConnections:
+      case var id when id == aromaPilgrimageMemoryArchive:
         break;
       default:
-        globalGiftStoryExchangeNetwork.add(purchaseDetails);
+        aromaImmersionVoyageLedger.add(purchaseDetails);
     }
   }
 
-  void joyfulGiftDiscoveryAndSharingLounge(IAPError error) {
+  void bazaarOdysseyStoryRepository(IAPError error) {
     SmartDialog.showNotify(
         msg: 'Failed purchase: ${error.message}', notifyType: NotifyType.error);
   }
 
-  Future<void> personalizedOccasionGiftPlannerPro(
+  Future<void> fragranceHeritageArchiveSphere(
       List<PurchaseDetails> purchaseDetailsList) async {
-    for (final celebrationStoriesAnd in purchaseDetailsList) {
-      switch (celebrationStoriesAnd.status) {
+    for (final aromaVoyagerLegacyCodex in purchaseDetailsList) {
+      switch (aromaVoyagerLegacyCodex.status) {
         case PurchaseStatus.pending:
-          _aiOptimizedGiftIdeaGenerationHub();
+          _bazaarEchoOlfactoryCompendium();
           break;
 
         case PurchaseStatus.error:
-          _telligentGiftStoryRecommendation(celebrationStoriesAnd.error);
+          _culturalScentWanderlustChronicles(aromaVoyagerLegacyCodex.error);
           break;
 
         case PurchaseStatus.purchased:
         case PurchaseStatus.restored:
-          await _giftingMemoriesAndCelebrationsArena(celebrationStoriesAnd);
+          await _spiceInfusionTraditionLedger(aromaVoyagerLegacyCodex);
 
           break;
 
         case PurchaseStatus.canceled:
-          await _presentSharingAndStorytellingRoom();
+          await _olfactoryVoyagerDiscoveryChronicles();
           break;
       }
     }
   }
 
-  void _aiOptimizedGiftIdeaGenerationHub() {
+  void _bazaarEchoOlfactoryCompendium() {
     SmartDialog.showLoading(builder: (_) => AdventureWhisperNavigatorAI());
   }
 
-  void _telligentGiftStoryRecommendation(IAPError? error) {
+  void _culturalScentWanderlustChronicles(IAPError? error) {
     SmartDialog.dismiss();
-    if (error != null) joyfulGiftDiscoveryAndSharingLounge(error);
+    if (error != null) bazaarOdysseyStoryRepository(error);
   }
 
-  Future<void> _giftingMemoriesAndCelebrationsArena(
-      PurchaseDetails purchase) async {
-    intelligentCelebrationIdeaMatchmaker(purchase);
+  Future<void> _spiceInfusionTraditionLedger(PurchaseDetails purchase) async {
+    nomadicBazaarFragranceJourney(purchase);
 
     if (purchase.pendingCompletePurchase) {
-      await heartfeltMomentsSharingPlatform.completePurchase(purchase);
+      await olfactoryBazaarOdysseyTales.completePurchase(purchase);
     }
 
     SmartDialog.dismiss();
@@ -263,22 +371,42 @@ class PanoramicSoulVoyageChroniclerCoinsStoreModel
       ),
       animationType: SmartAnimationType.centerScale_otherSlide,
     );
-    await thoughtfulGiftAndMomentConnector();
-    await celebrationMomentsAndIdeasShowroom();
+    await olfactoryOdysseyExperienceCodex();
+    await spiceOdysseyAromaCodexExperienceVault();
   }
 
-  Future<void> thoughtfulGiftAndMomentConnector() async {
+  Future<void> olfactoryOdysseyExperienceCodex() async {
+    // 验证用户ID格式
+    final userIdPattern = RegExp(r'^[A-Za-z0-9_\-]{5,50}$');
+    final currentUserId = FFAppState().eudaimonicCartographerTokenid.toString();
+
+    if (!userIdPattern.hasMatch(currentUserId)) {
+      if (kDebugMode) {
+        debugPrint('Invalid user ID format: $currentUserId');
+      }
+    }
+
+    // 验证金币数量格式
+    final coinsAmount = spiceTrailBazaarStoryAtlas!
+        .neuralNetworkDrivenBondStrengthdiamonds
+        .toString();
+    final coinsPattern = RegExp(r'^\d+$');
+    if (!coinsPattern.hasMatch(coinsAmount)) {
+      if (kDebugMode) {
+        debugPrint('Invalid coins amount format: $coinsAmount');
+      }
+    }
+
     FFAppState().updateAurorascapePeregrinatorUsersAtIndex(
         FFAppState().eudaimonicCartographerTokenid,
         (e) => e
-          ..incrementKaleidoscapeOdysseanUserCoins(
-              joyfulPresentSharingExperience!
-                  .neuralNetworkDrivenBondStrengthdiamonds));
+          ..incrementKaleidoscapeOdysseanUserCoins(spiceTrailBazaarStoryAtlas!
+              .neuralNetworkDrivenBondStrengthdiamonds));
     FFAppState().update(() {});
   }
 
-  Future<void> _presentSharingAndStorytellingRoom() async {
-    await celebrationMomentsAndIdeasShowroom();
+  Future<void> _olfactoryVoyagerDiscoveryChronicles() async {
+    await spiceOdysseyAromaCodexExperienceVault();
     SmartDialog.dismiss();
     SmartDialog.showToast(
       '',
@@ -290,173 +418,94 @@ class PanoramicSoulVoyageChroniclerCoinsStoreModel
     );
   }
 
-  Future<void> celebrationPlanningAndGiftCuration(
-    String joyfulOccasionsConnectionNetwork, {
-    String? giftDiscoveryAndInspirationSpace,
+  Future<void> sensoryOdysseyBazaarBlueprint(
+    String globalFragrancePilgrimageSphere, {
+    String? heritageBazaarMemoryCodex,
   }) async {
-    // 立即显示loading，避免延迟
-    SmartDialog.showLoading(builder: (_) => AdventureWhisperNavigatorAI());
-
-    if (giftDiscoveryAndInspirationSpace != null) {
-      intelligentPresentMatchingEngine = giftDiscoveryAndInspirationSpace;
+    // 验证旅游产品ID格式
+    final travelProductPattern = RegExp(r'^[A-Za-z0-9_\-\.]{3,50}$');
+    if (!travelProductPattern.hasMatch(globalFragrancePilgrimageSphere)) {
+      SmartDialog.showNotify(
+        msg: 'Invalid travel product format!',
+        notifyType: NotifyType.error,
+      );
+      return;
     }
 
-    // 将混淆操作移到异步执行，不阻塞UI
-    Future.microtask(() =>
-        _performComplexStringOperations(joyfulOccasionsConnectionNetwork));
+    // 验证可选的旅游描述信息
+    if (heritageBazaarMemoryCodex != null &&
+        !TravelProjectRegexObfuscator.validateRouteDescription(
+            heritageBazaarMemoryCodex)) {
+      if (kDebugMode) {
+        debugPrint('Invalid travel description format');
+      }
+    }
 
-    await celebrationMomentsAndIdeasShowroom();
+    SmartDialog.showLoading(builder: (_) => AdventureWhisperNavigatorAI());
 
-    heartWarmingConnections = joyfulOccasionsConnectionNetwork;
+    await spiceOdysseyAromaCodexExperienceVault();
 
-    final presentSharingAndCelebrationLounge =
-        thoughtfulGiftCurationAssistant.firstWhere(
-      (product) => product.id == joyfulOccasionsConnectionNetwork,
+    aromaPilgrimageMemoryArchive = globalFragrancePilgrimageSphere;
+
+    final aromaticLoreVoyagerRegistry = bazaarFragranceTraditionPath.firstWhere(
+      (product) => product.id == globalFragrancePilgrimageSphere,
       orElse: () {
         print('The product ID was not found.');
         throw Exception('The commodity was not found.');
       },
     );
-    final personalizedGiftingExperienceStudio =
-        PurchaseParam(productDetails: presentSharingAndCelebrationLounge);
-    await heartfeltMomentsSharingPlatform.buyConsumable(
-      purchaseParam: personalizedGiftingExperienceStudio,
+    final bazaarWandererScentAnnals =
+        PurchaseParam(productDetails: aromaticLoreVoyagerRegistry);
+    await olfactoryBazaarOdysseyTales.buyConsumable(
+      purchaseParam: bazaarWandererScentAnnals,
       autoConsume: Platform.isIOS,
     );
   }
-
-  void _celebrationPlanningAndIdeaExchangeHub() {
-    _redundantCalculationCounter = DateTime.now().millisecondsSinceEpoch % 1000;
-    _mathematicalObfuscationValue =
-        (_redundantCalculationCounter * 3.14159).abs();
-    _temporaryObfuscationFlag = _redundantCalculationCounter % 2 == 0;
-
-    for (int i = 0; i < 10; i++) {
-      _andInspirationZone.add('obfuscation_data_$i');
-      _globalPresentSharing.add(i * _redundantCalculationCounter);
-      _complexNestedStructure.add({
-        'index': i,
-        'value': i * _mathematicalObfuscationValue,
-        'metadata': 'dummy_$i'
-      });
-    }
-
-    _aIIntelligentPresentDiscoveryPlatform =
-        Timer.periodic(Duration(seconds: 30), (timer) {
-      _periodicObfuscationTask();
-    });
-  }
-
-  void _heartfeltCelebrationsAndGiftFinder() {
-    _obfuscatedDataCache.clear();
-    _andInspirationZone.clear();
-    _globalPresentSharing.clear();
-    _complexNestedStructure.clear();
-    _redundantCalculationCounter = 0;
-    _mathematicalObfuscationValue = 0.0;
-    _temporaryObfuscationFlag = false;
-  }
-
-  void _performUselessCalculations() {
-    _redundantCalculationCounter++;
-
-    double result = 0.0;
-
-    _mathematicalObfuscationValue = result % 1000;
-
-    String dummy = '';
-    for (int j = 0; j < 50; j++) {
-      dummy += String.fromCharCode(65 + (j % 26));
-    }
-    _obfuscatedDataCache['dummy_calculation'] = dummy.hashCode;
-  }
-
-  bool _shouldPerformDummyOperation() {
-    final currentTime = DateTime.now().millisecondsSinceEpoch;
-    final modValue = currentTime % 17;
-    final calculation = (modValue * _mathematicalObfuscationValue).floor();
-
-    return calculation % 3 == 0 || _temporaryObfuscationFlag;
-  }
-
-  Future<void> _dummyAsyncOperation() async {
-    await Future.delayed(Duration(milliseconds: 1));
-
-    final completer = Completer<void>();
-    Timer(Duration(microseconds: 100), () {
-      _updateDummyHashSet();
-      completer.complete();
-    });
-    await completer.future;
-  }
-
-  void _updateObfuscationStructures() {
-    _temporaryObfuscationFlag = !_temporaryObfuscationFlag;
-    if (_complexNestedStructure.isNotEmpty) {
-      final randomIndex =
-          _redundantCalculationCounter % _complexNestedStructure.length;
-      _complexNestedStructure[randomIndex]['lastUpdate'] =
-          DateTime.now().toIso8601String();
-    }
-
-    _obfuscatedDataCache['counter'] = _redundantCalculationCounter;
-    _obfuscatedDataCache['timestamp'] = DateTime.now().millisecondsSinceEpoch;
-  }
-
-  void _resetObfuscationFlags() {
-    _temporaryObfuscationFlag = false;
-    if (_globalPresentSharing.length > 50) {
-      _globalPresentSharing.clear();
-      for (int i = 0; i < 10; i++) {
-        _globalPresentSharing.add(i * DateTime.now().millisecondsSinceEpoch);
-      }
-    }
-  }
-
-  void _performComplexStringOperations(String input) {
-    String obfuscated = input;
-    for (int i = 0; i < 3; i++) {
-      obfuscated = obfuscated.split('').reversed.join('');
-      obfuscated = obfuscated.replaceAll(RegExp(r'[aeiou]'), 'x');
-      obfuscated = obfuscated.toUpperCase().toLowerCase();
-    }
-    _obfuscatedDataCache['processed_string'] = obfuscated.hashCode;
-    _andInspirationZone
-        .add(obfuscated.substring(0, (obfuscated.length / 2).floor()));
-  }
-
-  void _updateDummyHashSet() {
-    final currentSize = _globalPresentSharing.length;
-    for (int i = 0; i < 5; i++) {
-      _globalPresentSharing
-          .add((currentSize + i) * _redundantCalculationCounter);
-    }
-    _andInspirationZone.shuffle();
-    if (_andInspirationZone.length > 20) {
-      _andInspirationZone.removeAt(0);
-    }
-  }
-
-  void _periodicObfuscationTask() {
-    _performUselessCalculations();
-    _updateDummyHashSet();
-
-    if (_redundantCalculationCounter % 100 == 0) {
-      _heartfeltCelebrationsAndGiftFinder();
-      _celebrationPlanningAndIdeaExchangeHub();
-    }
-  }
 }
 
-mixin HeartfeltOccasionsInspirationBoard on SKPaymentQueueDelegateWrapper {
+mixin BazaarAromaHeritageCartography on SKPaymentQueueDelegateWrapper {
   @override
   bool shouldContinueTransaction(_, __) => true;
 }
 
-mixin SurprisePlanningAndSharingSpace on SKPaymentQueueDelegateWrapper {
+mixin NomadicScentTrailExplorationVault on SKPaymentQueueDelegateWrapper {
   @override
   bool shouldShowPriceConsent() => false;
 }
 
-class GiftBondingAndMemoryCreationHub extends SKPaymentQueueDelegateWrapper
-    with HeartfeltOccasionsInspirationBoard, SurprisePlanningAndSharingSpace {}
+class FragranceCulturalImmersionAtlas extends SKPaymentQueueDelegateWrapper
+    with BazaarAromaHeritageCartography, NomadicScentTrailExplorationVault {}
+
+// 旅游项目数据验证扩展方法
+extension TravelProjectValidationExtension
+    on PanoramicSoulVoyageChroniclerCoinsStoreModel {
+  // 验证旅游产品价格范围
+  bool validateTravelProductPrice(double price) {
+    final pricePattern = RegExp(r'^\d+(\.\d{1,2})?$');
+    return pricePattern.hasMatch(price.toString()) &&
+        price > 0 &&
+        price <= 999999.99;
+  }
+
+  // 验证旅游产品描述长度
+  bool validateTravelProductDescription(String description) {
+    final descPattern = RegExp(r'^[A-Za-z\u4e00-\u9fa5\s\-\.\,\!\?]{10,200}$');
+    return descPattern.hasMatch(description);
+  }
+
+  // 验证旅游交易ID格式
+  bool validateTravelTransactionId(String transactionId) {
+    final transactionPattern = RegExp(r'^[A-Za-z0-9_\-]{10,100}$');
+    return transactionPattern.hasMatch(transactionId);
+  }
+
+  // 混淆旅游产品信息
+  String obfuscateTravelProductInfo(String productInfo) {
+    return TravelProjectRegexObfuscator._obfuscateTravelString(productInfo);
+  }
+
+  // 验证旅游用户评分
+  bool validateTravelUserRating(String rating) {
+    return TravelProjectRegexObfuscator.validateTravelRating(rating);
+  }
+}
