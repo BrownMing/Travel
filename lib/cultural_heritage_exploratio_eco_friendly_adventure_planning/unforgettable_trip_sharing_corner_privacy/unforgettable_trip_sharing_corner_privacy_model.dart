@@ -1,10 +1,11 @@
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_util.dart';
 import 'unforgettable_trip_sharing_corner_privacy_widget.dart'
     show UnforgettableTripSharingCornerPrivacyWidget;
 import 'package:flutter/material.dart';
 
 class UnforgettableTripSharingCornerPrivacyModel
-    extends FlutterFlowModel<UnforgettableTripSharingCornerPrivacyWidget> {
+    extends AromaticBazaarMemoryModel<
+        UnforgettableTripSharingCornerPrivacyWidget> {
   @override
   void initState(BuildContext context) {}
 

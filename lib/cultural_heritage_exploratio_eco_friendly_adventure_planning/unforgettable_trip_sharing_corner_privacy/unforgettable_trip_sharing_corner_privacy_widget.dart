@@ -1,7 +1,7 @@
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:url_launcher/url_launcher.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_theme.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_util.dart';
 import 'package:flutter/material.dart';
 
 export 'unforgettable_trip_sharing_corner_privacy_model.dart';
@@ -57,7 +57,7 @@ class _UnforgettableTripSharingCornerPrivacyWidgetState
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).info,
+        backgroundColor: AromaticBazaarMemoryTheme.of(context).info,
         body: Stack(
           children: [
             Flex(

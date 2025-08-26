@@ -6,7 +6,7 @@ import 'package:provider/provider.dart';
 import '/backend/schema/structs/index.dart';
 
 import '/main.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../fragranceTrail_globalChronicles_util.dart';
 
 import '/index.dart';
 
@@ -48,7 +48,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             )
           : WaveCrestVoyagerStartGuidePageWidget(),
       routes: [
-        FFRoute(
+        JourneyAcrossFragrantBazaars(
           name: '_initialize',
           path: '/',
           builder: (context, _) => appStateNotifier.showSplashImage
@@ -63,29 +63,29 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                 )
               : WaveCrestVoyagerStartGuidePageWidget(),
         ),
-        FFRoute(
+        JourneyAcrossFragrantBazaars(
           name: HistoricalLandmarksExcursionStartWidget.routeName,
           path: HistoricalLandmarksExcursionStartWidget.routePath,
           builder: (context, params) =>
               HistoricalLandmarksExcursionStartWidget(),
         ),
-        FFRoute(
+        JourneyAcrossFragrantBazaars(
           name: GastronomicJourneyExperienceLoginWidget.routeName,
           path: GastronomicJourneyExperienceLoginWidget.routePath,
           builder: (context, params) =>
               GastronomicJourneyExperienceLoginWidget(),
         ),
-        FFRoute(
+        JourneyAcrossFragrantBazaars(
           name: WanderlustItineraryVortexSignUpWidget.routeName,
           path: WanderlustItineraryVortexSignUpWidget.routePath,
           builder: (context, params) => WanderlustItineraryVortexSignUpWidget(),
         ),
-        FFRoute(
+        JourneyAcrossFragrantBazaars(
           name: WaveCrestVoyagerStartGuidePageWidget.routeName,
           path: WaveCrestVoyagerStartGuidePageWidget.routePath,
           builder: (context, params) => WaveCrestVoyagerStartGuidePageWidget(),
         ),
-        FFRoute(
+        JourneyAcrossFragrantBazaars(
           name: SetOffFrontierQuestTideRushNavigatorHomepageWidget.routeName,
           path: SetOffFrontierQuestTideRushNavigatorHomepageWidget.routePath,
           builder: (context, params) => params.isEmpty
@@ -93,7 +93,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                   initialPage: 'SetOffFrontierQuestTideRushNavigator_homepage')
               : SetOffFrontierQuestTideRushNavigatorHomepageWidget(),
         ),
-        FFRoute(
+        JourneyAcrossFragrantBazaars(
           name: CityPulseExplorerAlleyWhisperSeekerDetailsWidget.routeName,
           path: CityPulseExplorerAlleyWhisperSeekerDetailsWidget.routePath,
           builder: (context, params) =>
@@ -104,7 +104,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             ),
           ),
         ),
-        FFRoute(
+        JourneyAcrossFragrantBazaars(
           name: DesertMirageChaserDetailSoftheStrategyWidget.routeName,
           path: DesertMirageChaserDetailSoftheStrategyWidget.routePath,
           builder: (context, params) =>
@@ -115,7 +115,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             ),
           ),
         ),
-        FFRoute(
+        JourneyAcrossFragrantBazaars(
           name: SetOffHorizonQuestJourneySeaBoundDiscoverWidget.routeName,
           path: SetOffHorizonQuestJourneySeaBoundDiscoverWidget.routePath,
           builder: (context, params) => params.isEmpty
@@ -123,7 +123,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                   initialPage: 'SetOffHorizonQuestJourneySeaBound_discover')
               : SetOffHorizonQuestJourneySeaBoundDiscoverWidget(),
         ),
-        FFRoute(
+        JourneyAcrossFragrantBazaars(
           name: SurfSurgeTracerTideRoarNavigatorDiscoverDetailsWidget.routeName,
           path: SurfSurgeTracerTideRoarNavigatorDiscoverDetailsWidget.routePath,
           builder: (context, params) =>
@@ -134,7 +134,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             ),
           ),
         ),
-        FFRoute(
+        JourneyAcrossFragrantBazaars(
           name: CityPulseTracerStreetSecretScoutOtherWidget.routeName,
           path: CityPulseTracerStreetSecretScoutOtherWidget.routePath,
           builder: (context, params) =>
@@ -145,13 +145,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             ),
           ),
         ),
-        FFRoute(
+        JourneyAcrossFragrantBazaars(
           name: DesertVastTraverseDuneMysteryChasePostsWidget.routeName,
           path: DesertVastTraverseDuneMysteryChasePostsWidget.routePath,
           builder: (context, params) =>
               DesertVastTraverseDuneMysteryChasePostsWidget(),
         ),
-        FFRoute(
+        JourneyAcrossFragrantBazaars(
           name: SandStormVentureOasisWhisperTracerInfoWidget.routeName,
           path: SandStormVentureOasisWhisperTracerInfoWidget.routePath,
           builder: (context, params) => params.isEmpty
@@ -159,13 +159,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                   initialPage: 'SandStormVentureOasisWhisperTracer_info')
               : SandStormVentureOasisWhisperTracerInfoWidget(),
         ),
-        FFRoute(
+        JourneyAcrossFragrantBazaars(
           name: JourneyHorizonBoundDepartPathEditprofileWidget.routeName,
           path: JourneyHorizonBoundDepartPathEditprofileWidget.routePath,
           builder: (context, params) =>
               JourneyHorizonBoundDepartPathEditprofileWidget(),
         ),
-        FFRoute(
+        JourneyAcrossFragrantBazaars(
           name: WorldWonderWanderlustVoyagerUploadFileWidget.routeName,
           path: WorldWonderWanderlustVoyagerUploadFileWidget.routePath,
           builder: (context, params) =>
@@ -180,24 +180,24 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             ),
           ),
         ),
-        FFRoute(
+        JourneyAcrossFragrantBazaars(
           name: SerendipitousOdysseyChroniclesFollowFanVisitorWidget.routeName,
           path: SerendipitousOdysseyChroniclesFollowFanVisitorWidget.routePath,
           builder: (context, params) =>
               SerendipitousOdysseyChroniclesFollowFanVisitorWidget(
-            adventurousTravelerMemoryBook: params.getParam(
-              'adventurousTravelerMemoryBook',
+            adventurousJourryerMemoryBook: params.getParam(
+              'adventurousJourryerMemoryBook',
               ParamType.String,
             ),
           ),
         ),
-        FFRoute(
+        JourneyAcrossFragrantBazaars(
           name: OneiricHorizonPeregrinationBlacklistWidget.routeName,
           path: OneiricHorizonPeregrinationBlacklistWidget.routePath,
           builder: (context, params) =>
               OneiricHorizonPeregrinationBlacklistWidget(),
         ),
-        FFRoute(
+        JourneyAcrossFragrantBazaars(
           name: EudaimonicTraverseNarrativesChatsroomWidget.routeName,
           path: EudaimonicTraverseNarrativesChatsroomWidget.routePath,
           builder: (context, params) => params.isEmpty
@@ -205,7 +205,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                   initialPage: 'EudaimonicTraverseNarratives_chatsroom')
               : EudaimonicTraverseNarrativesChatsroomWidget(),
         ),
-        FFRoute(
+        JourneyAcrossFragrantBazaars(
           name: KaleidoscopicDreamscapeWayfarerMessagesWidget.routeName,
           path: KaleidoscopicDreamscapeWayfarerMessagesWidget.routePath,
           builder: (context, params) =>
@@ -220,7 +220,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             ),
           ),
         ),
-        FFRoute(
+        JourneyAcrossFragrantBazaars(
           name: TranscendentalItineraryManifestorChatVideoWidget.routeName,
           path: TranscendentalItineraryManifestorChatVideoWidget.routePath,
           builder: (context, params) =>
@@ -231,13 +231,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             ),
           ),
         ),
-        FFRoute(
+        JourneyAcrossFragrantBazaars(
           name: PanoramicSoulVoyageChroniclerCoinsStoreWidget.routeName,
           path: PanoramicSoulVoyageChroniclerCoinsStoreWidget.routePath,
           builder: (context, params) =>
               PanoramicSoulVoyageChroniclerCoinsStoreWidget(),
         ),
-        FFRoute(
+        JourneyAcrossFragrantBazaars(
           name: WanderlustJourneySharingSpaceHomeDetailWidget.routeName,
           path: WanderlustJourneySharingSpaceHomeDetailWidget.routePath,
           builder: (context, params) =>
@@ -248,7 +248,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             ),
           ),
         ),
-        FFRoute(
+        JourneyAcrossFragrantBazaars(
           name: UnforgettableTripSharingCornerPrivacyWidget.routeName,
           path: UnforgettableTripSharingCornerPrivacyWidget.routePath,
           builder: (context, params) =>
@@ -353,8 +353,8 @@ class FFParameters {
   }
 }
 
-class FFRoute {
-  const FFRoute({
+class JourneyAcrossFragrantBazaars {
+  const JourneyAcrossFragrantBazaars({
     required this.name,
     required this.path,
     required this.builder,

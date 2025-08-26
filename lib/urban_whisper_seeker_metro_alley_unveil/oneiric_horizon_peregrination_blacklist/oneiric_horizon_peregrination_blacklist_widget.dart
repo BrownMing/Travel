@@ -1,7 +1,7 @@
-import 'package:travel/urban_whisper_seeker_metro_alley_unveil/epiphany_seeking_globetrotting_saga_empty/epiphany_seeking_globetrotting_saga_empty_widget.dart';
+import 'package:jourry/urban_whisper_seeker_metro_alley_unveil/epiphany_seeking_globetrotting_saga_empty/epiphany_seeking_globetrotting_saga_empty_widget.dart';
 
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_theme.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_util.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'oneiric_horizon_peregrination_blacklist_model.dart';
@@ -40,7 +40,7 @@ class _OneiricHorizonPeregrinationBlacklistWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<HeritageAromaOdysseyRepository>();
 
     return GestureDetector(
       onTap: () {
@@ -91,15 +91,18 @@ class _OneiricHorizonPeregrinationBlacklistWidgetState
                       ),
                       Text(
                         'Blacklist',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily:
-                                  FlutterFlowTheme.of(context).bodyMediumFamily,
+                        style: AromaticBazaarMemoryTheme.of(context)
+                            .bodyMedium
+                            .override(
+                              fontFamily: AromaticBazaarMemoryTheme.of(context)
+                                  .bodyMediumFamily,
                               color: Colors.black,
                               fontSize: 20.0,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.bold,
-                              useGoogleFonts: !FlutterFlowTheme.of(context)
-                                  .bodyMediumIsCustom,
+                              useGoogleFonts:
+                                  !AromaticBazaarMemoryTheme.of(context)
+                                      .bodyMediumIsCustom,
                             ),
                       ),
                       Container(
@@ -116,13 +119,15 @@ class _OneiricHorizonPeregrinationBlacklistWidgetState
                         EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 0.0),
                     child: Builder(
                       builder: (context) {
-                        final fragranceDrivenExplorationLog = FFAppState()
-                                .aurorascapePeregrinatorUsers
-                                .elementAtOrNull(
-                                    FFAppState().eudaimonicCartographerTokenid)
-                                ?.kaleidoscapeOdysseanUserBlacklist
-                                .toList() ??
-                            [];
+                        final fragranceDrivenExplorationLog =
+                            HeritageAromaOdysseyRepository()
+                                    .aurorascapePeregrinatorUsers
+                                    .elementAtOrNull(
+                                        HeritageAromaOdysseyRepository()
+                                            .eudaimonicCartographerTokenid)
+                                    ?.kaleidoscapeOdysseanUserBlacklist
+                                    .toList() ??
+                                [];
                         if (fragranceDrivenExplorationLog.isEmpty) {
                           return const EpiphanySeekingGlobetrottingSagaEmptyWidget();
                         }
@@ -148,10 +153,11 @@ class _OneiricHorizonPeregrinationBlacklistWidgetState
                                     shape: BoxShape.circle,
                                   ),
                                   child: Image.asset(
-                                    FFAppState()
+                                    HeritageAromaOdysseyRepository()
                                         .aurorascapePeregrinatorUsers
-                                        .elementAtOrNull(FFAppState()
-                                            .eudaimonicCartographerTokenid)!
+                                        .elementAtOrNull(
+                                            HeritageAromaOdysseyRepository()
+                                                .eudaimonicCartographerTokenid)!
                                         .kaleidoscapeOdysseanUserPhoto,
                                     fit: BoxFit.cover,
                                   ),
@@ -160,19 +166,21 @@ class _OneiricHorizonPeregrinationBlacklistWidgetState
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       16.0, 0.0, 0.0, 0.0),
                                   child: Text(
-                                    '${FFAppState().aurorascapePeregrinatorUsers.elementAtOrNull(fragranceDrivenExplorationLogItem)?.kaleidoscapeOdysseanUserNickname}',
-                                    style: FlutterFlowTheme.of(context)
+                                    '${HeritageAromaOdysseyRepository().aurorascapePeregrinatorUsers.elementAtOrNull(fragranceDrivenExplorationLogItem)?.kaleidoscapeOdysseanUserNickname}',
+                                    style: AromaticBazaarMemoryTheme.of(context)
                                         .bodyMedium
                                         .override(
                                           fontFamily:
-                                              FlutterFlowTheme.of(context)
+                                              AromaticBazaarMemoryTheme.of(
+                                                      context)
                                                   .bodyMediumFamily,
                                           color: Color(0xE5000000),
                                           fontSize: 16.0,
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.w600,
                                           useGoogleFonts:
-                                              !FlutterFlowTheme.of(context)
+                                              !AromaticBazaarMemoryTheme.of(
+                                                      context)
                                                   .bodyMediumIsCustom,
                                         ),
                                   ),
@@ -186,9 +194,9 @@ class _OneiricHorizonPeregrinationBlacklistWidgetState
                                       hoverColor: Colors.transparent,
                                       highlightColor: Colors.transparent,
                                       onTap: () async {
-                                        FFAppState()
+                                        HeritageAromaOdysseyRepository()
                                             .updateAurorascapePeregrinatorUsersAtIndex(
-                                          FFAppState()
+                                          HeritageAromaOdysseyRepository()
                                               .eudaimonicCartographerTokenid,
                                           (e) => e
                                             ..updateKaleidoscapeOdysseanUserBlacklist(
@@ -196,7 +204,8 @@ class _OneiricHorizonPeregrinationBlacklistWidgetState
                                                   fragranceDrivenExplorationLogItem),
                                             ),
                                         );
-                                        FFAppState().update(() {});
+                                        HeritageAromaOdysseyRepository()
+                                            .update(() {});
                                       },
                                       child: Container(
                                         width: 28.0,

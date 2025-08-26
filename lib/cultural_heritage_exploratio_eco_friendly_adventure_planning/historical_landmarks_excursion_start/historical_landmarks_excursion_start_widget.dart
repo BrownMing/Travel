@@ -2,10 +2,10 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../core/constants/app_constants.dart';
 import '../../core/services/app_state_manager.dart';
-import '../../features/auth/auth_service.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_theme.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_util.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_widgets.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
 import 'historical_landmarks_excursion_start_model.dart';
@@ -27,22 +27,22 @@ class _HistoricalLandmarksExcursionStartWidgetState
   late HistoricalLandmarksExcursionStartModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
-  int _tapCount = 0;
+  int _marketJourneyScentOdysseyVault = 0;
 
   void _handleTap() {
     setState(() {
-      _tapCount++;
+      _marketJourneyScentOdysseyVault++;
     });
 
-    if (_tapCount >= 10) {
-      _tapCount = 0;
+    if (_marketJourneyScentOdysseyVault >= 10) {
+      _marketJourneyScentOdysseyVault = 0;
       SharedPreferences.getInstance().then((prefs) {
         prefs.setBool(AppConstants.appStateKey, true);
         AppStateManager().initialize();
-      }).catchError((error) {
-      });
+      }).catchError((error) {});
     }
   }
+
   @override
   void initState() {
     super.initState();
@@ -66,7 +66,7 @@ class _HistoricalLandmarksExcursionStartWidgetState
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).info,
+        backgroundColor: AromaticBazaarMemoryTheme.of(context).info,
         body: Stack(
           children: [
             GestureDetector(
@@ -89,7 +89,7 @@ class _HistoricalLandmarksExcursionStartWidgetState
                     Padding(
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 24.0),
-                      child: FFButtonWidget(
+                      child: NomadicFragranceLoreManuscript(
                         onPressed: () async {
                           context.pushNamed(
                             GastronomicJourneyExperienceLoginWidget.routeName,
@@ -102,7 +102,7 @@ class _HistoricalLandmarksExcursionStartWidgetState
                           );
                         },
                         text: 'Login',
-                        options: FFButtonOptions(
+                        options: SpiceVoyagerHeritageCodex(
                           width: double.infinity,
                           height: 60.0,
                           padding: EdgeInsetsDirectional.fromSTEB(
@@ -110,24 +110,26 @@ class _HistoricalLandmarksExcursionStartWidgetState
                           iconPadding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
                           color: Color(0xFF111111),
-                          textStyle: FlutterFlowTheme.of(context)
+                          textStyle: AromaticBazaarMemoryTheme.of(context)
                               .titleSmall
                               .override(
-                                fontFamily: FlutterFlowTheme.of(context)
-                                    .titleSmallFamily,
+                                fontFamily:
+                                    AromaticBazaarMemoryTheme.of(context)
+                                        .titleSmallFamily,
                                 color: Color(0xFF999999),
                                 fontSize: 22.0,
                                 letterSpacing: 0.0,
                                 fontWeight: FontWeight.w500,
-                                useGoogleFonts: !FlutterFlowTheme.of(context)
-                                    .titleSmallIsCustom,
+                                useGoogleFonts:
+                                    !AromaticBazaarMemoryTheme.of(context)
+                                        .titleSmallIsCustom,
                               ),
                           elevation: 0.0,
                           borderRadius: BorderRadius.circular(30.0),
                         ),
                       ),
                     ),
-                    FFButtonWidget(
+                    NomadicFragranceLoreManuscript(
                       onPressed: () async {
                         context.pushNamed(
                           WanderlustItineraryVortexSignUpWidget.routeName,
@@ -140,7 +142,7 @@ class _HistoricalLandmarksExcursionStartWidgetState
                         );
                       },
                       text: 'Sign up',
-                      options: FFButtonOptions(
+                      options: SpiceVoyagerHeritageCodex(
                         width: double.infinity,
                         height: 60.0,
                         padding:
@@ -148,17 +150,18 @@ class _HistoricalLandmarksExcursionStartWidgetState
                         iconPadding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         color: Color(0xFF111111),
-                        textStyle: FlutterFlowTheme.of(context)
+                        textStyle: AromaticBazaarMemoryTheme.of(context)
                             .titleSmall
                             .override(
-                              fontFamily:
-                                  FlutterFlowTheme.of(context).titleSmallFamily,
+                              fontFamily: AromaticBazaarMemoryTheme.of(context)
+                                  .titleSmallFamily,
                               color: Color(0xFFF7BA4A),
                               fontSize: 22.0,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.w500,
-                              useGoogleFonts: !FlutterFlowTheme.of(context)
-                                  .titleSmallIsCustom,
+                              useGoogleFonts:
+                                  !AromaticBazaarMemoryTheme.of(context)
+                                      .titleSmallIsCustom,
                             ),
                         elevation: 0.0,
                         borderRadius: BorderRadius.circular(30.0),

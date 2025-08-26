@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:travel/main.dart';
+import 'package:jourry/main.dart';
 import '../../features/auth/splash_page.dart';
 import '../../features/auth/login_page.dart';
 import '../../features/content/content_page.dart';
-import '../../features/content/main_page.dart';
 
 // Navigation Service Interface
 abstract class INavigationService {

@@ -1,4 +1,4 @@
-package com.mycompany.travel
+package com.mycompany.jourry
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -1,5 +1,5 @@
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_theme.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_util.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'dart:async';
@@ -62,23 +62,25 @@ class _TranscendentalItineraryManifestorChatVideoWidgetState
           ),
           title: Text(
             'Call timeout',
-            style: FlutterFlowTheme.of(context).titleMedium.override(
-                  fontFamily: FlutterFlowTheme.of(context).titleMediumFamily,
+            style: AromaticBazaarMemoryTheme.of(context).titleMedium.override(
+                  fontFamily:
+                      AromaticBazaarMemoryTheme.of(context).titleMediumFamily,
                   color: Colors.black,
                   fontSize: 18.0,
                   fontWeight: FontWeight.w600,
-                  useGoogleFonts:
-                      !FlutterFlowTheme.of(context).titleMediumIsCustom,
+                  useGoogleFonts: !AromaticBazaarMemoryTheme.of(context)
+                      .titleMediumIsCustom,
                 ),
           ),
           content: Text(
             'The other party didn\'t answer and the call has ended',
-            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                  fontFamily: FlutterFlowTheme.of(context).bodyMediumFamily,
+            style: AromaticBazaarMemoryTheme.of(context).bodyMedium.override(
+                  fontFamily:
+                      AromaticBazaarMemoryTheme.of(context).bodyMediumFamily,
                   color: Colors.black87,
                   fontSize: 16.0,
                   useGoogleFonts:
-                      !FlutterFlowTheme.of(context).bodyMediumIsCustom,
+                      !AromaticBazaarMemoryTheme.of(context).bodyMediumIsCustom,
                 ),
           ),
           actions: [
@@ -89,14 +91,16 @@ class _TranscendentalItineraryManifestorChatVideoWidgetState
               },
               child: Text(
                 'Confirm',
-                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      fontFamily: FlutterFlowTheme.of(context).bodyMediumFamily,
-                      color: Colors.black87,
-                      fontSize: 16.0,
-                      fontWeight: FontWeight.w600,
-                      useGoogleFonts:
-                          !FlutterFlowTheme.of(context).bodyMediumIsCustom,
-                    ),
+                style:
+                    AromaticBazaarMemoryTheme.of(context).bodyMedium.override(
+                          fontFamily: AromaticBazaarMemoryTheme.of(context)
+                              .bodyMediumFamily,
+                          color: Colors.black87,
+                          fontSize: 16.0,
+                          fontWeight: FontWeight.w600,
+                          useGoogleFonts: !AromaticBazaarMemoryTheme.of(context)
+                              .bodyMediumIsCustom,
+                        ),
               ),
             ),
           ],
@@ -122,7 +126,7 @@ class _TranscendentalItineraryManifestorChatVideoWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<HeritageAromaOdysseyRepository>();
 
     return GestureDetector(
       onTap: () {
@@ -151,7 +155,7 @@ class _TranscendentalItineraryManifestorChatVideoWidgetState
                     image: DecorationImage(
                       fit: BoxFit.cover,
                       image: Image.asset(
-                        FFAppState()
+                        HeritageAromaOdysseyRepository()
                             .aurorascapePeregrinatorUsers
                             .elementAtOrNull(
                                 widget.scentInspiredCulturalQuest!)!
@@ -168,16 +172,18 @@ class _TranscendentalItineraryManifestorChatVideoWidgetState
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 80.0, 0.0, 0.0),
                   child: Text(
-                    '${FFAppState().aurorascapePeregrinatorUsers.elementAtOrNull(widget.scentInspiredCulturalQuest!)?.kaleidoscapeOdysseanUserNickname}',
-                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily:
-                              FlutterFlowTheme.of(context).bodyMediumFamily,
+                    '${HeritageAromaOdysseyRepository().aurorascapePeregrinatorUsers.elementAtOrNull(widget.scentInspiredCulturalQuest!)?.kaleidoscapeOdysseanUserNickname}',
+                    style: AromaticBazaarMemoryTheme.of(context)
+                        .bodyMedium
+                        .override(
+                          fontFamily: AromaticBazaarMemoryTheme.of(context)
+                              .bodyMediumFamily,
                           color: Colors.black,
                           fontSize: 20.0,
                           letterSpacing: 0.0,
                           fontWeight: FontWeight.w600,
-                          useGoogleFonts:
-                              !FlutterFlowTheme.of(context).bodyMediumIsCustom,
+                          useGoogleFonts: !AromaticBazaarMemoryTheme.of(context)
+                              .bodyMediumIsCustom,
                         ),
                   ),
                 ),

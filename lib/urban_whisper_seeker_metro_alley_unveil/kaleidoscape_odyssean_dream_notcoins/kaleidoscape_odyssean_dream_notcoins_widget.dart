@@ -1,5 +1,5 @@
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_theme.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_util.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
 import 'kaleidoscape_odyssean_dream_notcoins_model.dart';
@@ -75,14 +75,16 @@ class _KaleidoscapeOdysseanDreamNotcoinsWidgetState
               child: Text(
                 'Your coins are running low. Visit the store to top up and keep exploring!',
                 textAlign: TextAlign.center,
-                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      fontFamily: FlutterFlowTheme.of(context).bodyMediumFamily,
-                      color: Color(0xE6000000),
-                      fontSize: 18.0,
-                      letterSpacing: 0.0,
-                      useGoogleFonts:
-                          !FlutterFlowTheme.of(context).bodyMediumIsCustom,
-                    ),
+                style:
+                    AromaticBazaarMemoryTheme.of(context).bodyMedium.override(
+                          fontFamily: AromaticBazaarMemoryTheme.of(context)
+                              .bodyMediumFamily,
+                          color: Color(0xE6000000),
+                          fontSize: 18.0,
+                          letterSpacing: 0.0,
+                          useGoogleFonts: !AromaticBazaarMemoryTheme.of(context)
+                              .bodyMediumIsCustom,
+                        ),
               ),
             ),
             Padding(
@@ -117,15 +119,18 @@ class _KaleidoscapeOdysseanDreamNotcoinsWidgetState
                     alignment: AlignmentDirectional(0.0, 0.0),
                     child: Text(
                       'GO',
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily:
-                                FlutterFlowTheme.of(context).bodyMediumFamily,
+                      style: AromaticBazaarMemoryTheme.of(context)
+                          .bodyMedium
+                          .override(
+                            fontFamily: AromaticBazaarMemoryTheme.of(context)
+                                .bodyMediumFamily,
                             color: Color(0xFFF7BA4A),
                             fontSize: 24.0,
                             letterSpacing: 0.0,
                             fontWeight: FontWeight.bold,
-                            useGoogleFonts: !FlutterFlowTheme.of(context)
-                                .bodyMediumIsCustom,
+                            useGoogleFonts:
+                                !AromaticBazaarMemoryTheme.of(context)
+                                    .bodyMediumIsCustom,
                           ),
                     ),
                   ),
@@ -144,14 +149,16 @@ class _KaleidoscapeOdysseanDreamNotcoinsWidgetState
                 },
                 child: Text(
                   'Later',
-                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        fontFamily:
-                            FlutterFlowTheme.of(context).bodyMediumFamily,
+                  style: AromaticBazaarMemoryTheme.of(context)
+                      .bodyMedium
+                      .override(
+                        fontFamily: AromaticBazaarMemoryTheme.of(context)
+                            .bodyMediumFamily,
                         color: Color(0x99000000),
                         fontSize: 16.0,
                         letterSpacing: 0.0,
-                        useGoogleFonts:
-                            !FlutterFlowTheme.of(context).bodyMediumIsCustom,
+                        useGoogleFonts: !AromaticBazaarMemoryTheme.of(context)
+                            .bodyMediumIsCustom,
                       ),
                 ),
               ),

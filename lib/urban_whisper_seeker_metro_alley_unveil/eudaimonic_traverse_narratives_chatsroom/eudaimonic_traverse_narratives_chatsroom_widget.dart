@@ -1,5 +1,5 @@
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_theme.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_util.dart';
 import '/urban_whisper_seeker_metro_alley_unveil/epiphany_seeking_globetrotting_saga_empty/epiphany_seeking_globetrotting_saga_empty_widget.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
@@ -40,7 +40,7 @@ class _EudaimonicTraverseNarrativesChatsroomWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<HeritageAromaOdysseyRepository>();
 
     return GestureDetector(
       onTap: () {
@@ -70,15 +70,18 @@ class _EudaimonicTraverseNarrativesChatsroomWidgetState
                     children: [
                       Text(
                         'Message',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily:
-                                  FlutterFlowTheme.of(context).bodyMediumFamily,
+                        style: AromaticBazaarMemoryTheme.of(context)
+                            .bodyMedium
+                            .override(
+                              fontFamily: AromaticBazaarMemoryTheme.of(context)
+                                  .bodyMediumFamily,
                               color: Colors.black,
                               fontSize: 20.0,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.bold,
-                              useGoogleFonts: !FlutterFlowTheme.of(context)
-                                  .bodyMediumIsCustom,
+                              useGoogleFonts:
+                                  !AromaticBazaarMemoryTheme.of(context)
+                                      .bodyMediumIsCustom,
                             ),
                       ),
                       InkWell(
@@ -87,8 +90,9 @@ class _EudaimonicTraverseNarrativesChatsroomWidgetState
                         hoverColor: Colors.transparent,
                         highlightColor: Colors.transparent,
                         onTap: () async {
-                          FFAppState().chronotopicVagabondSeerChats = [];
-                          FFAppState().update(() {});
+                          HeritageAromaOdysseyRepository()
+                              .chronotopicVagabondSeerChats = [];
+                          HeritageAromaOdysseyRepository().update(() {});
                         },
                         child: Container(
                           width: 32.0,
@@ -112,31 +116,33 @@ class _EudaimonicTraverseNarrativesChatsroomWidgetState
                         EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 0.0),
                     child: Builder(
                       builder: (context) {
-                        final captivatingDestinationDiaryHub = FFAppState()
-                            .chronotopicVagabondSeerChats
-                            .where((e) =>
-                                e.solivagantEpiphanyCustodianChatUsers.contains(
-                                    FFAppState()
-                                        .eudaimonicCartographerTokenid) &&
-                                !FFAppState()
-                                    .aurorascapePeregrinatorUsers
-                                    .elementAtOrNull(FFAppState()
-                                        .eudaimonicCartographerTokenid)!
-                                    .kaleidoscapeOdysseanUserBlacklist
-                                    .contains(e
-                                        .solivagantEpiphanyCustodianChatUsers
-                                        .where((e) =>
-                                            e !=
-                                            FFAppState()
-                                                .eudaimonicCartographerTokenid)
-                                        .toList()
-                                        .firstOrNull))
-                            .toList()
-                            .sortedList(
-                                keyOf: (e) =>
-                                    e.solivagantEpiphanyCustodianChatLastTime!,
-                                desc: false)
-                            .toList();
+                        final captivatingDestinationDiaryHub =
+                            HeritageAromaOdysseyRepository()
+                                .chronotopicVagabondSeerChats
+                                .where((e) =>
+                                    e.solivagantEpiphanyCustodianChatUsers
+                                        .contains(HeritageAromaOdysseyRepository()
+                                            .eudaimonicCartographerTokenid) &&
+                                    !HeritageAromaOdysseyRepository()
+                                        .aurorascapePeregrinatorUsers
+                                        .elementAtOrNull(
+                                            HeritageAromaOdysseyRepository()
+                                                .eudaimonicCartographerTokenid)!
+                                        .kaleidoscapeOdysseanUserBlacklist
+                                        .contains(e
+                                            .solivagantEpiphanyCustodianChatUsers
+                                            .where((e) =>
+                                                e !=
+                                                HeritageAromaOdysseyRepository()
+                                                    .eudaimonicCartographerTokenid)
+                                            .toList()
+                                            .firstOrNull))
+                                .toList()
+                                .sortedList(
+                                    keyOf: (e) => e
+                                        .solivagantEpiphanyCustodianChatLastTime!,
+                                    desc: false)
+                                .toList();
                         if (captivatingDestinationDiaryHub.isEmpty) {
                           return EpiphanySeekingGlobetrottingSagaEmptyWidget();
                         }
@@ -174,7 +180,7 @@ class _EudaimonicTraverseNarrativesChatsroomWidgetState
                                           .solivagantEpiphanyCustodianChatUsers
                                           .where((e) =>
                                               e !=
-                                              FFAppState()
+                                              HeritageAromaOdysseyRepository()
                                                   .eudaimonicCartographerTokenid)
                                           .toList()
                                           .firstOrNull,
@@ -201,14 +207,14 @@ class _EudaimonicTraverseNarrativesChatsroomWidgetState
                                       shape: BoxShape.circle,
                                     ),
                                     child: Image.asset(
-                                      FFAppState()
+                                      HeritageAromaOdysseyRepository()
                                           .aurorascapePeregrinatorUsers
                                           .elementAtOrNull(
                                               captivatingDestinationDiaryHubItem
                                                   .solivagantEpiphanyCustodianChatUsers
                                                   .where((e) =>
                                                       e !=
-                                                      FFAppState()
+                                                      HeritageAromaOdysseyRepository()
                                                           .eudaimonicCartographerTokenid)
                                                   .toList()
                                                   .firstOrNull!)!
@@ -226,38 +232,40 @@ class _EudaimonicTraverseNarrativesChatsroomWidgetState
                                             CrossAxisAlignment.start,
                                         children: [
                                           Text(
-                                            '${FFAppState().aurorascapePeregrinatorUsers.elementAtOrNull(captivatingDestinationDiaryHubItem.solivagantEpiphanyCustodianChatUsers.where((e) => e != FFAppState().eudaimonicCartographerTokenid).toList().firstOrNull!)?.kaleidoscapeOdysseanUserNickname}',
-                                            style: FlutterFlowTheme.of(context)
+                                            '${HeritageAromaOdysseyRepository().aurorascapePeregrinatorUsers.elementAtOrNull(captivatingDestinationDiaryHubItem.solivagantEpiphanyCustodianChatUsers.where((e) => e != HeritageAromaOdysseyRepository().eudaimonicCartographerTokenid).toList().firstOrNull!)?.kaleidoscapeOdysseanUserNickname}',
+                                            style: AromaticBazaarMemoryTheme.of(
+                                                    context)
                                                 .bodyMedium
                                                 .override(
                                                   fontFamily:
-                                                      FlutterFlowTheme.of(
-                                                              context)
+                                                      AromaticBazaarMemoryTheme
+                                                              .of(context)
                                                           .bodyMediumFamily,
                                                   color: Color(0xE6000000),
                                                   fontSize: 16.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.w600,
                                                   useGoogleFonts:
-                                                      !FlutterFlowTheme.of(
-                                                              context)
+                                                      !AromaticBazaarMemoryTheme
+                                                              .of(context)
                                                           .bodyMediumIsCustom,
                                                 ),
                                           ),
                                           Text(
                                             '${captivatingDestinationDiaryHubItem.solivagantEpiphanyCustodianChatLastMsg}',
-                                            style: FlutterFlowTheme.of(context)
+                                            style: AromaticBazaarMemoryTheme.of(
+                                                    context)
                                                 .bodyMedium
                                                 .override(
                                                   fontFamily:
-                                                      FlutterFlowTheme.of(
-                                                              context)
+                                                      AromaticBazaarMemoryTheme
+                                                              .of(context)
                                                           .bodyMediumFamily,
                                                   color: Color(0xB2000000),
                                                   letterSpacing: 0.0,
                                                   useGoogleFonts:
-                                                      !FlutterFlowTheme.of(
-                                                              context)
+                                                      !AromaticBazaarMemoryTheme
+                                                              .of(context)
                                                           .bodyMediumIsCustom,
                                                 ),
                                           ),
@@ -270,16 +278,18 @@ class _EudaimonicTraverseNarrativesChatsroomWidgetState
                                         "jm",
                                         captivatingDestinationDiaryHubItem
                                             .solivagantEpiphanyCustodianChatLastTime!),
-                                    style: FlutterFlowTheme.of(context)
+                                    style: AromaticBazaarMemoryTheme.of(context)
                                         .bodyMedium
                                         .override(
                                           fontFamily:
-                                              FlutterFlowTheme.of(context)
+                                              AromaticBazaarMemoryTheme.of(
+                                                      context)
                                                   .bodyMediumFamily,
                                           color: Color(0x80000000),
                                           letterSpacing: 0.0,
                                           useGoogleFonts:
-                                              !FlutterFlowTheme.of(context)
+                                              !AromaticBazaarMemoryTheme.of(
+                                                      context)
                                                   .bodyMediumIsCustom,
                                         ),
                                   ),

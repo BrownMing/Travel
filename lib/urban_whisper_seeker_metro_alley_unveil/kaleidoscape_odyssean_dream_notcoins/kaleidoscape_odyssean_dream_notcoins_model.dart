@@ -1,10 +1,10 @@
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_util.dart';
 import 'kaleidoscape_odyssean_dream_notcoins_widget.dart'
     show KaleidoscapeOdysseanDreamNotcoinsWidget;
 import 'package:flutter/material.dart';
 
 class KaleidoscapeOdysseanDreamNotcoinsModel
-    extends FlutterFlowModel<KaleidoscapeOdysseanDreamNotcoinsWidget> {
+    extends AromaticBazaarMemoryModel<KaleidoscapeOdysseanDreamNotcoinsWidget> {
   @override
   void initState(BuildContext context) {}
 

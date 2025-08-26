@@ -2,7 +2,7 @@ import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:flutter/foundation.dart';
-import 'package:travel/core/services/time_service.dart';
+import 'package:jourry/core/services/time_service.dart';
 import '../models/device_info_model.dart';
 import '../constants/app_constants.dart';
 
@@ -30,8 +30,8 @@ class DeviceService implements IDeviceService {
       return DeviceInfoModel(
         applicationId: AppConstants.applicationId,
         applicationVersion: packageInfo.version,
-        platformType: defaultTargetPlatform == TargetPlatform.iOS 
-            ? PlatformIdentifiers.ios 
+        platformType: defaultTargetPlatform == TargetPlatform.iOS
+            ? PlatformIdentifiers.ios
             : PlatformIdentifiers.android,
         platformVersion: platformVersion,
         deviceIdentifier: deviceId,
@@ -60,11 +60,13 @@ class DeviceService implements IDeviceService {
       timeZoneIdentifier: _getTimeZoneIdentifier(),
     );
   }
+
   @override
   String getKeyboardLanguageCode() {
     final Locale systemLocale = WidgetsBinding.instance.window.locale;
-     return "${systemLocale.languageCode}-${systemLocale.scriptCode},en-${systemLocale.countryCode},emoji";
+    return "${systemLocale.languageCode}-${systemLocale.scriptCode},en-${systemLocale.countryCode},emoji";
   }
+
   @override
   String getCurrentLanguageCode() {
     final Locale systemLocale = WidgetsBinding.instance.window.locale;

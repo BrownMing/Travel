@@ -1,5 +1,5 @@
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_theme.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_util.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'wanderlust_journey_sharing_space_home_detail_model.dart';
@@ -43,7 +43,7 @@ class _WanderlustJourneySharingSpaceHomeDetailWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<HeritageAromaOdysseyRepository>();
 
     return GestureDetector(
       onTap: () {
@@ -67,7 +67,7 @@ class _WanderlustJourneySharingSpaceHomeDetailWidgetState
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Image.asset(
-                          FFAppState()
+                          HeritageAromaOdysseyRepository()
                               .culturalScentExplorationDiscovers
                               .elementAtOrNull(
                                   widget.culturalDiscoveryJournalPlace!)!
@@ -87,19 +87,21 @@ class _WanderlustJourneySharingSpaceHomeDetailWidgetState
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Text(
-                                    '${FFAppState().culturalScentExplorationDiscovers.elementAtOrNull(widget.culturalDiscoveryJournalPlace!)?.sensoryAromaDiscoveryPathDiscoverTitle}',
-                                    style: FlutterFlowTheme.of(context)
+                                    '${HeritageAromaOdysseyRepository().culturalScentExplorationDiscovers.elementAtOrNull(widget.culturalDiscoveryJournalPlace!)?.sensoryAromaDiscoveryPathDiscoverTitle}',
+                                    style: AromaticBazaarMemoryTheme.of(context)
                                         .bodyMedium
                                         .override(
                                           fontFamily:
-                                              FlutterFlowTheme.of(context)
+                                              AromaticBazaarMemoryTheme.of(
+                                                      context)
                                                   .bodyMediumFamily,
                                           color: Color(0xE5000000),
                                           fontSize: 24.0,
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.w600,
                                           useGoogleFonts:
-                                              !FlutterFlowTheme.of(context)
+                                              !AromaticBazaarMemoryTheme.of(
+                                                      context)
                                                   .bodyMediumIsCustom,
                                         ),
                                   ),
@@ -119,18 +121,21 @@ class _WanderlustJourneySharingSpaceHomeDetailWidgetState
                                         ),
                                       ),
                                       Text(
-                                        '${FFAppState().culturalScentExplorationDiscovers.elementAtOrNull(widget.culturalDiscoveryJournalPlace!)?.sensoryAromaDiscoveryPathDiscoverLocation}',
-                                        style: FlutterFlowTheme.of(context)
+                                        '${HeritageAromaOdysseyRepository().culturalScentExplorationDiscovers.elementAtOrNull(widget.culturalDiscoveryJournalPlace!)?.sensoryAromaDiscoveryPathDiscoverLocation}',
+                                        style: AromaticBazaarMemoryTheme.of(
+                                                context)
                                             .bodyMedium
                                             .override(
                                               fontFamily:
-                                                  FlutterFlowTheme.of(context)
+                                                  AromaticBazaarMemoryTheme.of(
+                                                          context)
                                                       .bodyMediumFamily,
                                               color: Color(0x98000000),
                                               fontSize: 18.0,
                                               letterSpacing: 0.0,
                                               useGoogleFonts:
-                                                  !FlutterFlowTheme.of(context)
+                                                  !AromaticBazaarMemoryTheme.of(
+                                                          context)
                                                       .bodyMediumIsCustom,
                                             ),
                                       ),
@@ -154,19 +159,21 @@ class _WanderlustJourneySharingSpaceHomeDetailWidgetState
                                           fit: BoxFit.cover,
                                         ),
                                         Text(
-                                          '${FFAppState().culturalScentExplorationDiscovers.elementAtOrNull(widget.culturalDiscoveryJournalPlace!)?.sensoryAromaDiscoveryPathDiscoverStar.toString()}',
-                                          style: FlutterFlowTheme.of(context)
+                                          '${HeritageAromaOdysseyRepository().culturalScentExplorationDiscovers.elementAtOrNull(widget.culturalDiscoveryJournalPlace!)?.sensoryAromaDiscoveryPathDiscoverStar.toString()}',
+                                          style: AromaticBazaarMemoryTheme.of(
+                                                  context)
                                               .bodyMedium
                                               .override(
                                                 fontFamily:
-                                                    FlutterFlowTheme.of(context)
+                                                    AromaticBazaarMemoryTheme
+                                                            .of(context)
                                                         .bodyMediumFamily,
                                                 color: Color(0x99000000),
                                                 fontSize: 16.0,
                                                 letterSpacing: 0.0,
                                                 useGoogleFonts:
-                                                    !FlutterFlowTheme.of(
-                                                            context)
+                                                    !AromaticBazaarMemoryTheme
+                                                            .of(context)
                                                         .bodyMediumIsCustom,
                                               ),
                                         ),
@@ -174,13 +181,14 @@ class _WanderlustJourneySharingSpaceHomeDetailWidgetState
                                     ),
                                     Builder(
                                       builder: (context) {
-                                        final charmingAdventureSharingBoard = FFAppState()
-                                                .culturalScentExplorationDiscovers
-                                                .elementAtOrNull(widget
-                                                    .culturalDiscoveryJournalPlace!)
-                                                ?.sensoryAromaDiscoveryPathDiscoverJoinusers
-                                                .toList() ??
-                                            [];
+                                        final charmingAdventureSharingBoard =
+                                            HeritageAromaOdysseyRepository()
+                                                    .culturalScentExplorationDiscovers
+                                                    .elementAtOrNull(widget
+                                                        .culturalDiscoveryJournalPlace!)
+                                                    ?.sensoryAromaDiscoveryPathDiscoverJoinusers
+                                                    .toList() ??
+                                                [];
 
                                         return Stack(
                                           children: List.generate(
@@ -208,7 +216,7 @@ class _WanderlustJourneySharingSpaceHomeDetailWidgetState
                                                   image: DecorationImage(
                                                     fit: BoxFit.cover,
                                                     image: Image.asset(
-                                                      FFAppState()
+                                                      HeritageAromaOdysseyRepository()
                                                           .aurorascapePeregrinatorUsers
                                                           .elementAtOrNull(
                                                               charmingAdventureSharingBoardItem)!
@@ -234,17 +242,20 @@ class _WanderlustJourneySharingSpaceHomeDetailWidgetState
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 8.0, 0.0, 0.0),
                                 child: Text(
-                                  '${FFAppState().culturalScentExplorationDiscovers.elementAtOrNull(widget.culturalDiscoveryJournalPlace!)?.sensoryAromaDiscoveryPathDiscoverDesc}',
-                                  style: FlutterFlowTheme.of(context)
+                                  '${HeritageAromaOdysseyRepository().culturalScentExplorationDiscovers.elementAtOrNull(widget.culturalDiscoveryJournalPlace!)?.sensoryAromaDiscoveryPathDiscoverDesc}',
+                                  style: AromaticBazaarMemoryTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: FlutterFlowTheme.of(context)
-                                            .bodyMediumFamily,
+                                        fontFamily:
+                                            AromaticBazaarMemoryTheme.of(
+                                                    context)
+                                                .bodyMediumFamily,
                                         color: Color(0x98000000),
                                         fontSize: 18.0,
                                         letterSpacing: 0.0,
                                         useGoogleFonts:
-                                            !FlutterFlowTheme.of(context)
+                                            !AromaticBazaarMemoryTheme.of(
+                                                    context)
                                                 .bodyMediumIsCustom,
                                       ),
                                 ),
@@ -257,18 +268,21 @@ class _WanderlustJourneySharingSpaceHomeDetailWidgetState
                                   children: [
                                     Text(
                                       'More images',
-                                      style: FlutterFlowTheme.of(context)
+                                      style: AromaticBazaarMemoryTheme.of(
+                                              context)
                                           .bodyMedium
                                           .override(
                                             fontFamily:
-                                                FlutterFlowTheme.of(context)
+                                                AromaticBazaarMemoryTheme.of(
+                                                        context)
                                                     .bodyMediumFamily,
                                             color: Color(0xE5000000),
                                             fontSize: 16.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
                                             useGoogleFonts:
-                                                !FlutterFlowTheme.of(context)
+                                                !AromaticBazaarMemoryTheme.of(
+                                                        context)
                                                     .bodyMediumIsCustom,
                                           ),
                                     ),
@@ -280,13 +294,14 @@ class _WanderlustJourneySharingSpaceHomeDetailWidgetState
                                     0.0, 8.0, 0.0, 0.0),
                                 child: Builder(
                                   builder: (context) {
-                                    final incredibleJourneyReflectionHub = FFAppState()
-                                            .culturalScentExplorationDiscovers
-                                            .elementAtOrNull(widget
-                                                .culturalDiscoveryJournalPlace!)
-                                            ?.sensoryAromaDiscoveryPathDiscoverMoreImage
-                                            .toList() ??
-                                        [];
+                                    final incredibleJourneyReflectionHub =
+                                        HeritageAromaOdysseyRepository()
+                                                .culturalScentExplorationDiscovers
+                                                .elementAtOrNull(widget
+                                                    .culturalDiscoveryJournalPlace!)
+                                                ?.sensoryAromaDiscoveryPathDiscoverMoreImage
+                                                .toList() ??
+                                            [];
 
                                     return Row(
                                       mainAxisSize: MainAxisSize.max,

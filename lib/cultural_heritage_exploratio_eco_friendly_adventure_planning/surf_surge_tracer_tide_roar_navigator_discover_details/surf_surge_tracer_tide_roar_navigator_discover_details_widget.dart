@@ -1,7 +1,7 @@
 import '/backend/schema/structs/index.dart';
 import '/components/wanderer_bazaar_fragrance_tales_details_widget.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_theme.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_util.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'surf_surge_tracer_tide_roar_navigator_discover_details_model.dart';
@@ -36,8 +36,8 @@ class _SurfSurgeTracerTideRoarNavigatorDiscoverDetailsWidgetState
     _model = createModel(
         context, () => SurfSurgeTracerTideRoarNavigatorDiscoverDetailsModel());
 
-    _model.textController ??= TextEditingController();
-    _model.textFieldFocusNode ??= FocusNode();
+    _model.journeyThroughSpiceChronicles ??= TextEditingController();
+    _model.nomadicTravelerStoryArchive ??= FocusNode();
   }
 
   @override
@@ -49,7 +49,7 @@ class _SurfSurgeTracerTideRoarNavigatorDiscoverDetailsWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<HeritageAromaOdysseyRepository>();
 
     return GestureDetector(
       onTap: () {
@@ -128,47 +128,55 @@ class _SurfSurgeTracerTideRoarNavigatorDiscoverDetailsWidgetState
                                   color: Colors.transparent,
                                   child:
                                       WandererBazaarFragranceTalesDetailsWidget(
-                                    globalScentTrailAtlasUserid: FFAppState()
-                                        .bioluminiscentTrailblazerPosts
-                                        .elementAtOrNull(
-                                            widget.sensoryBazaarOdysseyMap!)
-                                        ?.transcontinentalOneirochronPostCreateId,
+                                    globalScentTrailAtlasUserid:
+                                        HeritageAromaOdysseyRepository()
+                                            .bioluminiscentTrailblazerPosts
+                                            .elementAtOrNull(
+                                                widget.sensoryBazaarOdysseyMap!)
+                                            ?.transcontinentalOneirochronPostCreateId,
                                     globalScentTrailAtlasTime: dateTimeFormat(
                                         "relative",
-                                        FFAppState()
+                                        HeritageAromaOdysseyRepository()
                                             .bioluminiscentTrailblazerPosts
                                             .elementAtOrNull(widget
                                                 .sensoryBazaarOdysseyMap!)!
                                             .transcontinentalOneirochronPostCreateTime!),
-                                    globalScentTrailAtlasDescribe: FFAppState()
-                                        .bioluminiscentTrailblazerPosts
-                                        .elementAtOrNull(
-                                            widget.sensoryBazaarOdysseyMap!)
-                                        ?.transcontinentalOneirochronPostDesc,
-                                    globalScentTrailAtlasVideo: FFAppState()
-                                        .bioluminiscentTrailblazerPosts
-                                        .elementAtOrNull(
-                                            widget.sensoryBazaarOdysseyMap!)
-                                        ?.transcontinentalOneirochronPostVideo,
-                                    globalScentTrailAtlasUnlike: !FFAppState()
-                                        .bioluminiscentTrailblazerPosts
-                                        .elementAtOrNull(
-                                            widget.sensoryBazaarOdysseyMap!)!
-                                        .transcontinentalOneirochronPostLikeUsers
-                                        .contains(FFAppState()
-                                            .eudaimonicCartographerTokenid),
-                                    globalScentTrailAtlasPost: FFAppState()
-                                        .bioluminiscentTrailblazerPosts
-                                        .elementAtOrNull(
-                                            widget.sensoryBazaarOdysseyMap!)!
-                                        .transcontinentalOneirochronPostId,
-                                    globalScentTrailAtlasLike: FFAppState()
-                                        .bioluminiscentTrailblazerPosts
-                                        .elementAtOrNull(
-                                            widget.sensoryBazaarOdysseyMap!)
-                                        ?.transcontinentalOneirochronPostLikeUsers
-                                        .contains(FFAppState()
-                                            .eudaimonicCartographerTokenid),
+                                    globalScentTrailAtlasDescribe:
+                                        HeritageAromaOdysseyRepository()
+                                            .bioluminiscentTrailblazerPosts
+                                            .elementAtOrNull(
+                                                widget.sensoryBazaarOdysseyMap!)
+                                            ?.transcontinentalOneirochronPostDesc,
+                                    globalScentTrailAtlasVideo:
+                                        HeritageAromaOdysseyRepository()
+                                            .bioluminiscentTrailblazerPosts
+                                            .elementAtOrNull(
+                                                widget.sensoryBazaarOdysseyMap!)
+                                            ?.transcontinentalOneirochronPostVideo,
+                                    globalScentTrailAtlasUnlike:
+                                        !HeritageAromaOdysseyRepository()
+                                            .bioluminiscentTrailblazerPosts
+                                            .elementAtOrNull(widget
+                                                .sensoryBazaarOdysseyMap!)!
+                                            .transcontinentalOneirochronPostLikeUsers
+                                            .contains(
+                                                HeritageAromaOdysseyRepository()
+                                                    .eudaimonicCartographerTokenid),
+                                    globalScentTrailAtlasPost:
+                                        HeritageAromaOdysseyRepository()
+                                            .bioluminiscentTrailblazerPosts
+                                            .elementAtOrNull(widget
+                                                .sensoryBazaarOdysseyMap!)!
+                                            .transcontinentalOneirochronPostId,
+                                    globalScentTrailAtlasLike:
+                                        HeritageAromaOdysseyRepository()
+                                            .bioluminiscentTrailblazerPosts
+                                            .elementAtOrNull(
+                                                widget.sensoryBazaarOdysseyMap!)
+                                            ?.transcontinentalOneirochronPostLikeUsers
+                                            .contains(
+                                                HeritageAromaOdysseyRepository()
+                                                    .eudaimonicCartographerTokenid),
                                   ),
                                 ),
                               ),
@@ -191,18 +199,19 @@ class _SurfSurgeTracerTideRoarNavigatorDiscoverDetailsWidgetState
                               0.0, 16.0, 0.0, 0.0),
                           child: Builder(
                             builder: (context) {
-                              final memorableTravelExperienceGuide = FFAppState()
-                                  .noospherePilgrimageArchonComments
-                                  .where((e) =>
-                                      widget.sensoryBazaarOdysseyMap ==
-                                      e
-                                          .ecotopiaPeregrinationArchivistCommentPostref)
-                                  .toList()
-                                  .sortedList(
-                                      keyOf: (e) => e
-                                          .ecotopiaPeregrinationArchivistCommentCreateTime!,
-                                      desc: true)
-                                  .toList();
+                              final memorableJourryExperienceGuide =
+                                  HeritageAromaOdysseyRepository()
+                                      .noospherePilgrimageArchonComments
+                                      .where((e) =>
+                                          widget.sensoryBazaarOdysseyMap ==
+                                          e
+                                              .ecotopiaPeregrinationArchivistCommentPostref)
+                                      .toList()
+                                      .sortedList(
+                                          keyOf: (e) => e
+                                              .ecotopiaPeregrinationArchivistCommentCreateTime!,
+                                          desc: true)
+                                      .toList();
 
                               return ListView.separated(
                                 padding: EdgeInsets.zero,
@@ -210,14 +219,14 @@ class _SurfSurgeTracerTideRoarNavigatorDiscoverDetailsWidgetState
                                 shrinkWrap: true,
                                 scrollDirection: Axis.vertical,
                                 itemCount:
-                                    memorableTravelExperienceGuide.length,
+                                    memorableJourryExperienceGuide.length,
                                 separatorBuilder: (_, __) =>
                                     SizedBox(height: 20.0),
                                 itemBuilder: (context,
-                                    memorableTravelExperienceGuideIndex) {
-                                  final memorableTravelExperienceGuideItem =
-                                      memorableTravelExperienceGuide[
-                                          memorableTravelExperienceGuideIndex];
+                                    memorableJourryExperienceGuideIndex) {
+                                  final memorableJourryExperienceGuideItem =
+                                      memorableJourryExperienceGuide[
+                                          memorableJourryExperienceGuideIndex];
                                   return Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         16.0, 0.0, 16.0, 0.0),
@@ -232,10 +241,10 @@ class _SurfSurgeTracerTideRoarNavigatorDiscoverDetailsWidgetState
                                             shape: BoxShape.circle,
                                           ),
                                           child: Image.asset(
-                                            FFAppState()
+                                            HeritageAromaOdysseyRepository()
                                                 .aurorascapePeregrinatorUsers
                                                 .elementAtOrNull(
-                                                    memorableTravelExperienceGuideItem
+                                                    memorableJourryExperienceGuideItem
                                                         .ecotopiaPeregrinationArchivistCommentCreateId)!
                                                 .kaleidoscapeOdysseanUserPhoto,
                                             fit: BoxFit.cover,
@@ -248,42 +257,42 @@ class _SurfSurgeTracerTideRoarNavigatorDiscoverDetailsWidgetState
                                                 CrossAxisAlignment.start,
                                             children: [
                                               Text(
-                                                '${FFAppState().aurorascapePeregrinatorUsers.elementAtOrNull(memorableTravelExperienceGuideItem.ecotopiaPeregrinationArchivistCommentCreateId)?.kaleidoscapeOdysseanUserNickname}',
-                                                style: FlutterFlowTheme.of(
-                                                        context)
+                                                '${HeritageAromaOdysseyRepository().aurorascapePeregrinatorUsers.elementAtOrNull(memorableJourryExperienceGuideItem.ecotopiaPeregrinationArchivistCommentCreateId)?.kaleidoscapeOdysseanUserNickname}',
+                                                style: AromaticBazaarMemoryTheme
+                                                        .of(context)
                                                     .bodyMedium
                                                     .override(
                                                       fontFamily:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
+                                                          AromaticBazaarMemoryTheme
+                                                                  .of(context)
                                                               .bodyMediumFamily,
                                                       color: Color(0xE6000000),
                                                       letterSpacing: 0.0,
                                                       fontWeight:
                                                           FontWeight.w500,
                                                       useGoogleFonts:
-                                                          !FlutterFlowTheme.of(
-                                                                  context)
+                                                          !AromaticBazaarMemoryTheme
+                                                                  .of(context)
                                                               .bodyMediumIsCustom,
                                                     ),
                                               ),
                                               Text(
-                                                memorableTravelExperienceGuideItem
+                                                memorableJourryExperienceGuideItem
                                                     .ecotopiaPeregrinationArchivistCommentContent,
-                                                style: FlutterFlowTheme.of(
-                                                        context)
+                                                style: AromaticBazaarMemoryTheme
+                                                        .of(context)
                                                     .bodyMedium
                                                     .override(
                                                       fontFamily:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
+                                                          AromaticBazaarMemoryTheme
+                                                                  .of(context)
                                                               .bodyMediumFamily,
                                                       color: Color(0x98000000),
                                                       fontSize: 12.0,
                                                       letterSpacing: 0.0,
                                                       useGoogleFonts:
-                                                          !FlutterFlowTheme.of(
-                                                                  context)
+                                                          !AromaticBazaarMemoryTheme
+                                                                  .of(context)
                                                               .bodyMediumIsCustom,
                                                     ),
                                               ),
@@ -325,35 +334,43 @@ class _SurfSurgeTracerTideRoarNavigatorDiscoverDetailsWidgetState
                                 child: Container(
                                   width: double.infinity,
                                   child: TextFormField(
-                                    controller: _model.textController,
-                                    focusNode: _model.textFieldFocusNode,
+                                    controller:
+                                        _model.journeyThroughSpiceChronicles,
+                                    focusNode:
+                                        _model.nomadicTravelerStoryArchive,
                                     autofocus: false,
                                     textInputAction: TextInputAction.done,
                                     obscureText: false,
                                     decoration: InputDecoration(
                                       isDense: true,
-                                      labelStyle: FlutterFlowTheme.of(context)
+                                      labelStyle: AromaticBazaarMemoryTheme.of(
+                                              context)
                                           .labelMedium
                                           .override(
                                             fontFamily:
-                                                FlutterFlowTheme.of(context)
+                                                AromaticBazaarMemoryTheme.of(
+                                                        context)
                                                     .labelMediumFamily,
                                             letterSpacing: 0.0,
                                             useGoogleFonts:
-                                                !FlutterFlowTheme.of(context)
+                                                !AromaticBazaarMemoryTheme.of(
+                                                        context)
                                                     .labelMediumIsCustom,
                                           ),
                                       hintText: 'Please enter...',
-                                      hintStyle: FlutterFlowTheme.of(context)
+                                      hintStyle: AromaticBazaarMemoryTheme.of(
+                                              context)
                                           .labelMedium
                                           .override(
                                             fontFamily:
-                                                FlutterFlowTheme.of(context)
+                                                AromaticBazaarMemoryTheme.of(
+                                                        context)
                                                     .labelMediumFamily,
                                             color: Color(0xCCFFFFFF),
                                             letterSpacing: 0.0,
                                             useGoogleFonts:
-                                                !FlutterFlowTheme.of(context)
+                                                !AromaticBazaarMemoryTheme.of(
+                                                        context)
                                                     .labelMediumIsCustom,
                                           ),
                                       enabledBorder: OutlineInputBorder(
@@ -397,22 +414,27 @@ class _SurfSurgeTracerTideRoarNavigatorDiscoverDetailsWidgetState
                                         ),
                                       ),
                                     ),
-                                    style: FlutterFlowTheme.of(context)
+                                    style: AromaticBazaarMemoryTheme.of(context)
                                         .bodyMedium
                                         .override(
                                           fontFamily:
-                                              FlutterFlowTheme.of(context)
+                                              AromaticBazaarMemoryTheme.of(
+                                                      context)
                                                   .bodyMediumFamily,
-                                          color:
-                                              FlutterFlowTheme.of(context).info,
+                                          color: AromaticBazaarMemoryTheme.of(
+                                                  context)
+                                              .info,
                                           letterSpacing: 0.0,
                                           useGoogleFonts:
-                                              !FlutterFlowTheme.of(context)
+                                              !AromaticBazaarMemoryTheme.of(
+                                                      context)
                                                   .bodyMediumIsCustom,
                                         ),
                                     cursorColor:
-                                        FlutterFlowTheme.of(context).info,
-                                    validator: _model.textControllerValidator
+                                        AromaticBazaarMemoryTheme.of(context)
+                                            .info,
+                                    validator: _model
+                                        .olfactoryTrailVoyageRegistry
                                         .asValidator(context),
                                   ),
                                 ),
@@ -423,23 +445,28 @@ class _SurfSurgeTracerTideRoarNavigatorDiscoverDetailsWidgetState
                                 hoverColor: Colors.transparent,
                                 highlightColor: Colors.transparent,
                                 onTap: () async {
-                                  if (_model.textController.text != '') {
-                                    FFAppState()
+                                  if (_model
+                                          .journeyThroughSpiceChronicles.text !=
+                                      '') {
+                                    HeritageAromaOdysseyRepository()
                                         .addToNoospherePilgrimageArchonComments(
                                             EcotopiaPeregrinationArchivistCommentStruct(
                                       ecotopiaPeregrinationArchivistCommentContent:
-                                          _model.textController.text,
+                                          _model.journeyThroughSpiceChronicles
+                                              .text,
                                       ecotopiaPeregrinationArchivistCommentCreateId:
-                                          FFAppState()
+                                          HeritageAromaOdysseyRepository()
                                               .eudaimonicCartographerTokenid,
                                       ecotopiaPeregrinationArchivistCommentCreateTime:
                                           getCurrentTimestamp,
                                       ecotopiaPeregrinationArchivistCommentPostref:
                                           widget.sensoryBazaarOdysseyMap,
                                     ));
-                                    FFAppState().update(() {});
+                                    HeritageAromaOdysseyRepository()
+                                        .update(() {});
                                     safeSetState(() {
-                                      _model.textController?.clear();
+                                      _model.journeyThroughSpiceChronicles
+                                          ?.clear();
                                     });
                                   }
                                 },

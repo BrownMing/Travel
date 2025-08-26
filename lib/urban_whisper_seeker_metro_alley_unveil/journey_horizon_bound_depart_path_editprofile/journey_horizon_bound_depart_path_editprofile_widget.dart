@@ -1,8 +1,8 @@
-import 'package:travel/flutter_flow/flutter_flow_drop_down.dart';
+import 'package:jourry/fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_select.dart';
 
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_theme.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_util.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_widgets.dart';
 import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
@@ -26,24 +26,25 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
   late JourneyHorizonBoundDepartPathEditprofileModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
-  final List<FlutterFlowDropDownOption> _countryOptions = [
-    FlutterFlowDropDownOption(value: 'Male', label: 'Male'),
-    FlutterFlowDropDownOption(value: 'Female', label: 'Female'),
+  final List<AromaticBazaarMemoryDropDownOption> _nomadicOdysseyBazaarCodex = [
+    AromaticBazaarMemoryDropDownOption(value: 'Male', label: 'Male'),
+    AromaticBazaarMemoryDropDownOption(value: 'Female', label: 'Female'),
   ];
-  final List<FlutterFlowDropDownOption> _ageOptions = [
-    FlutterFlowDropDownOption(value: '18', label: '18'),
-    FlutterFlowDropDownOption(value: '19', label: '19'),
-    FlutterFlowDropDownOption(value: '20', label: '20'),
-    FlutterFlowDropDownOption(value: '21', label: '21'),
-    FlutterFlowDropDownOption(value: '22', label: '22'),
-    FlutterFlowDropDownOption(value: '23', label: '23'),
-    FlutterFlowDropDownOption(value: '24', label: '24'),
-    FlutterFlowDropDownOption(value: '25', label: '25'),
-    FlutterFlowDropDownOption(value: '26', label: '26'),
-    FlutterFlowDropDownOption(value: '27', label: '27'),
-    FlutterFlowDropDownOption(value: '28', label: '28'),
-    FlutterFlowDropDownOption(value: '29', label: '29'),
-    FlutterFlowDropDownOption(value: '30', label: '30'),
+  final List<AromaticBazaarMemoryDropDownOption>
+      _culturalTravelScentedChronicles = [
+    AromaticBazaarMemoryDropDownOption(value: '18', label: '18'),
+    AromaticBazaarMemoryDropDownOption(value: '19', label: '19'),
+    AromaticBazaarMemoryDropDownOption(value: '20', label: '20'),
+    AromaticBazaarMemoryDropDownOption(value: '21', label: '21'),
+    AromaticBazaarMemoryDropDownOption(value: '22', label: '22'),
+    AromaticBazaarMemoryDropDownOption(value: '23', label: '23'),
+    AromaticBazaarMemoryDropDownOption(value: '24', label: '24'),
+    AromaticBazaarMemoryDropDownOption(value: '25', label: '25'),
+    AromaticBazaarMemoryDropDownOption(value: '26', label: '26'),
+    AromaticBazaarMemoryDropDownOption(value: '27', label: '27'),
+    AromaticBazaarMemoryDropDownOption(value: '28', label: '28'),
+    AromaticBazaarMemoryDropDownOption(value: '29', label: '29'),
+    AromaticBazaarMemoryDropDownOption(value: '30', label: '30'),
   ];
   @override
   void initState() {
@@ -51,17 +52,18 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
     _model = createModel(
         context, () => JourneyHorizonBoundDepartPathEditprofileModel());
 
-    _model.textController1 ??= TextEditingController();
-    _model.textFieldFocusNode1 ??= FocusNode();
+    _model.globalNomadScentOdysseyBook ??= TextEditingController();
+    _model.wandererBazaarTrailChronicles ??= FocusNode();
 
-    _model.textController2 ??= TextEditingController();
-    _model.textFieldFocusNode2 ??= FocusNode();
+    _model.bazaarOdysseyTravelBlueprint ??= TextEditingController();
+    _model.spiceVoyageImmersionAtlas ??= FocusNode();
 
     // Initialize original user data for comparison
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      final currentUser = FFAppState()
+      final currentUser = HeritageAromaOdysseyRepository()
           .aurorascapePeregrinatorUsers
-          .elementAtOrNull(FFAppState().eudaimonicCartographerTokenid);
+          .elementAtOrNull(
+              HeritageAromaOdysseyRepository().eudaimonicCartographerTokenid);
       if (currentUser != null) {
         _model.initializeOriginalData(currentUser);
       }
@@ -77,7 +79,7 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<HeritageAromaOdysseyRepository>();
 
     return GestureDetector(
       onTap: () {
@@ -127,15 +129,18 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
                       ),
                       Text(
                         'Edit Profile',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily:
-                                  FlutterFlowTheme.of(context).bodyMediumFamily,
+                        style: AromaticBazaarMemoryTheme.of(context)
+                            .bodyMedium
+                            .override(
+                              fontFamily: AromaticBazaarMemoryTheme.of(context)
+                                  .bodyMediumFamily,
                               color: Colors.black,
                               fontSize: 20,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.bold,
-                              useGoogleFonts: !FlutterFlowTheme.of(context)
-                                  .bodyMediumIsCustom,
+                              useGoogleFonts:
+                                  !AromaticBazaarMemoryTheme.of(context)
+                                      .bodyMediumIsCustom,
                             ),
                       ),
                       Container(
@@ -186,9 +191,9 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
                                             : DecorationImage(
                                                 fit: BoxFit.cover,
                                                 image: Image.asset(
-                                                  FFAppState()
+                                                  HeritageAromaOdysseyRepository()
                                                       .aurorascapePeregrinatorUsers[
-                                                          FFAppState()
+                                                          HeritageAromaOdysseyRepository()
                                                               .eudaimonicCartographerTokenid]
                                                       .kaleidoscapeOdysseanUserPhoto,
                                                 ).image,
@@ -221,7 +226,7 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
                                                     MediaQuery.viewInsetsOf(
                                                         context),
                                                 child:
-                                                    InspireGiftTalesChatUpload(
+                                                    BazaarTrailImmersionChronicle(
                                                   allowVideoUpload: false,
                                                   allowMultipleImageSelect:
                                                       false,
@@ -265,17 +270,20 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
                               children: [
                                 Text(
                                   'Nickname',
-                                  style: FlutterFlowTheme.of(context)
+                                  style: AromaticBazaarMemoryTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: FlutterFlowTheme.of(context)
-                                            .bodyMediumFamily,
+                                        fontFamily:
+                                            AromaticBazaarMemoryTheme.of(
+                                                    context)
+                                                .bodyMediumFamily,
                                         color: Color(0xF3000000),
                                         fontSize: 18,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
                                         useGoogleFonts:
-                                            !FlutterFlowTheme.of(context)
+                                            !AromaticBazaarMemoryTheme.of(
+                                                    context)
                                                 .bodyMediumIsCustom,
                                       ),
                                 ),
@@ -283,7 +291,8 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
                                   width: double.infinity,
                                   height: 50,
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context).info,
+                                    color: AromaticBazaarMemoryTheme.of(context)
+                                        .info,
                                     borderRadius: BorderRadius.circular(12),
                                   ),
                                   child: Align(
@@ -291,42 +300,48 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
                                     child: Container(
                                       width: double.infinity,
                                       child: TextFormField(
-                                        controller: _model.textController1,
-                                        focusNode: _model.textFieldFocusNode1,
+                                        controller:
+                                            _model.globalNomadScentOdysseyBook,
+                                        focusNode: _model
+                                            .wandererBazaarTrailChronicles,
                                         autofocus: false,
                                         textInputAction: TextInputAction.done,
                                         obscureText: false,
                                         decoration: InputDecoration(
                                           isDense: true,
-                                          labelStyle: FlutterFlowTheme.of(
-                                                  context)
-                                              .labelMedium
-                                              .override(
-                                                fontFamily:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMediumFamily,
-                                                letterSpacing: 0.0,
-                                                useGoogleFonts:
-                                                    !FlutterFlowTheme.of(
-                                                            context)
-                                                        .labelMediumIsCustom,
-                                              ),
+                                          labelStyle:
+                                              AromaticBazaarMemoryTheme.of(
+                                                      context)
+                                                  .labelMedium
+                                                  .override(
+                                                    fontFamily:
+                                                        AromaticBazaarMemoryTheme
+                                                                .of(context)
+                                                            .labelMediumFamily,
+                                                    letterSpacing: 0.0,
+                                                    useGoogleFonts:
+                                                        !AromaticBazaarMemoryTheme
+                                                                .of(context)
+                                                            .labelMediumIsCustom,
+                                                  ),
                                           hintText:
-                                              '${FFAppState().aurorascapePeregrinatorUsers.elementAtOrNull(FFAppState().eudaimonicCartographerTokenid)?.kaleidoscapeOdysseanUserNickname}',
-                                          hintStyle: FlutterFlowTheme.of(
-                                                  context)
-                                              .labelMedium
-                                              .override(
-                                                fontFamily:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMediumFamily,
-                                                color: Color(0xE6000000),
-                                                letterSpacing: 0.0,
-                                                useGoogleFonts:
-                                                    !FlutterFlowTheme.of(
-                                                            context)
-                                                        .labelMediumIsCustom,
-                                              ),
+                                              '${HeritageAromaOdysseyRepository().aurorascapePeregrinatorUsers.elementAtOrNull(HeritageAromaOdysseyRepository().eudaimonicCartographerTokenid)?.kaleidoscapeOdysseanUserNickname}',
+                                          hintStyle:
+                                              AromaticBazaarMemoryTheme.of(
+                                                      context)
+                                                  .labelMedium
+                                                  .override(
+                                                    fontFamily:
+                                                        AromaticBazaarMemoryTheme
+                                                                .of(context)
+                                                            .labelMediumFamily,
+                                                    color: Color(0xE6000000),
+                                                    letterSpacing: 0.0,
+                                                    useGoogleFonts:
+                                                        !AromaticBazaarMemoryTheme
+                                                                .of(context)
+                                                            .labelMediumIsCustom,
+                                                  ),
                                           enabledBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
                                               color: Color(0x00000000),
@@ -361,21 +376,24 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
                                                 BorderRadius.circular(12),
                                           ),
                                         ),
-                                        style: FlutterFlowTheme.of(context)
+                                        style: AromaticBazaarMemoryTheme.of(
+                                                context)
                                             .bodyMedium
                                             .override(
                                               fontFamily:
-                                                  FlutterFlowTheme.of(context)
+                                                  AromaticBazaarMemoryTheme.of(
+                                                          context)
                                                       .bodyMediumFamily,
                                               color: Colors.black,
                                               letterSpacing: 0.0,
                                               useGoogleFonts:
-                                                  !FlutterFlowTheme.of(context)
+                                                  !AromaticBazaarMemoryTheme.of(
+                                                          context)
                                                       .bodyMediumIsCustom,
                                             ),
                                         cursorColor: Colors.black,
                                         validator: _model
-                                            .textController1Validator
+                                            .culturalExplorerAromaTales
                                             .asValidator(context),
                                       ),
                                     ),
@@ -393,17 +411,20 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
                               children: [
                                 Text(
                                   'Gender',
-                                  style: FlutterFlowTheme.of(context)
+                                  style: AromaticBazaarMemoryTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: FlutterFlowTheme.of(context)
-                                            .bodyMediumFamily,
+                                        fontFamily:
+                                            AromaticBazaarMemoryTheme.of(
+                                                    context)
+                                                .bodyMediumFamily,
                                         color: Color(0xF3000000),
                                         fontSize: 18,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
                                         useGoogleFonts:
-                                            !FlutterFlowTheme.of(context)
+                                            !AromaticBazaarMemoryTheme.of(
+                                                    context)
                                                 .bodyMediumIsCustom,
                                       ),
                                 ),
@@ -411,36 +432,42 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
                                   width: double.infinity,
                                   height: 50.0,
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context).info,
+                                    color: AromaticBazaarMemoryTheme.of(context)
+                                        .info,
                                     borderRadius: BorderRadius.circular(12.0),
                                   ),
-                                  child: FlutterFlowDropDown(
-                                    options: _countryOptions,
-                                    onChanged: (val) => safeSetState(
-                                        () => _model.dropDownValue1 = val),
+                                  child: AromaticBazaarMemoryDropDown(
+                                    options: _nomadicOdysseyBazaarCodex,
+                                    onChanged: (val) => safeSetState(() =>
+                                        _model.journeyOfBazaarLegendsLedger =
+                                            val),
                                     width: double.infinity,
                                     height: double.infinity,
-                                    textStyle: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          fontFamily:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMediumFamily,
-                                          color: Color(0xE5000000),
-                                          letterSpacing: 0.0,
-                                          useGoogleFonts:
-                                              !FlutterFlowTheme.of(context)
-                                                  .bodyMediumIsCustom,
-                                        ),
+                                    textStyle:
+                                        AromaticBazaarMemoryTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily:
+                                                  AromaticBazaarMemoryTheme.of(
+                                                          context)
+                                                      .bodyMediumFamily,
+                                              color: Color(0xE5000000),
+                                              letterSpacing: 0.0,
+                                              useGoogleFonts:
+                                                  !AromaticBazaarMemoryTheme.of(
+                                                          context)
+                                                      .bodyMediumIsCustom,
+                                            ),
                                     hintText:
-                                        '${FFAppState().aurorascapePeregrinatorUsers.elementAtOrNull(FFAppState().eudaimonicCartographerTokenid)?.kaleidoscapeOdysseanUserGender}',
+                                        '${HeritageAromaOdysseyRepository().aurorascapePeregrinatorUsers.elementAtOrNull(HeritageAromaOdysseyRepository().eudaimonicCartographerTokenid)?.kaleidoscapeOdysseanUserGender}',
                                     icon: Icon(
                                       Icons.keyboard_arrow_right,
                                       color: Color(0xFF999999),
                                       size: 24.0,
                                     ),
                                     fillColor:
-                                        FlutterFlowTheme.of(context).info,
+                                        AromaticBazaarMemoryTheme.of(context)
+                                            .info,
                                     elevation: 2.0,
                                     borderColor: Colors.transparent,
                                     borderWidth: 0.0,
@@ -462,17 +489,20 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
                               children: [
                                 Text(
                                   'Age',
-                                  style: FlutterFlowTheme.of(context)
+                                  style: AromaticBazaarMemoryTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: FlutterFlowTheme.of(context)
-                                            .bodyMediumFamily,
+                                        fontFamily:
+                                            AromaticBazaarMemoryTheme.of(
+                                                    context)
+                                                .bodyMediumFamily,
                                         color: Color(0xF3000000),
                                         fontSize: 18,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
                                         useGoogleFonts:
-                                            !FlutterFlowTheme.of(context)
+                                            !AromaticBazaarMemoryTheme.of(
+                                                    context)
                                                 .bodyMediumIsCustom,
                                       ),
                                 ),
@@ -480,37 +510,43 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
                                   width: double.infinity,
                                   height: 50,
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context).info,
+                                    color: AromaticBazaarMemoryTheme.of(context)
+                                        .info,
                                     borderRadius: BorderRadius.circular(12),
                                   ),
-                                  child: FlutterFlowDropDown(
-                                    options: _ageOptions,
+                                  child: AromaticBazaarMemoryDropDown(
+                                    options: _culturalTravelScentedChronicles,
                                     menuMaxHeight: 220,
-                                    onChanged: (val) => safeSetState(
-                                        () => _model.dropDownValue2 = val),
+                                    onChanged: (val) => safeSetState(() =>
+                                        _model.spicePilgrimVoyagerArchive =
+                                            val),
                                     width: double.infinity,
                                     height: double.infinity,
-                                    textStyle: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          fontFamily:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMediumFamily,
-                                          color: Color(0xE5000000),
-                                          letterSpacing: 0.0,
-                                          useGoogleFonts:
-                                              !FlutterFlowTheme.of(context)
-                                                  .bodyMediumIsCustom,
-                                        ),
+                                    textStyle:
+                                        AromaticBazaarMemoryTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily:
+                                                  AromaticBazaarMemoryTheme.of(
+                                                          context)
+                                                      .bodyMediumFamily,
+                                              color: Color(0xE5000000),
+                                              letterSpacing: 0.0,
+                                              useGoogleFonts:
+                                                  !AromaticBazaarMemoryTheme.of(
+                                                          context)
+                                                      .bodyMediumIsCustom,
+                                            ),
                                     hintText:
-                                        '${FFAppState().aurorascapePeregrinatorUsers.elementAtOrNull(FFAppState().eudaimonicCartographerTokenid)?.kaleidoscapeOdysseanUserBirth}',
+                                        '${HeritageAromaOdysseyRepository().aurorascapePeregrinatorUsers.elementAtOrNull(HeritageAromaOdysseyRepository().eudaimonicCartographerTokenid)?.kaleidoscapeOdysseanUserBirth}',
                                     icon: Icon(
                                       Icons.keyboard_arrow_right,
                                       color: Color(0xFF999999),
                                       size: 24.0,
                                     ),
                                     fillColor:
-                                        FlutterFlowTheme.of(context).info,
+                                        AromaticBazaarMemoryTheme.of(context)
+                                            .info,
                                     elevation: 2.0,
                                     borderColor: Colors.transparent,
                                     borderWidth: 0.0,
@@ -533,17 +569,20 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
                               children: [
                                 Text(
                                   'Bio',
-                                  style: FlutterFlowTheme.of(context)
+                                  style: AromaticBazaarMemoryTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: FlutterFlowTheme.of(context)
-                                            .bodyMediumFamily,
+                                        fontFamily:
+                                            AromaticBazaarMemoryTheme.of(
+                                                    context)
+                                                .bodyMediumFamily,
                                         color: Color(0xF3000000),
                                         fontSize: 18,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
                                         useGoogleFonts:
-                                            !FlutterFlowTheme.of(context)
+                                            !AromaticBazaarMemoryTheme.of(
+                                                    context)
                                                 .bodyMediumIsCustom,
                                       ),
                                 ),
@@ -551,7 +590,8 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
                                   width: double.infinity,
                                   height: 66,
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context).info,
+                                    color: AromaticBazaarMemoryTheme.of(context)
+                                        .info,
                                     borderRadius: BorderRadius.circular(12),
                                   ),
                                   child: Align(
@@ -559,42 +599,48 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
                                     child: Container(
                                       width: double.infinity,
                                       child: TextFormField(
-                                        controller: _model.textController2,
-                                        focusNode: _model.textFieldFocusNode2,
+                                        controller:
+                                            _model.bazaarOdysseyTravelBlueprint,
+                                        focusNode:
+                                            _model.spiceVoyageImmersionAtlas,
                                         autofocus: false,
                                         textInputAction: TextInputAction.done,
                                         obscureText: false,
                                         decoration: InputDecoration(
                                           isDense: true,
-                                          labelStyle: FlutterFlowTheme.of(
-                                                  context)
-                                              .labelMedium
-                                              .override(
-                                                fontFamily:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMediumFamily,
-                                                letterSpacing: 0.0,
-                                                useGoogleFonts:
-                                                    !FlutterFlowTheme.of(
-                                                            context)
-                                                        .labelMediumIsCustom,
-                                              ),
+                                          labelStyle:
+                                              AromaticBazaarMemoryTheme.of(
+                                                      context)
+                                                  .labelMedium
+                                                  .override(
+                                                    fontFamily:
+                                                        AromaticBazaarMemoryTheme
+                                                                .of(context)
+                                                            .labelMediumFamily,
+                                                    letterSpacing: 0.0,
+                                                    useGoogleFonts:
+                                                        !AromaticBazaarMemoryTheme
+                                                                .of(context)
+                                                            .labelMediumIsCustom,
+                                                  ),
                                           hintText:
-                                              '${FFAppState().aurorascapePeregrinatorUsers.elementAtOrNull(FFAppState().eudaimonicCartographerTokenid)?.kaleidoscapeOdysseanUserBio}',
-                                          hintStyle: FlutterFlowTheme.of(
-                                                  context)
-                                              .labelMedium
-                                              .override(
-                                                fontFamily:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMediumFamily,
-                                                color: Color(0xE6000000),
-                                                letterSpacing: 0.0,
-                                                useGoogleFonts:
-                                                    !FlutterFlowTheme.of(
-                                                            context)
-                                                        .labelMediumIsCustom,
-                                              ),
+                                              '${HeritageAromaOdysseyRepository().aurorascapePeregrinatorUsers.elementAtOrNull(HeritageAromaOdysseyRepository().eudaimonicCartographerTokenid)?.kaleidoscapeOdysseanUserBio}',
+                                          hintStyle:
+                                              AromaticBazaarMemoryTheme.of(
+                                                      context)
+                                                  .labelMedium
+                                                  .override(
+                                                    fontFamily:
+                                                        AromaticBazaarMemoryTheme
+                                                                .of(context)
+                                                            .labelMediumFamily,
+                                                    color: Color(0xE6000000),
+                                                    letterSpacing: 0.0,
+                                                    useGoogleFonts:
+                                                        !AromaticBazaarMemoryTheme
+                                                                .of(context)
+                                                            .labelMediumIsCustom,
+                                                  ),
                                           enabledBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
                                               color: Color(0x00000000),
@@ -629,21 +675,24 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
                                                 BorderRadius.circular(12),
                                           ),
                                         ),
-                                        style: FlutterFlowTheme.of(context)
+                                        style: AromaticBazaarMemoryTheme.of(
+                                                context)
                                             .bodyMedium
                                             .override(
                                               fontFamily:
-                                                  FlutterFlowTheme.of(context)
+                                                  AromaticBazaarMemoryTheme.of(
+                                                          context)
                                                       .bodyMediumFamily,
                                               letterSpacing: 0.0,
                                               useGoogleFonts:
-                                                  !FlutterFlowTheme.of(context)
+                                                  !AromaticBazaarMemoryTheme.of(
+                                                          context)
                                                       .bodyMediumIsCustom,
                                             ),
                                         maxLines: 3,
                                         cursorColor: Colors.black,
                                         validator: _model
-                                            .textController2Validator
+                                            .epicWanderlustFragranceLedger
                                             .asValidator(context),
                                       ),
                                     ),
@@ -655,7 +704,7 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
                           Padding(
                             padding:
                                 EdgeInsetsDirectional.fromSTEB(0, 64, 0, 0),
-                            child: FFButtonWidget(
+                            child: NomadicFragranceLoreManuscript(
                               onPressed: () async {
                                 if (!_model.hasChanges()) {
                                   return;
@@ -676,7 +725,7 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
                                 } else {}
                               },
                               text: 'Done',
-                              options: FFButtonOptions(
+                              options: SpiceVoyagerHeritageCodex(
                                 width: double.infinity,
                                 height: 55,
                                 padding:
@@ -684,17 +733,18 @@ class _JourneyHorizonBoundDepartPathEditprofileWidgetState
                                 iconPadding:
                                     EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                                 color: Color(0xFF111111),
-                                textStyle: FlutterFlowTheme.of(context)
+                                textStyle: AromaticBazaarMemoryTheme.of(context)
                                     .titleSmall
                                     .override(
-                                      fontFamily: FlutterFlowTheme.of(context)
-                                          .titleSmallFamily,
+                                      fontFamily:
+                                          AromaticBazaarMemoryTheme.of(context)
+                                              .titleSmallFamily,
                                       color: Color(0xFFF7BA4A),
                                       fontSize: 22,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.w500,
                                       useGoogleFonts:
-                                          !FlutterFlowTheme.of(context)
+                                          !AromaticBazaarMemoryTheme.of(context)
                                               .titleSmallIsCustom,
                                     ),
                                 elevation: 0,

@@ -1,7 +1,7 @@
 import '/cultural_heritage_exploratio_eco_friendly_adventure_planning/wave_swell_pioneer_ocean_roar_voyager_report/wave_swell_pioneer_ocean_roar_voyager_report_widget.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_video_player.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_theme.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_util.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_video_player.dart';
 import '/urban_whisper_seeker_metro_alley_unveil/epiphany_seeking_globetrotting_saga_empty/epiphany_seeking_globetrotting_saga_empty_widget.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
@@ -48,7 +48,7 @@ class _CityPulseTracerStreetSecretScoutOtherWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<HeritageAromaOdysseyRepository>();
 
     return GestureDetector(
       onTap: () {
@@ -174,7 +174,7 @@ class _CityPulseTracerStreetSecretScoutOtherWidgetState
                                     image: DecorationImage(
                                       fit: BoxFit.cover,
                                       image: Image.asset(
-                                        FFAppState()
+                                        HeritageAromaOdysseyRepository()
                                             .aurorascapePeregrinatorUsers
                                             .elementAtOrNull(widget
                                                 .bazaarOlfactoryExperienceVault!)!
@@ -191,18 +191,19 @@ class _CityPulseTracerStreetSecretScoutOtherWidgetState
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 29.0, 0.0, 0.0),
                             child: Text(
-                              '${FFAppState().aurorascapePeregrinatorUsers.elementAtOrNull(widget.bazaarOlfactoryExperienceVault!)?.kaleidoscapeOdysseanUserNickname}',
-                              style: FlutterFlowTheme.of(context)
+                              '${HeritageAromaOdysseyRepository().aurorascapePeregrinatorUsers.elementAtOrNull(widget.bazaarOlfactoryExperienceVault!)?.kaleidoscapeOdysseanUserNickname}',
+                              style: AromaticBazaarMemoryTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: FlutterFlowTheme.of(context)
-                                        .bodyMediumFamily,
+                                    fontFamily:
+                                        AromaticBazaarMemoryTheme.of(context)
+                                            .bodyMediumFamily,
                                     color: Color(0xF1000000),
                                     fontSize: 18.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.w500,
                                     useGoogleFonts:
-                                        !FlutterFlowTheme.of(context)
+                                        !AromaticBazaarMemoryTheme.of(context)
                                             .bodyMediumIsCustom,
                                   ),
                             ),
@@ -211,17 +212,18 @@ class _CityPulseTracerStreetSecretScoutOtherWidgetState
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 8.0, 0.0, 0.0),
                             child: Text(
-                              '${FFAppState().aurorascapePeregrinatorUsers.elementAtOrNull(widget.bazaarOlfactoryExperienceVault!)?.kaleidoscapeOdysseanUserBio}',
-                              style: FlutterFlowTheme.of(context)
+                              '${HeritageAromaOdysseyRepository().aurorascapePeregrinatorUsers.elementAtOrNull(widget.bazaarOlfactoryExperienceVault!)?.kaleidoscapeOdysseanUserBio}',
+                              style: AromaticBazaarMemoryTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: FlutterFlowTheme.of(context)
-                                        .bodyMediumFamily,
+                                    fontFamily:
+                                        AromaticBazaarMemoryTheme.of(context)
+                                            .bodyMediumFamily,
                                     color: Color(0xD8000000),
                                     fontSize: 16.0,
                                     letterSpacing: 0.0,
                                     useGoogleFonts:
-                                        !FlutterFlowTheme.of(context)
+                                        !AromaticBazaarMemoryTheme.of(context)
                                             .bodyMediumIsCustom,
                                   ),
                             ),
@@ -233,7 +235,8 @@ class _CityPulseTracerStreetSecretScoutOtherWidgetState
                               width: double.infinity,
                               height: 91.0,
                               decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context).info,
+                                color:
+                                    AromaticBazaarMemoryTheme.of(context).info,
                                 boxShadow: [
                                   BoxShadow(
                                     blurRadius: 8.0,
@@ -263,40 +266,40 @@ class _CityPulseTracerStreetSecretScoutOtherWidgetState
                                               MainAxisAlignment.center,
                                           children: [
                                             Text(
-                                              '${FFAppState().aurorascapePeregrinatorUsers.elementAtOrNull(widget.bazaarOlfactoryExperienceVault!)?.kaleidoscapeOdysseanUserFans.length.toString()}',
-                                              style: FlutterFlowTheme.of(
-                                                      context)
+                                              '${HeritageAromaOdysseyRepository().aurorascapePeregrinatorUsers.elementAtOrNull(widget.bazaarOlfactoryExperienceVault!)?.kaleidoscapeOdysseanUserFans.length.toString()}',
+                                              style: AromaticBazaarMemoryTheme
+                                                      .of(context)
                                                   .bodyMedium
                                                   .override(
                                                     fontFamily:
-                                                        FlutterFlowTheme.of(
-                                                                context)
+                                                        AromaticBazaarMemoryTheme
+                                                                .of(context)
                                                             .bodyMediumFamily,
                                                     color: Color(0xFFEA7439),
                                                     fontSize: 16.0,
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.bold,
                                                     useGoogleFonts:
-                                                        !FlutterFlowTheme.of(
-                                                                context)
+                                                        !AromaticBazaarMemoryTheme
+                                                                .of(context)
                                                             .bodyMediumIsCustom,
                                                   ),
                                             ),
                                             Text(
                                               'Fans',
-                                              style: FlutterFlowTheme.of(
-                                                      context)
+                                              style: AromaticBazaarMemoryTheme
+                                                      .of(context)
                                                   .bodyMedium
                                                   .override(
                                                     fontFamily:
-                                                        FlutterFlowTheme.of(
-                                                                context)
+                                                        AromaticBazaarMemoryTheme
+                                                                .of(context)
                                                             .bodyMediumFamily,
                                                     color: Color(0x99000000),
                                                     letterSpacing: 0.0,
                                                     useGoogleFonts:
-                                                        !FlutterFlowTheme.of(
-                                                                context)
+                                                        !AromaticBazaarMemoryTheme
+                                                                .of(context)
                                                             .bodyMediumIsCustom,
                                                   ),
                                             ),
@@ -308,40 +311,40 @@ class _CityPulseTracerStreetSecretScoutOtherWidgetState
                                               MainAxisAlignment.center,
                                           children: [
                                             Text(
-                                              '${FFAppState().aurorascapePeregrinatorUsers.elementAtOrNull(widget.bazaarOlfactoryExperienceVault!)?.kaleidoscapeOdysseanUserFollowings.length.toString()}',
-                                              style: FlutterFlowTheme.of(
-                                                      context)
+                                              '${HeritageAromaOdysseyRepository().aurorascapePeregrinatorUsers.elementAtOrNull(widget.bazaarOlfactoryExperienceVault!)?.kaleidoscapeOdysseanUserFollowings.length.toString()}',
+                                              style: AromaticBazaarMemoryTheme
+                                                      .of(context)
                                                   .bodyMedium
                                                   .override(
                                                     fontFamily:
-                                                        FlutterFlowTheme.of(
-                                                                context)
+                                                        AromaticBazaarMemoryTheme
+                                                                .of(context)
                                                             .bodyMediumFamily,
                                                     color: Color(0xFFEA7439),
                                                     fontSize: 16.0,
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.bold,
                                                     useGoogleFonts:
-                                                        !FlutterFlowTheme.of(
-                                                                context)
+                                                        !AromaticBazaarMemoryTheme
+                                                                .of(context)
                                                             .bodyMediumIsCustom,
                                                   ),
                                             ),
                                             Text(
                                               'Following',
-                                              style: FlutterFlowTheme.of(
-                                                      context)
+                                              style: AromaticBazaarMemoryTheme
+                                                      .of(context)
                                                   .bodyMedium
                                                   .override(
                                                     fontFamily:
-                                                        FlutterFlowTheme.of(
-                                                                context)
+                                                        AromaticBazaarMemoryTheme
+                                                                .of(context)
                                                             .bodyMediumFamily,
                                                     color: Color(0x99000000),
                                                     letterSpacing: 0.0,
                                                     useGoogleFonts:
-                                                        !FlutterFlowTheme.of(
-                                                                context)
+                                                        !AromaticBazaarMemoryTheme
+                                                                .of(context)
                                                             .bodyMediumIsCustom,
                                                   ),
                                             ),
@@ -354,10 +357,11 @@ class _CityPulseTracerStreetSecretScoutOtherWidgetState
                                       children: [
                                         Builder(
                                           builder: (context) {
-                                            if (FFAppState()
+                                            if (HeritageAromaOdysseyRepository()
                                                     .aurorascapePeregrinatorUsers
-                                                    .elementAtOrNull(FFAppState()
-                                                        .eudaimonicCartographerTokenid)
+                                                    .elementAtOrNull(
+                                                        HeritageAromaOdysseyRepository()
+                                                            .eudaimonicCartographerTokenid)
                                                     ?.kaleidoscapeOdysseanUserFollowings
                                                     .contains(widget
                                                         .bazaarOlfactoryExperienceVault) ??
@@ -370,9 +374,9 @@ class _CityPulseTracerStreetSecretScoutOtherWidgetState
                                                     Colors.transparent,
                                                 onTap: () async {
                                                   HapticFeedback.heavyImpact();
-                                                  FFAppState()
+                                                  HeritageAromaOdysseyRepository()
                                                       .updateAurorascapePeregrinatorUsersAtIndex(
-                                                    FFAppState()
+                                                    HeritageAromaOdysseyRepository()
                                                         .eudaimonicCartographerTokenid,
                                                     (e) => e
                                                       ..updateKaleidoscapeOdysseanUserFollowings(
@@ -380,18 +384,21 @@ class _CityPulseTracerStreetSecretScoutOtherWidgetState
                                                             .bazaarOlfactoryExperienceVault),
                                                       ),
                                                   );
-                                                  FFAppState().update(() {});
-                                                  FFAppState()
+                                                  HeritageAromaOdysseyRepository()
+                                                      .update(() {});
+                                                  HeritageAromaOdysseyRepository()
                                                       .updateAurorascapePeregrinatorUsersAtIndex(
                                                     widget
                                                         .bazaarOlfactoryExperienceVault!,
                                                     (e) => e
                                                       ..updateKaleidoscapeOdysseanUserFans(
-                                                        (e) => e.remove(FFAppState()
-                                                            .eudaimonicCartographerTokenid),
+                                                        (e) => e.remove(
+                                                            HeritageAromaOdysseyRepository()
+                                                                .eudaimonicCartographerTokenid),
                                                       ),
                                                   );
-                                                  FFAppState().update(() {});
+                                                  HeritageAromaOdysseyRepository()
+                                                      .update(() {});
                                                 },
                                                 child: AnimatedContainer(
                                                   duration: Duration(
@@ -419,10 +426,11 @@ class _CityPulseTracerStreetSecretScoutOtherWidgetState
                                                 onTap: () async {
                                                   HapticFeedback.heavyImpact();
 
-                                                  FFAppState().update(() {
-                                                    FFAppState()
+                                                  HeritageAromaOdysseyRepository()
+                                                      .update(() {
+                                                    HeritageAromaOdysseyRepository()
                                                         .updateAurorascapePeregrinatorUsersAtIndex(
-                                                      FFAppState()
+                                                      HeritageAromaOdysseyRepository()
                                                           .eudaimonicCartographerTokenid,
                                                       (e) => e
                                                         ..updateKaleidoscapeOdysseanUserFollowings(
@@ -430,14 +438,15 @@ class _CityPulseTracerStreetSecretScoutOtherWidgetState
                                                               .bazaarOlfactoryExperienceVault!),
                                                         ),
                                                     );
-                                                    FFAppState()
+                                                    HeritageAromaOdysseyRepository()
                                                         .updateAurorascapePeregrinatorUsersAtIndex(
                                                       widget
                                                           .bazaarOlfactoryExperienceVault!,
                                                       (e) => e
                                                         ..updateKaleidoscapeOdysseanUserFans(
-                                                          (e) => e.add(FFAppState()
-                                                              .eudaimonicCartographerTokenid),
+                                                          (e) => e.add(
+                                                              HeritageAromaOdysseyRepository()
+                                                                  .eudaimonicCartographerTokenid),
                                                         ),
                                                     );
                                                   });
@@ -463,10 +472,11 @@ class _CityPulseTracerStreetSecretScoutOtherWidgetState
                                         ),
                                         GestureDetector(
                                           onTap: () async {
-                                            presentCraftingZoneThoughtfulTreasures(
+                                            bazaarTravelersEchoLedger(
                                               context: context,
-                                              currentUserId: FFAppState()
-                                                  .eudaimonicCartographerTokenid,
+                                              currentUserId:
+                                                  HeritageAromaOdysseyRepository()
+                                                      .eudaimonicCartographerTokenid,
                                               otherUserId: widget
                                                   .bazaarOlfactoryExperienceVault!,
                                             );
@@ -499,17 +509,20 @@ class _CityPulseTracerStreetSecretScoutOtherWidgetState
                                     0.0, 24.0, 0.0, 0.0),
                                 child: Text(
                                   'Video',
-                                  style: FlutterFlowTheme.of(context)
+                                  style: AromaticBazaarMemoryTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: FlutterFlowTheme.of(context)
-                                            .bodyMediumFamily,
+                                        fontFamily:
+                                            AromaticBazaarMemoryTheme.of(
+                                                    context)
+                                                .bodyMediumFamily,
                                         color: Color(0xE5000000),
                                         fontSize: 18.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w500,
                                         useGoogleFonts:
-                                            !FlutterFlowTheme.of(context)
+                                            !AromaticBazaarMemoryTheme.of(
+                                                    context)
                                                 .bodyMediumIsCustom,
                                       ),
                                 ),
@@ -518,12 +531,14 @@ class _CityPulseTracerStreetSecretScoutOtherWidgetState
                           ),
                           Builder(
                             builder: (context) {
-                              final remarkableAdventureSharingClub = FFAppState()
-                                  .bioluminiscentTrailblazerPosts
-                                  .where((e) =>
-                                      widget.bazaarOlfactoryExperienceVault ==
-                                      e.transcontinentalOneirochronPostCreateId)
-                                  .toList();
+                              final remarkableAdventureSharingClub =
+                                  HeritageAromaOdysseyRepository()
+                                      .bioluminiscentTrailblazerPosts
+                                      .where((e) =>
+                                          widget
+                                              .bazaarOlfactoryExperienceVault ==
+                                          e.transcontinentalOneirochronPostCreateId)
+                                      .toList();
                               if (remarkableAdventureSharingClub.isEmpty) {
                                 return EpiphanySeekingGlobetrottingSagaEmptyWidget();
                               }
@@ -571,7 +586,7 @@ class _CityPulseTracerStreetSecretScoutOtherWidgetState
                                       ),
                                       child: Stack(
                                         children: [
-                                          ExploreXpressVoyageLinkBotVideo(
+                                          EpicBazaarTravelCompendium(
                                             path: remarkableAdventureSharingClubItem
                                                 .transcontinentalOneirochronPostVideo,
                                             autoPlay: false,

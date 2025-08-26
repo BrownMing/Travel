@@ -1,10 +1,11 @@
-import 'package:travel/backend/schema/structs/kaleidoscape_odyssean_user_struct.dart';
+import 'package:jourry/backend/schema/structs/kaleidoscape_odyssean_user_struct.dart';
+import 'package:jourry/fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_select.dart';
 
 import '../../cultural_heritage_exploratio_eco_friendly_adventure_planning/set_off_frontier_quest_tide_rush_navigator_homepage/set_off_frontier_quest_tide_rush_navigator_homepage_widget.dart';
-import '/flutter_flow/flutter_flow_drop_down.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_theme.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_util.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'world_wonder_wanderlust_voyager_upload_file_model.dart';
@@ -32,24 +33,25 @@ class _WorldWonderWanderlustVoyagerUploadFileWidgetState
   final scaffoldKey = GlobalKey<ScaffoldState>();
   String? nomadicScentChronicleAtlas;
 
-  final List<FlutterFlowDropDownOption> _countryOptions = [
-    FlutterFlowDropDownOption(value: 'Male', label: 'Male'),
-    FlutterFlowDropDownOption(value: 'Female', label: 'Female'),
+  final List<AromaticBazaarMemoryDropDownOption> _nomadicOdysseyBazaarCodex = [
+    AromaticBazaarMemoryDropDownOption(value: 'Male', label: 'Male'),
+    AromaticBazaarMemoryDropDownOption(value: 'Female', label: 'Female'),
   ];
-  final List<FlutterFlowDropDownOption> _ageOptions = [
-    FlutterFlowDropDownOption(value: '18', label: '18'),
-    FlutterFlowDropDownOption(value: '19', label: '19'),
-    FlutterFlowDropDownOption(value: '20', label: '20'),
-    FlutterFlowDropDownOption(value: '21', label: '21'),
-    FlutterFlowDropDownOption(value: '22', label: '22'),
-    FlutterFlowDropDownOption(value: '23', label: '23'),
-    FlutterFlowDropDownOption(value: '24', label: '24'),
-    FlutterFlowDropDownOption(value: '25', label: '25'),
-    FlutterFlowDropDownOption(value: '26', label: '26'),
-    FlutterFlowDropDownOption(value: '27', label: '27'),
-    FlutterFlowDropDownOption(value: '28', label: '28'),
-    FlutterFlowDropDownOption(value: '29', label: '29'),
-    FlutterFlowDropDownOption(value: '30', label: '30'),
+  final List<AromaticBazaarMemoryDropDownOption>
+      _culturalTravelScentedChronicles = [
+    AromaticBazaarMemoryDropDownOption(value: '18', label: '18'),
+    AromaticBazaarMemoryDropDownOption(value: '19', label: '19'),
+    AromaticBazaarMemoryDropDownOption(value: '20', label: '20'),
+    AromaticBazaarMemoryDropDownOption(value: '21', label: '21'),
+    AromaticBazaarMemoryDropDownOption(value: '22', label: '22'),
+    AromaticBazaarMemoryDropDownOption(value: '23', label: '23'),
+    AromaticBazaarMemoryDropDownOption(value: '24', label: '24'),
+    AromaticBazaarMemoryDropDownOption(value: '25', label: '25'),
+    AromaticBazaarMemoryDropDownOption(value: '26', label: '26'),
+    AromaticBazaarMemoryDropDownOption(value: '27', label: '27'),
+    AromaticBazaarMemoryDropDownOption(value: '28', label: '28'),
+    AromaticBazaarMemoryDropDownOption(value: '29', label: '29'),
+    AromaticBazaarMemoryDropDownOption(value: '30', label: '30'),
   ];
   @override
   void initState() {
@@ -57,11 +59,11 @@ class _WorldWonderWanderlustVoyagerUploadFileWidgetState
     _model = createModel(
         context, () => WorldWonderWanderlustVoyagerUploadFileModel());
 
-    _model.textController1 ??= TextEditingController();
-    _model.textFieldFocusNode1 ??= FocusNode();
+    _model.globalNomadScentOdysseyBook ??= TextEditingController();
+    _model.wandererBazaarTrailChronicles ??= FocusNode();
 
-    _model.textController2 ??= TextEditingController();
-    _model.textFieldFocusNode2 ??= FocusNode();
+    _model.bazaarOdysseyTravelBlueprint ??= TextEditingController();
+    _model.spiceVoyageImmersionAtlas ??= FocusNode();
   }
 
   @override
@@ -74,19 +76,19 @@ class _WorldWonderWanderlustVoyagerUploadFileWidgetState
   // 创建新用户的方法
   Future<void> _createNewUser() async {
     // 表单验证
-    if (_model.textController1.text.trim().isEmpty) {
-      trailTreasureJourneyCompan(
-          context, 'Please enter your nickname.', 'error');
+    if (_model.globalNomadScentOdysseyBook.text.trim().isEmpty) {
+      exoticJourneyScentLoom(context, 'Please enter your nickname.', 'error');
       return;
     }
     // 检查邮箱是否已存在
-    final existingUser = FFAppState().aurorascapePeregrinatorUsers.where(
-        (user) =>
+    final existingUser = HeritageAromaOdysseyRepository()
+        .aurorascapePeregrinatorUsers
+        .where((user) =>
             user.kaleidoscapeOdysseanUserEmail ==
             widget.aromaInfusedJourneyChronicleMaill);
 
     if (existingUser.isNotEmpty) {
-      trailTreasureJourneyCompan(
+      exoticJourneyScentLoom(
           context,
           'This email address has been registered. Please use another email address.',
           'error');
@@ -95,7 +97,7 @@ class _WorldWonderWanderlustVoyagerUploadFileWidgetState
     }
 
     try {
-      final existingIds = FFAppState()
+      final existingIds = HeritageAromaOdysseyRepository()
           .aurorascapePeregrinatorUsers
           .map((user) => user.kaleidoscapeOdysseanUserId)
           .toList();
@@ -110,25 +112,30 @@ class _WorldWonderWanderlustVoyagerUploadFileWidgetState
             widget.aromaInfusedJourneyChronicleMaill!,
         kaleidoscapeOdysseanUserPassword:
             widget.bazaarOdysseyExperiencePassword!,
-        kaleidoscapeOdysseanUserNickname: _model.textController1.text.trim(),
-        kaleidoscapeOdysseanUserGender: _model.dropDownValue1 ?? '',
-        kaleidoscapeOdysseanUserBirth: _model.dropDownValue2 ?? '',
-        kaleidoscapeOdysseanUserBio: _model.textController2.text.trim(),
+        kaleidoscapeOdysseanUserNickname:
+            _model.globalNomadScentOdysseyBook.text.trim(),
+        kaleidoscapeOdysseanUserGender:
+            _model.journeyOfBazaarLegendsLedger ?? '',
+        kaleidoscapeOdysseanUserBirth: _model.spicePilgrimVoyagerArchive ?? '',
+        kaleidoscapeOdysseanUserBio:
+            _model.bazaarOdysseyTravelBlueprint.text.trim(),
         kaleidoscapeOdysseanUserPhoto: nomadicScentChronicleAtlas ?? '',
         kaleidoscapeOdysseanUserCoins: 0,
         kaleidoscapeOdysseanUserCreateTime: DateTime.now(),
       );
 
       // 添加新用户到状态管理
-      FFAppState().update(() {
-        FFAppState().addToAurorascapePeregrinatorUsers(newUser);
+      HeritageAromaOdysseyRepository().update(() {
+        HeritageAromaOdysseyRepository()
+            .addToAurorascapePeregrinatorUsers(newUser);
         // 设置新创建的用户为当前用户
-        FFAppState().eudaimonicCartographerTokenid = newUserId;
+        HeritageAromaOdysseyRepository().eudaimonicCartographerTokenid =
+            newUserId;
       });
 
-      trailTreasureJourneyCompan(
+      exoticJourneyScentLoom(
           context,
-          'User creation successful! Welcome${_model.textController1.text.trim()}',
+          'User creation successful! Welcome${_model.globalNomadScentOdysseyBook.text.trim()}',
           'success');
       // 延迟后返回上级页面
       await Future.delayed(const Duration(seconds: 2));
@@ -148,7 +155,7 @@ class _WorldWonderWanderlustVoyagerUploadFileWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<HeritageAromaOdysseyRepository>();
 
     return GestureDetector(
       onTap: () {
@@ -199,15 +206,18 @@ class _WorldWonderWanderlustVoyagerUploadFileWidgetState
                       ),
                       Text(
                         'Create Profile',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily:
-                                  FlutterFlowTheme.of(context).bodyMediumFamily,
+                        style: AromaticBazaarMemoryTheme.of(context)
+                            .bodyMedium
+                            .override(
+                              fontFamily: AromaticBazaarMemoryTheme.of(context)
+                                  .bodyMediumFamily,
                               color: Colors.black,
                               fontSize: 20.0,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.bold,
-                              useGoogleFonts: !FlutterFlowTheme.of(context)
-                                  .bodyMediumIsCustom,
+                              useGoogleFonts:
+                                  !AromaticBazaarMemoryTheme.of(context)
+                                      .bodyMediumIsCustom,
                             ),
                       ),
                       Container(
@@ -282,7 +292,7 @@ class _WorldWonderWanderlustVoyagerUploadFileWidgetState
                                                     MediaQuery.viewInsetsOf(
                                                         context),
                                                 child:
-                                                    InspireGiftTalesChatUpload(
+                                                    BazaarTrailImmersionChronicle(
                                                   allowVideoUpload: false,
                                                   allowMultipleImageSelect:
                                                       false,
@@ -326,17 +336,20 @@ class _WorldWonderWanderlustVoyagerUploadFileWidgetState
                               children: [
                                 Text(
                                   'Nickname',
-                                  style: FlutterFlowTheme.of(context)
+                                  style: AromaticBazaarMemoryTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: FlutterFlowTheme.of(context)
-                                            .bodyMediumFamily,
+                                        fontFamily:
+                                            AromaticBazaarMemoryTheme.of(
+                                                    context)
+                                                .bodyMediumFamily,
                                         color: Color(0xF3000000),
                                         fontSize: 18.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
                                         useGoogleFonts:
-                                            !FlutterFlowTheme.of(context)
+                                            !AromaticBazaarMemoryTheme.of(
+                                                    context)
                                                 .bodyMediumIsCustom,
                                       ),
                                 ),
@@ -344,7 +357,8 @@ class _WorldWonderWanderlustVoyagerUploadFileWidgetState
                                   width: double.infinity,
                                   height: 50.0,
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context).info,
+                                    color: AromaticBazaarMemoryTheme.of(context)
+                                        .info,
                                     borderRadius: BorderRadius.circular(12.0),
                                   ),
                                   child: Align(
@@ -352,42 +366,48 @@ class _WorldWonderWanderlustVoyagerUploadFileWidgetState
                                     child: Container(
                                       width: double.infinity,
                                       child: TextFormField(
-                                        controller: _model.textController1,
-                                        focusNode: _model.textFieldFocusNode1,
+                                        controller:
+                                            _model.globalNomadScentOdysseyBook,
+                                        focusNode: _model
+                                            .wandererBazaarTrailChronicles,
                                         autofocus: false,
                                         textInputAction: TextInputAction.done,
                                         obscureText: false,
                                         decoration: InputDecoration(
                                           isDense: true,
-                                          labelStyle: FlutterFlowTheme.of(
-                                                  context)
-                                              .labelMedium
-                                              .override(
-                                                fontFamily:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMediumFamily,
-                                                letterSpacing: 0.0,
-                                                useGoogleFonts:
-                                                    !FlutterFlowTheme.of(
-                                                            context)
-                                                        .labelMediumIsCustom,
-                                              ),
+                                          labelStyle:
+                                              AromaticBazaarMemoryTheme.of(
+                                                      context)
+                                                  .labelMedium
+                                                  .override(
+                                                    fontFamily:
+                                                        AromaticBazaarMemoryTheme
+                                                                .of(context)
+                                                            .labelMediumFamily,
+                                                    letterSpacing: 0.0,
+                                                    useGoogleFonts:
+                                                        !AromaticBazaarMemoryTheme
+                                                                .of(context)
+                                                            .labelMediumIsCustom,
+                                                  ),
                                           hintText:
                                               'Please enter you nickname...',
-                                          hintStyle: FlutterFlowTheme.of(
-                                                  context)
-                                              .labelMedium
-                                              .override(
-                                                fontFamily:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMediumFamily,
-                                                color: Color(0xE6000000),
-                                                letterSpacing: 0.0,
-                                                useGoogleFonts:
-                                                    !FlutterFlowTheme.of(
-                                                            context)
-                                                        .labelMediumIsCustom,
-                                              ),
+                                          hintStyle:
+                                              AromaticBazaarMemoryTheme.of(
+                                                      context)
+                                                  .labelMedium
+                                                  .override(
+                                                    fontFamily:
+                                                        AromaticBazaarMemoryTheme
+                                                                .of(context)
+                                                            .labelMediumFamily,
+                                                    color: Color(0xE6000000),
+                                                    letterSpacing: 0.0,
+                                                    useGoogleFonts:
+                                                        !AromaticBazaarMemoryTheme
+                                                                .of(context)
+                                                            .labelMediumIsCustom,
+                                                  ),
                                           enabledBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
                                               color: Color(0x00000000),
@@ -422,21 +442,24 @@ class _WorldWonderWanderlustVoyagerUploadFileWidgetState
                                                 BorderRadius.circular(12.0),
                                           ),
                                         ),
-                                        style: FlutterFlowTheme.of(context)
+                                        style: AromaticBazaarMemoryTheme.of(
+                                                context)
                                             .bodyMedium
                                             .override(
                                               fontFamily:
-                                                  FlutterFlowTheme.of(context)
+                                                  AromaticBazaarMemoryTheme.of(
+                                                          context)
                                                       .bodyMediumFamily,
                                               color: Colors.black,
                                               letterSpacing: 0.0,
                                               useGoogleFonts:
-                                                  !FlutterFlowTheme.of(context)
+                                                  !AromaticBazaarMemoryTheme.of(
+                                                          context)
                                                       .bodyMediumIsCustom,
                                             ),
                                         cursorColor: Colors.black,
                                         validator: _model
-                                            .textController1Validator
+                                            .culturalExplorerAromaTales
                                             .asValidator(context),
                                       ),
                                     ),
@@ -454,17 +477,20 @@ class _WorldWonderWanderlustVoyagerUploadFileWidgetState
                               children: [
                                 Text(
                                   'Gender(Not required fields)',
-                                  style: FlutterFlowTheme.of(context)
+                                  style: AromaticBazaarMemoryTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: FlutterFlowTheme.of(context)
-                                            .bodyMediumFamily,
+                                        fontFamily:
+                                            AromaticBazaarMemoryTheme.of(
+                                                    context)
+                                                .bodyMediumFamily,
                                         color: Color(0xF3000000),
                                         fontSize: 18.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
                                         useGoogleFonts:
-                                            !FlutterFlowTheme.of(context)
+                                            !AromaticBazaarMemoryTheme.of(
+                                                    context)
                                                 .bodyMediumIsCustom,
                                       ),
                                 ),
@@ -472,27 +498,32 @@ class _WorldWonderWanderlustVoyagerUploadFileWidgetState
                                   width: double.infinity,
                                   height: 50.0,
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context).info,
+                                    color: AromaticBazaarMemoryTheme.of(context)
+                                        .info,
                                     borderRadius: BorderRadius.circular(12.0),
                                   ),
-                                  child: FlutterFlowDropDown(
-                                    options: _countryOptions,
-                                    onChanged: (val) => safeSetState(
-                                        () => _model.dropDownValue1 = val),
+                                  child: AromaticBazaarMemoryDropDown(
+                                    options: _nomadicOdysseyBazaarCodex,
+                                    onChanged: (val) => safeSetState(() =>
+                                        _model.journeyOfBazaarLegendsLedger =
+                                            val),
                                     width: double.infinity,
                                     height: double.infinity,
-                                    textStyle: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          fontFamily:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMediumFamily,
-                                          color: Color(0xE5000000),
-                                          letterSpacing: 0.0,
-                                          useGoogleFonts:
-                                              !FlutterFlowTheme.of(context)
-                                                  .bodyMediumIsCustom,
-                                        ),
+                                    textStyle:
+                                        AromaticBazaarMemoryTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily:
+                                                  AromaticBazaarMemoryTheme.of(
+                                                          context)
+                                                      .bodyMediumFamily,
+                                              color: Color(0xE5000000),
+                                              letterSpacing: 0.0,
+                                              useGoogleFonts:
+                                                  !AromaticBazaarMemoryTheme.of(
+                                                          context)
+                                                      .bodyMediumIsCustom,
+                                            ),
                                     hintText: 'Please select your gender...',
                                     icon: Icon(
                                       Icons.keyboard_arrow_right,
@@ -500,7 +531,8 @@ class _WorldWonderWanderlustVoyagerUploadFileWidgetState
                                       size: 24.0,
                                     ),
                                     fillColor:
-                                        FlutterFlowTheme.of(context).info,
+                                        AromaticBazaarMemoryTheme.of(context)
+                                            .info,
                                     elevation: 2.0,
                                     borderColor: Colors.transparent,
                                     borderWidth: 0.0,
@@ -522,17 +554,20 @@ class _WorldWonderWanderlustVoyagerUploadFileWidgetState
                               children: [
                                 Text(
                                   'Age(Not required fields)',
-                                  style: FlutterFlowTheme.of(context)
+                                  style: AromaticBazaarMemoryTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: FlutterFlowTheme.of(context)
-                                            .bodyMediumFamily,
+                                        fontFamily:
+                                            AromaticBazaarMemoryTheme.of(
+                                                    context)
+                                                .bodyMediumFamily,
                                         color: Color(0xF3000000),
                                         fontSize: 18.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
                                         useGoogleFonts:
-                                            !FlutterFlowTheme.of(context)
+                                            !AromaticBazaarMemoryTheme.of(
+                                                    context)
                                                 .bodyMediumIsCustom,
                                       ),
                                 ),
@@ -540,28 +575,33 @@ class _WorldWonderWanderlustVoyagerUploadFileWidgetState
                                   width: double.infinity,
                                   height: 50.0,
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context).info,
+                                    color: AromaticBazaarMemoryTheme.of(context)
+                                        .info,
                                     borderRadius: BorderRadius.circular(12.0),
                                   ),
-                                  child: FlutterFlowDropDown(
-                                    options: _ageOptions,
+                                  child: AromaticBazaarMemoryDropDown(
+                                    options: _culturalTravelScentedChronicles,
                                     menuMaxHeight: 220,
-                                    onChanged: (val) => safeSetState(
-                                        () => _model.dropDownValue2 = val),
+                                    onChanged: (val) => safeSetState(() =>
+                                        _model.spicePilgrimVoyagerArchive =
+                                            val),
                                     width: double.infinity,
                                     height: double.infinity,
-                                    textStyle: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          fontFamily:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMediumFamily,
-                                          color: Color(0xE5000000),
-                                          letterSpacing: 0.0,
-                                          useGoogleFonts:
-                                              !FlutterFlowTheme.of(context)
-                                                  .bodyMediumIsCustom,
-                                        ),
+                                    textStyle:
+                                        AromaticBazaarMemoryTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily:
+                                                  AromaticBazaarMemoryTheme.of(
+                                                          context)
+                                                      .bodyMediumFamily,
+                                              color: Color(0xE5000000),
+                                              letterSpacing: 0.0,
+                                              useGoogleFonts:
+                                                  !AromaticBazaarMemoryTheme.of(
+                                                          context)
+                                                      .bodyMediumIsCustom,
+                                            ),
                                     hintText: 'Please select your age...',
                                     icon: Icon(
                                       Icons.keyboard_arrow_right,
@@ -569,7 +609,8 @@ class _WorldWonderWanderlustVoyagerUploadFileWidgetState
                                       size: 24.0,
                                     ),
                                     fillColor:
-                                        FlutterFlowTheme.of(context).info,
+                                        AromaticBazaarMemoryTheme.of(context)
+                                            .info,
                                     elevation: 2.0,
                                     borderColor: Colors.transparent,
                                     borderWidth: 0.0,
@@ -592,17 +633,20 @@ class _WorldWonderWanderlustVoyagerUploadFileWidgetState
                               children: [
                                 Text(
                                   'Bio',
-                                  style: FlutterFlowTheme.of(context)
+                                  style: AromaticBazaarMemoryTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: FlutterFlowTheme.of(context)
-                                            .bodyMediumFamily,
+                                        fontFamily:
+                                            AromaticBazaarMemoryTheme.of(
+                                                    context)
+                                                .bodyMediumFamily,
                                         color: Color(0xF3000000),
                                         fontSize: 18.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
                                         useGoogleFonts:
-                                            !FlutterFlowTheme.of(context)
+                                            !AromaticBazaarMemoryTheme.of(
+                                                    context)
                                                 .bodyMediumIsCustom,
                                       ),
                                 ),
@@ -610,7 +654,8 @@ class _WorldWonderWanderlustVoyagerUploadFileWidgetState
                                   width: double.infinity,
                                   height: 66.0,
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context).info,
+                                    color: AromaticBazaarMemoryTheme.of(context)
+                                        .info,
                                     borderRadius: BorderRadius.circular(12.0),
                                   ),
                                   child: Align(
@@ -618,41 +663,47 @@ class _WorldWonderWanderlustVoyagerUploadFileWidgetState
                                     child: Container(
                                       width: double.infinity,
                                       child: TextFormField(
-                                        controller: _model.textController2,
-                                        focusNode: _model.textFieldFocusNode2,
+                                        controller:
+                                            _model.bazaarOdysseyTravelBlueprint,
+                                        focusNode:
+                                            _model.spiceVoyageImmersionAtlas,
                                         autofocus: false,
                                         textInputAction: TextInputAction.done,
                                         obscureText: false,
                                         decoration: InputDecoration(
                                           isDense: true,
-                                          labelStyle: FlutterFlowTheme.of(
-                                                  context)
-                                              .labelMedium
-                                              .override(
-                                                fontFamily:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMediumFamily,
-                                                letterSpacing: 0.0,
-                                                useGoogleFonts:
-                                                    !FlutterFlowTheme.of(
-                                                            context)
-                                                        .labelMediumIsCustom,
-                                              ),
+                                          labelStyle:
+                                              AromaticBazaarMemoryTheme.of(
+                                                      context)
+                                                  .labelMedium
+                                                  .override(
+                                                    fontFamily:
+                                                        AromaticBazaarMemoryTheme
+                                                                .of(context)
+                                                            .labelMediumFamily,
+                                                    letterSpacing: 0.0,
+                                                    useGoogleFonts:
+                                                        !AromaticBazaarMemoryTheme
+                                                                .of(context)
+                                                            .labelMediumIsCustom,
+                                                  ),
                                           hintText: 'Please enter dio...',
-                                          hintStyle: FlutterFlowTheme.of(
-                                                  context)
-                                              .labelMedium
-                                              .override(
-                                                fontFamily:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMediumFamily,
-                                                color: Color(0xE6000000),
-                                                letterSpacing: 0.0,
-                                                useGoogleFonts:
-                                                    !FlutterFlowTheme.of(
-                                                            context)
-                                                        .labelMediumIsCustom,
-                                              ),
+                                          hintStyle:
+                                              AromaticBazaarMemoryTheme.of(
+                                                      context)
+                                                  .labelMedium
+                                                  .override(
+                                                    fontFamily:
+                                                        AromaticBazaarMemoryTheme
+                                                                .of(context)
+                                                            .labelMediumFamily,
+                                                    color: Color(0xE6000000),
+                                                    letterSpacing: 0.0,
+                                                    useGoogleFonts:
+                                                        !AromaticBazaarMemoryTheme
+                                                                .of(context)
+                                                            .labelMediumIsCustom,
+                                                  ),
                                           enabledBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
                                               color: Color(0x00000000),
@@ -687,22 +738,25 @@ class _WorldWonderWanderlustVoyagerUploadFileWidgetState
                                                 BorderRadius.circular(12.0),
                                           ),
                                         ),
-                                        style: FlutterFlowTheme.of(context)
+                                        style: AromaticBazaarMemoryTheme.of(
+                                                context)
                                             .bodyMedium
                                             .override(
                                               fontFamily:
-                                                  FlutterFlowTheme.of(context)
+                                                  AromaticBazaarMemoryTheme.of(
+                                                          context)
                                                       .bodyMediumFamily,
                                               color: Color(0xE2000000),
                                               letterSpacing: 0.0,
                                               useGoogleFonts:
-                                                  !FlutterFlowTheme.of(context)
+                                                  !AromaticBazaarMemoryTheme.of(
+                                                          context)
                                                       .bodyMediumIsCustom,
                                             ),
                                         maxLines: 3,
                                         cursorColor: Colors.black,
                                         validator: _model
-                                            .textController2Validator
+                                            .epicWanderlustFragranceLedger
                                             .asValidator(context),
                                       ),
                                     ),
@@ -714,12 +768,12 @@ class _WorldWonderWanderlustVoyagerUploadFileWidgetState
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 64.0, 0.0, 0.0),
-                            child: FFButtonWidget(
+                            child: NomadicFragranceLoreManuscript(
                               onPressed: () async {
                                 await _createNewUser();
                               },
                               text: 'Done',
-                              options: FFButtonOptions(
+                              options: SpiceVoyagerHeritageCodex(
                                 width: double.infinity,
                                 height: 55.0,
                                 padding: EdgeInsetsDirectional.fromSTEB(
@@ -727,17 +781,18 @@ class _WorldWonderWanderlustVoyagerUploadFileWidgetState
                                 iconPadding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: Color(0xFF111111),
-                                textStyle: FlutterFlowTheme.of(context)
+                                textStyle: AromaticBazaarMemoryTheme.of(context)
                                     .titleSmall
                                     .override(
-                                      fontFamily: FlutterFlowTheme.of(context)
-                                          .titleSmallFamily,
+                                      fontFamily:
+                                          AromaticBazaarMemoryTheme.of(context)
+                                              .titleSmallFamily,
                                       color: Color(0xFFF7BA4A),
                                       fontSize: 22.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.w500,
                                       useGoogleFonts:
-                                          !FlutterFlowTheme.of(context)
+                                          !AromaticBazaarMemoryTheme.of(context)
                                               .titleSmallIsCustom,
                                     ),
                                 elevation: 0.0,

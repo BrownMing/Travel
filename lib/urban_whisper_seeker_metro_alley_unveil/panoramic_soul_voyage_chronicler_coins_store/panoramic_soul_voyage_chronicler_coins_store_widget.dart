@@ -1,42 +1,42 @@
 import 'package:flutter/services.dart';
 
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_theme.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_util.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'panoramic_soul_voyage_chronicler_coins_store_model.dart';
 export 'panoramic_soul_voyage_chronicler_coins_store_model.dart';
 
-class StarlightMelodyOfForeverSouls {
-  final int neuralNetworkDrivenBondStrengthdiamonds;
-  final double sentimentAnalysisOfRomanticEchoesPrice;
-  final String opredictiveJourneyOfHeartfeltProductid;
+class AromaDrivenJourneyCompendium {
+  final int travelerOdysseyHeritageBookDiamonds;
+  final double bazaarTrailImmersiveRegistryPrice;
+  final String epicFragranceVoyageAnnalsID;
 
-  const StarlightMelodyOfForeverSouls({
-    required this.neuralNetworkDrivenBondStrengthdiamonds,
-    required this.sentimentAnalysisOfRomanticEchoesPrice,
-    required this.opredictiveJourneyOfHeartfeltProductid,
+  const AromaDrivenJourneyCompendium({
+    required this.travelerOdysseyHeritageBookDiamonds,
+    required this.bazaarTrailImmersiveRegistryPrice,
+    required this.epicFragranceVoyageAnnalsID,
   });
 }
 
-final List<StarlightMelodyOfForeverSouls> eternalUnionOfSharedDreamscapes =
+final List<AromaDrivenJourneyCompendium> olfactoryHeritageTravelNetwork =
     List.generate(9, (index) {
   final row = const [
     [400, 0.99, 'hqixulkxvpfvktef'],
     [800, 1.99, 'shlcbocllovqiewo'],
-    [2450, 4.99, 'fvkusbwswxykhebg'],
-    [4000, 6.99, 'qfkpdzsnhxmvbtgy'],
-    [5800, 9.99, 'kmbzxlyicznuvkhv'],
-    [8200, 19.99, 'lrkpnfhjnbipnpqn'],
-    [12000, 28.99, 'lrtawcgjqobznehm'],
-    [15000, 49.99, 'mxyubmkaibvoxrbf'],
-    [20000, 99.99, 'ccmaewugkbrzoart'],
+    [1000, 4.99, 'fvkusbwswxykhebg'],
+    [1500, 8.99, 'qfkpdzsnhxmvbtgy'],
+    [3000, 12.99, 'kmbzxlyicznuvkhv'],
+    [5000, 19.99, 'lrkpnfhjnbipnpqn'],
+    [7000, 25.99, 'lrtawcgjqobznehm'],
+    [9000, 49.99, 'mxyubmkaibvoxrbf'],
+    [15000, 99.99, 'ccmaewugkbrzoart'],
   ][index];
 
-  return StarlightMelodyOfForeverSouls(
-    neuralNetworkDrivenBondStrengthdiamonds: row[0] as int,
-    sentimentAnalysisOfRomanticEchoesPrice: row[1] as double,
-    opredictiveJourneyOfHeartfeltProductid: row[2] as String,
+  return AromaDrivenJourneyCompendium(
+    travelerOdysseyHeritageBookDiamonds: row[0] as int,
+    bazaarTrailImmersiveRegistryPrice: row[1] as double,
+    epicFragranceVoyageAnnalsID: row[2] as String,
   );
 });
 
@@ -73,7 +73,7 @@ class _PanoramicSoulVoyageChroniclerCoinsStoreWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<HeritageAromaOdysseyRepository>();
 
     return GestureDetector(
       onTap: () {
@@ -136,15 +136,18 @@ class _PanoramicSoulVoyageChroniclerCoinsStoreWidgetState
                       ),
                       Text(
                         'Coins Store',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily:
-                                  FlutterFlowTheme.of(context).bodyMediumFamily,
+                        style: AromaticBazaarMemoryTheme.of(context)
+                            .bodyMedium
+                            .override(
+                              fontFamily: AromaticBazaarMemoryTheme.of(context)
+                                  .bodyMediumFamily,
                               color: Colors.black,
                               fontSize: 20.0,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.bold,
-                              useGoogleFonts: !FlutterFlowTheme.of(context)
-                                  .bodyMediumIsCustom,
+                              useGoogleFonts:
+                                  !AromaticBazaarMemoryTheme.of(context)
+                                      .bodyMediumIsCustom,
                             ),
                       ),
                       Container(
@@ -176,19 +179,22 @@ class _PanoramicSoulVoyageChroniclerCoinsStoreWidgetState
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      '${FFAppState().aurorascapePeregrinatorUsers.elementAtOrNull(FFAppState().eudaimonicCartographerTokenid)?.kaleidoscapeOdysseanUserCoins.toString()}',
-                                      style: FlutterFlowTheme.of(context)
+                                      '${HeritageAromaOdysseyRepository().aurorascapePeregrinatorUsers.elementAtOrNull(HeritageAromaOdysseyRepository().eudaimonicCartographerTokenid)?.kaleidoscapeOdysseanUserCoins.toString()}',
+                                      style: AromaticBazaarMemoryTheme.of(
+                                              context)
                                           .bodyMedium
                                           .override(
                                             fontFamily:
-                                                FlutterFlowTheme.of(context)
+                                                AromaticBazaarMemoryTheme.of(
+                                                        context)
                                                     .bodyMediumFamily,
                                             color: Color(0xE5000000),
                                             fontSize: 50.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.bold,
                                             useGoogleFonts:
-                                                !FlutterFlowTheme.of(context)
+                                                !AromaticBazaarMemoryTheme.of(
+                                                        context)
                                                     .bodyMediumIsCustom,
                                           ),
                                     ),
@@ -197,17 +203,20 @@ class _PanoramicSoulVoyageChroniclerCoinsStoreWidgetState
                                       decoration: BoxDecoration(),
                                       child: Text(
                                         'Your coin account balance',
-                                        style: FlutterFlowTheme.of(context)
+                                        style: AromaticBazaarMemoryTheme.of(
+                                                context)
                                             .bodyMedium
                                             .override(
                                               fontFamily:
-                                                  FlutterFlowTheme.of(context)
+                                                  AromaticBazaarMemoryTheme.of(
+                                                          context)
                                                       .bodyMediumFamily,
                                               color: Color(0xD8000000),
                                               fontSize: 18.0,
                                               letterSpacing: 0.0,
                                               useGoogleFonts:
-                                                  !FlutterFlowTheme.of(context)
+                                                  !AromaticBazaarMemoryTheme.of(
+                                                          context)
                                                       .bodyMediumIsCustom,
                                             ),
                                       ),
@@ -236,8 +245,7 @@ class _PanoramicSoulVoyageChroniclerCoinsStoreWidgetState
                                 child: Builder(
                                   builder: (context) {
                                     final heartfeltWanderlustMemoryBase =
-                                        eternalUnionOfSharedDreamscapes
-                                            .toList();
+                                        olfactoryHeritageTravelNetwork.toList();
 
                                     return GridView.builder(
                                       padding: EdgeInsets.fromLTRB(
@@ -272,7 +280,7 @@ class _PanoramicSoulVoyageChroniclerCoinsStoreWidgetState
 
                                               _model.sensoryOdysseyBazaarBlueprint(
                                                   heartfeltWanderlustMemoryBaseItem
-                                                      .opredictiveJourneyOfHeartfeltProductid);
+                                                      .epicFragranceVoyageAnnalsID);
                                             });
                                           },
                                           child: Container(
@@ -310,47 +318,51 @@ class _PanoramicSoulVoyageChroniclerCoinsStoreWidgetState
                                                             .fromSTEB(0.0, 12.0,
                                                                 0.0, 0.0),
                                                     child: Text(
-                                                      '${heartfeltWanderlustMemoryBaseItem.neuralNetworkDrivenBondStrengthdiamonds.toString()}',
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .bodyMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                FlutterFlowTheme.of(
+                                                      '${heartfeltWanderlustMemoryBaseItem.travelerOdysseyHeritageBookDiamonds.toString()}',
+                                                      style:
+                                                          AromaticBazaarMemoryTheme
+                                                                  .of(context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily: AromaticBazaarMemoryTheme.of(
                                                                         context)
                                                                     .bodyMediumFamily,
-                                                            color: Color(
-                                                                0xFFF7BA4A),
-                                                            fontSize: 24.0,
-                                                            letterSpacing: 0.0,
-                                                            fontWeight:
-                                                                FontWeight.w500,
-                                                            useGoogleFonts:
-                                                                !FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMediumIsCustom,
-                                                          ),
+                                                                color: Color(
+                                                                    0xFFF7BA4A),
+                                                                fontSize: 24.0,
+                                                                letterSpacing:
+                                                                    0.0,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w500,
+                                                                useGoogleFonts:
+                                                                    !AromaticBazaarMemoryTheme.of(
+                                                                            context)
+                                                                        .bodyMediumIsCustom,
+                                                              ),
                                                     ),
                                                   ),
                                                   Text(
-                                                    '\$ ${heartfeltWanderlustMemoryBaseItem.sentimentAnalysisOfRomanticEchoesPrice.toString()}',
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMediumFamily,
-                                                          color:
-                                                              Color(0x99FFFFFF),
-                                                          fontSize: 12.0,
-                                                          letterSpacing: 0.0,
-                                                          useGoogleFonts:
-                                                              !FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .bodyMediumIsCustom,
-                                                        ),
+                                                    '\$ ${heartfeltWanderlustMemoryBaseItem.bazaarTrailImmersiveRegistryPrice.toString()}',
+                                                    style:
+                                                        AromaticBazaarMemoryTheme
+                                                                .of(context)
+                                                            .bodyMedium
+                                                            .override(
+                                                              fontFamily:
+                                                                  AromaticBazaarMemoryTheme.of(
+                                                                          context)
+                                                                      .bodyMediumFamily,
+                                                              color: Color(
+                                                                  0x99FFFFFF),
+                                                              fontSize: 12.0,
+                                                              letterSpacing:
+                                                                  0.0,
+                                                              useGoogleFonts:
+                                                                  !AromaticBazaarMemoryTheme.of(
+                                                                          context)
+                                                                      .bodyMediumIsCustom,
+                                                            ),
                                                   ),
                                                 ],
                                               ),

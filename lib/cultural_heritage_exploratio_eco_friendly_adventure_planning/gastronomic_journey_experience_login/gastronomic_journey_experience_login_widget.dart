@@ -1,7 +1,7 @@
 import '../set_off_frontier_quest_tide_rush_navigator_homepage/set_off_frontier_quest_tide_rush_navigator_homepage_widget.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_theme.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_util.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_widgets.dart';
 import 'package:flutter/material.dart';
 import 'gastronomic_journey_experience_login_model.dart';
 export 'gastronomic_journey_experience_login_model.dart';
@@ -29,11 +29,11 @@ class _GastronomicJourneyExperienceLoginWidgetState
     _model =
         createModel(context, () => GastronomicJourneyExperienceLoginModel());
 
-    _model.textController1 ??= TextEditingController();
-    _model.textFieldFocusNode1 ??= FocusNode();
+    _model.globalNomadScentOdysseyBook ??= TextEditingController();
+    _model.wandererBazaarTrailChronicles ??= FocusNode();
 
-    _model.textController2 ??= TextEditingController();
-    _model.textFieldFocusNode2 ??= FocusNode();
+    _model.bazaarOdysseyTravelBlueprint ??= TextEditingController();
+    _model.spiceVoyageImmersionAtlas ??= FocusNode();
   }
 
   @override
@@ -44,46 +44,45 @@ class _GastronomicJourneyExperienceLoginWidgetState
   }
 
   Future<void> _fragranceHeritageExplorationPath(BuildContext context) async {
-    if (_model.textController1.text.isEmpty) {
-      trailTreasureJourneyCompan(context, 'Please enter your email!', 'error');
+    if (_model.globalNomadScentOdysseyBook.text.isEmpty) {
+      exoticJourneyScentLoom(context, 'Please enter your email!', 'error');
       safeSetState(() {});
       return;
     }
 
-    if (_model.textController2.text.isEmpty) {
-      trailTreasureJourneyCompan(
-          context, 'Please enter your password!', 'error');
+    if (_model.bazaarOdysseyTravelBlueprint.text.isEmpty) {
+      exoticJourneyScentLoom(context, 'Please enter your password!', 'error');
       safeSetState(() {});
       return;
     }
 
     try {
-      final matchingUsers = FFAppState().aurorascapePeregrinatorUsers.where(
-          (e) =>
-              _model.textController1.text == e.kaleidoscapeOdysseanUserEmail);
+      final matchingUsers = HeritageAromaOdysseyRepository()
+          .aurorascapePeregrinatorUsers
+          .where((e) =>
+              _model.globalNomadScentOdysseyBook.text ==
+              e.kaleidoscapeOdysseanUserEmail);
 
       if (matchingUsers.isEmpty) {
-        trailTreasureJourneyCompan(
-            context, 'The account does not exist!', 'error');
-        _model.textController1?.clear();
-        _model.textController2?.clear();
+        exoticJourneyScentLoom(context, 'The account does not exist!', 'error');
+        _model.globalNomadScentOdysseyBook?.clear();
+        _model.bazaarOdysseyTravelBlueprint?.clear();
         safeSetState(() {});
         return;
       }
 
       final user = matchingUsers.first;
       if (user.kaleidoscapeOdysseanUserPassword !=
-          _model.textController2.text) {
-        trailTreasureJourneyCompan(
-            context, 'The password is incorrect!', 'error');
-        _model.textController2?.clear();
+          _model.bazaarOdysseyTravelBlueprint.text) {
+        exoticJourneyScentLoom(context, 'The password is incorrect!', 'error');
+        _model.bazaarOdysseyTravelBlueprint?.clear();
         safeSetState(() {});
         return;
       }
 
-      FFAppState().eudaimonicCartographerTokenid =
+      HeritageAromaOdysseyRepository().eudaimonicCartographerTokenid =
           user.kaleidoscapeOdysseanUserId;
-      FFAppState().update(() {});
+      HeritageAromaOdysseyRepository().update(() {});
 
       await Future.delayed(const Duration(milliseconds: 1600));
 
@@ -195,35 +194,39 @@ class _GastronomicJourneyExperienceLoginWidgetState
                                 children: [
                                   Text(
                                     'Login',
-                                    style: FlutterFlowTheme.of(context)
+                                    style: AromaticBazaarMemoryTheme.of(context)
                                         .bodyMedium
                                         .override(
                                           fontFamily:
-                                              FlutterFlowTheme.of(context)
+                                              AromaticBazaarMemoryTheme.of(
+                                                      context)
                                                   .bodyMediumFamily,
                                           color: Colors.black,
                                           fontSize: 22.0,
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.w900,
                                           useGoogleFonts:
-                                              !FlutterFlowTheme.of(context)
+                                              !AromaticBazaarMemoryTheme.of(
+                                                      context)
                                                   .bodyMediumIsCustom,
                                         ),
                                   ),
                                   Text(
-                                    'Welcome to Travel',
-                                    style: FlutterFlowTheme.of(context)
+                                    'Welcome to Jourry',
+                                    style: AromaticBazaarMemoryTheme.of(context)
                                         .bodyMedium
                                         .override(
                                           fontFamily:
-                                              FlutterFlowTheme.of(context)
+                                              AromaticBazaarMemoryTheme.of(
+                                                      context)
                                                   .bodyMediumFamily,
                                           color: Color(0xCC000000),
                                           fontSize: 18.0,
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.bold,
                                           useGoogleFonts:
-                                              !FlutterFlowTheme.of(context)
+                                              !AromaticBazaarMemoryTheme.of(
+                                                      context)
                                                   .bodyMediumIsCustom,
                                         ),
                                   ),
@@ -243,17 +246,18 @@ class _GastronomicJourneyExperienceLoginWidgetState
                             children: [
                               Text(
                                 'Mail',
-                                style: FlutterFlowTheme.of(context)
+                                style: AromaticBazaarMemoryTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: FlutterFlowTheme.of(context)
-                                          .bodyMediumFamily,
+                                      fontFamily:
+                                          AromaticBazaarMemoryTheme.of(context)
+                                              .bodyMediumFamily,
                                       color: Color(0xF2000000),
                                       fontSize: 20.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.w500,
                                       useGoogleFonts:
-                                          !FlutterFlowTheme.of(context)
+                                          !AromaticBazaarMemoryTheme.of(context)
                                               .bodyMediumIsCustom,
                                     ),
                               ),
@@ -261,7 +265,8 @@ class _GastronomicJourneyExperienceLoginWidgetState
                                 width: double.infinity,
                                 height: 51.0,
                                 decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context).info,
+                                  color: AromaticBazaarMemoryTheme.of(context)
+                                      .info,
                                   borderRadius: BorderRadius.circular(12.0),
                                 ),
                                 child: Align(
@@ -269,36 +274,44 @@ class _GastronomicJourneyExperienceLoginWidgetState
                                   child: Container(
                                     width: double.infinity,
                                     child: TextFormField(
-                                      controller: _model.textController1,
-                                      focusNode: _model.textFieldFocusNode1,
+                                      controller:
+                                          _model.globalNomadScentOdysseyBook,
+                                      focusNode:
+                                          _model.wandererBazaarTrailChronicles,
                                       autofocus: false,
                                       textInputAction: TextInputAction.done,
                                       obscureText: false,
                                       decoration: InputDecoration(
                                         isDense: true,
-                                        labelStyle: FlutterFlowTheme.of(context)
+                                        labelStyle: AromaticBazaarMemoryTheme
+                                                .of(context)
                                             .labelMedium
                                             .override(
                                               fontFamily:
-                                                  FlutterFlowTheme.of(context)
+                                                  AromaticBazaarMemoryTheme.of(
+                                                          context)
                                                       .labelMediumFamily,
                                               letterSpacing: 0.0,
                                               useGoogleFonts:
-                                                  !FlutterFlowTheme.of(context)
+                                                  !AromaticBazaarMemoryTheme.of(
+                                                          context)
                                                       .labelMediumIsCustom,
                                             ),
                                         hintText: 'Please enter...',
-                                        hintStyle: FlutterFlowTheme.of(context)
+                                        hintStyle: AromaticBazaarMemoryTheme.of(
+                                                context)
                                             .labelMedium
                                             .override(
                                               fontFamily:
-                                                  FlutterFlowTheme.of(context)
+                                                  AromaticBazaarMemoryTheme.of(
+                                                          context)
                                                       .labelMediumFamily,
                                               color: Color(0xE5000000),
                                               fontSize: 16.0,
                                               letterSpacing: 0.0,
                                               useGoogleFonts:
-                                                  !FlutterFlowTheme.of(context)
+                                                  !AromaticBazaarMemoryTheme.of(
+                                                          context)
                                                       .labelMediumIsCustom,
                                             ),
                                         enabledBorder: OutlineInputBorder(
@@ -334,21 +347,25 @@ class _GastronomicJourneyExperienceLoginWidgetState
                                               BorderRadius.circular(12.0),
                                         ),
                                       ),
-                                      style: FlutterFlowTheme.of(context)
+                                      style: AromaticBazaarMemoryTheme.of(
+                                              context)
                                           .bodyMedium
                                           .override(
                                             fontFamily:
-                                                FlutterFlowTheme.of(context)
+                                                AromaticBazaarMemoryTheme.of(
+                                                        context)
                                                     .bodyMediumFamily,
                                             color: Colors.black,
                                             fontSize: 16.0,
                                             letterSpacing: 0.0,
                                             useGoogleFonts:
-                                                !FlutterFlowTheme.of(context)
+                                                !AromaticBazaarMemoryTheme.of(
+                                                        context)
                                                     .bodyMediumIsCustom,
                                           ),
                                       cursorColor: Colors.black,
-                                      validator: _model.textController1Validator
+                                      validator: _model
+                                          .culturalExplorerAromaTales
                                           .asValidator(context),
                                     ),
                                   ),
@@ -365,17 +382,20 @@ class _GastronomicJourneyExperienceLoginWidgetState
                               children: [
                                 Text(
                                   'Password',
-                                  style: FlutterFlowTheme.of(context)
+                                  style: AromaticBazaarMemoryTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: FlutterFlowTheme.of(context)
-                                            .bodyMediumFamily,
+                                        fontFamily:
+                                            AromaticBazaarMemoryTheme.of(
+                                                    context)
+                                                .bodyMediumFamily,
                                         color: Color(0xF2000000),
                                         fontSize: 20.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w500,
                                         useGoogleFonts:
-                                            !FlutterFlowTheme.of(context)
+                                            !AromaticBazaarMemoryTheme.of(
+                                                    context)
                                                 .bodyMediumIsCustom,
                                       ),
                                 ),
@@ -383,7 +403,8 @@ class _GastronomicJourneyExperienceLoginWidgetState
                                   width: double.infinity,
                                   height: 51.0,
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context).info,
+                                    color: AromaticBazaarMemoryTheme.of(context)
+                                        .info,
                                     borderRadius: BorderRadius.circular(12.0),
                                   ),
                                   child: Align(
@@ -391,42 +412,48 @@ class _GastronomicJourneyExperienceLoginWidgetState
                                     child: Container(
                                       width: double.infinity,
                                       child: TextFormField(
-                                        controller: _model.textController2,
-                                        focusNode: _model.textFieldFocusNode2,
+                                        controller:
+                                            _model.bazaarOdysseyTravelBlueprint,
+                                        focusNode:
+                                            _model.spiceVoyageImmersionAtlas,
                                         autofocus: false,
                                         textInputAction: TextInputAction.done,
                                         obscureText: true,
                                         decoration: InputDecoration(
                                           isDense: true,
-                                          labelStyle: FlutterFlowTheme.of(
-                                                  context)
-                                              .labelMedium
-                                              .override(
-                                                fontFamily:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMediumFamily,
-                                                letterSpacing: 0.0,
-                                                useGoogleFonts:
-                                                    !FlutterFlowTheme.of(
-                                                            context)
-                                                        .labelMediumIsCustom,
-                                              ),
+                                          labelStyle:
+                                              AromaticBazaarMemoryTheme.of(
+                                                      context)
+                                                  .labelMedium
+                                                  .override(
+                                                    fontFamily:
+                                                        AromaticBazaarMemoryTheme
+                                                                .of(context)
+                                                            .labelMediumFamily,
+                                                    letterSpacing: 0.0,
+                                                    useGoogleFonts:
+                                                        !AromaticBazaarMemoryTheme
+                                                                .of(context)
+                                                            .labelMediumIsCustom,
+                                                  ),
                                           hintText: 'Please enter...',
-                                          hintStyle: FlutterFlowTheme.of(
-                                                  context)
-                                              .labelMedium
-                                              .override(
-                                                fontFamily:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMediumFamily,
-                                                color: Color(0xE5000000),
-                                                fontSize: 16.0,
-                                                letterSpacing: 0.0,
-                                                useGoogleFonts:
-                                                    !FlutterFlowTheme.of(
-                                                            context)
-                                                        .labelMediumIsCustom,
-                                              ),
+                                          hintStyle:
+                                              AromaticBazaarMemoryTheme.of(
+                                                      context)
+                                                  .labelMedium
+                                                  .override(
+                                                    fontFamily:
+                                                        AromaticBazaarMemoryTheme
+                                                                .of(context)
+                                                            .labelMediumFamily,
+                                                    color: Color(0xE5000000),
+                                                    fontSize: 16.0,
+                                                    letterSpacing: 0.0,
+                                                    useGoogleFonts:
+                                                        !AromaticBazaarMemoryTheme
+                                                                .of(context)
+                                                            .labelMediumIsCustom,
+                                                  ),
                                           enabledBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
                                               color: Color(0x00000000),
@@ -461,22 +488,25 @@ class _GastronomicJourneyExperienceLoginWidgetState
                                                 BorderRadius.circular(12.0),
                                           ),
                                         ),
-                                        style: FlutterFlowTheme.of(context)
+                                        style: AromaticBazaarMemoryTheme.of(
+                                                context)
                                             .bodyMedium
                                             .override(
                                               fontFamily:
-                                                  FlutterFlowTheme.of(context)
+                                                  AromaticBazaarMemoryTheme.of(
+                                                          context)
                                                       .bodyMediumFamily,
                                               color: Colors.black,
                                               fontSize: 16.0,
                                               letterSpacing: 0.0,
                                               useGoogleFonts:
-                                                  !FlutterFlowTheme.of(context)
+                                                  !AromaticBazaarMemoryTheme.of(
+                                                          context)
                                                       .bodyMediumIsCustom,
                                             ),
                                         cursorColor: Colors.black,
                                         validator: _model
-                                            .textController2Validator
+                                            .epicWanderlustFragranceLedger
                                             .asValidator(context),
                                       ),
                                     ),
@@ -488,13 +518,13 @@ class _GastronomicJourneyExperienceLoginWidgetState
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 129.0, 0.0, 0.0),
-                            child: FFButtonWidget(
+                            child: NomadicFragranceLoreManuscript(
                               onPressed: () async {
                                 await _fragranceHeritageExplorationPath(
                                     context);
                               },
                               text: 'Login',
-                              options: FFButtonOptions(
+                              options: SpiceVoyagerHeritageCodex(
                                 width: double.infinity,
                                 height: 60.0,
                                 padding: EdgeInsetsDirectional.fromSTEB(
@@ -502,17 +532,18 @@ class _GastronomicJourneyExperienceLoginWidgetState
                                 iconPadding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: Color(0xFF111111),
-                                textStyle: FlutterFlowTheme.of(context)
+                                textStyle: AromaticBazaarMemoryTheme.of(context)
                                     .titleSmall
                                     .override(
-                                      fontFamily: FlutterFlowTheme.of(context)
-                                          .titleSmallFamily,
+                                      fontFamily:
+                                          AromaticBazaarMemoryTheme.of(context)
+                                              .titleSmallFamily,
                                       color: Color(0xFFF7BA4A),
                                       fontSize: 22.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.w500,
                                       useGoogleFonts:
-                                          !FlutterFlowTheme.of(context)
+                                          !AromaticBazaarMemoryTheme.of(context)
                                               .titleSmallIsCustom,
                                     ),
                                 elevation: 0.0,

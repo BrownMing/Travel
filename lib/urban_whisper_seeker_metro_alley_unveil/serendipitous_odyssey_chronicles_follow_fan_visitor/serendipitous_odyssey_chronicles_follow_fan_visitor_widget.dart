@@ -1,6 +1,6 @@
 import '../epiphany_seeking_globetrotting_saga_empty/epiphany_seeking_globetrotting_saga_empty_widget.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_theme.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:provider/provider.dart';
@@ -11,10 +11,10 @@ class SerendipitousOdysseyChroniclesFollowFanVisitorWidget
     extends StatefulWidget {
   const SerendipitousOdysseyChroniclesFollowFanVisitorWidget({
     super.key,
-    required this.adventurousTravelerMemoryBook,
+    required this.adventurousJourryerMemoryBook,
   });
 
-  final String? adventurousTravelerMemoryBook;
+  final String? adventurousJourryerMemoryBook;
 
   static String routeName = 'SerendipitousOdysseyChronicles_follow_fan_visitor';
   static String routePath = '/serendipitousOdysseyChroniclesFollowFanVisitor';
@@ -45,9 +45,10 @@ class _SerendipitousOdysseyChroniclesFollowFanVisitorWidgetState
   }
 
   List<dynamic> fragranceBoundBazaarLegends(String type) {
-    final sensoryOdysseyAromaLoom = FFAppState()
+    final sensoryOdysseyAromaLoom = HeritageAromaOdysseyRepository()
         .aurorascapePeregrinatorUsers
-        .elementAtOrNull(FFAppState().eudaimonicCartographerTokenid);
+        .elementAtOrNull(
+            HeritageAromaOdysseyRepository().eudaimonicCartographerTokenid);
 
     switch (type) {
       case 'Following':
@@ -68,7 +69,7 @@ class _SerendipitousOdysseyChroniclesFollowFanVisitorWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<HeritageAromaOdysseyRepository>();
 
     return GestureDetector(
       onTap: () {
@@ -118,16 +119,19 @@ class _SerendipitousOdysseyChroniclesFollowFanVisitorWidgetState
                         ),
                       ),
                       Text(
-                        '${widget.adventurousTravelerMemoryBook}',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily:
-                                  FlutterFlowTheme.of(context).bodyMediumFamily,
+                        '${widget.adventurousJourryerMemoryBook}',
+                        style: AromaticBazaarMemoryTheme.of(context)
+                            .bodyMedium
+                            .override(
+                              fontFamily: AromaticBazaarMemoryTheme.of(context)
+                                  .bodyMediumFamily,
                               color: Colors.black,
                               fontSize: 20.0,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.bold,
-                              useGoogleFonts: !FlutterFlowTheme.of(context)
-                                  .bodyMediumIsCustom,
+                              useGoogleFonts:
+                                  !AromaticBazaarMemoryTheme.of(context)
+                                      .bodyMediumIsCustom,
                             ),
                       ),
                       Container(
@@ -146,7 +150,7 @@ class _SerendipitousOdysseyChroniclesFollowFanVisitorWidgetState
                       builder: (context) {
                         final scenicDestinationReviewCenter =
                             fragranceBoundBazaarLegends(
-                                    widget.adventurousTravelerMemoryBook!)
+                                    widget.adventurousJourryerMemoryBook!)
                                 .toList();
                         if (scenicDestinationReviewCenter.isEmpty) {
                           return const EpiphanySeekingGlobetrottingSagaEmptyWidget();
@@ -177,7 +181,7 @@ class _SerendipitousOdysseyChroniclesFollowFanVisitorWidgetState
                                 image: DecorationImage(
                                   fit: BoxFit.cover,
                                   image: Image.asset(
-                                    FFAppState()
+                                    HeritageAromaOdysseyRepository()
                                         .aurorascapePeregrinatorUsers
                                         .elementAtOrNull(
                                             scenicDestinationReviewCenterItem)!
@@ -196,18 +200,22 @@ class _SerendipitousOdysseyChroniclesFollowFanVisitorWidgetState
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         16.0, 16.0, 0.0, 0.0),
                                     child: Text(
-                                      '${FFAppState().aurorascapePeregrinatorUsers.elementAtOrNull(scenicDestinationReviewCenterItem)?.kaleidoscapeOdysseanUserNickname}',
-                                      style: FlutterFlowTheme.of(context)
+                                      '${HeritageAromaOdysseyRepository().aurorascapePeregrinatorUsers.elementAtOrNull(scenicDestinationReviewCenterItem)?.kaleidoscapeOdysseanUserNickname}',
+                                      style: AromaticBazaarMemoryTheme.of(
+                                              context)
                                           .bodyMedium
                                           .override(
                                             fontFamily:
-                                                FlutterFlowTheme.of(context)
+                                                AromaticBazaarMemoryTheme.of(
+                                                        context)
                                                     .bodyMediumFamily,
-                                            color: FlutterFlowTheme.of(context)
+                                            color: AromaticBazaarMemoryTheme.of(
+                                                    context)
                                                 .info,
                                             letterSpacing: 0.0,
                                             useGoogleFonts:
-                                                !FlutterFlowTheme.of(context)
+                                                !AromaticBazaarMemoryTheme.of(
+                                                        context)
                                                     .bodyMediumIsCustom,
                                           ),
                                     ),
@@ -217,10 +225,11 @@ class _SerendipitousOdysseyChroniclesFollowFanVisitorWidgetState
                                         0.0, 0.0, 16.0, 16.0),
                                     child: GestureDetector(
                                       onTap: () async {
-                                        await presentCraftingZoneThoughtfulTreasures(
+                                        await bazaarTravelersEchoLedger(
                                           context: context,
-                                          currentUserId: FFAppState()
-                                              .eudaimonicCartographerTokenid,
+                                          currentUserId:
+                                              HeritageAromaOdysseyRepository()
+                                                  .eudaimonicCartographerTokenid,
                                           otherUserId:
                                               scenicDestinationReviewCenterItem,
                                         );

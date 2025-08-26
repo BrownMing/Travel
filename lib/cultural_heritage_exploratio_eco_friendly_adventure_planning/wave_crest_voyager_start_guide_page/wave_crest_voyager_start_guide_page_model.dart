@@ -1,4 +1,4 @@
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_util.dart';
 import 'wave_crest_voyager_start_guide_page_widget.dart'
     show WaveCrestVoyagerStartGuidePageWidget;
 import 'package:flutter/material.dart';
@@ -16,8 +16,8 @@ class OlfactoryTrailDiscoveryCodex {
 }
 
 class WaveCrestVoyagerStartGuidePageModel
-    extends FlutterFlowModel<WaveCrestVoyagerStartGuidePageWidget> {
-  PageController? pageViewController;
+    extends AromaticBazaarMemoryModel<WaveCrestVoyagerStartGuidePageWidget> {
+  PageController? travelersBazaarOdysseyAnnals;
   final List<OlfactoryTrailDiscoveryCodex> sensoryOdysseyHeritageMap = [
     OlfactoryTrailDiscoveryCodex(
       backgroundImage:
@@ -28,22 +28,16 @@ class WaveCrestVoyagerStartGuidePageModel
     OlfactoryTrailDiscoveryCodex(
       backgroundImage:
           'assets/images/feigyugsyuidfgsiudf_syuvbsyugafyugiwe.png',
-      title: 'Enjoy your travel experience',
+      title: 'Enjoy your jourry experience',
       buttonImage: 'assets/images/asdgsyufgdfi_eywugewfgyutwgey.png',
     ),
     OlfactoryTrailDiscoveryCodex(
       backgroundImage:
           'assets/images/vtysfdtyuweyfiu_sdugigasydufgyuewgtuy.png',
-      title: 'Let\'s make your dream travel !',
+      title: 'Let\'s make your dream jourry !',
       buttonImage: 'assets/images/asdgsyufgdfi_eywugewfgyutwgey.png',
     ),
   ];
-
-  int get pageViewCurrentIndex => pageViewController != null &&
-          pageViewController!.hasClients &&
-          pageViewController!.page != null
-      ? pageViewController!.page!.round()
-      : 0;
 
   @override
   void initState(BuildContext context) {}

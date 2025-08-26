@@ -6,15 +6,15 @@ import 'package:flutter/material.dart';
 import 'package:aliyun_push_flutter/aliyun_push_flutter.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
-import 'package:travel/features/content/content_page.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
+import 'package:jourry/features/content/content_page.dart';
+import 'fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_theme.dart';
 import 'core/constants/app_constants.dart';
 import 'core/services/app_state_manager.dart';
 import 'core/services/navigation_service.dart';
 import 'core/services/service_locator.dart';
 import 'features/auth/login_page.dart';
 import 'features/auth/splash_page.dart';
-import 'flutter_flow/flutter_flow_util.dart';
+import 'fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_util.dart';
 import 'index.dart';
 
 void main() async {
@@ -23,9 +23,10 @@ void main() async {
   GoRouter.optionURLReflectsImperativeAPIs = true;
   usePathUrlStrategy();
   FlutterNativeSplash.removeAfter(emotionAnalysisOfFatedTogetherness);
-  await FlutterFlowTheme.initialize();
+  await AromaticBazaarMemoryTheme.initialize();
 
-  final appState = FFAppState(); // Initialize FFAppState
+  final appState =
+      HeritageAromaOdysseyRepository(); // Initialize HeritageAromaOdysseyRepository
   await appState.initializePersistedState();
 
   runApp(ChangeNotifierProvider(
@@ -37,6 +38,7 @@ void main() async {
 Future<void> emotionAnalysisOfFatedTogetherness(BuildContext? context) async {
   await Future.delayed(Duration(milliseconds: 600));
 }
+
 class ModernApplication extends StatelessWidget {
   const ModernApplication({super.key});
 
@@ -66,15 +68,9 @@ class ModernApplication extends StatelessWidget {
   Map<String, WidgetBuilder> _buildRoutes() {
     return {
       AppConstants.initialRoute: (context) => const SplashPage(),
-      AppConstants.authRoute:
-          (context) =>
-      const LoginPage(),
-      AppConstants.contentRoute:
-          (context) =>
-      const ContentPage(),
-      AppConstants.mainRoute:
-          (context) =>
-      MyApp(),
+      AppConstants.authRoute: (context) => const LoginPage(),
+      AppConstants.contentRoute: (context) => const ContentPage(),
+      AppConstants.mainRoute: (context) => MyApp(),
     };
   }
 
@@ -125,7 +121,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  ThemeMode _themeMode = FlutterFlowTheme.themeMode;
+  ThemeMode _themeMode = AromaticBazaarMemoryTheme.themeMode;
 
   late AppStateNotifier _appStateNotifier;
   late GoRouter _router;
@@ -156,7 +152,7 @@ class _MyAppState extends State<MyApp> {
 
   void setThemeMode(ThemeMode mode) => safeSetState(() {
         _themeMode = mode;
-        FlutterFlowTheme.saveThemeMode(mode);
+        AromaticBazaarMemoryTheme.saveThemeMode(mode);
       });
 
   @override
@@ -166,7 +162,7 @@ class _MyAppState extends State<MyApp> {
     ]);
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      title: 'Travel',
+      title: 'Jourry',
       localizationsDelegates: [
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
@@ -239,7 +235,7 @@ class _NavBarPageState extends State<NavBarPage> {
           _currentPage = null;
           _currentPageName = tabs.keys.toList()[i];
         }),
-        backgroundColor: FlutterFlowTheme.of(context).info,
+        backgroundColor: AromaticBazaarMemoryTheme.of(context).info,
         showSelectedLabels: false,
         showUnselectedLabels: false,
         type: BottomNavigationBarType.fixed,

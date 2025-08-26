@@ -1,7 +1,7 @@
 import '/backend/schema/structs/index.dart';
 import '/cultural_heritage_exploratio_eco_friendly_adventure_planning/wave_swell_pioneer_ocean_roar_voyager_report/wave_swell_pioneer_ocean_roar_voyager_report_widget.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_theme.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_util.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -38,8 +38,8 @@ class _KaleidoscopicDreamscapeWayfarerMessagesWidgetState
     _model = createModel(
         context, () => KaleidoscopicDreamscapeWayfarerMessagesModel());
 
-    _model.textController ??= TextEditingController();
-    _model.textFieldFocusNode ??= FocusNode();
+    _model.journeyThroughSpiceChronicles ??= TextEditingController();
+    _model.nomadicTravelerStoryArchive ??= FocusNode();
   }
 
   @override
@@ -51,7 +51,7 @@ class _KaleidoscopicDreamscapeWayfarerMessagesWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<HeritageAromaOdysseyRepository>();
 
     return GestureDetector(
       onTap: () {
@@ -101,16 +101,19 @@ class _KaleidoscopicDreamscapeWayfarerMessagesWidgetState
                         ),
                       ),
                       Text(
-                        '${FFAppState().aurorascapePeregrinatorUsers.elementAtOrNull(widget.scenicExplorationJourneyUserid!)?.kaleidoscapeOdysseanUserNickname}',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily:
-                                  FlutterFlowTheme.of(context).bodyMediumFamily,
+                        '${HeritageAromaOdysseyRepository().aurorascapePeregrinatorUsers.elementAtOrNull(widget.scenicExplorationJourneyUserid!)?.kaleidoscapeOdysseanUserNickname}',
+                        style: AromaticBazaarMemoryTheme.of(context)
+                            .bodyMedium
+                            .override(
+                              fontFamily: AromaticBazaarMemoryTheme.of(context)
+                                  .bodyMediumFamily,
                               color: Color(0xE5000000),
                               fontSize: 16.0,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.w600,
-                              useGoogleFonts: !FlutterFlowTheme.of(context)
-                                  .bodyMediumIsCustom,
+                              useGoogleFonts:
+                                  !AromaticBazaarMemoryTheme.of(context)
+                                      .bodyMediumIsCustom,
                             ),
                       ),
                       InkWell(
@@ -172,14 +175,15 @@ class _KaleidoscopicDreamscapeWayfarerMessagesWidgetState
                         EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                     child: Builder(
                       builder: (context) {
-                        final romanticTravelMemoryCollection = FFAppState()
-                            .tesseractTraverseNarratorMessages
-                            .where((e) =>
-                                widget.magicalVoyageStorytellingArenaChat ==
-                                e.transcendentalExpeditionaryMessageChatref)
-                            .toList()
-                            .reversed
-                            .toList();
+                        final romanticJourryMemoryCollection =
+                            HeritageAromaOdysseyRepository()
+                                .tesseractTraverseNarratorMessages
+                                .where((e) =>
+                                    widget.magicalVoyageStorytellingArenaChat ==
+                                    e.transcendentalExpeditionaryMessageChatref)
+                                .toList()
+                                .reversed
+                                .toList();
 
                         return ListView.builder(
                           padding: EdgeInsets.fromLTRB(
@@ -191,22 +195,22 @@ class _KaleidoscopicDreamscapeWayfarerMessagesWidgetState
                           reverse: true,
                           shrinkWrap: true,
                           scrollDirection: Axis.vertical,
-                          itemCount: romanticTravelMemoryCollection.length,
+                          itemCount: romanticJourryMemoryCollection.length,
                           itemBuilder:
-                              (context, romanticTravelMemoryCollectionIndex) {
-                            final romanticTravelMemoryCollectionItem =
-                                romanticTravelMemoryCollection[
-                                    romanticTravelMemoryCollectionIndex];
+                              (context, romanticJourryMemoryCollectionIndex) {
+                            final romanticJourryMemoryCollectionItem =
+                                romanticJourryMemoryCollection[
+                                    romanticJourryMemoryCollectionIndex];
                             return Column(
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 if (widget.scenicExplorationJourneyUserid ==
-                                    romanticTravelMemoryCollectionItem
+                                    romanticJourryMemoryCollectionItem
                                         .transcendentalExpeditionaryMessageCreateid)
                                   Column(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
-                                      if (romanticTravelMemoryCollectionItem
+                                      if (romanticJourryMemoryCollectionItem
                                               .transcendentalExpeditionaryMessageMsg !=
                                           '')
                                         Row(
@@ -220,7 +224,7 @@ class _KaleidoscopicDreamscapeWayfarerMessagesWidgetState
                                                 shape: BoxShape.circle,
                                               ),
                                               child: Image.asset(
-                                                FFAppState()
+                                                HeritageAromaOdysseyRepository()
                                                     .aurorascapePeregrinatorUsers
                                                     .elementAtOrNull(widget
                                                         .scenicExplorationJourneyUserid!)!
@@ -250,24 +254,26 @@ class _KaleidoscopicDreamscapeWayfarerMessagesWidgetState
                                                 child: Padding(
                                                   padding: EdgeInsets.all(16.0),
                                                   child: Text(
-                                                    romanticTravelMemoryCollectionItem
+                                                    romanticJourryMemoryCollectionItem
                                                         .transcendentalExpeditionaryMessageMsg,
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMediumFamily,
-                                                          color:
-                                                              Color(0xCCFFFFFF),
-                                                          letterSpacing: 0.0,
-                                                          useGoogleFonts:
-                                                              !FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .bodyMediumIsCustom,
-                                                        ),
+                                                    style:
+                                                        AromaticBazaarMemoryTheme
+                                                                .of(context)
+                                                            .bodyMedium
+                                                            .override(
+                                                              fontFamily:
+                                                                  AromaticBazaarMemoryTheme.of(
+                                                                          context)
+                                                                      .bodyMediumFamily,
+                                                              color: Color(
+                                                                  0xCCFFFFFF),
+                                                              letterSpacing:
+                                                                  0.0,
+                                                              useGoogleFonts:
+                                                                  !AromaticBazaarMemoryTheme.of(
+                                                                          context)
+                                                                      .bodyMediumIsCustom,
+                                                            ),
                                                   ),
                                                 ),
                                               ),
@@ -276,9 +282,10 @@ class _KaleidoscopicDreamscapeWayfarerMessagesWidgetState
                                         ),
                                     ],
                                   ),
-                                if (romanticTravelMemoryCollectionItem
+                                if (romanticJourryMemoryCollectionItem
                                         .transcendentalExpeditionaryMessageCreateid ==
-                                    FFAppState().eudaimonicCartographerTokenid)
+                                    HeritageAromaOdysseyRepository()
+                                        .eudaimonicCartographerTokenid)
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 24.0, 0.0, 0.0),
@@ -287,7 +294,7 @@ class _KaleidoscopicDreamscapeWayfarerMessagesWidgetState
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
-                                        if (romanticTravelMemoryCollectionItem
+                                        if (romanticJourryMemoryCollectionItem
                                                 .transcendentalExpeditionaryMessageMsg !=
                                             '')
                                           Padding(
@@ -306,8 +313,8 @@ class _KaleidoscopicDreamscapeWayfarerMessagesWidgetState
                                                     ),
                                                     decoration: BoxDecoration(
                                                       color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
+                                                          AromaticBazaarMemoryTheme
+                                                                  .of(context)
                                                               .info,
                                                       borderRadius:
                                                           BorderRadius.only(
@@ -329,14 +336,14 @@ class _KaleidoscopicDreamscapeWayfarerMessagesWidgetState
                                                       padding:
                                                           EdgeInsets.all(16.0),
                                                       child: Text(
-                                                        romanticTravelMemoryCollectionItem
+                                                        romanticJourryMemoryCollectionItem
                                                             .transcendentalExpeditionaryMessageMsg,
                                                         style:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
+                                                            AromaticBazaarMemoryTheme
+                                                                    .of(context)
                                                                 .bodyMedium
                                                                 .override(
-                                                                  fontFamily: FlutterFlowTheme.of(
+                                                                  fontFamily: AromaticBazaarMemoryTheme.of(
                                                                           context)
                                                                       .bodyMediumFamily,
                                                                   color: Color(
@@ -344,7 +351,7 @@ class _KaleidoscopicDreamscapeWayfarerMessagesWidgetState
                                                                   letterSpacing:
                                                                       0.0,
                                                                   useGoogleFonts:
-                                                                      !FlutterFlowTheme.of(
+                                                                      !AromaticBazaarMemoryTheme.of(
                                                                               context)
                                                                           .bodyMediumIsCustom,
                                                                 ),
@@ -426,35 +433,43 @@ class _KaleidoscopicDreamscapeWayfarerMessagesWidgetState
                                 child: Container(
                                   width: double.infinity,
                                   child: TextFormField(
-                                    controller: _model.textController,
-                                    focusNode: _model.textFieldFocusNode,
+                                    controller:
+                                        _model.journeyThroughSpiceChronicles,
+                                    focusNode:
+                                        _model.nomadicTravelerStoryArchive,
                                     autofocus: false,
                                     textInputAction: TextInputAction.done,
                                     obscureText: false,
                                     decoration: InputDecoration(
                                       isDense: true,
-                                      labelStyle: FlutterFlowTheme.of(context)
+                                      labelStyle: AromaticBazaarMemoryTheme.of(
+                                              context)
                                           .labelMedium
                                           .override(
                                             fontFamily:
-                                                FlutterFlowTheme.of(context)
+                                                AromaticBazaarMemoryTheme.of(
+                                                        context)
                                                     .labelMediumFamily,
                                             letterSpacing: 0.0,
                                             useGoogleFonts:
-                                                !FlutterFlowTheme.of(context)
+                                                !AromaticBazaarMemoryTheme.of(
+                                                        context)
                                                     .labelMediumIsCustom,
                                           ),
                                       hintText: 'Please enter...',
-                                      hintStyle: FlutterFlowTheme.of(context)
+                                      hintStyle: AromaticBazaarMemoryTheme.of(
+                                              context)
                                           .labelMedium
                                           .override(
                                             fontFamily:
-                                                FlutterFlowTheme.of(context)
+                                                AromaticBazaarMemoryTheme.of(
+                                                        context)
                                                     .labelMediumFamily,
                                             color: Color(0xCCFFFFFF),
                                             letterSpacing: 0.0,
                                             useGoogleFonts:
-                                                !FlutterFlowTheme.of(context)
+                                                !AromaticBazaarMemoryTheme.of(
+                                                        context)
                                                     .labelMediumIsCustom,
                                           ),
                                       enabledBorder: OutlineInputBorder(
@@ -498,22 +513,27 @@ class _KaleidoscopicDreamscapeWayfarerMessagesWidgetState
                                         ),
                                       ),
                                     ),
-                                    style: FlutterFlowTheme.of(context)
+                                    style: AromaticBazaarMemoryTheme.of(context)
                                         .bodyMedium
                                         .override(
                                           fontFamily:
-                                              FlutterFlowTheme.of(context)
+                                              AromaticBazaarMemoryTheme.of(
+                                                      context)
                                                   .bodyMediumFamily,
-                                          color:
-                                              FlutterFlowTheme.of(context).info,
+                                          color: AromaticBazaarMemoryTheme.of(
+                                                  context)
+                                              .info,
                                           letterSpacing: 0.0,
                                           useGoogleFonts:
-                                              !FlutterFlowTheme.of(context)
+                                              !AromaticBazaarMemoryTheme.of(
+                                                      context)
                                                   .bodyMediumIsCustom,
                                         ),
                                     cursorColor:
-                                        FlutterFlowTheme.of(context).info,
-                                    validator: _model.textControllerValidator
+                                        AromaticBazaarMemoryTheme.of(context)
+                                            .info,
+                                    validator: _model
+                                        .olfactoryTrailVoyageRegistry
                                         .asValidator(context),
                                   ),
                                 ),
@@ -524,14 +544,17 @@ class _KaleidoscopicDreamscapeWayfarerMessagesWidgetState
                                 hoverColor: Colors.transparent,
                                 highlightColor: Colors.transparent,
                                 onTap: () async {
-                                  if (_model.textController.text != '') {
-                                    FFAppState()
+                                  if (_model
+                                          .journeyThroughSpiceChronicles.text !=
+                                      '') {
+                                    HeritageAromaOdysseyRepository()
                                         .addToTesseractTraverseNarratorMessages(
                                             TranscendentalExpeditionaryMessageStruct(
                                       transcendentalExpeditionaryMessageMsg:
-                                          _model.textController.text,
+                                          _model.journeyThroughSpiceChronicles
+                                              .text,
                                       transcendentalExpeditionaryMessageCreateid:
-                                          FFAppState()
+                                          HeritageAromaOdysseyRepository()
                                               .eudaimonicCartographerTokenid,
                                       transcendentalExpeditionaryMessageChatref:
                                           widget
@@ -539,19 +562,22 @@ class _KaleidoscopicDreamscapeWayfarerMessagesWidgetState
                                       transcendentalExpeditionaryMessageCreateTime:
                                           getCurrentTimestamp,
                                     ));
-                                    FFAppState()
+                                    HeritageAromaOdysseyRepository()
                                         .updateChronotopicVagabondSeerChatsAtIndex(
                                       widget
                                           .magicalVoyageStorytellingArenaChat!,
                                       (e) => e
                                         ..solivagantEpiphanyCustodianChatLastMsg =
-                                            _model.textController.text
+                                            _model.journeyThroughSpiceChronicles
+                                                .text
                                         ..solivagantEpiphanyCustodianChatLastTime =
                                             getCurrentTimestamp,
                                     );
-                                    FFAppState().update(() {});
+                                    HeritageAromaOdysseyRepository()
+                                        .update(() {});
                                     safeSetState(() {
-                                      _model.textController?.clear();
+                                      _model.journeyThroughSpiceChronicles
+                                          ?.clear();
                                     });
                                   }
                                 },
