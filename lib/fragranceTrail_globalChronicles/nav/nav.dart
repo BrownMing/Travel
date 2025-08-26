@@ -41,7 +41,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context) => Container(
                 color: Colors.transparent,
                 child: Image.asset(
-                  'assets/images/huidhfguidfgoi_reiysdfgyuisdgfysdf.png',
+                  'assets/images/asudgfihdhfguui_adsfgioudfhhgihoiuad.png',
                   fit: BoxFit.cover,
                 ),
               ),
@@ -56,7 +56,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                   builder: (context) => Container(
                     color: Colors.transparent,
                     child: Image.asset(
-                      'assets/images/huidhfguidfgoi_reiysdfgyuisdgfysdf.png',
+                      'assets/images/asudgfihdhfguui_adsfgioudfhhgihoiuad.png',
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -89,7 +89,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: SetOffFrontierQuestTideRushNavigatorHomepageWidget.routeName,
           path: SetOffFrontierQuestTideRushNavigatorHomepageWidget.routePath,
           builder: (context, params) => params.isEmpty
-              ? NavBarPage(
+              ? TravelogueBazaarExperienceVault(
                   initialPage: 'SetOffFrontierQuestTideRushNavigator_homepage')
               : SetOffFrontierQuestTideRushNavigatorHomepageWidget(),
         ),
@@ -119,7 +119,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: SetOffHorizonQuestJourneySeaBoundDiscoverWidget.routeName,
           path: SetOffHorizonQuestJourneySeaBoundDiscoverWidget.routePath,
           builder: (context, params) => params.isEmpty
-              ? NavBarPage(
+              ? TravelogueBazaarExperienceVault(
                   initialPage: 'SetOffHorizonQuestJourneySeaBound_discover')
               : SetOffHorizonQuestJourneySeaBoundDiscoverWidget(),
         ),
@@ -155,7 +155,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: SandStormVentureOasisWhisperTracerInfoWidget.routeName,
           path: SandStormVentureOasisWhisperTracerInfoWidget.routePath,
           builder: (context, params) => params.isEmpty
-              ? NavBarPage(
+              ? TravelogueBazaarExperienceVault(
                   initialPage: 'SandStormVentureOasisWhisperTracer_info')
               : SandStormVentureOasisWhisperTracerInfoWidget(),
         ),
@@ -201,7 +201,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: EudaimonicTraverseNarrativesChatsroomWidget.routeName,
           path: EudaimonicTraverseNarrativesChatsroomWidget.routePath,
           builder: (context, params) => params.isEmpty
-              ? NavBarPage(
+              ? TravelogueBazaarExperienceVault(
                   initialPage: 'EudaimonicTraverseNarratives_chatsroom')
               : EudaimonicTraverseNarrativesChatsroomWidget(),
         ),

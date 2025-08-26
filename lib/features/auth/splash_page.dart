@@ -38,7 +38,7 @@ class _SplashPageState extends BaseStatefulWidgetState<SplashPage> {
     return Scaffold(
       body: Center(
         child: Image.asset(
-          'assets/images/huidhfguidfgoi_reiysdfgyuisdgfysdf.png',
+          'assets/images/asudgfihdhfguui_adsfgioudfhhgihoiuad.png',
           width: double.infinity,
           height: double.infinity,
           fit: BoxFit.cover,

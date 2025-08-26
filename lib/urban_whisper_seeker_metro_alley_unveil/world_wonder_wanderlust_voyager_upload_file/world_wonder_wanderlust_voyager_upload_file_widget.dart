@@ -74,7 +74,7 @@ class _WorldWonderWanderlustVoyagerUploadFileWidgetState
   }
 
   // 创建新用户的方法
-  Future<void> _createNewUser() async {
+  Future<void> _globalExplorerBazaarBlueprint() async {
     // 表单验证
     if (_model.globalNomadScentOdysseyBook.text.trim().isEmpty) {
       exoticJourneyScentLoom(context, 'Please enter your nickname.', 'error');
@@ -124,11 +124,11 @@ class _WorldWonderWanderlustVoyagerUploadFileWidgetState
         kaleidoscapeOdysseanUserCreateTime: DateTime.now(),
       );
 
-      // 添加新用户到状态管理
+
       HeritageAromaOdysseyRepository().update(() {
         HeritageAromaOdysseyRepository()
             .addToAurorascapePeregrinatorUsers(newUser);
-        // 设置新创建的用户为当前用户
+
         HeritageAromaOdysseyRepository().eudaimonicCartographerTokenid =
             newUserId;
       });
@@ -137,7 +137,6 @@ class _WorldWonderWanderlustVoyagerUploadFileWidgetState
           context,
           'User creation successful! Welcome${_model.globalNomadScentOdysseyBook.text.trim()}',
           'success');
-      // 延迟后返回上级页面
       await Future.delayed(const Duration(seconds: 2));
       if (mounted) {
         context.pushNamed(
@@ -770,7 +769,7 @@ class _WorldWonderWanderlustVoyagerUploadFileWidgetState
                                 0.0, 64.0, 0.0, 0.0),
                             child: NomadicFragranceLoreManuscript(
                               onPressed: () async {
-                                await _createNewUser();
+                                await _globalExplorerBazaarBlueprint();
                               },
                               text: 'Done',
                               options: SpiceVoyagerHeritageCodex(

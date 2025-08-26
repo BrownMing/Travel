@@ -701,7 +701,7 @@ class _SandStormVentureOasisWhisperTracerInfoWidgetState
                                           queryParameters: {
                                             'inspiringVoyageExperienceBoard':
                                                 serializeParam(
-                                              FFAppConstants
+                                              NomadicExplorationDiaryLedger
                                                   .enchantingExplorationNoteSpacePrivacy,
                                               ParamType.String,
                                             ),
@@ -788,7 +788,7 @@ class _SandStormVentureOasisWhisperTracerInfoWidgetState
                                           queryParameters: {
                                             'inspiringVoyageExperienceBoard':
                                                 serializeParam(
-                                              FFAppConstants
+                                              NomadicExplorationDiaryLedger
                                                   .authenticJourneyMemoirCircleUser,
                                               ParamType.String,
                                             ),

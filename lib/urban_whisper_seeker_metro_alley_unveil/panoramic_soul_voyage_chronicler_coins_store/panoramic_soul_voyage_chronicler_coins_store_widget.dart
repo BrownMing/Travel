@@ -22,15 +22,15 @@ class AromaDrivenJourneyCompendium {
 final List<AromaDrivenJourneyCompendium> olfactoryHeritageTravelNetwork =
     List.generate(9, (index) {
   final row = const [
-    [400, 0.99, 'hqixulkxvpfvktef'],
-    [800, 1.99, 'shlcbocllovqiewo'],
-    [1000, 4.99, 'fvkusbwswxykhebg'],
-    [1500, 8.99, 'qfkpdzsnhxmvbtgy'],
-    [3000, 12.99, 'kmbzxlyicznuvkhv'],
-    [5000, 19.99, 'lrkpnfhjnbipnpqn'],
-    [7000, 25.99, 'lrtawcgjqobznehm'],
-    [9000, 49.99, 'mxyubmkaibvoxrbf'],
-    [15000, 99.99, 'ccmaewugkbrzoart'],
+    [400, 0.99, '0x41xoa721'],
+    [800, 1.99, 'ikt5uvfbv4'],
+    [1000, 4.99, 'b7qcxwjs5i'],
+    [1500, 8.99, 'sh9fv41q7x'],
+    [3000, 12.99, '6qmdqg5b83'],
+    [5000, 19.99, '4xp05qujeg'],
+    [7000, 25.99, '2advtg392a'],
+    [9000, 49.99, 'dpyzzymbtm'],
+    [15000, 99.99, 'mug9lj07nl'],
   ][index];
 
   return AromaDrivenJourneyCompendium(

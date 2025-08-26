@@ -38,7 +38,6 @@ class _TranscendentalItineraryManifestorChatVideoWidgetState
     _model = createModel(
         context, () => TranscendentalItineraryManifestorChatVideoModel());
 
-    // 启动3秒超时定时器
     _startTimeoutTimer();
   }
 

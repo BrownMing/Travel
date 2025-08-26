@@ -115,15 +115,15 @@ enum NomadicAromaLoreRepository {
 
   static final Map<NomadicAromaLoreRepository, String>
       _bazaarVoyageMemoryArchive = {
-    key1: 'znvgceavikwnfvle', //400
-    key2: 'nubzcebxjositcvh', //800
-    key3: 'fvkusbwswxykhebg', //
-    key4: 'qzmjtdrnpcegxyw', //2450
-    key5: 'meshyyhsosknsfqa', //4900
-    key6: 'lrkpnfhjnbipnpqn', //
-    key7: 'bkfhsvxqzgnmjae', //9800
-    key8: 'rfqtktkithcyefsw', //24500
-    key9: 'ovfvtcfgxwniaaml', //
+    key1: '0x41xoa721', //400
+    key2: 'ikt5uvfbv4', //800
+    key3: 'b7qcxwjs5i', //
+    key4: 'sh9fv41q7x', //2450
+    key5: '6qmdqg5b83', //4900
+    key6: '4xp05qujeg', //
+    key7: '2advtg392a', //9800
+    key8: 'dpyzzymbtm', //24500
+    key9: 'mug9lj07nl', //
   };
 
   String get value => _bazaarVoyageMemoryArchive[this] ?? '';

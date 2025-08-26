@@ -1,3 +1,5 @@
+import 'package:jourry/cultural_heritage_exploratio_eco_friendly_adventure_planning/unforgettable_trip_sharing_corner_privacy/unforgettable_trip_sharing_corner_privacy_widget.dart';
+
 import '../../urban_whisper_seeker_metro_alley_unveil/world_wonder_wanderlust_voyager_upload_file/world_wonder_wanderlust_voyager_upload_file_widget.dart';
 import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_theme.dart';
 import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_util.dart';
@@ -22,7 +24,7 @@ class _WanderlustItineraryVortexSignUpWidgetState
   late WanderlustItineraryVortexSignUpModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
-
+  bool journeyFootprintMemoryArchive = true;
   @override
   void initState() {
     super.initState();
@@ -651,6 +653,58 @@ class _WanderlustItineraryVortexSignUpWidgetState
                                 elevation: 0.0,
                                 borderRadius: BorderRadius.circular(30.0),
                               ),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
+                            child: InspireGiftChatEchoPlatform(
+                              onUserAgreementTap: () {
+                                context.pushNamed(
+                                  UnforgettableTripSharingCornerPrivacyWidget
+                                      .routeName,
+                                  queryParameters: {
+                                    'inspiringVoyageExperienceBoard':
+                                        serializeParam(
+                                      NomadicExplorationDiaryLedger
+                                          .authenticJourneyMemoirCircleUser,
+                                      ParamType.String,
+                                    ),
+                                  }.withoutNulls,
+                                  extra: <String, dynamic>{
+                                    kTransitionInfoKey: TransitionInfo(
+                                      hasTransition: true,
+                                      transitionType:
+                                          PageTransitionType.rightToLeft,
+                                    ),
+                                  },
+                                );
+                              },
+                              onPrivacyPolicyTap: () {
+                                context.pushNamed(
+                                  UnforgettableTripSharingCornerPrivacyWidget
+                                      .routeName,
+                                  queryParameters: {
+                                    'inspiringVoyageExperienceBoard':
+                                        serializeParam(
+                                      NomadicExplorationDiaryLedger
+                                          .enchantingExplorationNoteSpacePrivacy,
+                                      ParamType.String,
+                                    ),
+                                  }.withoutNulls,
+                                  extra: <String, dynamic>{
+                                    kTransitionInfoKey: TransitionInfo(
+                                      hasTransition: true,
+                                      transitionType:
+                                          PageTransitionType.rightToLeft,
+                                    ),
+                                  },
+                                );
+                              },
+                              onChanged: (value) {
+                                setState(() {
+                                  journeyFootprintMemoryArchive = value;
+                                });
+                              },
                             ),
                           ),
                         ].addToEnd(SizedBox(height: 50.0)),

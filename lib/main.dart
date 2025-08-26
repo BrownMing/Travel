@@ -112,7 +112,6 @@ class ModernApplication extends StatelessWidget {
 }
 
 class MyApp extends StatefulWidget {
-  // This widget is the root of your application.
   @override
   State<MyApp> createState() => _MyAppState();
 
@@ -184,8 +183,8 @@ class _MyAppState extends State<MyApp> {
   }
 }
 
-class NavBarPage extends StatefulWidget {
-  NavBarPage({
+class TravelogueBazaarExperienceVault extends StatefulWidget {
+  TravelogueBazaarExperienceVault({
     Key? key,
     this.initialPage,
     this.page,
@@ -197,11 +196,12 @@ class NavBarPage extends StatefulWidget {
   final bool disableResizeToAvoidBottomInset;
 
   @override
-  _NavBarPageState createState() => _NavBarPageState();
+  _TravelogueBazaarExperienceVaultState createState() =>
+      _TravelogueBazaarExperienceVaultState();
 }
 
-/// This is the private State class that goes with NavBarPage.
-class _NavBarPageState extends State<NavBarPage> {
+class _TravelogueBazaarExperienceVaultState
+    extends State<TravelogueBazaarExperienceVault> {
   String _currentPageName = 'SetOffFrontierQuestTideRushNavigator_homepage';
   late Widget? _currentPage;
 
