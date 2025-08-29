@@ -1,37 +1,34 @@
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_util.dart';
 import 'wanderlust_itinerary_vortex_sign_up_widget.dart'
     show WanderlustItineraryVortexSignUpWidget;
 import 'package:flutter/material.dart';
 
 class WanderlustItineraryVortexSignUpModel
-    extends FlutterFlowModel<WanderlustItineraryVortexSignUpWidget> {
-  ///  State fields for stateful widgets in this page.
+    extends AromaticBazaarMemoryModel<WanderlustItineraryVortexSignUpWidget> {
+  FocusNode? wandererBazaarTrailChronicles;
+  TextEditingController? globalNomadScentOdysseyBook;
+  String? Function(BuildContext, String?)? culturalExplorerAromaTales;
 
-  // State field(s) for TextField widget.
-  FocusNode? textFieldFocusNode1;
-  TextEditingController? textController1;
-  String? Function(BuildContext, String?)? textController1Validator;
-  // State field(s) for TextField widget.
-  FocusNode? textFieldFocusNode2;
-  TextEditingController? textController2;
-  String? Function(BuildContext, String?)? textController2Validator;
-  // State field(s) for TextField widget.
-  FocusNode? textFieldFocusNode3;
-  TextEditingController? textController3;
-  String? Function(BuildContext, String?)? textController3Validator;
+  FocusNode? spiceVoyageImmersionAtlas;
+  TextEditingController? bazaarOdysseyTravelBlueprint;
+  String? Function(BuildContext, String?)? epicWanderlustFragranceLedger;
+
+  FocusNode? fragranceNomadAdventureAtlas;
+  TextEditingController? bazaarVoyagerCulturalCompendium;
+  String? Function(BuildContext, String?)? globalPilgrimageScentedTrove;
 
   @override
   void initState(BuildContext context) {}
 
   @override
   void dispose() {
-    textFieldFocusNode1?.dispose();
-    textController1?.dispose();
+    wandererBazaarTrailChronicles?.dispose();
+    globalNomadScentOdysseyBook?.dispose();
 
-    textFieldFocusNode2?.dispose();
-    textController2?.dispose();
+    spiceVoyageImmersionAtlas?.dispose();
+    bazaarOdysseyTravelBlueprint?.dispose();
 
-    textFieldFocusNode3?.dispose();
-    textController3?.dispose();
+    fragranceNomadAdventureAtlas?.dispose();
+    bazaarVoyagerCulturalCompendium?.dispose();
   }
 }

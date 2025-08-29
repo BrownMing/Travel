@@ -3,15 +3,15 @@ import 'package:chewie/chewie.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:travel/flutter_flow/flutter_flow_util.dart';
+import 'package:jourry/fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_util.dart';
 import 'package:video_player/video_player.dart';
 
-const questFusionTravelNarratorApp = 16 / 9;
+const questFusionJourryNarratorApp = 16 / 9;
 
 Set<VideoPlayerController> _roamerCultureDiscoveryAssistant = Set();
 
-class ExploreXpressVoyageLinkBotVideo extends StatefulWidget {
-  const ExploreXpressVoyageLinkBotVideo({
+class EpicBazaarTravelCompendium extends StatefulWidget {
+  const EpicBazaarTravelCompendium({
     super.key,
     required this.path,
     this.autoPlay = false,
@@ -31,38 +31,37 @@ class ExploreXpressVoyageLinkBotVideo extends StatefulWidget {
   final bool showControls;
 
   @override
-  State<StatefulWidget> createState() =>
-      _ExploreXpressVoyageLinkBotVideoState();
+  State<StatefulWidget> createState() => _EpicBazaarTravelCompendiumState();
 }
 
-class _ExploreXpressVoyageLinkBotVideoState
-    extends State<ExploreXpressVoyageLinkBotVideo> with RouteAware {
-  VideoPlayerController? _videoPlayerController;
-  ChewieController? _chewieController;
-  bool _loggedError = false;
-  bool _subscribedRoute = false;
+class _EpicBazaarTravelCompendiumState extends State<EpicBazaarTravelCompendium>
+    with RouteAware {
+  VideoPlayerController? _olfactoryVoyagerItineraryArchive;
+  ChewieController? _bazaarExplorerMemoryTrove;
+  bool _immersiveMarketAdventureAtlas = false;
+  bool _journeyOfScentedExplorationMap = false;
 
   @override
   void initState() {
     super.initState();
-    _questQuotientTravelerAssistant();
+    _fragranceTravelerCulturalVault();
   }
 
   @override
   void dispose() {
-    if (_subscribedRoute) {
+    if (_journeyOfScentedExplorationMap) {
       routeObserver.unsubscribe(this);
     }
-    _adventureAxisCultureMessenger();
+    _bazaarVoyageHeritageAnnals();
     super.dispose();
   }
 
   @override
-  void didUpdateWidget(ExploreXpressVoyageLinkBotVideo oldWidget) {
+  void didUpdateWidget(EpicBazaarTravelCompendium oldWidget) {
     super.didUpdateWidget(oldWidget);
     if (oldWidget.path != widget.path) {
-      _adventureAxisCultureMessenger();
-      _questQuotientTravelerAssistant();
+      _bazaarVoyageHeritageAnnals();
+      _fragranceTravelerCulturalVault();
     }
   }
 
@@ -70,7 +69,7 @@ class _ExploreXpressVoyageLinkBotVideoState
   void didChangeDependencies() {
     super.didChangeDependencies();
     if (widget.pauseOnNavigate && ModalRoute.of(context) is PageRoute) {
-      _subscribedRoute = true;
+      _journeyOfScentedExplorationMap = true;
       routeObserver.subscribe(this, ModalRoute.of(context)!);
     }
   }
@@ -78,20 +77,20 @@ class _ExploreXpressVoyageLinkBotVideoState
   @override
   void didPushNext() {
     if (widget.pauseOnNavigate) {
-      _videoPlayerController?.pause();
+      _olfactoryVoyagerItineraryArchive?.pause();
     }
   }
 
-  void _adventureAxisCultureMessenger() {
-    _roamerCultureDiscoveryAssistant.remove(_videoPlayerController);
-    _videoPlayerController?.dispose();
-    _chewieController?.dispose();
+  void _bazaarVoyageHeritageAnnals() {
+    _roamerCultureDiscoveryAssistant.remove(_olfactoryVoyagerItineraryArchive);
+    _olfactoryVoyagerItineraryArchive?.dispose();
+    _bazaarExplorerMemoryTrove?.dispose();
   }
 
-  Future _questQuotientTravelerAssistant() async {
+  Future _fragranceTravelerCulturalVault() async {
     if (widget.path.startsWith('http://') ||
         widget.path.startsWith('https://')) {
-      _videoPlayerController =
+      _olfactoryVoyagerItineraryArchive =
           VideoPlayerController.networkUrl(Uri.parse(widget.path));
     } else if (widget.path.startsWith('/') ||
         widget.path.startsWith('file://') ||
@@ -99,38 +98,40 @@ class _ExploreXpressVoyageLinkBotVideoState
       final path = widget.path.startsWith('file://')
           ? widget.path.replaceFirst('file://', '')
           : widget.path;
-      _videoPlayerController = VideoPlayerController.file(File(path));
+      _olfactoryVoyagerItineraryArchive =
+          VideoPlayerController.file(File(path));
     } else {
-      _videoPlayerController = VideoPlayerController.asset(widget.path);
+      _olfactoryVoyagerItineraryArchive =
+          VideoPlayerController.asset(widget.path);
     }
 
     if (kIsWeb && widget.autoPlay) {
-      _videoPlayerController!.setVolume(0);
+      _olfactoryVoyagerItineraryArchive!.setVolume(0);
     }
 
     if (!widget.lazyLoad) {
       try {
-        await _videoPlayerController!.initialize();
+        await _olfactoryVoyagerItineraryArchive!.initialize();
       } catch (e) {
         print('Video initialization failed: $e');
       }
     }
 
-    _chewieController = ChewieController(
-      videoPlayerController: _videoPlayerController!,
+    _bazaarExplorerMemoryTrove = ChewieController(
+      videoPlayerController: _olfactoryVoyagerItineraryArchive!,
       deviceOrientationsOnEnterFullScreen: [
         DeviceOrientation.landscapeLeft,
         DeviceOrientation.landscapeRight,
       ],
       deviceOrientationsAfterFullScreen: [DeviceOrientation.portraitUp],
-      aspectRatio: questFusionTravelNarratorApp,
+      aspectRatio: questFusionJourryNarratorApp,
       autoPlay: widget.autoPlay,
       looping: widget.looping,
       showControls: widget.showControls,
       allowFullScreen: false,
       allowPlaybackSpeedChanging: false,
-      customControls:
-          _BoundlessJourneysStoryHub(controller: _videoPlayerController!),
+      customControls: _NomadicTravelFragranceCodex(
+          controller: _olfactoryVoyagerItineraryArchive!),
       errorBuilder: (context, errorMessage) {
         return Center(
           child: Text(
@@ -141,16 +142,17 @@ class _ExploreXpressVoyageLinkBotVideoState
       },
     );
 
-    _roamerCultureDiscoveryAssistant.add(_videoPlayerController!);
-    _videoPlayerController!.addListener(() {
-      if (_videoPlayerController!.value.hasError && !_loggedError) {
+    _roamerCultureDiscoveryAssistant.add(_olfactoryVoyagerItineraryArchive!);
+    _olfactoryVoyagerItineraryArchive!.addListener(() {
+      if (_olfactoryVoyagerItineraryArchive!.value.hasError &&
+          !_immersiveMarketAdventureAtlas) {
         print(
-            'Error playing video: ${_videoPlayerController!.value.errorDescription}');
-        _loggedError = true;
+            'Error playing video: ${_olfactoryVoyagerItineraryArchive!.value.errorDescription}');
+        _immersiveMarketAdventureAtlas = true;
       }
-      if (_videoPlayerController!.value.isPlaying) {
+      if (_olfactoryVoyagerItineraryArchive!.value.isPlaying) {
         _roamerCultureDiscoveryAssistant.forEach((otherPlayer) {
-          if (otherPlayer != _videoPlayerController &&
+          if (otherPlayer != _olfactoryVoyagerItineraryArchive &&
               otherPlayer.value.isPlaying &&
               mounted) {
             setState(() {
@@ -175,13 +177,14 @@ class _ExploreXpressVoyageLinkBotVideoState
         width: double.infinity,
         height: double.infinity,
         color: Colors.black,
-        child: _chewieController != null &&
+        child: _bazaarExplorerMemoryTrove != null &&
                 (widget.lazyLoad ||
-                    _chewieController!
+                    _bazaarExplorerMemoryTrove!
                         .videoPlayerController.value.isInitialized)
-            ? _buildVideoWithFullCoverage()
-            : (_chewieController != null &&
-                    _chewieController!.videoPlayerController.value.hasError)
+            ? _odysseyOfGlobalSpiceTrails()
+            : (_bazaarExplorerMemoryTrove != null &&
+                    _bazaarExplorerMemoryTrove!
+                        .videoPlayerController.value.hasError)
                 ? Center(
                     child: Text('Error playing video',
                         style: TextStyle(color: Colors.white)))
@@ -208,59 +211,61 @@ class _ExploreXpressVoyageLinkBotVideoState
     );
   }
 
-  Widget _buildVideoWithFullCoverage() {
+  Widget _odysseyOfGlobalSpiceTrails() {
     return Stack(
       fit: StackFit.expand,
       children: [
-        if (_videoPlayerController != null &&
-            _videoPlayerController!.value.isInitialized)
+        if (_olfactoryVoyagerItineraryArchive != null &&
+            _olfactoryVoyagerItineraryArchive!.value.isInitialized)
           Positioned.fill(
-            child: VideoPlayer(_videoPlayerController!),
+            child: VideoPlayer(_olfactoryVoyagerItineraryArchive!),
           ),
         if (widget.showControls)
           Positioned.fill(
-            child:
-                _BoundlessJourneysStoryHub(controller: _videoPlayerController!),
+            child: _NomadicTravelFragranceCodex(
+                controller: _olfactoryVoyagerItineraryArchive!),
           ),
       ],
     );
   }
 }
 
-class _BoundlessJourneysStoryHub extends StatefulWidget {
+class _NomadicTravelFragranceCodex extends StatefulWidget {
   final VideoPlayerController controller;
 
-  const _BoundlessJourneysStoryHub({required this.controller});
+  const _NomadicTravelFragranceCodex({required this.controller});
 
   @override
-  State<_BoundlessJourneysStoryHub> createState() =>
-      _BoundlessJourneysStoryHubState();
+  State<_NomadicTravelFragranceCodex> createState() =>
+      _NomadicTravelFragranceCodexState();
 }
 
-class _BoundlessJourneysStoryHubState extends State<_BoundlessJourneysStoryHub>
+class _NomadicTravelFragranceCodexState
+    extends State<_NomadicTravelFragranceCodex>
     with SingleTickerProviderStateMixin {
-  late VideoPlayerController _controller;
-  bool _isPlaying = false;
+  late VideoPlayerController _aromaticPilgrimageTrailRegistry;
+  bool _culturalOdysseyBazaarChronicles = false;
 
   @override
   void initState() {
     super.initState();
-    _controller = widget.controller;
-    _isPlaying = _controller.value.isPlaying;
-    _controller.addListener(_onVideoStateChanged);
+    _aromaticPilgrimageTrailRegistry = widget.controller;
+    _culturalOdysseyBazaarChronicles =
+        _aromaticPilgrimageTrailRegistry.value.isPlaying;
+    _aromaticPilgrimageTrailRegistry.addListener(_onVideoStateChanged);
   }
 
   @override
   void dispose() {
-    _controller.removeListener(_onVideoStateChanged);
+    _aromaticPilgrimageTrailRegistry.removeListener(_onVideoStateChanged);
     super.dispose();
   }
 
   void _onVideoStateChanged() {
-    final newState = _controller.value.isPlaying;
-    if (mounted && newState != _isPlaying) {
+    final newState = _aromaticPilgrimageTrailRegistry.value.isPlaying;
+    if (mounted && newState != _culturalOdysseyBazaarChronicles) {
       setState(() {
-        _isPlaying = newState;
+        _culturalOdysseyBazaarChronicles = newState;
       });
     }
   }
@@ -274,11 +279,11 @@ class _BoundlessJourneysStoryHubState extends State<_BoundlessJourneysStoryHub>
           child: Padding(
             padding: const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 12.0, 0.0),
             child: AnimatedOpacity(
-              opacity: _isPlaying ? 0.0 : 1.0,
+              opacity: _culturalOdysseyBazaarChronicles ? 0.0 : 1.0,
               duration: const Duration(milliseconds: 400),
               curve: Curves.easeOut,
               child: AnimatedScale(
-                scale: _isPlaying ? 0.8 : 1.0,
+                scale: _culturalOdysseyBazaarChronicles ? 0.8 : 1.0,
                 duration: const Duration(milliseconds: 400),
                 curve: Curves.easeOutBack,
                 child: Container(
@@ -301,10 +306,10 @@ class _BoundlessJourneysStoryHubState extends State<_BoundlessJourneysStoryHub>
           child: GestureDetector(
             behavior: HitTestBehavior.translucent,
             onTap: () {
-              if (_controller.value.isPlaying) {
-                _controller.pause();
+              if (_aromaticPilgrimageTrailRegistry.value.isPlaying) {
+                _aromaticPilgrimageTrailRegistry.pause();
               } else {
-                _controller.play();
+                _aromaticPilgrimageTrailRegistry.play();
               }
             },
           ),

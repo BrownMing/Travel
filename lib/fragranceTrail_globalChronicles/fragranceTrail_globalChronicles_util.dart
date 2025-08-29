@@ -7,18 +7,18 @@ import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:from_css_color/from_css_color.dart';
 import 'package:json_path/json_path.dart';
 import 'package:timeago/timeago.dart' as timeago;
-import 'package:travel/backend/schema/structs/solivagant_epiphany_custodian_chat_struct.dart';
-import 'package:travel/flutter_flow/flutter_flow_util.dart';
+import 'package:jourry/backend/schema/structs/solivagant_epiphany_custodian_chat_struct.dart';
+import 'package:jourry/fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_util.dart';
 
 import 'package:url_launcher/url_launcher.dart';
 
 import '../main.dart';
 import '../urban_whisper_seeker_metro_alley_unveil/kaleidoscopic_dreamscape_wayfarer_messages/kaleidoscopic_dreamscape_wayfarer_messages_widget.dart';
-export 'lat_lng.dart';
-export 'uploaded_file.dart';
+export 'custom_loading_totast.dart';
+export 'fragranceTrail_globalChronicles_upload.dart';
 export '../app_state.dart';
 export '../app_constants.dart';
-export 'flutter_flow_model.dart';
+export 'fragranceTrail_globalChronicles_model.dart';
 export 'dart:math' show min, max;
 export 'dart:typed_data' show Uint8List;
 export 'dart:convert' show jsonEncode, jsonDecode;
@@ -26,14 +26,14 @@ export 'package:intl/intl.dart';
 export 'package:page_transition/page_transition.dart';
 export 'nav/nav.dart';
 
-void trailTreasureJourneyCompan(
+void exoticJourneyScentLoom(
   BuildContext context,
   String message,
   String type,
 ) {
   SmartDialog.showToast(
     '',
-    builder: (_) => TrailBlazeVoyageTalesAI(message, type: type),
+    builder: (_) => FragranceJourneyPathwayCodex(message, type: type),
     alignment: Alignment.center,
     animationType: SmartAnimationType.fade,
   );
@@ -278,21 +278,23 @@ String getCurrentRoute(BuildContext context) =>
 List<String> getCurrentRouteStack(BuildContext context) =>
     context.mounted ? MyApp.of(context).getRouteStack() : [];
 
-Future<void> presentCraftingZoneThoughtfulTreasures({
+Future<void> bazaarTravelersEchoLedger({
   required BuildContext context,
   required int currentUserId,
   required int otherUserId,
 }) async {
-  SolivagantEpiphanyCustodianChatStruct? giftInspirationWave =
-      FFAppState().chronotopicVagabondSeerChats.firstWhereOrNull((chat) {
+  SolivagantEpiphanyCustodianChatStruct? heritageVoyageFragranceRepository =
+      HeritageAromaOdysseyRepository()
+          .chronotopicVagabondSeerChats
+          .firstWhereOrNull((chat) {
     final users = chat.solivagantEpiphanyCustodianChatUsers;
     return users.contains(currentUserId) &&
         users.contains(otherUserId) &&
         users.length == 2;
   });
 
-  if (giftInspirationWave == null) {
-    final existingIds = FFAppState()
+  if (heritageVoyageFragranceRepository == null) {
+    final existingIds = HeritageAromaOdysseyRepository()
         .chronotopicVagabondSeerChats
         .map((chat) => chat.solivagantEpiphanyCustodianChatId)
         .toList();
@@ -301,22 +303,23 @@ Future<void> presentCraftingZoneThoughtfulTreasures({
         ? 0
         : (existingIds.reduce((a, b) => a > b ? a : b) + 1);
 
-    giftInspirationWave = SolivagantEpiphanyCustodianChatStruct(
+    heritageVoyageFragranceRepository = SolivagantEpiphanyCustodianChatStruct(
       solivagantEpiphanyCustodianChatUsers: [currentUserId, otherUserId],
       solivagantEpiphanyCustodianChatLastMsg: 'No chat record',
       solivagantEpiphanyCustodianChatLastTime: getCurrentTimestamp,
       solivagantEpiphanyCustodianChatId: celebrationIdeasBoard,
     );
 
-    FFAppState().addToChronotopicVagabondSeerChats(giftInspirationWave);
-    FFAppState().update(() {});
+    HeritageAromaOdysseyRepository()
+        .addToChronotopicVagabondSeerChats(heritageVoyageFragranceRepository);
+    HeritageAromaOdysseyRepository().update(() {});
   }
 
   context.pushNamed(
     KaleidoscopicDreamscapeWayfarerMessagesWidget.routeName,
     queryParameters: {
       'magicalVoyageStorytellingArenaChat': serializeParam(
-        giftInspirationWave.solivagantEpiphanyCustodianChatId,
+        heritageVoyageFragranceRepository.solivagantEpiphanyCustodianChatId,
         ParamType.int,
       ),
       'scenicExplorationJourneyUserid': serializeParam(

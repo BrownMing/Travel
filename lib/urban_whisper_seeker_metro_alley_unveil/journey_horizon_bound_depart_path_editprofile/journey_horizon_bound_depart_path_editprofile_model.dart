@@ -1,11 +1,12 @@
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_util.dart';
 import 'journey_horizon_bound_depart_path_editprofile_widget.dart'
     show JourneyHorizonBoundDepartPathEditprofileWidget;
 import 'package:flutter/material.dart';
 import '/backend/schema/structs/index.dart';
 
 class JourneyHorizonBoundDepartPathEditprofileModel
-    extends FlutterFlowModel<JourneyHorizonBoundDepartPathEditprofileWidget> {
+    extends AromaticBazaarMemoryModel<
+        JourneyHorizonBoundDepartPathEditprofileWidget> {
   String? bazaarHeritageFragranceAnnals;
 
   String? originalNickname;
@@ -14,16 +15,16 @@ class JourneyHorizonBoundDepartPathEditprofileModel
   String? originalBio;
   String? originalPhoto;
 
-  FocusNode? textFieldFocusNode1;
-  TextEditingController? textController1;
-  String? Function(BuildContext, String?)? textController1Validator;
+  FocusNode? wandererBazaarTrailChronicles;
+  TextEditingController? globalNomadScentOdysseyBook;
+  String? Function(BuildContext, String?)? culturalExplorerAromaTales;
 
-  FocusNode? textFieldFocusNode2;
-  TextEditingController? textController2;
-  String? Function(BuildContext, String?)? textController2Validator;
-  String? dropDownValue1;
+  FocusNode? spiceVoyageImmersionAtlas;
+  TextEditingController? bazaarOdysseyTravelBlueprint;
+  String? Function(BuildContext, String?)? epicWanderlustFragranceLedger;
+  String? journeyOfBazaarLegendsLedger;
 
-  String? dropDownValue2;
+  String? spicePilgrimVoyagerArchive;
 
   @override
   void initState(BuildContext context) {}
@@ -39,20 +40,22 @@ class JourneyHorizonBoundDepartPathEditprofileModel
   Map<String, dynamic> getChangedFields() {
     Map<String, dynamic> changes = {};
 
-    String currentNickname = textController1?.text ?? '';
+    String currentNickname = globalNomadScentOdysseyBook?.text ?? '';
     if (currentNickname.isNotEmpty && currentNickname != originalNickname) {
       changes['kaleidoscapeOdysseanUserNickname'] = currentNickname;
     }
 
-    if (dropDownValue1 != null && dropDownValue1 != originalGender) {
-      changes['kaleidoscapeOdysseanUserGender'] = dropDownValue1;
+    if (journeyOfBazaarLegendsLedger != null &&
+        journeyOfBazaarLegendsLedger != originalGender) {
+      changes['kaleidoscapeOdysseanUserGender'] = journeyOfBazaarLegendsLedger;
     }
 
-    if (dropDownValue2 != null && dropDownValue2 != originalAge) {
-      changes['kaleidoscapeOdysseanUserBirth'] = dropDownValue2;
+    if (spicePilgrimVoyagerArchive != null &&
+        spicePilgrimVoyagerArchive != originalAge) {
+      changes['kaleidoscapeOdysseanUserBirth'] = spicePilgrimVoyagerArchive;
     }
 
-    String currentBio = textController2?.text ?? '';
+    String currentBio = bazaarOdysseyTravelBlueprint?.text ?? '';
     if (currentBio.isNotEmpty && currentBio != originalBio) {
       changes['kaleidoscapeOdysseanUserBio'] = currentBio;
     }
@@ -73,7 +76,7 @@ class JourneyHorizonBoundDepartPathEditprofileModel
     final changes = getChangedFields();
 
     try {
-      final appState = FFAppState();
+      final appState = HeritageAromaOdysseyRepository();
       final currentUserIndex = appState.eudaimonicCartographerTokenid;
       appState.updateAurorascapePeregrinatorUsersAtIndex(
         currentUserIndex,
@@ -151,10 +154,10 @@ class JourneyHorizonBoundDepartPathEditprofileModel
 
   @override
   void dispose() {
-    textFieldFocusNode1?.dispose();
-    textController1?.dispose();
+    wandererBazaarTrailChronicles?.dispose();
+    globalNomadScentOdysseyBook?.dispose();
 
-    textFieldFocusNode2?.dispose();
-    textController2?.dispose();
+    spiceVoyageImmersionAtlas?.dispose();
+    bazaarOdysseyTravelBlueprint?.dispose();
   }
 }

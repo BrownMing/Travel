@@ -1,6 +1,6 @@
 import '/components/wanderer_bazaar_fragrance_tales_details_widget.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_theme.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_util.dart';
 import '/urban_whisper_seeker_metro_alley_unveil/epiphany_seeking_globetrotting_saga_empty/epiphany_seeking_globetrotting_saga_empty_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -45,7 +45,7 @@ class _CityPulseExplorerAlleyWhisperSeekerDetailsWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<HeritageAromaOdysseyRepository>();
 
     return GestureDetector(
       onTap: () {
@@ -138,7 +138,7 @@ class _CityPulseExplorerAlleyWhisperSeekerDetailsWidgetState
                                     image: DecorationImage(
                                       fit: BoxFit.cover,
                                       image: Image.asset(
-                                        FFAppState()
+                                        HeritageAromaOdysseyRepository()
                                             .paleoHorizonWayfarerTypes
                                             .elementAtOrNull(widget
                                                 .olfactoryBazaarExpedition!)!
@@ -162,37 +162,43 @@ class _CityPulseExplorerAlleyWhisperSeekerDetailsWidgetState
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Text(
-                                        '${FFAppState().paleoHorizonWayfarerTypes.elementAtOrNull(widget.olfactoryBazaarExpedition!)?.luminiferousSomnamTypeTitle}',
-                                        style: FlutterFlowTheme.of(context)
+                                        '${HeritageAromaOdysseyRepository().paleoHorizonWayfarerTypes.elementAtOrNull(widget.olfactoryBazaarExpedition!)?.luminiferousSomnamTypeTitle}',
+                                        style: AromaticBazaarMemoryTheme.of(
+                                                context)
                                             .bodyMedium
                                             .override(
                                               fontFamily:
-                                                  FlutterFlowTheme.of(context)
+                                                  AromaticBazaarMemoryTheme.of(
+                                                          context)
                                                       .bodyMediumFamily,
                                               color: Color(0xFFF7BA4A),
                                               fontSize: 20.0,
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.bold,
                                               useGoogleFonts:
-                                                  !FlutterFlowTheme.of(context)
+                                                  !AromaticBazaarMemoryTheme.of(
+                                                          context)
                                                       .bodyMediumIsCustom,
                                             ),
                                       ),
                                       Text(
-                                        '${FFAppState().paleoHorizonWayfarerTypes.elementAtOrNull(widget.olfactoryBazaarExpedition!)?.luminiferousSomnamTypeDescribe}',
+                                        '${HeritageAromaOdysseyRepository().paleoHorizonWayfarerTypes.elementAtOrNull(widget.olfactoryBazaarExpedition!)?.luminiferousSomnamTypeDescribe}',
                                         textAlign: TextAlign.center,
-                                        style: FlutterFlowTheme.of(context)
+                                        style: AromaticBazaarMemoryTheme.of(
+                                                context)
                                             .bodyMedium
                                             .override(
                                               fontFamily:
-                                                  FlutterFlowTheme.of(context)
+                                                  AromaticBazaarMemoryTheme.of(
+                                                          context)
                                                       .bodyMediumFamily,
                                               color: Color(0x9AFFFFFF),
                                               fontSize: 16.0,
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.w500,
                                               useGoogleFonts:
-                                                  !FlutterFlowTheme.of(context)
+                                                  !AromaticBazaarMemoryTheme.of(
+                                                          context)
                                                       .bodyMediumIsCustom,
                                             ),
                                       ),
@@ -209,23 +215,24 @@ class _CityPulseExplorerAlleyWhisperSeekerDetailsWidgetState
                             EdgeInsetsDirectional.fromSTEB(0.0, 18.0, 0.0, 0.0),
                         child: Builder(
                           builder: (context) {
-                            final fragranceHeritageVoyager = FFAppState()
-                                .bioluminiscentTrailblazerPosts
-                                .where((e) =>
-                                    e.transcontinentalOneirochronPostType ==
-                                        FFAppState()
-                                            .paleoHorizonWayfarerTypes
-                                            .elementAtOrNull(widget
-                                                .olfactoryBazaarExpedition!)
-                                            ?.luminiferousSomnamTypeTitle &&
-                                    !FFAppState()
-                                        .aurorascapePeregrinatorUsers[
-                                            FFAppState()
-                                                .eudaimonicCartographerTokenid]
-                                        .kaleidoscapeOdysseanUserBlacklist
-                                        .contains(e
-                                            .transcontinentalOneirochronPostCreateId))
-                                .toList();
+                            final fragranceHeritageVoyager =
+                                HeritageAromaOdysseyRepository()
+                                    .bioluminiscentTrailblazerPosts
+                                    .where((e) =>
+                                        e.transcontinentalOneirochronPostType ==
+                                            HeritageAromaOdysseyRepository()
+                                                .paleoHorizonWayfarerTypes
+                                                .elementAtOrNull(widget
+                                                    .olfactoryBazaarExpedition!)
+                                                ?.luminiferousSomnamTypeTitle &&
+                                        !HeritageAromaOdysseyRepository()
+                                            .aurorascapePeregrinatorUsers[
+                                                HeritageAromaOdysseyRepository()
+                                                    .eudaimonicCartographerTokenid]
+                                            .kaleidoscapeOdysseanUserBlacklist
+                                            .contains(e
+                                                .transcontinentalOneirochronPostCreateId))
+                                    .toList();
                             if (fragranceHeritageVoyager.isEmpty) {
                               return Center(
                                 child:
@@ -273,15 +280,17 @@ class _CityPulseExplorerAlleyWhisperSeekerDetailsWidgetState
                                     globalScentTrailAtlasUnlike:
                                         !fragranceHeritageVoyagerItem
                                             .transcontinentalOneirochronPostLikeUsers
-                                            .contains(FFAppState()
-                                                .eudaimonicCartographerTokenid),
+                                            .contains(
+                                                HeritageAromaOdysseyRepository()
+                                                    .eudaimonicCartographerTokenid),
                                     globalScentTrailAtlasPost:
                                         widget.olfactoryBazaarExpedition!,
                                     globalScentTrailAtlasLike:
                                         fragranceHeritageVoyagerItem
                                             .transcontinentalOneirochronPostLikeUsers
-                                            .contains(FFAppState()
-                                                .eudaimonicCartographerTokenid),
+                                            .contains(
+                                                HeritageAromaOdysseyRepository()
+                                                    .eudaimonicCartographerTokenid),
                                   ),
                                 );
                               })

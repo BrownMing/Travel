@@ -1,6 +1,7 @@
-import '/flutter_flow/flutter_flow_button_tabbar.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import 'package:jourry/fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_tabbar.dart';
+
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_theme.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_util.dart';
 import '/urban_whisper_seeker_metro_alley_unveil/epiphany_seeking_globetrotting_saga_empty/epiphany_seeking_globetrotting_saga_empty_widget.dart';
 import '/urban_whisper_seeker_metro_alley_unveil/kaleidoscape_odyssean_dream_notcoins/kaleidoscape_odyssean_dream_notcoins_widget.dart';
 import '/index.dart';
@@ -37,7 +38,7 @@ class _SetOffFrontierQuestTideRushNavigatorHomepageWidgetState
     _model = createModel(
         context, () => SetOffFrontierQuestTideRushNavigatorHomepageModel());
 
-    _model.tabBarController = TabController(
+    _model.heritagePilgrimageAromaCodex = TabController(
       vsync: this,
       length: 2,
       initialIndex: 0,
@@ -53,7 +54,7 @@ class _SetOffFrontierQuestTideRushNavigatorHomepageWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<HeritageAromaOdysseyRepository>();
 
     return GestureDetector(
       onTap: () {
@@ -106,23 +107,25 @@ class _SetOffFrontierQuestTideRushNavigatorHomepageWidgetState
                         padding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 60.0, 0.0, 0.0),
                         child: Text(
-                          'Travel',
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    font: GoogleFonts.montserrat(
-                                      fontWeight: FontWeight.w900,
-                                      fontStyle: FlutterFlowTheme.of(context)
+                          'Jourry',
+                          style: AromaticBazaarMemoryTheme.of(context)
+                              .bodyMedium
+                              .override(
+                                font: GoogleFonts.montserrat(
+                                  fontWeight: FontWeight.w900,
+                                  fontStyle:
+                                      AromaticBazaarMemoryTheme.of(context)
                                           .bodyMedium
                                           .fontStyle,
-                                    ),
-                                    color: Colors.black,
-                                    fontSize: 36.0,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FontWeight.w900,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontStyle,
-                                  ),
+                                ),
+                                color: Colors.black,
+                                fontSize: 36.0,
+                                letterSpacing: 0.0,
+                                fontWeight: FontWeight.w900,
+                                fontStyle: AromaticBazaarMemoryTheme.of(context)
+                                    .bodyMedium
+                                    .fontStyle,
+                              ),
                         ),
                       ),
                     ],
@@ -132,7 +135,9 @@ class _SetOffFrontierQuestTideRushNavigatorHomepageWidgetState
                   padding: EdgeInsetsDirectional.fromSTEB(16.0, 8.0, 32.0, 0.0),
                   child: Text(
                     'See the world, one story at a time.',
-                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                    style: AromaticBazaarMemoryTheme.of(context)
+                        .bodyMedium
+                        .override(
                           fontFamily: 'hongmeng',
                           color: Colors.black,
                           fontSize: 22.0,
@@ -162,7 +167,7 @@ class _SetOffFrontierQuestTideRushNavigatorHomepageWidgetState
                           child: Builder(
                             builder: (context) {
                               final sublimarePeregrinHeterotopologySeer =
-                                  FFAppState()
+                                  HeritageAromaOdysseyRepository()
                                       .paleoHorizonWayfarerTypes
                                       .toList();
 
@@ -207,8 +212,9 @@ class _SetOffFrontierQuestTideRushNavigatorHomepageWidgetState
                                         width: 106.0,
                                         height: 180.0,
                                         decoration: BoxDecoration(
-                                          color:
-                                              FlutterFlowTheme.of(context).info,
+                                          color: AromaticBazaarMemoryTheme.of(
+                                                  context)
+                                              .info,
                                           boxShadow: [
                                             BoxShadow(
                                               blurRadius: 6.0,
@@ -247,12 +253,12 @@ class _SetOffFrontierQuestTideRushNavigatorHomepageWidgetState
                                                   '${sublimarePeregrinHeterotopologySeerItem.luminiferousSomnamTypeTitle}',
                                                   textAlign: TextAlign.center,
                                                   style:
-                                                      FlutterFlowTheme.of(
-                                                              context)
+                                                      AromaticBazaarMemoryTheme
+                                                              .of(context)
                                                           .bodyMedium
                                                           .override(
                                                             fontFamily:
-                                                                FlutterFlowTheme.of(
+                                                                AromaticBazaarMemoryTheme.of(
                                                                         context)
                                                                     .bodyMediumFamily,
                                                             color: Colors.black,
@@ -260,7 +266,7 @@ class _SetOffFrontierQuestTideRushNavigatorHomepageWidgetState
                                                             fontWeight:
                                                                 FontWeight.bold,
                                                             useGoogleFonts:
-                                                                !FlutterFlowTheme.of(
+                                                                !AromaticBazaarMemoryTheme.of(
                                                                         context)
                                                                     .bodyMediumIsCustom,
                                                           ),
@@ -304,8 +310,8 @@ class _SetOffFrontierQuestTideRushNavigatorHomepageWidgetState
                               gradient: LinearGradient(
                                 colors: [
                                   Color(0x80F7BA4A),
-                                  FlutterFlowTheme.of(context).info,
-                                  FlutterFlowTheme.of(context).info
+                                  AromaticBazaarMemoryTheme.of(context).info,
+                                  AromaticBazaarMemoryTheme.of(context).info
                                 ],
                                 stops: [0.0, 0.3, 1.0],
                                 begin: AlignmentDirectional(0.0, -1.0),
@@ -339,35 +345,38 @@ class _SetOffFrontierQuestTideRushNavigatorHomepageWidgetState
                                     children: [
                                       Align(
                                         alignment: Alignment(0.0, 0),
-                                        child: FlutterFlowButtonTabBar(
+                                        child: AromaticBazaarMemoryButtonTabBar(
                                           useToggleButtonStyle: false,
-                                          labelStyle: FlutterFlowTheme.of(
-                                                  context)
-                                              .titleMedium
-                                              .override(
-                                                fontFamily:
-                                                    FlutterFlowTheme.of(context)
-                                                        .titleMediumFamily,
-                                                letterSpacing: 0.0,
-                                                fontWeight: FontWeight.bold,
-                                                useGoogleFonts:
-                                                    !FlutterFlowTheme.of(
-                                                            context)
-                                                        .titleMediumIsCustom,
-                                              ),
-                                          unselectedLabelStyle:
-                                              FlutterFlowTheme.of(context)
+                                          labelStyle:
+                                              AromaticBazaarMemoryTheme.of(
+                                                      context)
                                                   .titleMedium
                                                   .override(
                                                     fontFamily:
-                                                        FlutterFlowTheme.of(
-                                                                context)
+                                                        AromaticBazaarMemoryTheme
+                                                                .of(context)
                                                             .titleMediumFamily,
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.bold,
                                                     useGoogleFonts:
-                                                        !FlutterFlowTheme.of(
-                                                                context)
+                                                        !AromaticBazaarMemoryTheme
+                                                                .of(context)
+                                                            .titleMediumIsCustom,
+                                                  ),
+                                          unselectedLabelStyle:
+                                              AromaticBazaarMemoryTheme.of(
+                                                      context)
+                                                  .titleMedium
+                                                  .override(
+                                                    fontFamily:
+                                                        AromaticBazaarMemoryTheme
+                                                                .of(context)
+                                                            .titleMediumFamily,
+                                                    letterSpacing: 0.0,
+                                                    fontWeight: FontWeight.bold,
+                                                    useGoogleFonts:
+                                                        !AromaticBazaarMemoryTheme
+                                                                .of(context)
                                                             .titleMediumIsCustom,
                                                   ),
                                           labelColor: Color(0xFFF7BA4A),
@@ -375,7 +384,9 @@ class _SetOffFrontierQuestTideRushNavigatorHomepageWidgetState
                                               Color(0x40000000),
                                           backgroundColor: Color(0xFF111111),
                                           unselectedBackgroundColor:
-                                              FlutterFlowTheme.of(context).info,
+                                              AromaticBazaarMemoryTheme.of(
+                                                      context)
+                                                  .info,
                                           borderWidth: 0.0,
                                           borderRadius: 8.0,
                                           elevation: 0.0,
@@ -396,7 +407,8 @@ class _SetOffFrontierQuestTideRushNavigatorHomepageWidgetState
                                               text: 'Itineraries',
                                             ),
                                           ],
-                                          controller: _model.tabBarController,
+                                          controller: _model
+                                              .heritagePilgrimageAromaCodex,
                                           onTap: (i) async {
                                             [() async {}, () async {}][i]();
                                           },
@@ -404,7 +416,8 @@ class _SetOffFrontierQuestTideRushNavigatorHomepageWidgetState
                                       ),
                                       Expanded(
                                         child: TabBarView(
-                                          controller: _model.tabBarController,
+                                          controller: _model
+                                              .heritagePilgrimageAromaCodex,
                                           children: [
                                             Padding(
                                               padding: EdgeInsetsDirectional
@@ -413,7 +426,7 @@ class _SetOffFrontierQuestTideRushNavigatorHomepageWidgetState
                                               child: Builder(
                                                 builder: (context) {
                                                   final exoticMarketplaceOdyssey =
-                                                      FFAppState()
+                                                      HeritageAromaOdysseyRepository()
                                                           .culturalScentExplorationDiscovers
                                                           .sortedList(
                                                               keyOf: (e) => e
@@ -532,7 +545,7 @@ class _SetOffFrontierQuestTideRushNavigatorHomepageWidgetState
                                                                     if (!exoticMarketplaceOdysseyItem
                                                                         .sensoryAromaDiscoveryPathDiscoverLikeusers
                                                                         .contains(
-                                                                            FFAppState().eudaimonicCartographerTokenid))
+                                                                            HeritageAromaOdysseyRepository().eudaimonicCartographerTokenid))
                                                                       InkWell(
                                                                         splashColor:
                                                                             Colors.transparent,
@@ -546,15 +559,15 @@ class _SetOffFrontierQuestTideRushNavigatorHomepageWidgetState
                                                                             () async {
                                                                           HapticFeedback
                                                                               .heavyImpact();
-                                                                          FFAppState()
+                                                                          HeritageAromaOdysseyRepository()
                                                                               .updateCulturalScentExplorationDiscoversAtIndex(
                                                                             exoticMarketplaceOdysseyItem.sensoryAromaDiscoveryPathDiscoverId,
                                                                             (e) => e
                                                                               ..updateSensoryAromaDiscoveryPathDiscoverLikeusers(
-                                                                                (e) => e.add(FFAppState().eudaimonicCartographerTokenid),
+                                                                                (e) => e.add(HeritageAromaOdysseyRepository().eudaimonicCartographerTokenid),
                                                                               ),
                                                                           );
-                                                                          FFAppState()
+                                                                          HeritageAromaOdysseyRepository()
                                                                               .update(() {});
                                                                         },
                                                                         child:
@@ -582,7 +595,7 @@ class _SetOffFrontierQuestTideRushNavigatorHomepageWidgetState
                                                                     if (exoticMarketplaceOdysseyItem
                                                                         .sensoryAromaDiscoveryPathDiscoverLikeusers
                                                                         .contains(
-                                                                            FFAppState().eudaimonicCartographerTokenid))
+                                                                            HeritageAromaOdysseyRepository().eudaimonicCartographerTokenid))
                                                                       InkWell(
                                                                         splashColor:
                                                                             Colors.transparent,
@@ -596,15 +609,15 @@ class _SetOffFrontierQuestTideRushNavigatorHomepageWidgetState
                                                                             () async {
                                                                           HapticFeedback
                                                                               .heavyImpact();
-                                                                          FFAppState()
+                                                                          HeritageAromaOdysseyRepository()
                                                                               .updateCulturalScentExplorationDiscoversAtIndex(
                                                                             exoticMarketplaceOdysseyItem.sensoryAromaDiscoveryPathDiscoverId,
                                                                             (e) => e
                                                                               ..updateSensoryAromaDiscoveryPathDiscoverLikeusers(
-                                                                                (e) => e.remove(FFAppState().eudaimonicCartographerTokenid),
+                                                                                (e) => e.remove(HeritageAromaOdysseyRepository().eudaimonicCartographerTokenid),
                                                                               ),
                                                                           );
-                                                                          FFAppState()
+                                                                          HeritageAromaOdysseyRepository()
                                                                               .update(() {});
                                                                         },
                                                                         child:
@@ -664,20 +677,20 @@ class _SetOffFrontierQuestTideRushNavigatorHomepageWidgetState
                                                                     ),
                                                                     Text(
                                                                       '${exoticMarketplaceOdysseyItem.sensoryAromaDiscoveryPathDiscoverTitle}',
-                                                                      style: FlutterFlowTheme.of(
+                                                                      style: AromaticBazaarMemoryTheme.of(
                                                                               context)
                                                                           .bodyMedium
                                                                           .override(
                                                                             fontFamily:
-                                                                                FlutterFlowTheme.of(context).bodyMediumFamily,
+                                                                                AromaticBazaarMemoryTheme.of(context).bodyMediumFamily,
                                                                             color:
-                                                                                FlutterFlowTheme.of(context).info,
+                                                                                AromaticBazaarMemoryTheme.of(context).info,
                                                                             letterSpacing:
                                                                                 0.0,
                                                                             fontWeight:
                                                                                 FontWeight.w500,
                                                                             useGoogleFonts:
-                                                                                !FlutterFlowTheme.of(context).bodyMediumIsCustom,
+                                                                                !AromaticBazaarMemoryTheme.of(context).bodyMediumIsCustom,
                                                                           ),
                                                                     ),
                                                                   ].divide(SizedBox(
@@ -701,7 +714,7 @@ class _SetOffFrontierQuestTideRushNavigatorHomepageWidgetState
                                               child: Builder(
                                                 builder: (context) {
                                                   final nomadicAromaExperienceHub =
-                                                      FFAppState()
+                                                      HeritageAromaOdysseyRepository()
                                                           .petrichorPathfinderChroniclerGuides
                                                           .toList();
                                                   if (nomadicAromaExperienceHub
@@ -731,20 +744,20 @@ class _SetOffFrontierQuestTideRushNavigatorHomepageWidgetState
                                                               nomadicAromaExperienceHubIndex];
                                                       return GestureDetector(
                                                         onTap: () async {
-                                                          if (FFAppState()
+                                                          if (HeritageAromaOdysseyRepository()
                                                                   .aurorascapePeregrinatorUsers
                                                                   .elementAtOrNull(
-                                                                      FFAppState()
+                                                                      HeritageAromaOdysseyRepository()
                                                                           .eudaimonicCartographerTokenid)!
                                                                   .kaleidoscapeOdysseanUserCoins >=
                                                               90) {
-                                                            if (FFAppState()
+                                                            if (HeritageAromaOdysseyRepository()
                                                                 .petrichorPathfinderChroniclerGuides[
                                                                     nomadicAromaExperienceHubItem
                                                                         .ethnoscapePilgrimageStrategyGuideId]
                                                                 .ethnoscapePilgrimageStrategyGuideUnlock
                                                                 .contains(
-                                                                    FFAppState()
+                                                                    HeritageAromaOdysseyRepository()
                                                                         .eudaimonicCartographerTokenid)) {
                                                               context.pushNamed(
                                                                 DesertMirageChaserDetailSoftheStrategyWidget
@@ -772,24 +785,24 @@ class _SetOffFrontierQuestTideRushNavigatorHomepageWidgetState
                                                                 },
                                                               );
                                                             } else {
-                                                              FFAppState()
+                                                              HeritageAromaOdysseyRepository()
                                                                   .updatePetrichorPathfinderChroniclerGuidesAtIndex(
                                                                 nomadicAromaExperienceHubItem
                                                                     .ethnoscapePilgrimageStrategyGuideId,
                                                                 (e) => e
                                                                   ..updateEthnoscapePilgrimageStrategyGuideUnlock(
                                                                     (e) => e.add(
-                                                                        FFAppState()
+                                                                        HeritageAromaOdysseyRepository()
                                                                             .eudaimonicCartographerTokenid),
                                                                   ),
                                                               );
-                                                              FFAppState().updateAurorascapePeregrinatorUsersAtIndex(
-                                                                  FFAppState()
+                                                              HeritageAromaOdysseyRepository().updateAurorascapePeregrinatorUsersAtIndex(
+                                                                  HeritageAromaOdysseyRepository()
                                                                       .eudaimonicCartographerTokenid,
                                                                   (e) => e
                                                                     ..incrementKaleidoscapeOdysseanUserCoins(
                                                                         -90));
-                                                              FFAppState()
+                                                              HeritageAromaOdysseyRepository()
                                                                   .update(
                                                                       () {});
                                                               context.pushNamed(
@@ -861,7 +874,7 @@ class _SetOffFrontierQuestTideRushNavigatorHomepageWidgetState
                                                               double.infinity,
                                                           decoration:
                                                               BoxDecoration(
-                                                            color: FlutterFlowTheme
+                                                            color: AromaticBazaarMemoryTheme
                                                                     .of(context)
                                                                 .info,
                                                             boxShadow: [
@@ -916,7 +929,7 @@ class _SetOffFrontierQuestTideRushNavigatorHomepageWidgetState
                                                                       children: [
                                                                         if (!nomadicAromaExperienceHubItem
                                                                             .ethnoscapePilgrimageStrategyGuideUnlock
-                                                                            .contains(FFAppState().eudaimonicCartographerTokenid))
+                                                                            .contains(HeritageAromaOdysseyRepository().eudaimonicCartographerTokenid))
                                                                           Container(
                                                                             width:
                                                                                 39.0,
@@ -944,12 +957,12 @@ class _SetOffFrontierQuestTideRushNavigatorHomepageWidgetState
                                                                                 ),
                                                                                 Text(
                                                                                   '90',
-                                                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                        fontFamily: FlutterFlowTheme.of(context).bodyMediumFamily,
+                                                                                  style: AromaticBazaarMemoryTheme.of(context).bodyMedium.override(
+                                                                                        fontFamily: AromaticBazaarMemoryTheme.of(context).bodyMediumFamily,
                                                                                         color: Color(0xFFCFFE08),
                                                                                         fontSize: 12.0,
                                                                                         letterSpacing: 0.0,
-                                                                                        useGoogleFonts: !FlutterFlowTheme.of(context).bodyMediumIsCustom,
+                                                                                        useGoogleFonts: !AromaticBazaarMemoryTheme.of(context).bodyMediumIsCustom,
                                                                                       ),
                                                                                 ),
                                                                               ].divide(SizedBox(width: 4.0)),
@@ -971,26 +984,26 @@ class _SetOffFrontierQuestTideRushNavigatorHomepageWidgetState
                                                                           [
                                                                         Text(
                                                                           '${nomadicAromaExperienceHubItem.ethnoscapePilgrimageStrategyGuideTitle}',
-                                                                          style: FlutterFlowTheme.of(context)
+                                                                          style: AromaticBazaarMemoryTheme.of(context)
                                                                               .bodyMedium
                                                                               .override(
-                                                                                fontFamily: FlutterFlowTheme.of(context).bodyMediumFamily,
+                                                                                fontFamily: AromaticBazaarMemoryTheme.of(context).bodyMediumFamily,
                                                                                 color: Color(0xFFEA7439),
                                                                                 fontSize: 16.0,
                                                                                 letterSpacing: 0.0,
                                                                                 fontWeight: FontWeight.w500,
-                                                                                useGoogleFonts: !FlutterFlowTheme.of(context).bodyMediumIsCustom,
+                                                                                useGoogleFonts: !AromaticBazaarMemoryTheme.of(context).bodyMediumIsCustom,
                                                                               ),
                                                                         ),
                                                                         Text(
                                                                           '${nomadicAromaExperienceHubItem.ethnoscapePilgrimageStrategyGuideDesc}',
-                                                                          style: FlutterFlowTheme.of(context)
+                                                                          style: AromaticBazaarMemoryTheme.of(context)
                                                                               .bodyMedium
                                                                               .override(
-                                                                                fontFamily: FlutterFlowTheme.of(context).bodyMediumFamily,
+                                                                                fontFamily: AromaticBazaarMemoryTheme.of(context).bodyMediumFamily,
                                                                                 color: Color(0x98000000),
                                                                                 letterSpacing: 0.0,
-                                                                                useGoogleFonts: !FlutterFlowTheme.of(context).bodyMediumIsCustom,
+                                                                                useGoogleFonts: !AromaticBazaarMemoryTheme.of(context).bodyMediumIsCustom,
                                                                               ),
                                                                         ),
                                                                       ].divide(SizedBox(

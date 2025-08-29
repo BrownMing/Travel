@@ -1,28 +1,27 @@
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_util.dart';
 import 'gastronomic_journey_experience_login_widget.dart'
     show GastronomicJourneyExperienceLoginWidget;
 import 'package:flutter/material.dart';
 
 class GastronomicJourneyExperienceLoginModel
-    extends FlutterFlowModel<GastronomicJourneyExperienceLoginWidget> {
+    extends AromaticBazaarMemoryModel<GastronomicJourneyExperienceLoginWidget> {
+  FocusNode? wandererBazaarTrailChronicles;
+  TextEditingController? globalNomadScentOdysseyBook;
+  String? Function(BuildContext, String?)? culturalExplorerAromaTales;
 
-  FocusNode? textFieldFocusNode1;
-  TextEditingController? textController1;
-  String? Function(BuildContext, String?)? textController1Validator;
-
-  FocusNode? textFieldFocusNode2;
-  TextEditingController? textController2;
-  String? Function(BuildContext, String?)? textController2Validator;
+  FocusNode? spiceVoyageImmersionAtlas;
+  TextEditingController? bazaarOdysseyTravelBlueprint;
+  String? Function(BuildContext, String?)? epicWanderlustFragranceLedger;
 
   @override
   void initState(BuildContext context) {}
 
   @override
   void dispose() {
-    textFieldFocusNode1?.dispose();
-    textController1?.dispose();
+    wandererBazaarTrailChronicles?.dispose();
+    globalNomadScentOdysseyBook?.dispose();
 
-    textFieldFocusNode2?.dispose();
-    textController2?.dispose();
+    spiceVoyageImmersionAtlas?.dispose();
+    bazaarOdysseyTravelBlueprint?.dispose();
   }
 }

@@ -1,5 +1,5 @@
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_theme.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_util.dart';
 import '/urban_whisper_seeker_metro_alley_unveil/epiphany_seeking_globetrotting_saga_empty/epiphany_seeking_globetrotting_saga_empty_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -44,7 +44,7 @@ class _DesertMirageChaserDetailSoftheStrategyWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<HeritageAromaOdysseyRepository>();
 
     return GestureDetector(
       onTap: () {
@@ -61,7 +61,7 @@ class _DesertMirageChaserDetailSoftheStrategyWidgetState
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Image.asset(
-                    FFAppState()
+                    HeritageAromaOdysseyRepository()
                         .petrichorPathfinderChroniclerGuides
                         .elementAtOrNull(widget.spiceHeritageWanderlustID!)!
                         .ethnoscapePilgrimageStrategyGuidePhoto,
@@ -74,13 +74,14 @@ class _DesertMirageChaserDetailSoftheStrategyWidgetState
                         EdgeInsetsDirectional.fromSTEB(16.0, 32.0, 16.0, 0.0),
                     child: Builder(
                       builder: (context) {
-                        final bazaarFragranceAdventureLog = FFAppState()
-                                .petrichorPathfinderChroniclerGuides
-                                .elementAtOrNull(
-                                    widget.spiceHeritageWanderlustID!)
-                                ?.ethnoscapePilgrimageStrategyGuideDatediray
-                                .toList() ??
-                            [];
+                        final bazaarFragranceAdventureLog =
+                            HeritageAromaOdysseyRepository()
+                                    .petrichorPathfinderChroniclerGuides
+                                    .elementAtOrNull(
+                                        widget.spiceHeritageWanderlustID!)
+                                    ?.ethnoscapePilgrimageStrategyGuideDatediray
+                                    .toList() ??
+                                [];
 
                         if (bazaarFragranceAdventureLog.isEmpty) {
                           return Center(
@@ -141,8 +142,9 @@ class _DesertMirageChaserDetailSoftheStrategyWidgetState
                                       width: double.infinity,
                                       height: 100,
                                       decoration: BoxDecoration(
-                                        color:
-                                            FlutterFlowTheme.of(context).info,
+                                        color: AromaticBazaarMemoryTheme.of(
+                                                context)
+                                            .info,
                                         boxShadow: [
                                           BoxShadow(
                                             blurRadius: 6.0,
@@ -180,25 +182,26 @@ class _DesertMirageChaserDetailSoftheStrategyWidgetState
                                               children: [
                                                 Text(
                                                   'Day',
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        fontFamily:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMediumFamily,
-                                                        color:
-                                                            Color(0xFFF7BA4A),
-                                                        fontSize: 18.0,
-                                                        letterSpacing: 0.0,
-                                                        fontWeight:
-                                                            FontWeight.w900,
-                                                        useGoogleFonts:
-                                                            !FlutterFlowTheme
-                                                                    .of(context)
-                                                                .bodyMediumIsCustom,
-                                                      ),
+                                                  style:
+                                                      AromaticBazaarMemoryTheme
+                                                              .of(context)
+                                                          .bodyMedium
+                                                          .override(
+                                                            fontFamily:
+                                                                AromaticBazaarMemoryTheme.of(
+                                                                        context)
+                                                                    .bodyMediumFamily,
+                                                            color: Color(
+                                                                0xFFF7BA4A),
+                                                            fontSize: 18.0,
+                                                            letterSpacing: 0.0,
+                                                            fontWeight:
+                                                                FontWeight.w900,
+                                                            useGoogleFonts:
+                                                                !AromaticBazaarMemoryTheme.of(
+                                                                        context)
+                                                                    .bodyMediumIsCustom,
+                                                          ),
                                                 ),
                                                 Container(
                                                   width: 37.0,
@@ -214,25 +217,26 @@ class _DesertMirageChaserDetailSoftheStrategyWidgetState
                                                 ),
                                                 Text(
                                                   '0${bazaarFragranceAdventureLogItem.mythopoeicTrailblazerDatedescribeId.toString()}',
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        fontFamily:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMediumFamily,
-                                                        color:
-                                                            Color(0xFFF7BA4A),
-                                                        fontSize: 18.0,
-                                                        letterSpacing: 0.0,
-                                                        fontWeight:
-                                                            FontWeight.w900,
-                                                        useGoogleFonts:
-                                                            !FlutterFlowTheme
-                                                                    .of(context)
-                                                                .bodyMediumIsCustom,
-                                                      ),
+                                                  style:
+                                                      AromaticBazaarMemoryTheme
+                                                              .of(context)
+                                                          .bodyMedium
+                                                          .override(
+                                                            fontFamily:
+                                                                AromaticBazaarMemoryTheme.of(
+                                                                        context)
+                                                                    .bodyMediumFamily,
+                                                            color: Color(
+                                                                0xFFF7BA4A),
+                                                            fontSize: 18.0,
+                                                            letterSpacing: 0.0,
+                                                            fontWeight:
+                                                                FontWeight.w900,
+                                                            useGoogleFonts:
+                                                                !AromaticBazaarMemoryTheme.of(
+                                                                        context)
+                                                                    .bodyMediumIsCustom,
+                                                          ),
                                                 ),
                                               ].divide(SizedBox(height: 14.0)),
                                             ),
@@ -252,42 +256,47 @@ class _DesertMirageChaserDetailSoftheStrategyWidgetState
                                                   Text(
                                                     bazaarFragranceAdventureLogItem
                                                         .mythopoeicTrailblazerDatedescribeTitle,
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'hongmeng',
-                                                          color:
-                                                              Color(0xCD000000),
-                                                          fontSize: 15.0,
-                                                          letterSpacing: 0.0,
-                                                          fontWeight:
-                                                              FontWeight.w500,
-                                                        ),
+                                                    style:
+                                                        AromaticBazaarMemoryTheme
+                                                                .of(context)
+                                                            .bodyMedium
+                                                            .override(
+                                                              fontFamily:
+                                                                  'hongmeng',
+                                                              color: Color(
+                                                                  0xCD000000),
+                                                              fontSize: 15.0,
+                                                              letterSpacing:
+                                                                  0.0,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w500,
+                                                            ),
                                                   ),
                                                   Text(
                                                     '${bazaarFragranceAdventureLogItem.mythopoeicTrailblazerDatedescribeMsg}'
                                                         .maybeHandleOverflow(
                                                             maxChars: 50,
                                                             replacement: '...'),
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMediumFamily,
-                                                          color:
-                                                              Color(0x99000000),
-                                                          fontSize: 12.0,
-                                                          letterSpacing: 0.0,
-                                                          useGoogleFonts:
-                                                              !FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .bodyMediumIsCustom,
-                                                        ),
+                                                    style:
+                                                        AromaticBazaarMemoryTheme
+                                                                .of(context)
+                                                            .bodyMedium
+                                                            .override(
+                                                              fontFamily:
+                                                                  AromaticBazaarMemoryTheme.of(
+                                                                          context)
+                                                                      .bodyMediumFamily,
+                                                              color: Color(
+                                                                  0x99000000),
+                                                              fontSize: 12.0,
+                                                              letterSpacing:
+                                                                  0.0,
+                                                              useGoogleFonts:
+                                                                  !AromaticBazaarMemoryTheme.of(
+                                                                          context)
+                                                                      .bodyMediumIsCustom,
+                                                            ),
                                                   ),
                                                 ].divide(SizedBox(height: 4.0)),
                                               ),
@@ -338,16 +347,19 @@ class _DesertMirageChaserDetailSoftheStrategyWidgetState
                     padding:
                         EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                     child: Text(
-                      '${FFAppState().petrichorPathfinderChroniclerGuides.elementAtOrNull(widget.spiceHeritageWanderlustID!)?.ethnoscapePilgrimageStrategyGuideTitle}',
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily:
-                                FlutterFlowTheme.of(context).bodyMediumFamily,
-                            color: FlutterFlowTheme.of(context).info,
+                      '${HeritageAromaOdysseyRepository().petrichorPathfinderChroniclerGuides.elementAtOrNull(widget.spiceHeritageWanderlustID!)?.ethnoscapePilgrimageStrategyGuideTitle}',
+                      style: AromaticBazaarMemoryTheme.of(context)
+                          .bodyMedium
+                          .override(
+                            fontFamily: AromaticBazaarMemoryTheme.of(context)
+                                .bodyMediumFamily,
+                            color: AromaticBazaarMemoryTheme.of(context).info,
                             fontSize: 18.0,
                             letterSpacing: 0.0,
                             fontWeight: FontWeight.w600,
-                            useGoogleFonts: !FlutterFlowTheme.of(context)
-                                .bodyMediumIsCustom,
+                            useGoogleFonts:
+                                !AromaticBazaarMemoryTheme.of(context)
+                                    .bodyMediumIsCustom,
                           ),
                     ),
                   ),

@@ -1,79 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
-	<key>CADisableMinimumFrameDurationOnPhone</key>
-	<true/>
-	<key>CFBundleDevelopmentRegion</key>
-	<string>$(DEVELOPMENT_LANGUAGE)</string>
-	<key>CFBundleDisplayName</key>
-	<string>Travel</string>
-	<key>CFBundleExecutable</key>
-	<string>$(EXECUTABLE_NAME)</string>
-	<key>CFBundleIdentifier</key>
-	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
-	<key>CFBundleInfoDictionaryVersion</key>
-	<string>6.0</string>
-	<key>CFBundleName</key>
-	<string>Travel</string>
-	<key>CFBundlePackageType</key>
-	<string>APPL</string>
-	<key>CFBundleShortVersionString</key>
-	<string>$(FLUTTER_BUILD_NAME)</string>
-	<key>CFBundleSignature</key>
-	<string>????</string>
-	<key>CFBundleURLTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
-			<key>CFBundleURLName</key>
-			<string>travel.com</string>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>travel</string>
-			</array>
-		</dict>
-	</array>
-	<key>CFBundleVersion</key>
-	<string>$(FLUTTER_BUILD_NUMBER)</string>
-	<key>FlutterDeepLinkingEnabled</key>
-	<true/>
-	<key>LSRequiresIPhoneOS</key>
-	<true/>
-	<key>NSAppTransportSecurity</key>
 	<dict>
-		<key>NSAllowsArbitraryLoads</key>
+		<key>CADisableMinimumFrameDurationOnPhone</key>
 		<true/>
+		<key>CFBundleDevelopmentRegion</key>
+		<string>$(DEVELOPMENT_LANGUAGE)</string>
+		<key>CFBundleDisplayName</key>
+		<string>Jourry</string>
+		<key>CFBundleExecutable</key>
+		<string>$(EXECUTABLE_NAME)</string>
+		<key>CFBundleIdentifier</key>
+		<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+		<key>CFBundleInfoDictionaryVersion</key>
+		<string>6.0</string>
+		<key>CFBundleName</key>
+		<string>Jourry</string>
+		<key>CFBundlePackageType</key>
+		<string>APPL</string>
+		<key>CFBundleShortVersionString</key>
+		<string>$(FLUTTER_BUILD_NAME)</string>
+		<key>CFBundleSignature</key>
+		<string>????</string>
+		<key>CFBundleURLTypes</key>
+		<array>
+			<dict>
+				<key>CFBundleTypeRole</key>
+				<string>Editor</string>
+				<key>CFBundleURLName</key>
+				<string>jourry.com</string>
+				<key>CFBundleURLSchemes</key>
+				<array>
+					<string>jourry</string>
+				</array>
+			</dict>
+		</array>
+		<key>CFBundleVersion</key>
+		<string>$(FLUTTER_BUILD_NUMBER)</string>
+		<key>FlutterDeepLinkingEnabled</key>
+		<true/>
+		<key>LSRequiresIPhoneOS</key>
+		<true/>
+		<key>NSAppTransportSecurity</key>
+		<dict>
+			<key>NSAllowsArbitraryLoads</key>
+			<true/>
+		</dict>
+		<key>NSCameraUsageDescription</key>
+		<string>This app requires camera access to enable you to capture photos and videos. These can be used to personalize your profile or shared with friends. All media files are securely stored on your device and will only be shared with your explicit consent. Your privacy and data security are our top priorities.</string>
+		<key>NSMicrophoneUsageDescription</key>
+		<string>This app requests microphone access to support voice message recording. Your audio data is encrypted and securely stored locally on your device, and will only be transmitted when you choose to share it. We are committed to protecting your privacy.</string>
+		<key>NSPhotoLibraryUsageDescription</key>
+		<string>This app Access to your photo library is required to facilitate sharing and management of your images and videos. All content remains on your device unless you actively choose to share it. This permission enhances your sharing experience while ensuring your privacy is protected.</string>
+		<key>UIApplicationSupportsIndirectInputEvents</key>
+		<true/>
+		<key>UIBackgroundModes</key>
+		<array>
+			<string>remote-notification</string>
+		</array>
+		<key>UILaunchStoryboardName</key>
+		<string>LaunchScreen</string>
+		<key>UIMainStoryboardFile</key>
+		<string>Main</string>
+		<key>UISupportedInterfaceOrientations</key>
+		<array>
+			<string>UIInterfaceOrientationPortrait</string>
+		</array>
+		<key>UISupportedInterfaceOrientations~ipad</key>
+		<array>
+			<string>UIInterfaceOrientationLandscapeLeft</string>
+			<string>UIInterfaceOrientationLandscapeRight</string>
+			<string>UIInterfaceOrientationPortrait</string>
+			<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		</array>
+		<key>UIViewControllerBasedStatusBarAppearance</key>
+		<false/>
+		<key>UIStatusBarHidden</key>
+		<false/>
 	</dict>
-	<key>NSCameraUsageDescription</key>
-	<string>This app requires camera access to enable you to capture photos and videos. These can be used to personalize your profile or shared with friends. All media files are securely stored on your device and will only be shared with your explicit consent. Your privacy and data security are our top priorities.</string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>This app requests microphone access to support voice message recording. Your audio data is encrypted and securely stored locally on your device, and will only be transmitted when you choose to share it. We are committed to protecting your privacy.</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>This app Access to your photo library is required to facilitate sharing and management of your images and videos. All content remains on your device unless you actively choose to share it. This permission enhances your sharing experience while ensuring your privacy is protected.</string>
-	<key>UIApplicationSupportsIndirectInputEvents</key>
-	<true/>
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>remote-notification</string>
-	</array>
-	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
-	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
-	<key>UISupportedInterfaceOrientations</key>
-	<array>
-		<string>UIInterfaceOrientationPortrait</string>
-	</array>
-	<key>UISupportedInterfaceOrientations~ipad</key>
-	<array>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
-		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationPortraitUpsideDown</string>
-	</array>
-	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<false/>
-</dict>
 </plist>

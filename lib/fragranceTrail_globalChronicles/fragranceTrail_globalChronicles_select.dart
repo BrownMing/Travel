@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 /// 自定义下拉选择框组件
-class FlutterFlowDropDown extends StatefulWidget {
-  const FlutterFlowDropDown({
+class AromaticBazaarMemoryDropDown extends StatefulWidget {
+  const AromaticBazaarMemoryDropDown({
     super.key,
     required this.options,
     required this.onChanged,
@@ -34,7 +34,7 @@ class FlutterFlowDropDown extends StatefulWidget {
   });
 
   /// 选项列表
-  final List<FlutterFlowDropDownOption> options;
+  final List<AromaticBazaarMemoryDropDownOption> options;
 
   /// 单选回调函数
   final Function(String?)? onChanged;
@@ -115,15 +115,17 @@ class FlutterFlowDropDown extends StatefulWidget {
   final bool autofocus;
 
   @override
-  State<FlutterFlowDropDown> createState() => _FlutterFlowDropDownState();
+  State<AromaticBazaarMemoryDropDown> createState() =>
+      _AromaticBazaarMemoryDropDownState();
 }
 
-class _FlutterFlowDropDownState extends State<FlutterFlowDropDown> {
+class _AromaticBazaarMemoryDropDownState
+    extends State<AromaticBazaarMemoryDropDown> {
   String? _selectedValue;
   // ignore: unused_field
   List<String> _selectedValues = [];
 
-  List<FlutterFlowDropDownOption> _filteredOptions = [];
+  List<AromaticBazaarMemoryDropDownOption> _filteredOptions = [];
 
   @override
   void initState() {
@@ -134,7 +136,7 @@ class _FlutterFlowDropDownState extends State<FlutterFlowDropDown> {
   }
 
   @override
-  void didUpdateWidget(FlutterFlowDropDown oldWidget) {
+  void didUpdateWidget(AromaticBazaarMemoryDropDown oldWidget) {
     super.didUpdateWidget(oldWidget);
     if (widget.initialValue != oldWidget.initialValue) {
       _selectedValue = widget.initialValue;
@@ -176,7 +178,7 @@ class _FlutterFlowDropDownState extends State<FlutterFlowDropDown> {
                   widget.onChanged?.call(newValue);
                 },
           items: _filteredOptions.map<DropdownMenuItem<String>>(
-            (FlutterFlowDropDownOption option) {
+            (AromaticBazaarMemoryDropDownOption option) {
               return DropdownMenuItem<String>(
                 value: option.value,
                 child: Text(
@@ -214,8 +216,8 @@ class _FlutterFlowDropDownState extends State<FlutterFlowDropDown> {
 }
 
 /// 下拉选项数据模型
-class FlutterFlowDropDownOption {
-  const FlutterFlowDropDownOption({
+class AromaticBazaarMemoryDropDownOption {
+  const AromaticBazaarMemoryDropDownOption({
     required this.value,
     required this.label,
     this.icon,
@@ -240,16 +242,16 @@ class FlutterFlowDropDownOption {
 }
 
 /// 预设样式
-class FlutterFlowDropDownStyles {
+class AromaticBazaarMemoryDropDownStyles {
   /// 默认样式
-  static FlutterFlowDropDown defaultStyle({
-    required List<FlutterFlowDropDownOption> options,
+  static AromaticBazaarMemoryDropDown defaultStyle({
+    required List<AromaticBazaarMemoryDropDownOption> options,
     required Function(String?)? onChanged,
     String? initialValue,
     double? width,
     String? hintText,
   }) {
-    return FlutterFlowDropDown(
+    return AromaticBazaarMemoryDropDown(
       options: options,
       onChanged: onChanged,
       initialValue: initialValue,
@@ -264,14 +266,14 @@ class FlutterFlowDropDownStyles {
   }
 
   /// 圆角样式
-  static FlutterFlowDropDown roundedStyle({
-    required List<FlutterFlowDropDownOption> options,
+  static AromaticBazaarMemoryDropDown roundedStyle({
+    required List<AromaticBazaarMemoryDropDownOption> options,
     required Function(String?)? onChanged,
     String? initialValue,
     double? width,
     String? hintText,
   }) {
-    return FlutterFlowDropDown(
+    return AromaticBazaarMemoryDropDown(
       options: options,
       onChanged: onChanged,
       initialValue: initialValue,
@@ -287,14 +289,14 @@ class FlutterFlowDropDownStyles {
   }
 
   /// 扁平化样式
-  static FlutterFlowDropDown flatStyle({
-    required List<FlutterFlowDropDownOption> options,
+  static AromaticBazaarMemoryDropDown flatStyle({
+    required List<AromaticBazaarMemoryDropDownOption> options,
     required Function(String?)? onChanged,
     String? initialValue,
     double? width,
     String? hintText,
   }) {
-    return FlutterFlowDropDown(
+    return AromaticBazaarMemoryDropDown(
       options: options,
       onChanged: onChanged,
       initialValue: initialValue,

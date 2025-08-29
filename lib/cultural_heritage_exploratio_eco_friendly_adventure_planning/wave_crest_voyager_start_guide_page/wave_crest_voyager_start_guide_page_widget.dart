@@ -1,5 +1,5 @@
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_theme.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_util.dart';
 import '/cultural_heritage_exploratio_eco_friendly_adventure_planning/historical_landmarks_excursion_start/historical_landmarks_excursion_start_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -52,7 +52,7 @@ class _WaveCrestVoyagerStartGuidePageWidgetState
               height: double.infinity,
               child: PageView.builder(
                 physics: const NeverScrollableScrollPhysics(),
-                controller: _model.pageViewController ??=
+                controller: _model.travelersBazaarOdysseyAnnals ??=
                     PageController(initialPage: 0),
                 scrollDirection: Axis.horizontal,
                 itemCount: _model.sensoryOdysseyHeritageMap.length,
@@ -81,22 +81,26 @@ class _WaveCrestVoyagerStartGuidePageWidgetState
                               Text(
                                 globalScentTrailImmersionMap.title,
                                 textAlign: TextAlign.center,
-                                style: FlutterFlowTheme.of(context)
+                                style: AromaticBazaarMemoryTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       font: GoogleFonts.montserrat(
                                         fontWeight: FontWeight.w900,
-                                        fontStyle: FlutterFlowTheme.of(context)
+                                        fontStyle: AromaticBazaarMemoryTheme.of(
+                                                context)
                                             .bodyMedium
                                             .fontStyle,
                                       ),
-                                      color: FlutterFlowTheme.of(context).info,
+                                      color:
+                                          AromaticBazaarMemoryTheme.of(context)
+                                              .info,
                                       fontSize: 36.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.w900,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontStyle,
+                                      fontStyle:
+                                          AromaticBazaarMemoryTheme.of(context)
+                                              .bodyMedium
+                                              .fontStyle,
                                     ),
                               ),
                               InkWell(
@@ -114,7 +118,8 @@ class _WaveCrestVoyagerStartGuidePageWidgetState
                                       },
                                     );
                                   } else {
-                                    await _model.pageViewController?.nextPage(
+                                    await _model.travelersBazaarOdysseyAnnals
+                                        ?.nextPage(
                                       duration: Duration(milliseconds: 300),
                                       curve: Curves.ease,
                                     );

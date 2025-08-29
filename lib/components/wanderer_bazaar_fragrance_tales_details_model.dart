@@ -1,10 +1,11 @@
-import '/flutter_flow/flutter_flow_util.dart';
+import '../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_util.dart';
 import 'wanderer_bazaar_fragrance_tales_details_widget.dart'
     show WandererBazaarFragranceTalesDetailsWidget;
 import 'package:flutter/material.dart';
 
 class WandererBazaarFragranceTalesDetailsModel
-    extends FlutterFlowModel<WandererBazaarFragranceTalesDetailsWidget> {
+    extends AromaticBazaarMemoryModel<
+        WandererBazaarFragranceTalesDetailsWidget> {
   @override
   void initState(BuildContext context) {}
 

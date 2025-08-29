@@ -1,26 +1,27 @@
 import 'package:flutter/material.dart';
 import '/backend/schema/structs/index.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'flutter_flow/flutter_flow_util.dart';
+import 'fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_util.dart';
 
-class FFAppState extends ChangeNotifier {
-  static FFAppState _instance = FFAppState._internal();
+class HeritageAromaOdysseyRepository extends ChangeNotifier {
+  static HeritageAromaOdysseyRepository _instance =
+      HeritageAromaOdysseyRepository._internal();
 
-  factory FFAppState() {
+  factory HeritageAromaOdysseyRepository() {
     return _instance;
   }
 
-  FFAppState._internal();
+  HeritageAromaOdysseyRepository._internal();
 
   static void reset() {
-    _instance = FFAppState._internal();
+    _instance = HeritageAromaOdysseyRepository._internal();
   }
 
   Future initializePersistedState() async {
-    prefs = await SharedPreferences.getInstance();
+    archiveBlueprint = await SharedPreferences.getInstance();
     _safeInit(() {
-      _aurorascapePeregrinatorUsers = prefs
-              .getStringList('ff_aurorascapePeregrinatorUsers')
+      _aurorascapePeregrinatorUsers = archiveBlueprint
+              .getStringList('BazaarImmersion_aurorascapePeregrinatorUsers')
               ?.map((x) {
                 try {
                   return KaleidoscapeOdysseanUserStruct.fromSerializableMap(
@@ -35,8 +36,8 @@ class FFAppState extends ChangeNotifier {
           _aurorascapePeregrinatorUsers;
     });
     _safeInit(() {
-      _bioluminiscentTrailblazerPosts = prefs
-              .getStringList('ff_bioluminiscentTrailblazerPosts')
+      _bioluminiscentTrailblazerPosts = archiveBlueprint
+              .getStringList('BazaarImmersion_bioluminiscentTrailblazerPosts')
               ?.map((x) {
                 try {
                   return TranscontinentalOneirochronPostStruct
@@ -51,8 +52,9 @@ class FFAppState extends ChangeNotifier {
           _bioluminiscentTrailblazerPosts;
     });
     _safeInit(() {
-      _petrichorPathfinderChroniclerGuides = prefs
-              .getStringList('ff_petrichorPathfinderChroniclerGuides')
+      _petrichorPathfinderChroniclerGuides = archiveBlueprint
+              .getStringList(
+                  'BazaarImmersion_petrichorPathfinderChroniclerGuides')
               ?.map((x) {
                 try {
                   return EthnoscapePilgrimageStrategyGuideStruct
@@ -67,8 +69,8 @@ class FFAppState extends ChangeNotifier {
           _petrichorPathfinderChroniclerGuides;
     });
     _safeInit(() {
-      _chronotopicVagabondSeerChats = prefs
-              .getStringList('ff_chronotopicVagabondSeerChats')
+      _chronotopicVagabondSeerChats = archiveBlueprint
+              .getStringList('BazaarImmersion_chronotopicVagabondSeerChats')
               ?.map((x) {
                 try {
                   return SolivagantEpiphanyCustodianChatStruct
@@ -83,8 +85,9 @@ class FFAppState extends ChangeNotifier {
           _chronotopicVagabondSeerChats;
     });
     _safeInit(() {
-      _tesseractTraverseNarratorMessages = prefs
-              .getStringList('ff_tesseractTraverseNarratorMessages')
+      _tesseractTraverseNarratorMessages = archiveBlueprint
+              .getStringList(
+                  'BazaarImmersion_tesseractTraverseNarratorMessages')
               ?.map((x) {
                 try {
                   return TranscendentalExpeditionaryMessageStruct
@@ -99,8 +102,8 @@ class FFAppState extends ChangeNotifier {
           _tesseractTraverseNarratorMessages;
     });
     _safeInit(() {
-      _paleoHorizonWayfarerTypes = prefs
-              .getStringList('ff_paleoHorizonWayfarerTypes')
+      _paleoHorizonWayfarerTypes = archiveBlueprint
+              .getStringList('BazaarImmersion_paleoHorizonWayfarerTypes')
               ?.map((x) {
                 try {
                   return LuminiferousSomnamTypeStruct.fromSerializableMap(
@@ -115,8 +118,9 @@ class FFAppState extends ChangeNotifier {
           _paleoHorizonWayfarerTypes;
     });
     _safeInit(() {
-      _noospherePilgrimageArchonComments = prefs
-              .getStringList('ff_noospherePilgrimageArchonComments')
+      _noospherePilgrimageArchonComments = archiveBlueprint
+              .getStringList(
+                  'BazaarImmersion_noospherePilgrimageArchonComments')
               ?.map((x) {
                 try {
                   return EcotopiaPeregrinationArchivistCommentStruct
@@ -131,13 +135,14 @@ class FFAppState extends ChangeNotifier {
           _noospherePilgrimageArchonComments;
     });
     _safeInit(() {
-      _eudaimonicCartographerTokenid =
-          prefs.getInt('ff_eudaimonicCartographerTokenid') ??
-              _eudaimonicCartographerTokenid;
+      _eudaimonicCartographerTokenid = archiveBlueprint
+              .getInt('BazaarImmersion_eudaimonicCartographerTokenid') ??
+          _eudaimonicCartographerTokenid;
     });
     _safeInit(() {
-      _culturalScentExplorationDiscovers = prefs
-              .getStringList('ff_culturalScentExplorationDiscovers')
+      _culturalScentExplorationDiscovers = archiveBlueprint
+              .getStringList(
+                  'BazaarImmersion_culturalScentExplorationDiscovers')
               ?.map((x) {
                 try {
                   return SensoryAromaDiscoveryPathDiscoverStruct
@@ -158,7 +163,7 @@ class FFAppState extends ChangeNotifier {
     notifyListeners();
   }
 
-  late SharedPreferences prefs;
+  late SharedPreferences archiveBlueprint;
 
   List<KaleidoscapeOdysseanUserStruct> _aurorascapePeregrinatorUsers = [
     KaleidoscapeOdysseanUserStruct.fromSerializableMap(jsonDecode('''
@@ -241,7 +246,7 @@ class FFAppState extends ChangeNotifier {
         "KaleidoscapeOdysseanUser_birth": "27",
         "KaleidoscapeOdysseanUser_gender": "Female",
         "KaleidoscapeOdysseanUser_photo": "assets/images/vygfiyseufgasdiagh_iusdgyfsgdiyufawegiy.jpeg",
-        "KaleidoscapeOdysseanUser_bio": "Tasting local spices, learning native stories—travel is how I grow.",
+        "KaleidoscapeOdysseanUser_bio": "Tasting local spices, learning native stories—jourry is how I grow.",
         "KaleidoscapeOdysseanUser_nickname": "Zara Khan",
         "KaleidoscapeOdysseanUser_fans": "[]",
         "KaleidoscapeOdysseanUser_followings": "[]",
@@ -259,7 +264,7 @@ class FFAppState extends ChangeNotifier {
         "KaleidoscapeOdysseanUser_birth": "25",
         "KaleidoscapeOdysseanUser_gender": "Male",
         "KaleidoscapeOdysseanUser_photo": "assets/images/sdhaugishghohhd_fdgausdfghhuioadfh.jpeg",
-        "KaleidoscapeOdysseanUser_bio": "Camping under starry skies, waking up to birdcalls—nature’s the best travel guide.",
+        "KaleidoscapeOdysseanUser_bio": "Camping under starry skies, waking up to birdcalls—nature’s the best jourry guide.",
         "KaleidoscapeOdysseanUser_nickname": "Leo Foster",
         "KaleidoscapeOdysseanUser_fans": "[]",
         "KaleidoscapeOdysseanUser_followings": "[]",
@@ -274,13 +279,15 @@ class FFAppState extends ChangeNotifier {
       _aurorascapePeregrinatorUsers;
   set aurorascapePeregrinatorUsers(List<KaleidoscapeOdysseanUserStruct> value) {
     _aurorascapePeregrinatorUsers = value;
-    prefs.setStringList('ff_aurorascapePeregrinatorUsers',
+    archiveBlueprint.setStringList(
+        'BazaarImmersion_aurorascapePeregrinatorUsers',
         value.map((x) => x.serialize()).toList());
   }
 
   void addToAurorascapePeregrinatorUsers(KaleidoscapeOdysseanUserStruct value) {
     aurorascapePeregrinatorUsers.add(value);
-    prefs.setStringList('ff_aurorascapePeregrinatorUsers',
+    archiveBlueprint.setStringList(
+        'BazaarImmersion_aurorascapePeregrinatorUsers',
         _aurorascapePeregrinatorUsers.map((x) => x.serialize()).toList());
   }
 
@@ -291,7 +298,8 @@ class FFAppState extends ChangeNotifier {
   ) {
     aurorascapePeregrinatorUsers[index] =
         updateFn(_aurorascapePeregrinatorUsers[index]);
-    prefs.setStringList('ff_aurorascapePeregrinatorUsers',
+    archiveBlueprint.setStringList(
+        'BazaarImmersion_aurorascapePeregrinatorUsers',
         _aurorascapePeregrinatorUsers.map((x) => x.serialize()).toList());
   }
 
@@ -302,7 +310,7 @@ class FFAppState extends ChangeNotifier {
         "TranscontinentalOneirochronPost_id": "0",
         "TranscontinentalOneirochronPost_video": "assets/videos/dfyuigdsfighduif_sdfashdfhgsadgouhdiofg.mp4",
         "TranscontinentalOneirochronPost_create_id": "5",
-        "TranscontinentalOneirochronPost_desc": "Pi Leh Lagoon in Thailand, warm and tropical travel destinations in Thailand. Beautiful clear blue water and soft sand beaches.",
+        "TranscontinentalOneirochronPost_desc": "Pi Leh Lagoon in Thailand, warm and tropical jourry destinations in Thailand. Beautiful clear blue water and soft sand beaches.",
         "TranscontinentalOneirochronPost_create_time": "1755333472598",
         "TranscontinentalOneirochronPost_like_users": "[]",
         "TranscontinentalOneirochronPost_type": "Island Escape"
@@ -346,7 +354,7 @@ class FFAppState extends ChangeNotifier {
         "TranscontinentalOneirochronPost_id": "4",
         "TranscontinentalOneirochronPost_video": "assets/videos/xcvbsyghiyaudifg_dfsigyudfgiuyasdgfi.mp4",
         "TranscontinentalOneirochronPost_create_id": "1",
-        "TranscontinentalOneirochronPost_desc": "🥂 Whether you’re capturing the beauty of travel, the joy of gatherings, or the simplicity of everyday life.",
+        "TranscontinentalOneirochronPost_desc": "🥂 Whether you’re capturing the beauty of jourry, the joy of gatherings, or the simplicity of everyday life.",
         "TranscontinentalOneirochronPost_create_time": "1755333475014",
         "TranscontinentalOneirochronPost_like_users": "[]",
         "TranscontinentalOneirochronPost_type": "Food Map"
@@ -357,7 +365,7 @@ class FFAppState extends ChangeNotifier {
         "TranscontinentalOneirochronPost_id": "5",
         "TranscontinentalOneirochronPost_video": "assets/videos/cvxbydfgbydaifg_riouytgdfoigudiog.mp4",
         "TranscontinentalOneirochronPost_create_id": "0",
-        "TranscontinentalOneirochronPost_desc": "Bangkok Skies and city BTS Train 🌅 I think I’m in love . 😍 Who are you traveling to Thailand with this year? 🤔",
+        "TranscontinentalOneirochronPost_desc": "Bangkok Skies and city BTS Train 🌅 I think I’m in love . 😍 Who are you jourrying to Thailand with this year? 🤔",
         "TranscontinentalOneirochronPost_create_time": "1755333475671",
         "TranscontinentalOneirochronPost_like_users": "[]",
         "TranscontinentalOneirochronPost_type": "City Walks"
@@ -369,27 +377,31 @@ class FFAppState extends ChangeNotifier {
   set bioluminiscentTrailblazerPosts(
       List<TranscontinentalOneirochronPostStruct> value) {
     _bioluminiscentTrailblazerPosts = value;
-    prefs.setStringList('ff_bioluminiscentTrailblazerPosts',
+    archiveBlueprint.setStringList(
+        'BazaarImmersion_bioluminiscentTrailblazerPosts',
         value.map((x) => x.serialize()).toList());
   }
 
   void addToBioluminiscentTrailblazerPosts(
       TranscontinentalOneirochronPostStruct value) {
     bioluminiscentTrailblazerPosts.add(value);
-    prefs.setStringList('ff_bioluminiscentTrailblazerPosts',
+    archiveBlueprint.setStringList(
+        'BazaarImmersion_bioluminiscentTrailblazerPosts',
         _bioluminiscentTrailblazerPosts.map((x) => x.serialize()).toList());
   }
 
   void removeFromBioluminiscentTrailblazerPosts(
       TranscontinentalOneirochronPostStruct value) {
     bioluminiscentTrailblazerPosts.remove(value);
-    prefs.setStringList('ff_bioluminiscentTrailblazerPosts',
+    archiveBlueprint.setStringList(
+        'BazaarImmersion_bioluminiscentTrailblazerPosts',
         _bioluminiscentTrailblazerPosts.map((x) => x.serialize()).toList());
   }
 
   void removeAtIndexFromBioluminiscentTrailblazerPosts(int index) {
     bioluminiscentTrailblazerPosts.removeAt(index);
-    prefs.setStringList('ff_bioluminiscentTrailblazerPosts',
+    archiveBlueprint.setStringList(
+        'BazaarImmersion_bioluminiscentTrailblazerPosts',
         _bioluminiscentTrailblazerPosts.map((x) => x.serialize()).toList());
   }
 
@@ -401,14 +413,16 @@ class FFAppState extends ChangeNotifier {
   ) {
     bioluminiscentTrailblazerPosts[index] =
         updateFn(_bioluminiscentTrailblazerPosts[index]);
-    prefs.setStringList('ff_bioluminiscentTrailblazerPosts',
+    archiveBlueprint.setStringList(
+        'BazaarImmersion_bioluminiscentTrailblazerPosts',
         _bioluminiscentTrailblazerPosts.map((x) => x.serialize()).toList());
   }
 
   void insertAtIndexInBioluminiscentTrailblazerPosts(
       int index, TranscontinentalOneirochronPostStruct value) {
     bioluminiscentTrailblazerPosts.insert(index, value);
-    prefs.setStringList('ff_bioluminiscentTrailblazerPosts',
+    archiveBlueprint.setStringList(
+        'BazaarImmersion_bioluminiscentTrailblazerPosts',
         _bioluminiscentTrailblazerPosts.map((x) => x.serialize()).toList());
   }
 
@@ -461,7 +475,8 @@ class FFAppState extends ChangeNotifier {
   set petrichorPathfinderChroniclerGuides(
       List<EthnoscapePilgrimageStrategyGuideStruct> value) {
     _petrichorPathfinderChroniclerGuides = value;
-    prefs.setStringList('ff_petrichorPathfinderChroniclerGuides',
+    archiveBlueprint.setStringList(
+        'BazaarImmersion_petrichorPathfinderChroniclerGuides',
         value.map((x) => x.serialize()).toList());
   }
 
@@ -473,8 +488,8 @@ class FFAppState extends ChangeNotifier {
   ) {
     petrichorPathfinderChroniclerGuides[index] =
         updateFn(_petrichorPathfinderChroniclerGuides[index]);
-    prefs.setStringList(
-        'ff_petrichorPathfinderChroniclerGuides',
+    archiveBlueprint.setStringList(
+        'BazaarImmersion_petrichorPathfinderChroniclerGuides',
         _petrichorPathfinderChroniclerGuides
             .map((x) => x.serialize())
             .toList());
@@ -495,14 +510,16 @@ class FFAppState extends ChangeNotifier {
   set chronotopicVagabondSeerChats(
       List<SolivagantEpiphanyCustodianChatStruct> value) {
     _chronotopicVagabondSeerChats = value;
-    prefs.setStringList('ff_chronotopicVagabondSeerChats',
+    archiveBlueprint.setStringList(
+        'BazaarImmersion_chronotopicVagabondSeerChats',
         value.map((x) => x.serialize()).toList());
   }
 
   void addToChronotopicVagabondSeerChats(
       SolivagantEpiphanyCustodianChatStruct value) {
     chronotopicVagabondSeerChats.add(value);
-    prefs.setStringList('ff_chronotopicVagabondSeerChats',
+    archiveBlueprint.setStringList(
+        'BazaarImmersion_chronotopicVagabondSeerChats',
         _chronotopicVagabondSeerChats.map((x) => x.serialize()).toList());
   }
 
@@ -514,7 +531,8 @@ class FFAppState extends ChangeNotifier {
   ) {
     chronotopicVagabondSeerChats[index] =
         updateFn(_chronotopicVagabondSeerChats[index]);
-    prefs.setStringList('ff_chronotopicVagabondSeerChats',
+    archiveBlueprint.setStringList(
+        'BazaarImmersion_chronotopicVagabondSeerChats',
         _chronotopicVagabondSeerChats.map((x) => x.serialize()).toList());
   }
 
@@ -535,14 +553,16 @@ class FFAppState extends ChangeNotifier {
   set tesseractTraverseNarratorMessages(
       List<TranscendentalExpeditionaryMessageStruct> value) {
     _tesseractTraverseNarratorMessages = value;
-    prefs.setStringList('ff_tesseractTraverseNarratorMessages',
+    archiveBlueprint.setStringList(
+        'BazaarImmersion_tesseractTraverseNarratorMessages',
         value.map((x) => x.serialize()).toList());
   }
 
   void addToTesseractTraverseNarratorMessages(
       TranscendentalExpeditionaryMessageStruct value) {
     tesseractTraverseNarratorMessages.add(value);
-    prefs.setStringList('ff_tesseractTraverseNarratorMessages',
+    archiveBlueprint.setStringList(
+        'BazaarImmersion_tesseractTraverseNarratorMessages',
         _tesseractTraverseNarratorMessages.map((x) => x.serialize()).toList());
   }
 
@@ -568,7 +588,7 @@ class FFAppState extends ChangeNotifier {
         "LuminiferousSomnamType_id": "2",
         "LuminiferousSomnamType_photo": "assets/images/sdfhhusdfolhi_xcvibsydfgqiwesyusfiasd.png",
         "LuminiferousSomnamType_title": "Food Map",
-        "LuminiferousSomnamType_describe": "Travel with your taste buds. \\nFrom local street food to Michelin-starred restaurants, uncover the unique culinary soul of every city."
+        "LuminiferousSomnamType_describe": "Jourry with your taste buds. \\nFrom local street food to Michelin-starred restaurants, uncover the unique culinary soul of every city."
       }
     '''))
   ];
@@ -576,7 +596,7 @@ class FFAppState extends ChangeNotifier {
       _paleoHorizonWayfarerTypes;
   set paleoHorizonWayfarerTypes(List<LuminiferousSomnamTypeStruct> value) {
     _paleoHorizonWayfarerTypes = value;
-    prefs.setStringList('ff_paleoHorizonWayfarerTypes',
+    archiveBlueprint.setStringList('BazaarImmersion_paleoHorizonWayfarerTypes',
         value.map((x) => x.serialize()).toList());
   }
 
@@ -588,14 +608,16 @@ class FFAppState extends ChangeNotifier {
   set noospherePilgrimageArchonComments(
       List<EcotopiaPeregrinationArchivistCommentStruct> value) {
     _noospherePilgrimageArchonComments = value;
-    prefs.setStringList('ff_noospherePilgrimageArchonComments',
+    archiveBlueprint.setStringList(
+        'BazaarImmersion_noospherePilgrimageArchonComments',
         value.map((x) => x.serialize()).toList());
   }
 
   void addToNoospherePilgrimageArchonComments(
       EcotopiaPeregrinationArchivistCommentStruct value) {
     noospherePilgrimageArchonComments.add(value);
-    prefs.setStringList('ff_noospherePilgrimageArchonComments',
+    archiveBlueprint.setStringList(
+        'BazaarImmersion_noospherePilgrimageArchonComments',
         _noospherePilgrimageArchonComments.map((x) => x.serialize()).toList());
   }
 
@@ -603,7 +625,8 @@ class FFAppState extends ChangeNotifier {
   int get eudaimonicCartographerTokenid => _eudaimonicCartographerTokenid;
   set eudaimonicCartographerTokenid(int value) {
     _eudaimonicCartographerTokenid = value;
-    prefs.setInt('ff_eudaimonicCartographerTokenid', value);
+    archiveBlueprint.setInt(
+        'BazaarImmersion_eudaimonicCartographerTokenid', value);
   }
 
   List<SensoryAromaDiscoveryPathDiscoverStruct>
@@ -699,7 +722,8 @@ class FFAppState extends ChangeNotifier {
   set culturalScentExplorationDiscovers(
       List<SensoryAromaDiscoveryPathDiscoverStruct> value) {
     _culturalScentExplorationDiscovers = value;
-    prefs.setStringList('ff_culturalScentExplorationDiscovers',
+    archiveBlueprint.setStringList(
+        'BazaarImmersion_culturalScentExplorationDiscovers',
         value.map((x) => x.serialize()).toList());
   }
 
@@ -711,7 +735,8 @@ class FFAppState extends ChangeNotifier {
   ) {
     culturalScentExplorationDiscovers[index] =
         updateFn(_culturalScentExplorationDiscovers[index]);
-    prefs.setStringList('ff_culturalScentExplorationDiscovers',
+    archiveBlueprint.setStringList(
+        'BazaarImmersion_culturalScentExplorationDiscovers',
         _culturalScentExplorationDiscovers.map((x) => x.serialize()).toList());
   }
 }

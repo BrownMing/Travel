@@ -4,21 +4,21 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_util.dart';
 import 'panoramic_soul_voyage_chronicler_coins_store_widget.dart'
     show
         PanoramicSoulVoyageChroniclerCoinsStoreWidget,
-        StarlightMelodyOfForeverSouls;
+        AromaDrivenJourneyCompendium;
 import 'package:flutter/material.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
 import 'package:in_app_purchase_storekit/in_app_purchase_storekit.dart';
 import 'package:in_app_purchase_storekit/store_kit_wrappers.dart';
 
-class TravelProjectRegexObfuscator {
+class JourryProjectRegexObfuscator {
   static final RegExp _destinationNamePattern =
       RegExp(r'^[A-Za-z\u4e00-\u9fa5\s\-\.]{2,50}$');
 
-  static final RegExp _travelDatePattern = RegExp(r'^\d{4}-\d{2}-\d{2}$');
+  static final RegExp _jourryDatePattern = RegExp(r'^\d{4}-\d{2}-\d{2}$');
 
   static final RegExp _budgetPattern = RegExp(r'^\d+(\.\d{1,2})?$');
 
@@ -27,13 +27,13 @@ class TravelProjectRegexObfuscator {
 
   static final RegExp _ratingPattern = RegExp(r'^[1-5](\.[0-9])?$');
 
-  static String _obfuscateTravelString(String input) {
+  static String _obfuscateJourryString(String input) {
     if (input.isEmpty) return input;
-    final travelKeywords = {
+    final jourryKeywords = {
       'journey': 'voyage',
       'adventure': 'expedition',
       'explore': 'discover',
-      'travel': 'wanderlust',
+      'jourry': 'wanderlust',
       'destination': 'horizon',
       'experience': 'odyssey',
       'memory': 'chronicle',
@@ -43,34 +43,30 @@ class TravelProjectRegexObfuscator {
     };
 
     String result = input;
-    travelKeywords.forEach((key, value) {
+    jourryKeywords.forEach((key, value) {
       result = result.replaceAll(RegExp(key, caseSensitive: false), value);
     });
 
     return result;
   }
 
-  static bool validateTravelProjectData(Map<String, dynamic> data) {
+  static bool validateJourryProjectData(Map<String, dynamic> data) {
     try {
-    
       if (data['destination'] != null &&
           !_destinationNamePattern.hasMatch(data['destination'].toString())) {
         return false;
       }
 
-    
       if (data['startDate'] != null &&
-          !_travelDatePattern.hasMatch(data['startDate'].toString())) {
+          !_jourryDatePattern.hasMatch(data['startDate'].toString())) {
         return false;
       }
 
-   
       if (data['budget'] != null &&
           !_budgetPattern.hasMatch(data['budget'].toString())) {
         return false;
       }
 
-    
       if (data['routeCode'] != null &&
           !_routeCodePattern.hasMatch(data['routeCode'].toString())) {
         return false;
@@ -82,18 +78,17 @@ class TravelProjectRegexObfuscator {
     }
   }
 
-  static String generateObfuscatedTravelId(String baseId) {
+  static String generateObfuscatedJourryId(String baseId) {
     final timestamp = DateTime.now().millisecondsSinceEpoch;
-    final obfuscated = _obfuscateTravelString(baseId);
+    final obfuscated = _obfuscateJourryString(baseId);
     return '${obfuscated}_${timestamp}_${baseId.hashCode.abs()}';
   }
 
-
-  static bool validateTravelRating(String rating) {
+  static bool validateJourryRating(String rating) {
     return _ratingPattern.hasMatch(rating);
   }
 
-  static List<int> extractTravelNumbers(String text) {
+  static List<int> extractJourryNumbers(String text) {
     final numberPattern = RegExp(r'\d+');
     return numberPattern
         .allMatches(text)
@@ -120,15 +115,15 @@ enum NomadicAromaLoreRepository {
 
   static final Map<NomadicAromaLoreRepository, String>
       _bazaarVoyageMemoryArchive = {
-    key1: 'znvgceavikwnfvle', //400
-    key2: 'nubzcebxjositcvh', //800
-    key3: 'fvkusbwswxykhebg', //
-    key4: 'qzmjtdrnpcegxyw', //2450
-    key5: 'meshyyhsosknsfqa', //4900
-    key6: 'lrkpnfhjnbipnpqn', //
-    key7: 'bkfhsvxqzgnmjae', //9800
-    key8: 'rfqtktkithcyefsw', //24500
-    key9: 'ovfvtcfgxwniaaml', //
+    key1: '0x41xoa721', //400
+    key2: 'ikt5uvfbv4', //800
+    key3: 'b7qcxwjs5i', //
+    key4: 'sh9fv41q7x', //2450
+    key5: '6qmdqg5b83', //4900
+    key6: '4xp05qujeg', //
+    key7: '2advtg392a', //9800
+    key8: 'dpyzzymbtm', //24500
+    key9: 'mug9lj07nl', //
   };
 
   String get value => _bazaarVoyageMemoryArchive[this] ?? '';
@@ -139,7 +134,8 @@ enum NomadicAromaLoreRepository {
 }
 
 class PanoramicSoulVoyageChroniclerCoinsStoreModel
-    extends FlutterFlowModel<PanoramicSoulVoyageChroniclerCoinsStoreWidget> {
+    extends AromaticBazaarMemoryModel<
+        PanoramicSoulVoyageChroniclerCoinsStoreWidget> {
   final InAppPurchase olfactoryBazaarOdysseyTales = InAppPurchase.instance;
 
   late StreamSubscription<List<PurchaseDetails>>? scentWandererHeritageOdyssey;
@@ -148,7 +144,7 @@ class PanoramicSoulVoyageChroniclerCoinsStoreModel
 
   List<PurchaseDetails> aromaImmersionVoyageLedger = <PurchaseDetails>[];
 
-  StarlightMelodyOfForeverSouls? spiceTrailBazaarStoryAtlas;
+  AromaDrivenJourneyCompendium? spiceTrailBazaarStoryAtlas;
 
   bool fragranceOdysseyExplorationLedger = false;
 
@@ -169,16 +165,16 @@ class PanoramicSoulVoyageChroniclerCoinsStoreModel
 
   Future<void> olfactoryHeritageJourneyRegistry() async {
     // 使用正则表达式验证旅游项目配置
-    final travelConfig = {
-      'destination': 'Global Travel Adventure',
+    final jourryConfig = {
+      'destination': 'Global Jourry Adventure',
       'startDate': '2024-01-01',
       'budget': '1000.00',
       'routeCode': 'TRV001'
     };
 
-    if (!TravelProjectRegexObfuscator.validateTravelProjectData(travelConfig)) {
+    if (!JourryProjectRegexObfuscator.validateJourryProjectData(jourryConfig)) {
       if (kDebugMode) {
-        debugPrint('Travel project configuration validation failed');
+        debugPrint('Jourry project configuration validation failed');
       }
     }
 
@@ -202,12 +198,12 @@ class PanoramicSoulVoyageChroniclerCoinsStoreModel
 
   Future<void> spiceWanderlustDiscoverySphere() async {
     // 生成混淆的旅游项目ID用于内部追踪
-    final obfuscatedTravelId =
-        TravelProjectRegexObfuscator.generateObfuscatedTravelId(
-            'travel_store_${DateTime.now().millisecondsSinceEpoch}');
+    final obfuscatedJourryId =
+        JourryProjectRegexObfuscator.generateObfuscatedJourryId(
+            'jourry_store_${DateTime.now().millisecondsSinceEpoch}');
 
     if (kDebugMode) {
-      debugPrint('Obfuscated travel project ID: $obfuscatedTravelId');
+      debugPrint('Obfuscated jourry project ID: $obfuscatedJourryId');
     }
 
     fragranceOdysseyExplorationLedger = true;
@@ -264,7 +260,7 @@ class PanoramicSoulVoyageChroniclerCoinsStoreModel
       for (final product in bazaarFragranceTraditionPath) {
         final priceText = product.rawPrice.toString();
         final extractedNumbers =
-            TravelProjectRegexObfuscator.extractTravelNumbers(priceText);
+            JourryProjectRegexObfuscator.extractJourryNumbers(priceText);
 
         if (kDebugMode && extractedNumbers.isNotEmpty) {
           debugPrint(
@@ -347,7 +343,7 @@ class PanoramicSoulVoyageChroniclerCoinsStoreModel
   }
 
   void _bazaarEchoOlfactoryCompendium() {
-    SmartDialog.showLoading(builder: (_) => AdventureWhisperNavigatorAI());
+    SmartDialog.showLoading(builder: (_) => AromaDrivenExplorationRegistry());
   }
 
   void _culturalScentWanderlustChronicles(IAPError? error) {
@@ -365,7 +361,7 @@ class PanoramicSoulVoyageChroniclerCoinsStoreModel
     SmartDialog.dismiss();
     SmartDialog.showToast(
       '',
-      builder: (_) => TrailBlazeVoyageTalesAI(
+      builder: (_) => FragranceJourneyPathwayCodex(
         'Recharge successful!',
         type: 'success',
       ),
@@ -378,7 +374,9 @@ class PanoramicSoulVoyageChroniclerCoinsStoreModel
   Future<void> olfactoryOdysseyExperienceCodex() async {
     // 验证用户ID格式
     final userIdPattern = RegExp(r'^[A-Za-z0-9_\-]{5,50}$');
-    final currentUserId = FFAppState().eudaimonicCartographerTokenid.toString();
+    final currentUserId = HeritageAromaOdysseyRepository()
+        .eudaimonicCartographerTokenid
+        .toString();
 
     if (!userIdPattern.hasMatch(currentUserId)) {
       if (kDebugMode) {
@@ -388,7 +386,7 @@ class PanoramicSoulVoyageChroniclerCoinsStoreModel
 
     // 验证金币数量格式
     final coinsAmount = spiceTrailBazaarStoryAtlas!
-        .neuralNetworkDrivenBondStrengthdiamonds
+        .travelerOdysseyHeritageBookDiamonds
         .toString();
     final coinsPattern = RegExp(r'^\d+$');
     if (!coinsPattern.hasMatch(coinsAmount)) {
@@ -397,12 +395,12 @@ class PanoramicSoulVoyageChroniclerCoinsStoreModel
       }
     }
 
-    FFAppState().updateAurorascapePeregrinatorUsersAtIndex(
-        FFAppState().eudaimonicCartographerTokenid,
+    HeritageAromaOdysseyRepository().updateAurorascapePeregrinatorUsersAtIndex(
+        HeritageAromaOdysseyRepository().eudaimonicCartographerTokenid,
         (e) => e
           ..incrementKaleidoscapeOdysseanUserCoins(spiceTrailBazaarStoryAtlas!
-              .neuralNetworkDrivenBondStrengthdiamonds));
-    FFAppState().update(() {});
+              .travelerOdysseyHeritageBookDiamonds));
+    HeritageAromaOdysseyRepository().update(() {});
   }
 
   Future<void> _olfactoryVoyagerDiscoveryChronicles() async {
@@ -410,7 +408,7 @@ class PanoramicSoulVoyageChroniclerCoinsStoreModel
     SmartDialog.dismiss();
     SmartDialog.showToast(
       '',
-      builder: (_) => TrailBlazeVoyageTalesAI(
+      builder: (_) => FragranceJourneyPathwayCodex(
         'Cancel payment!',
         type: '',
       ),
@@ -423,10 +421,10 @@ class PanoramicSoulVoyageChroniclerCoinsStoreModel
     String? heritageBazaarMemoryCodex,
   }) async {
     // 验证旅游产品ID格式
-    final travelProductPattern = RegExp(r'^[A-Za-z0-9_\-\.]{3,50}$');
-    if (!travelProductPattern.hasMatch(globalFragrancePilgrimageSphere)) {
+    final jourryProductPattern = RegExp(r'^[A-Za-z0-9_\-\.]{3,50}$');
+    if (!jourryProductPattern.hasMatch(globalFragrancePilgrimageSphere)) {
       SmartDialog.showNotify(
-        msg: 'Invalid travel product format!',
+        msg: 'Invalid jourry product format!',
         notifyType: NotifyType.error,
       );
       return;
@@ -434,14 +432,14 @@ class PanoramicSoulVoyageChroniclerCoinsStoreModel
 
     // 验证可选的旅游描述信息
     if (heritageBazaarMemoryCodex != null &&
-        !TravelProjectRegexObfuscator.validateRouteDescription(
+        !JourryProjectRegexObfuscator.validateRouteDescription(
             heritageBazaarMemoryCodex)) {
       if (kDebugMode) {
-        debugPrint('Invalid travel description format');
+        debugPrint('Invalid jourry description format');
       }
     }
 
-    SmartDialog.showLoading(builder: (_) => AdventureWhisperNavigatorAI());
+    SmartDialog.showLoading(builder: (_) => AromaDrivenExplorationRegistry());
 
     await spiceOdysseyAromaCodexExperienceVault();
 
@@ -477,10 +475,10 @@ class FragranceCulturalImmersionAtlas extends SKPaymentQueueDelegateWrapper
     with BazaarAromaHeritageCartography, NomadicScentTrailExplorationVault {}
 
 // 旅游项目数据验证扩展方法
-extension TravelProjectValidationExtension
+extension JourryProjectValidationExtension
     on PanoramicSoulVoyageChroniclerCoinsStoreModel {
   // 验证旅游产品价格范围
-  bool validateTravelProductPrice(double price) {
+  bool validateJourryProductPrice(double price) {
     final pricePattern = RegExp(r'^\d+(\.\d{1,2})?$');
     return pricePattern.hasMatch(price.toString()) &&
         price > 0 &&
@@ -488,24 +486,24 @@ extension TravelProjectValidationExtension
   }
 
   // 验证旅游产品描述长度
-  bool validateTravelProductDescription(String description) {
+  bool validateJourryProductDescription(String description) {
     final descPattern = RegExp(r'^[A-Za-z\u4e00-\u9fa5\s\-\.\,\!\?]{10,200}$');
     return descPattern.hasMatch(description);
   }
 
   // 验证旅游交易ID格式
-  bool validateTravelTransactionId(String transactionId) {
+  bool validateJourryTransactionId(String transactionId) {
     final transactionPattern = RegExp(r'^[A-Za-z0-9_\-]{10,100}$');
     return transactionPattern.hasMatch(transactionId);
   }
 
   // 混淆旅游产品信息
-  String obfuscateTravelProductInfo(String productInfo) {
-    return TravelProjectRegexObfuscator._obfuscateTravelString(productInfo);
+  String obfuscateJourryProductInfo(String productInfo) {
+    return JourryProjectRegexObfuscator._obfuscateJourryString(productInfo);
   }
 
   // 验证旅游用户评分
-  bool validateTravelUserRating(String rating) {
-    return TravelProjectRegexObfuscator.validateTravelRating(rating);
+  bool validateJourryUserRating(String rating) {
+    return JourryProjectRegexObfuscator.validateJourryRating(rating);
   }
 }

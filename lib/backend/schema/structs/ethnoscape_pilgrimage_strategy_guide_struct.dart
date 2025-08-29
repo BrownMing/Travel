@@ -1,8 +1,7 @@
 // ignore_for_file: unnecessary_getters_setters
 
-
 import 'index.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_util.dart';
 
 class EthnoscapePilgrimageStrategyGuideStruct extends BaseStruct {
   EthnoscapePilgrimageStrategyGuideStruct({

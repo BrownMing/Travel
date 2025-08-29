@@ -1,6 +1,6 @@
 import '/components/wanderer_bazaar_fragrance_tales_details_widget.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_theme.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_util.dart';
 import '/urban_whisper_seeker_metro_alley_unveil/epiphany_seeking_globetrotting_saga_empty/epiphany_seeking_globetrotting_saga_empty_widget.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
@@ -41,7 +41,7 @@ class _SetOffHorizonQuestJourneySeaBoundDiscoverWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<HeritageAromaOdysseyRepository>();
 
     return GestureDetector(
       onTap: () {
@@ -89,27 +89,29 @@ class _SetOffHorizonQuestJourneySeaBoundDiscoverWidgetState
                                 shape: BoxShape.circle,
                               ),
                               child: Image.asset(
-                                FFAppState()
+                                HeritageAromaOdysseyRepository()
                                     .aurorascapePeregrinatorUsers
-                                    .elementAtOrNull(FFAppState()
-                                        .eudaimonicCartographerTokenid)!
+                                    .elementAtOrNull(
+                                        HeritageAromaOdysseyRepository()
+                                            .eudaimonicCartographerTokenid)!
                                     .kaleidoscapeOdysseanUserPhoto,
                                 fit: BoxFit.cover,
                               ),
                             ),
                             Text(
-                              'Hi~${FFAppState().aurorascapePeregrinatorUsers.elementAtOrNull(FFAppState().eudaimonicCartographerTokenid)?.kaleidoscapeOdysseanUserNickname}',
-                              style: FlutterFlowTheme.of(context)
+                              'Hi~${HeritageAromaOdysseyRepository().aurorascapePeregrinatorUsers.elementAtOrNull(HeritageAromaOdysseyRepository().eudaimonicCartographerTokenid)?.kaleidoscapeOdysseanUserNickname}',
+                              style: AromaticBazaarMemoryTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: FlutterFlowTheme.of(context)
-                                        .bodyMediumFamily,
+                                    fontFamily:
+                                        AromaticBazaarMemoryTheme.of(context)
+                                            .bodyMediumFamily,
                                     color: Color(0xCD000000),
                                     fontSize: 16.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.bold,
                                     useGoogleFonts:
-                                        !FlutterFlowTheme.of(context)
+                                        !AromaticBazaarMemoryTheme.of(context)
                                             .bodyMediumIsCustom,
                                   ),
                             ),
@@ -160,20 +162,21 @@ class _SetOffHorizonQuestJourneySeaBoundDiscoverWidgetState
                                 16.0, 16.0, 0.0, 0.0),
                             child: Builder(
                               builder: (context) {
-                                final aromaticVoyagerCompendium = FFAppState()
-                                    .aurorascapePeregrinatorUsers
-                                    .where((e) =>
-                                        e.kaleidoscapeOdysseanUserId !=
-                                            FFAppState()
-                                                .eudaimonicCartographerTokenid &&
-                                        !FFAppState()
-                                            .aurorascapePeregrinatorUsers[
-                                                FFAppState()
-                                                    .eudaimonicCartographerTokenid]
-                                            .kaleidoscapeOdysseanUserBlacklist
-                                            .contains(
-                                                e.kaleidoscapeOdysseanUserId))
-                                    .toList();
+                                final aromaticVoyagerCompendium =
+                                    HeritageAromaOdysseyRepository()
+                                        .aurorascapePeregrinatorUsers
+                                        .where((e) =>
+                                            e.kaleidoscapeOdysseanUserId !=
+                                                HeritageAromaOdysseyRepository()
+                                                    .eudaimonicCartographerTokenid &&
+                                            !HeritageAromaOdysseyRepository()
+                                                .aurorascapePeregrinatorUsers[
+                                                    HeritageAromaOdysseyRepository()
+                                                        .eudaimonicCartographerTokenid]
+                                                .kaleidoscapeOdysseanUserBlacklist
+                                                .contains(e
+                                                    .kaleidoscapeOdysseanUserId))
+                                        .toList();
 
                                 return SingleChildScrollView(
                                   scrollDirection: Axis.horizontal,
@@ -224,7 +227,7 @@ class _SetOffHorizonQuestJourneySeaBoundDiscoverWidgetState
                                                 shape: BoxShape.circle,
                                               ),
                                               child: Image.asset(
-                                                FFAppState()
+                                                HeritageAromaOdysseyRepository()
                                                     .aurorascapePeregrinatorUsers
                                                     .elementAtOrNull(
                                                         aromaticVoyagerCompendiumItem
@@ -234,22 +237,22 @@ class _SetOffHorizonQuestJourneySeaBoundDiscoverWidgetState
                                               ),
                                             ),
                                             Text(
-                                              '${FFAppState().aurorascapePeregrinatorUsers.elementAtOrNull(aromaticVoyagerCompendiumItem.kaleidoscapeOdysseanUserId)?.kaleidoscapeOdysseanUserNickname}',
-                                              style: FlutterFlowTheme.of(
-                                                      context)
+                                              '${HeritageAromaOdysseyRepository().aurorascapePeregrinatorUsers.elementAtOrNull(aromaticVoyagerCompendiumItem.kaleidoscapeOdysseanUserId)?.kaleidoscapeOdysseanUserNickname}',
+                                              style: AromaticBazaarMemoryTheme
+                                                      .of(context)
                                                   .bodyMedium
                                                   .override(
                                                     fontFamily:
-                                                        FlutterFlowTheme.of(
-                                                                context)
+                                                        AromaticBazaarMemoryTheme
+                                                                .of(context)
                                                             .bodyMediumFamily,
                                                     color: Color(0xCD000000),
                                                     fontSize: 16.0,
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.bold,
                                                     useGoogleFonts:
-                                                        !FlutterFlowTheme.of(
-                                                                context)
+                                                        !AromaticBazaarMemoryTheme
+                                                                .of(context)
                                                             .bodyMediumIsCustom,
                                                   ),
                                             ),
@@ -267,20 +270,21 @@ class _SetOffHorizonQuestJourneySeaBoundDiscoverWidgetState
                                 0.0, 24.0, 0.0, 0.0),
                             child: Builder(
                               builder: (context) {
-                                final spiceLadenWandererChronicles = FFAppState()
-                                    .bioluminiscentTrailblazerPosts
-                                    .where((e) => !FFAppState()
-                                        .aurorascapePeregrinatorUsers[
-                                            FFAppState()
-                                                .eudaimonicCartographerTokenid]
-                                        .kaleidoscapeOdysseanUserBlacklist
-                                        .contains(e
-                                            .transcontinentalOneirochronPostCreateId))
-                                    .sortedList(
-                                        keyOf: (e) => e
-                                            .transcontinentalOneirochronPostCreateTime!,
-                                        desc: false)
-                                    .toList();
+                                final spiceLadenWandererChronicles =
+                                    HeritageAromaOdysseyRepository()
+                                        .bioluminiscentTrailblazerPosts
+                                        .where((e) => !HeritageAromaOdysseyRepository()
+                                            .aurorascapePeregrinatorUsers[
+                                                HeritageAromaOdysseyRepository()
+                                                    .eudaimonicCartographerTokenid]
+                                            .kaleidoscapeOdysseanUserBlacklist
+                                            .contains(e
+                                                .transcontinentalOneirochronPostCreateId))
+                                        .sortedList(
+                                            keyOf: (e) => e
+                                                .transcontinentalOneirochronPostCreateTime!,
+                                            desc: false)
+                                        .toList();
                                 if (spiceLadenWandererChronicles.isEmpty) {
                                   return EpiphanySeekingGlobetrottingSagaEmptyWidget();
                                 }
@@ -337,16 +341,18 @@ class _SetOffHorizonQuestJourneySeaBoundDiscoverWidgetState
                                               globalScentTrailAtlasUnlike:
                                                   !spiceLadenWandererChroniclesItem
                                                       .transcontinentalOneirochronPostLikeUsers
-                                                      .contains(FFAppState()
-                                                          .eudaimonicCartographerTokenid),
+                                                      .contains(
+                                                          HeritageAromaOdysseyRepository()
+                                                              .eudaimonicCartographerTokenid),
                                               globalScentTrailAtlasPost:
                                                   spiceLadenWandererChroniclesItem
                                                       .transcontinentalOneirochronPostId,
                                               globalScentTrailAtlasLike:
                                                   spiceLadenWandererChroniclesItem
                                                       .transcontinentalOneirochronPostLikeUsers
-                                                      .contains(FFAppState()
-                                                          .eudaimonicCartographerTokenid),
+                                                      .contains(
+                                                          HeritageAromaOdysseyRepository()
+                                                              .eudaimonicCartographerTokenid),
                                             ),
                                           ),
                                         ),

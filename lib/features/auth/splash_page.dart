@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:travel/core/services/time_service.dart';
+import 'package:jourry/core/services/time_service.dart';
 import '../../shared/widgets/base_widget.dart';
 import '../../core/services/app_state_manager.dart';
-import '../../core/services/service_locator.dart';
 
 // Splash Screen Page
 class SplashPage extends BaseStatefulWidget {
@@ -33,12 +32,13 @@ class _SplashPageState extends BaseStatefulWidgetState<SplashPage> {
     super.initState();
     TimeService.initialize();
   }
+
   @override
   Widget buildContent(BuildContext context) {
     return Scaffold(
       body: Center(
         child: Image.asset(
-          'assets/images/huidhfguidfgoi_reiysdfgyuisdgfysdf.png',
+          'assets/images/asudgfihdhfguui_adsfgioudfhhgihoiuad.png',
           width: double.infinity,
           height: double.infinity,
           fit: BoxFit.cover,
@@ -50,7 +50,7 @@ class _SplashPageState extends BaseStatefulWidgetState<SplashPage> {
   @override
   void onStateChanged(AppState appState) {
     super.onStateChanged(appState);
-    
+
     // Handle state changes specific to splash screen
     switch (appState) {
       case AppState.authentication:

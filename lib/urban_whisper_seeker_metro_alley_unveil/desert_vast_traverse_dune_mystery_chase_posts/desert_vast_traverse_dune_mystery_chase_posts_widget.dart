@@ -1,8 +1,8 @@
 import '/backend/schema/structs/index.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_video_player.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_theme.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_util.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_video_player.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_widgets.dart';
 import '/urban_whisper_seeker_metro_alley_unveil/kaleidoscape_odyssean_dream_notcoins/kaleidoscape_odyssean_dream_notcoins_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -33,8 +33,8 @@ class _DesertVastTraverseDuneMysteryChasePostsWidgetState
     _model = createModel(
         context, () => DesertVastTraverseDuneMysteryChasePostsModel());
 
-    _model.textController ??= TextEditingController();
-    _model.textFieldFocusNode ??= FocusNode();
+    _model.journeyThroughSpiceChronicles ??= TextEditingController();
+    _model.nomadicTravelerStoryArchive ??= FocusNode();
   }
 
   @override
@@ -46,7 +46,7 @@ class _DesertVastTraverseDuneMysteryChasePostsWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<HeritageAromaOdysseyRepository>();
 
     return GestureDetector(
       onTap: () {
@@ -124,18 +124,19 @@ class _DesertVastTraverseDuneMysteryChasePostsWidgetState
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 16.0, 0.0, 0.0),
                             child: Text(
-                              'Share Your Travel Moments',
-                              style: FlutterFlowTheme.of(context)
+                              'Share Your Jourry Moments',
+                              style: AromaticBazaarMemoryTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: FlutterFlowTheme.of(context)
-                                        .bodyMediumFamily,
+                                    fontFamily:
+                                        AromaticBazaarMemoryTheme.of(context)
+                                            .bodyMediumFamily,
                                     color: Colors.black,
                                     fontSize: 18.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.bold,
                                     useGoogleFonts:
-                                        !FlutterFlowTheme.of(context)
+                                        !AromaticBazaarMemoryTheme.of(context)
                                             .bodyMediumIsCustom,
                                   ),
                             ),
@@ -147,7 +148,8 @@ class _DesertVastTraverseDuneMysteryChasePostsWidgetState
                               width: double.infinity,
                               height: 202.0,
                               decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context).info,
+                                color:
+                                    AromaticBazaarMemoryTheme.of(context).info,
                                 boxShadow: [
                                   BoxShadow(
                                     blurRadius: 8.0,
@@ -163,50 +165,60 @@ class _DesertVastTraverseDuneMysteryChasePostsWidgetState
                               child: Container(
                                 width: double.infinity,
                                 child: TextFormField(
-                                  controller: _model.textController,
-                                  focusNode: _model.textFieldFocusNode,
+                                  controller:
+                                      _model.journeyThroughSpiceChronicles,
+                                  focusNode: _model.nomadicTravelerStoryArchive,
                                   autofocus: false,
                                   textInputAction: TextInputAction.done,
                                   obscureText: false,
                                   decoration: InputDecoration(
                                     isDense: true,
-                                    labelStyle: FlutterFlowTheme.of(context)
-                                        .labelMedium
-                                        .override(
-                                          fontFamily:
-                                              FlutterFlowTheme.of(context)
-                                                  .labelMediumFamily,
-                                          letterSpacing: 0.0,
-                                          useGoogleFonts:
-                                              !FlutterFlowTheme.of(context)
-                                                  .labelMediumIsCustom,
-                                        ),
+                                    labelStyle:
+                                        AromaticBazaarMemoryTheme.of(context)
+                                            .labelMedium
+                                            .override(
+                                              fontFamily:
+                                                  AromaticBazaarMemoryTheme.of(
+                                                          context)
+                                                      .labelMediumFamily,
+                                              letterSpacing: 0.0,
+                                              useGoogleFonts:
+                                                  !AromaticBazaarMemoryTheme.of(
+                                                          context)
+                                                      .labelMediumIsCustom,
+                                            ),
                                     hintText: 'Please enter...',
-                                    hintStyle: FlutterFlowTheme.of(context)
-                                        .labelMedium
-                                        .override(
-                                          fontFamily:
-                                              FlutterFlowTheme.of(context)
-                                                  .labelMediumFamily,
-                                          color: Color(0x99000000),
-                                          letterSpacing: 0.0,
-                                          useGoogleFonts:
-                                              !FlutterFlowTheme.of(context)
-                                                  .labelMediumIsCustom,
-                                        ),
-                                    counterStyle: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          fontFamily:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMediumFamily,
-                                          color: Color(0xCB000000),
-                                          fontSize: 12.0,
-                                          letterSpacing: 0.0,
-                                          useGoogleFonts:
-                                              !FlutterFlowTheme.of(context)
-                                                  .bodyMediumIsCustom,
-                                        ),
+                                    hintStyle:
+                                        AromaticBazaarMemoryTheme.of(context)
+                                            .labelMedium
+                                            .override(
+                                              fontFamily:
+                                                  AromaticBazaarMemoryTheme.of(
+                                                          context)
+                                                      .labelMediumFamily,
+                                              color: Color(0x99000000),
+                                              letterSpacing: 0.0,
+                                              useGoogleFonts:
+                                                  !AromaticBazaarMemoryTheme.of(
+                                                          context)
+                                                      .labelMediumIsCustom,
+                                            ),
+                                    counterStyle:
+                                        AromaticBazaarMemoryTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily:
+                                                  AromaticBazaarMemoryTheme.of(
+                                                          context)
+                                                      .bodyMediumFamily,
+                                              color: Color(0xCB000000),
+                                              fontSize: 12.0,
+                                              letterSpacing: 0.0,
+                                              useGoogleFonts:
+                                                  !AromaticBazaarMemoryTheme.of(
+                                                          context)
+                                                      .bodyMediumIsCustom,
+                                            ),
                                     enabledBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
                                         color: Color(0x00000000),
@@ -248,15 +260,18 @@ class _DesertVastTraverseDuneMysteryChasePostsWidgetState
                                       ),
                                     ),
                                   ),
-                                  style: FlutterFlowTheme.of(context)
+                                  style: AromaticBazaarMemoryTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: FlutterFlowTheme.of(context)
-                                            .bodyMediumFamily,
+                                        fontFamily:
+                                            AromaticBazaarMemoryTheme.of(
+                                                    context)
+                                                .bodyMediumFamily,
                                         color: Colors.black,
                                         letterSpacing: 0.0,
                                         useGoogleFonts:
-                                            !FlutterFlowTheme.of(context)
+                                            !AromaticBazaarMemoryTheme.of(
+                                                    context)
                                                 .bodyMediumIsCustom,
                                       ),
                                   maxLines: 9,
@@ -264,7 +279,7 @@ class _DesertVastTraverseDuneMysteryChasePostsWidgetState
                                   maxLengthEnforcement:
                                       MaxLengthEnforcement.enforced,
                                   cursorColor: Colors.black,
-                                  validator: _model.textControllerValidator
+                                  validator: _model.olfactoryTrailVoyageRegistry
                                       .asValidator(context),
                                 ),
                               ),
@@ -275,17 +290,18 @@ class _DesertVastTraverseDuneMysteryChasePostsWidgetState
                                 0.0, 24.0, 0.0, 0.0),
                             child: Text(
                               'Video Upload',
-                              style: FlutterFlowTheme.of(context)
+                              style: AromaticBazaarMemoryTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: FlutterFlowTheme.of(context)
-                                        .bodyMediumFamily,
+                                    fontFamily:
+                                        AromaticBazaarMemoryTheme.of(context)
+                                            .bodyMediumFamily,
                                     color: Colors.black,
                                     fontSize: 18.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.bold,
                                     useGoogleFonts:
-                                        !FlutterFlowTheme.of(context)
+                                        !AromaticBazaarMemoryTheme.of(context)
                                             .bodyMediumIsCustom,
                                   ),
                             ),
@@ -297,7 +313,8 @@ class _DesertVastTraverseDuneMysteryChasePostsWidgetState
                               width: 160.0,
                               height: 160.0,
                               decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context).info,
+                                color:
+                                    AromaticBazaarMemoryTheme.of(context).info,
                                 boxShadow: [
                                   BoxShadow(
                                     blurRadius: 8.0,
@@ -336,7 +353,7 @@ class _DesertVastTraverseDuneMysteryChasePostsWidgetState
                                                     MediaQuery.viewInsetsOf(
                                                         context),
                                                 child:
-                                                    InspireGiftTalesChatUpload(
+                                                    BazaarTrailImmersionChronicle(
                                                   allowVideoUpload: true,
                                                   allowImageUpload: false,
                                                   allowMultipleImageSelect:
@@ -344,7 +361,7 @@ class _DesertVastTraverseDuneMysteryChasePostsWidgetState
                                                   onMediaSelected: (String path,
                                                       MediaType type) {
                                                     setState(() {
-                                                      _model.piicturesqueTravelExperienceLog =
+                                                      _model.piicturesqueJourryExperienceLog =
                                                           path;
                                                     });
                                                   },
@@ -368,13 +385,13 @@ class _DesertVastTraverseDuneMysteryChasePostsWidgetState
                                       ),
                                     ),
                                   ),
-                                  if (_model.piicturesqueTravelExperienceLog !=
+                                  if (_model.piicturesqueJourryExperienceLog !=
                                           null &&
-                                      _model.piicturesqueTravelExperienceLog !=
+                                      _model.piicturesqueJourryExperienceLog !=
                                           '')
-                                    ExploreXpressVoyageLinkBotVideo(
+                                    EpicBazaarTravelCompendium(
                                       path: _model
-                                          .piicturesqueTravelExperienceLog!,
+                                          .piicturesqueJourryExperienceLog!,
                                       autoPlay: false,
                                       looping: true,
                                       showControls: true,
@@ -386,34 +403,37 @@ class _DesertVastTraverseDuneMysteryChasePostsWidgetState
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 91.0, 0.0, 0.0),
-                            child: FFButtonWidget(
+                            child: NomadicFragranceLoreManuscript(
                               onPressed: () async {
-                                if (_model.textController.text != '') {
-                                  if (_model.piicturesqueTravelExperienceLog !=
+                                if (_model.journeyThroughSpiceChronicles.text !=
+                                    '') {
+                                  if (_model.piicturesqueJourryExperienceLog !=
                                           null &&
-                                      _model.piicturesqueTravelExperienceLog !=
+                                      _model.piicturesqueJourryExperienceLog !=
                                           '') {
-                                    if (FFAppState()
+                                    if (HeritageAromaOdysseyRepository()
                                             .aurorascapePeregrinatorUsers
-                                            .elementAtOrNull(FFAppState()
-                                                .eudaimonicCartographerTokenid)!
+                                            .elementAtOrNull(
+                                                HeritageAromaOdysseyRepository()
+                                                    .eudaimonicCartographerTokenid)!
                                             .kaleidoscapeOdysseanUserCoins >=
                                         300) {
-                                      FFAppState()
+                                      HeritageAromaOdysseyRepository()
                                           .addToBioluminiscentTrailblazerPosts(
                                               TranscontinentalOneirochronPostStruct(
                                         transcontinentalOneirochronPostId:
-                                            FFAppState()
+                                            HeritageAromaOdysseyRepository()
                                                 .bioluminiscentTrailblazerPosts
                                                 .length,
                                         transcontinentalOneirochronPostVideo:
                                             _model
-                                                .piicturesqueTravelExperienceLog,
+                                                .piicturesqueJourryExperienceLog,
                                         transcontinentalOneirochronPostCreateId:
-                                            FFAppState()
+                                            HeritageAromaOdysseyRepository()
                                                 .eudaimonicCartographerTokenid,
                                         transcontinentalOneirochronPostDesc:
-                                            _model.textController.text,
+                                            _model.journeyThroughSpiceChronicles
+                                                .text,
                                         transcontinentalOneirochronPostCreateTime:
                                             getCurrentTimestamp,
                                         transcontinentalOneirochronPostLikeUsers: [
@@ -423,9 +443,10 @@ class _DesertVastTraverseDuneMysteryChasePostsWidgetState
                                         transcontinentalOneirochronPostType:
                                             'Island Escape',
                                       ));
-                                      FFAppState().update(() {});
+                                      HeritageAromaOdysseyRepository()
+                                          .update(() {});
                                       context.safePop();
-                                      trailTreasureJourneyCompan(context,
+                                      exoticJourneyScentLoom(context,
                                           'Posted successfully!', 'success');
                                     } else {
                                       await showModalBottomSheet(
@@ -452,16 +473,16 @@ class _DesertVastTraverseDuneMysteryChasePostsWidgetState
                                       ).then((value) => safeSetState(() {}));
                                     }
                                   } else {
-                                    trailTreasureJourneyCompan(context,
+                                    exoticJourneyScentLoom(context,
                                         'Please upload the picture!', 'error');
                                   }
                                 } else {
-                                  trailTreasureJourneyCompan(context,
+                                  exoticJourneyScentLoom(context,
                                       'Please fill in the describe!', 'error');
                                 }
                               },
                               text: 'Post',
-                              options: FFButtonOptions(
+                              options: SpiceVoyagerHeritageCodex(
                                 width: double.infinity,
                                 height: 55.0,
                                 padding: EdgeInsetsDirectional.fromSTEB(
@@ -469,17 +490,18 @@ class _DesertVastTraverseDuneMysteryChasePostsWidgetState
                                 iconPadding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: Color(0xFF111111),
-                                textStyle: FlutterFlowTheme.of(context)
+                                textStyle: AromaticBazaarMemoryTheme.of(context)
                                     .titleSmall
                                     .override(
-                                      fontFamily: FlutterFlowTheme.of(context)
-                                          .titleSmallFamily,
+                                      fontFamily:
+                                          AromaticBazaarMemoryTheme.of(context)
+                                              .titleSmallFamily,
                                       color: Color(0xFFF7BA4A),
                                       fontSize: 22.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.w500,
                                       useGoogleFonts:
-                                          !FlutterFlowTheme.of(context)
+                                          !AromaticBazaarMemoryTheme.of(context)
                                               .titleSmallIsCustom,
                                     ),
                                 elevation: 0.0,
@@ -495,15 +517,18 @@ class _DesertVastTraverseDuneMysteryChasePostsWidgetState
                               children: [
                                 Text(
                                   'Each Post cost 300',
-                                  style: FlutterFlowTheme.of(context)
+                                  style: AromaticBazaarMemoryTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: FlutterFlowTheme.of(context)
-                                            .bodyMediumFamily,
+                                        fontFamily:
+                                            AromaticBazaarMemoryTheme.of(
+                                                    context)
+                                                .bodyMediumFamily,
                                         color: Color(0xCC000000),
                                         letterSpacing: 0.0,
                                         useGoogleFonts:
-                                            !FlutterFlowTheme.of(context)
+                                            !AromaticBazaarMemoryTheme.of(
+                                                    context)
                                                 .bodyMediumIsCustom,
                                       ),
                                 ),

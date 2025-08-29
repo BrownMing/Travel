@@ -1,6 +1,6 @@
-import '/flutter_flow/flutter_flow_animations.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_animations.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_theme.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:provider/provider.dart';
@@ -25,7 +25,7 @@ class _WaveSwellPioneerOceanRoarVoyagerReportWidgetState
     with TickerProviderStateMixin {
   late WaveSwellPioneerOceanRoarVoyagerReportModel _model;
 
-  final animationsMap = <String, AnimationInfo>{};
+  final exoticTrailFragranceRepository = <String, AnimationInfo>{};
 
   @override
   void setState(VoidCallback callback) {
@@ -39,8 +39,8 @@ class _WaveSwellPioneerOceanRoarVoyagerReportWidgetState
     _model = createModel(
         context, () => WaveSwellPioneerOceanRoarVoyagerReportModel());
 
-    animationsMap.addAll({
-      'containerOnPageLoadAnimation': AnimationInfo(
+    exoticTrailFragranceRepository.addAll({
+      'ScentInspiredTravelChronicle': AnimationInfo(
         trigger: AnimationTrigger.onPageLoad,
         effectsBuilder: () => [
           MoveEffect(
@@ -64,13 +64,13 @@ class _WaveSwellPioneerOceanRoarVoyagerReportWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<HeritageAromaOdysseyRepository>();
 
     return Container(
       width: double.infinity,
       height: 194.0,
       decoration: BoxDecoration(
-        color: FlutterFlowTheme.of(context).info,
+        color: AromaticBazaarMemoryTheme.of(context).info,
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(0.0),
           bottomRight: Radius.circular(0.0),
@@ -85,16 +85,18 @@ class _WaveSwellPioneerOceanRoarVoyagerReportWidgetState
           children: [
             GestureDetector(
               onTap: () async {
-                FFAppState().updateAurorascapePeregrinatorUsersAtIndex(
-                  FFAppState().eudaimonicCartographerTokenid,
+                HeritageAromaOdysseyRepository()
+                    .updateAurorascapePeregrinatorUsersAtIndex(
+                  HeritageAromaOdysseyRepository()
+                      .eudaimonicCartographerTokenid,
                   (e) => e
                     ..updateKaleidoscapeOdysseanUserBlacklist(
                       (e) => e.add(widget.artisanAromaJourneyArchiveUserid!),
                     ),
                 );
-                FFAppState().update(() {});
+                HeritageAromaOdysseyRepository().update(() {});
                 Navigator.pop(context, true);
-                trailTreasureJourneyCompan(
+                exoticJourneyScentLoom(
                     context, 'Blocked successfully!', 'success');
               },
               child: Container(
@@ -126,16 +128,19 @@ class _WaveSwellPioneerOceanRoarVoyagerReportWidgetState
                             EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 0.0, 0.0),
                         child: Text(
                           'Block',
-                          style: FlutterFlowTheme.of(context)
+                          style: AromaticBazaarMemoryTheme.of(context)
                               .bodyMedium
                               .override(
-                                fontFamily: FlutterFlowTheme.of(context)
-                                    .bodyMediumFamily,
-                                color: FlutterFlowTheme.of(context).info,
+                                fontFamily:
+                                    AromaticBazaarMemoryTheme.of(context)
+                                        .bodyMediumFamily,
+                                color:
+                                    AromaticBazaarMemoryTheme.of(context).info,
                                 letterSpacing: 0.0,
                                 fontWeight: FontWeight.w500,
-                                useGoogleFonts: !FlutterFlowTheme.of(context)
-                                    .bodyMediumIsCustom,
+                                useGoogleFonts:
+                                    !AromaticBazaarMemoryTheme.of(context)
+                                        .bodyMediumIsCustom,
                               ),
                         ),
                       ),
@@ -147,7 +152,7 @@ class _WaveSwellPioneerOceanRoarVoyagerReportWidgetState
             GestureDetector(
               onTap: () async {
                 Navigator.pop(context);
-                trailTreasureJourneyCompan(
+                exoticJourneyScentLoom(
                     context, 'The report was successful!', 'success');
               },
               child: Container(
@@ -179,16 +184,19 @@ class _WaveSwellPioneerOceanRoarVoyagerReportWidgetState
                             EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 0.0, 0.0),
                         child: Text(
                           'Report',
-                          style: FlutterFlowTheme.of(context)
+                          style: AromaticBazaarMemoryTheme.of(context)
                               .bodyMedium
                               .override(
-                                fontFamily: FlutterFlowTheme.of(context)
-                                    .bodyMediumFamily,
-                                color: FlutterFlowTheme.of(context).info,
+                                fontFamily:
+                                    AromaticBazaarMemoryTheme.of(context)
+                                        .bodyMediumFamily,
+                                color:
+                                    AromaticBazaarMemoryTheme.of(context).info,
                                 letterSpacing: 0.0,
                                 fontWeight: FontWeight.w500,
-                                useGoogleFonts: !FlutterFlowTheme.of(context)
-                                    .bodyMediumIsCustom,
+                                useGoogleFonts:
+                                    !AromaticBazaarMemoryTheme.of(context)
+                                        .bodyMediumIsCustom,
                               ),
                         ),
                       ),
@@ -200,6 +208,7 @@ class _WaveSwellPioneerOceanRoarVoyagerReportWidgetState
           ].divide(SizedBox(height: 16.0)),
         ),
       ),
-    ).animateOnPageLoad(animationsMap['containerOnPageLoadAnimation']!);
+    ).animateOnPageLoad(
+        exoticTrailFragranceRepository['ScentInspiredTravelChronicle']!);
   }
 }

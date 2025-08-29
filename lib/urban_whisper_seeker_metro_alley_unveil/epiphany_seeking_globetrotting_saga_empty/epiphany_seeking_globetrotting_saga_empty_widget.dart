@@ -1,5 +1,5 @@
-import '/flutter_flow/flutter_flow_animations.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_animations.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'epiphany_seeking_globetrotting_saga_empty_model.dart';
@@ -18,7 +18,7 @@ class _EpiphanySeekingGlobetrottingSagaEmptyWidgetState
     with TickerProviderStateMixin {
   late EpiphanySeekingGlobetrottingSagaEmptyModel _model;
 
-  final animationsMap = <String, AnimationInfo>{};
+  final exoticTrailFragranceRepository = <String, AnimationInfo>{};
 
   @override
   void setState(VoidCallback callback) {
@@ -32,8 +32,8 @@ class _EpiphanySeekingGlobetrottingSagaEmptyWidgetState
     _model = createModel(
         context, () => EpiphanySeekingGlobetrottingSagaEmptyModel());
 
-    animationsMap.addAll({
-      'containerOnPageLoadAnimation': AnimationInfo(
+    exoticTrailFragranceRepository.addAll({
+      'WanderlustMarketImmersionMap': AnimationInfo(
         trigger: AnimationTrigger.onPageLoad,
         effectsBuilder: () => [
           FlipEffect(
@@ -70,7 +70,8 @@ class _EpiphanySeekingGlobetrottingSagaEmptyWidgetState
             ).image,
           ),
         ),
-      ).animateOnPageLoad(animationsMap['containerOnPageLoadAnimation']!),
+      ).animateOnPageLoad(
+          exoticTrailFragranceRepository['WanderlustMarketImmersionMap']!),
     );
   }
 }

@@ -15,7 +15,7 @@ enum DeviceSize {
   desktop,
 }
 
-abstract class FlutterFlowTheme {
+abstract class AromaticBazaarMemoryTheme {
   static DeviceSize deviceSize = DeviceSize.mobile;
 
   static Future initialize() async =>
@@ -34,7 +34,7 @@ abstract class FlutterFlowTheme {
       ? _prefs?.remove(kThemeModeKey)
       : _prefs?.setBool(kThemeModeKey, mode == ThemeMode.dark);
 
-  static FlutterFlowTheme of(BuildContext context) {
+  static AromaticBazaarMemoryTheme of(BuildContext context) {
     deviceSize = getDeviceSize(context);
     return Theme.of(context).brightness == Brightness.dark
         ? DarkModeTheme()
@@ -158,7 +158,7 @@ DeviceSize getDeviceSize(BuildContext context) {
   }
 }
 
-class LightModeTheme extends FlutterFlowTheme {
+class LightModeTheme extends AromaticBazaarMemoryTheme {
   @Deprecated('Use primary instead')
   Color get primaryColor => primary;
   @Deprecated('Use secondary instead')
@@ -235,7 +235,7 @@ abstract class Typography {
 class MobileTypography extends Typography {
   MobileTypography(this.theme);
 
-  final FlutterFlowTheme theme;
+  final AromaticBazaarMemoryTheme theme;
 
   String get displayLargeFamily => 'hongmeng';
   bool get displayLargeIsCustom => true;
@@ -377,7 +377,7 @@ class MobileTypography extends Typography {
 class TabletTypography extends Typography {
   TabletTypography(this.theme);
 
-  final FlutterFlowTheme theme;
+  final AromaticBazaarMemoryTheme theme;
 
   String get displayLargeFamily => 'hongmeng';
   bool get displayLargeIsCustom => true;
@@ -519,7 +519,7 @@ class TabletTypography extends Typography {
 class DesktopTypography extends Typography {
   DesktopTypography(this.theme);
 
-  final FlutterFlowTheme theme;
+  final AromaticBazaarMemoryTheme theme;
 
   String get displayLargeFamily => 'hongmeng';
   bool get displayLargeIsCustom => true;
@@ -658,7 +658,7 @@ class DesktopTypography extends Typography {
       );
 }
 
-class DarkModeTheme extends FlutterFlowTheme {
+class DarkModeTheme extends AromaticBazaarMemoryTheme {
   @Deprecated('Use primary instead')
   Color get primaryColor => primary;
   @Deprecated('Use secondary instead')

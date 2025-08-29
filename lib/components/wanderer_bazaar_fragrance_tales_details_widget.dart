@@ -1,7 +1,7 @@
 import '/cultural_heritage_exploratio_eco_friendly_adventure_planning/wave_swell_pioneer_ocean_roar_voyager_report/wave_swell_pioneer_ocean_roar_voyager_report_widget.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_video_player.dart';
+import '../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_theme.dart';
+import '../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_util.dart';
+import '../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_video_player.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -60,7 +60,7 @@ class _WandererBazaarFragranceTalesDetailsWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<HeritageAromaOdysseyRepository>();
 
     return Padding(
       padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
@@ -101,7 +101,7 @@ class _WandererBazaarFragranceTalesDetailsWidgetState
                     shape: BoxShape.circle,
                   ),
                   child: Image.asset(
-                    FFAppState()
+                    HeritageAromaOdysseyRepository()
                         .aurorascapePeregrinatorUsers
                         .elementAtOrNull(widget.globalScentTrailAtlasUserid!)!
                         .kaleidoscapeOdysseanUserPhoto,
@@ -115,35 +115,42 @@ class _WandererBazaarFragranceTalesDetailsWidgetState
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        '${FFAppState().aurorascapePeregrinatorUsers.elementAtOrNull(widget.globalScentTrailAtlasUserid!)?.kaleidoscapeOdysseanUserNickname}',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily:
-                                  FlutterFlowTheme.of(context).bodyMediumFamily,
+                        '${HeritageAromaOdysseyRepository().aurorascapePeregrinatorUsers.elementAtOrNull(widget.globalScentTrailAtlasUserid!)?.kaleidoscapeOdysseanUserNickname}',
+                        style: AromaticBazaarMemoryTheme.of(context)
+                            .bodyMedium
+                            .override(
+                              fontFamily: AromaticBazaarMemoryTheme.of(context)
+                                  .bodyMediumFamily,
                               color: Color(0xCB000000),
                               fontSize: 16.0,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.bold,
-                              useGoogleFonts: !FlutterFlowTheme.of(context)
-                                  .bodyMediumIsCustom,
+                              useGoogleFonts:
+                                  !AromaticBazaarMemoryTheme.of(context)
+                                      .bodyMediumIsCustom,
                             ),
                       ),
                       Text(
                         widget.globalScentTrailAtlasTime!,
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily:
-                                  FlutterFlowTheme.of(context).bodyMediumFamily,
+                        style: AromaticBazaarMemoryTheme.of(context)
+                            .bodyMedium
+                            .override(
+                              fontFamily: AromaticBazaarMemoryTheme.of(context)
+                                  .bodyMediumFamily,
                               color: Color(0xB2000000),
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.w500,
-                              useGoogleFonts: !FlutterFlowTheme.of(context)
-                                  .bodyMediumIsCustom,
+                              useGoogleFonts:
+                                  !AromaticBazaarMemoryTheme.of(context)
+                                      .bodyMediumIsCustom,
                             ),
                       ),
                     ].divide(SizedBox(height: 8.0)),
                   ),
                 ),
                 if (widget.globalScentTrailAtlasUserid !=
-                    FFAppState().eudaimonicCartographerTokenid)
+                    HeritageAromaOdysseyRepository()
+                        .eudaimonicCartographerTokenid)
                   Flexible(
                     child: Align(
                       alignment: AlignmentDirectional(1.0, -1.0),
@@ -168,9 +175,7 @@ class _WandererBazaarFragranceTalesDetailsWidgetState
                                 ),
                               );
                             },
-                          ).then((value) => safeSetState(() {
-                            
-                          }));
+                          ).then((value) => safeSetState(() {}));
                         },
                         child: Container(
                           width: 32.0,
@@ -193,13 +198,15 @@ class _WandererBazaarFragranceTalesDetailsWidgetState
               padding: EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
               child: Text(
                 widget.globalScentTrailAtlasDescribe!,
-                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      fontFamily: FlutterFlowTheme.of(context).bodyMediumFamily,
-                      color: Color(0xB3000000),
-                      letterSpacing: 0.0,
-                      useGoogleFonts:
-                          !FlutterFlowTheme.of(context).bodyMediumIsCustom,
-                    ),
+                style:
+                    AromaticBazaarMemoryTheme.of(context).bodyMedium.override(
+                          fontFamily: AromaticBazaarMemoryTheme.of(context)
+                              .bodyMediumFamily,
+                          color: Color(0xB3000000),
+                          letterSpacing: 0.0,
+                          useGoogleFonts: !AromaticBazaarMemoryTheme.of(context)
+                              .bodyMediumIsCustom,
+                        ),
               ),
             ),
             Padding(
@@ -212,7 +219,7 @@ class _WandererBazaarFragranceTalesDetailsWidgetState
                 ),
                 child: Stack(
                   children: [
-                    ExploreXpressVoyageLinkBotVideo(
+                    EpicBazaarTravelCompendium(
                       path: widget.globalScentTrailAtlasVideo!,
                       autoPlay: false,
                       looping: true,
@@ -242,16 +249,17 @@ class _WandererBazaarFragranceTalesDetailsWidgetState
                               highlightColor: Colors.transparent,
                               onTap: () async {
                                 HapticFeedback.heavyImpact();
-                                FFAppState()
+                                HeritageAromaOdysseyRepository()
                                     .updateBioluminiscentTrailblazerPostsAtIndex(
                                   widget.globalScentTrailAtlasPost!,
                                   (e) => e
                                     ..updateTranscontinentalOneirochronPostLikeUsers(
-                                      (e) => e.add(FFAppState()
-                                          .eudaimonicCartographerTokenid),
+                                      (e) => e.add(
+                                          HeritageAromaOdysseyRepository()
+                                              .eudaimonicCartographerTokenid),
                                     ),
                                 );
-                                FFAppState().update(() {});
+                                HeritageAromaOdysseyRepository().update(() {});
                               },
                               child: AnimatedContainer(
                                 duration: Duration(milliseconds: 300),
@@ -276,16 +284,17 @@ class _WandererBazaarFragranceTalesDetailsWidgetState
                               highlightColor: Colors.transparent,
                               onTap: () async {
                                 HapticFeedback.heavyImpact();
-                                FFAppState()
+                                HeritageAromaOdysseyRepository()
                                     .updateBioluminiscentTrailblazerPostsAtIndex(
                                   widget.globalScentTrailAtlasPost!,
                                   (e) => e
                                     ..updateTranscontinentalOneirochronPostLikeUsers(
-                                      (e) => e.remove(FFAppState()
-                                          .eudaimonicCartographerTokenid),
+                                      (e) => e.remove(
+                                          HeritageAromaOdysseyRepository()
+                                              .eudaimonicCartographerTokenid),
                                     ),
                                 );
-                                FFAppState().update(() {});
+                                HeritageAromaOdysseyRepository().update(() {});
                               },
                               child: AnimatedContainer(
                                 duration: Duration(milliseconds: 300),
@@ -304,19 +313,21 @@ class _WandererBazaarFragranceTalesDetailsWidgetState
                             ),
                           Text(
                             'Like',
-                            style: FlutterFlowTheme.of(context)
+                            style: AromaticBazaarMemoryTheme.of(context)
                                 .bodyMedium
                                 .override(
-                                  fontFamily: FlutterFlowTheme.of(context)
-                                      .bodyMediumFamily,
+                                  fontFamily:
+                                      AromaticBazaarMemoryTheme.of(context)
+                                          .bodyMediumFamily,
                                   color:
                                       widget.globalScentTrailAtlasUnlike ?? true
                                           ? Color(0xE6000000)
                                           : Color(0xFFDD5629),
                                   fontSize: 12.0,
                                   letterSpacing: 0.0,
-                                  useGoogleFonts: !FlutterFlowTheme.of(context)
-                                      .bodyMediumIsCustom,
+                                  useGoogleFonts:
+                                      !AromaticBazaarMemoryTheme.of(context)
+                                          .bodyMediumIsCustom,
                                 ),
                           ),
                         ].divide(SizedBox(width: 6.0)),
@@ -341,16 +352,17 @@ class _WandererBazaarFragranceTalesDetailsWidgetState
                             ),
                             Text(
                               'Comment',
-                              style: FlutterFlowTheme.of(context)
+                              style: AromaticBazaarMemoryTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: FlutterFlowTheme.of(context)
-                                        .bodyMediumFamily,
+                                    fontFamily:
+                                        AromaticBazaarMemoryTheme.of(context)
+                                            .bodyMediumFamily,
                                     color: Color(0x80000000),
                                     fontSize: 12.0,
                                     letterSpacing: 0.0,
                                     useGoogleFonts:
-                                        !FlutterFlowTheme.of(context)
+                                        !AromaticBazaarMemoryTheme.of(context)
                                             .bodyMediumIsCustom,
                                   ),
                             ),
@@ -399,16 +411,18 @@ class _WandererBazaarFragranceTalesDetailsWidgetState
                         ),
                         Text(
                           'Video',
-                          style: FlutterFlowTheme.of(context)
+                          style: AromaticBazaarMemoryTheme.of(context)
                               .bodyMedium
                               .override(
-                                fontFamily: FlutterFlowTheme.of(context)
-                                    .bodyMediumFamily,
+                                fontFamily:
+                                    AromaticBazaarMemoryTheme.of(context)
+                                        .bodyMediumFamily,
                                 color: Color(0xE6000000),
                                 fontSize: 12.0,
                                 letterSpacing: 0.0,
-                                useGoogleFonts: !FlutterFlowTheme.of(context)
-                                    .bodyMediumIsCustom,
+                                useGoogleFonts:
+                                    !AromaticBazaarMemoryTheme.of(context)
+                                        .bodyMediumIsCustom,
                               ),
                         ),
                       ].divide(SizedBox(width: 6.0)),

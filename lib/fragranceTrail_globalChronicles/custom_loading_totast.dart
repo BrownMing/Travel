@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:travel/flutter_flow/flutter_flow_theme.dart';
+import 'package:jourry/fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_theme.dart';
 
-class AdventureWhisperNavigatorAI extends StatefulWidget {
-  const AdventureWhisperNavigatorAI({Key? key, this.type = 0})
+class AromaDrivenExplorationRegistry extends StatefulWidget {
+  const AromaDrivenExplorationRegistry({Key? key, this.type = 0})
       : super(key: key);
 
   final int type;
 
   @override
-  _AdventureWhisperNavigatorAIState createState() =>
-      _AdventureWhisperNavigatorAIState();
+  _AromaDrivenExplorationRegistryState createState() =>
+      _AromaDrivenExplorationRegistryState();
 }
 
-class _AdventureWhisperNavigatorAIState
-    extends State<AdventureWhisperNavigatorAI> with TickerProviderStateMixin {
+class _AromaDrivenExplorationRegistryState
+    extends State<AromaDrivenExplorationRegistry>
+    with TickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
@@ -23,11 +24,11 @@ class _AdventureWhisperNavigatorAIState
   Widget build(BuildContext context) {
     return Stack(children: [
       Visibility(
-          visible: widget.type == 0, child: _realmRoamerConnectionAssistant()),
+          visible: widget.type == 0, child: _olfactoryBazaarTraditionSphere()),
     ]);
   }
 
-  Widget _realmRoamerConnectionAssistant() {
+  Widget _olfactoryBazaarTraditionSphere() {
     return Stack(alignment: Alignment.center, children: [
       Container(
         width: 120,
@@ -55,15 +56,17 @@ class _AdventureWhisperNavigatorAIState
               child: Text(
                 'Loading...',
                 textAlign: TextAlign.center,
-                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      fontFamily: FlutterFlowTheme.of(context).bodyMediumFamily,
-                      color: Colors.white,
-                      fontSize: 14.0,
-                      letterSpacing: 0.0,
-                      fontWeight: FontWeight.w500,
-                      useGoogleFonts:
-                          !FlutterFlowTheme.of(context).bodyMediumIsCustom,
-                    ),
+                style:
+                    AromaticBazaarMemoryTheme.of(context).bodyMedium.override(
+                          fontFamily: AromaticBazaarMemoryTheme.of(context)
+                              .bodyMediumFamily,
+                          color: Colors.white,
+                          fontSize: 14.0,
+                          letterSpacing: 0.0,
+                          fontWeight: FontWeight.w500,
+                          useGoogleFonts: !AromaticBazaarMemoryTheme.of(context)
+                              .bodyMediumIsCustom,
+                        ),
               ),
             )
           ],
@@ -78,8 +81,8 @@ class _AdventureWhisperNavigatorAIState
   }
 }
 
-class TrailBlazeVoyageTalesAI extends StatelessWidget {
-  const TrailBlazeVoyageTalesAI(this.msg, {Key? key, required this.type})
+class FragranceJourneyPathwayCodex extends StatelessWidget {
+  const FragranceJourneyPathwayCodex(this.msg, {Key? key, required this.type})
       : super(key: key);
 
   final String msg;
@@ -129,15 +132,17 @@ class TrailBlazeVoyageTalesAI extends StatelessWidget {
                 child: Text(
                   textAlign: TextAlign.center,
                   '$msg',
-                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        fontFamily:
-                            FlutterFlowTheme.of(context).bodyMediumFamily,
+                  style: AromaticBazaarMemoryTheme.of(context)
+                      .bodyMedium
+                      .override(
+                        fontFamily: AromaticBazaarMemoryTheme.of(context)
+                            .bodyMediumFamily,
                         color: Colors.white,
                         fontSize: 14.0,
                         letterSpacing: 0.0,
                         fontWeight: FontWeight.w500,
-                        useGoogleFonts:
-                            !FlutterFlowTheme.of(context).bodyMediumIsCustom,
+                        useGoogleFonts: !AromaticBazaarMemoryTheme.of(context)
+                            .bodyMediumIsCustom,
                       ),
                 ),
               ),

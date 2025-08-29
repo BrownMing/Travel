@@ -1,6 +1,6 @@
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_theme.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_util.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_widgets.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -40,7 +40,7 @@ class _SandStormVentureOasisWhisperTracerInfoWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<HeritageAromaOdysseyRepository>();
 
     return GestureDetector(
       onTap: () {
@@ -126,10 +126,11 @@ class _SandStormVentureOasisWhisperTracerInfoWidgetState
                                     image: DecorationImage(
                                       fit: BoxFit.cover,
                                       image: Image.asset(
-                                        FFAppState()
+                                        HeritageAromaOdysseyRepository()
                                             .aurorascapePeregrinatorUsers
-                                            .elementAtOrNull(FFAppState()
-                                                .eudaimonicCartographerTokenid)!
+                                            .elementAtOrNull(
+                                                HeritageAromaOdysseyRepository()
+                                                    .eudaimonicCartographerTokenid)!
                                             .kaleidoscapeOdysseanUserPhoto,
                                       ).image,
                                     ),
@@ -143,18 +144,19 @@ class _SandStormVentureOasisWhisperTracerInfoWidgetState
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 29.0, 0.0, 0.0),
                             child: Text(
-                              '${FFAppState().aurorascapePeregrinatorUsers.elementAtOrNull(FFAppState().eudaimonicCartographerTokenid)?.kaleidoscapeOdysseanUserNickname}',
-                              style: FlutterFlowTheme.of(context)
+                              '${HeritageAromaOdysseyRepository().aurorascapePeregrinatorUsers.elementAtOrNull(HeritageAromaOdysseyRepository().eudaimonicCartographerTokenid)?.kaleidoscapeOdysseanUserNickname}',
+                              style: AromaticBazaarMemoryTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: FlutterFlowTheme.of(context)
-                                        .bodyMediumFamily,
+                                    fontFamily:
+                                        AromaticBazaarMemoryTheme.of(context)
+                                            .bodyMediumFamily,
                                     color: Color(0xF1000000),
                                     fontSize: 18.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.w600,
                                     useGoogleFonts:
-                                        !FlutterFlowTheme.of(context)
+                                        !AromaticBazaarMemoryTheme.of(context)
                                             .bodyMediumIsCustom,
                                   ),
                             ),
@@ -163,17 +165,18 @@ class _SandStormVentureOasisWhisperTracerInfoWidgetState
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 8.0, 0.0, 0.0),
                             child: Text(
-                              'ID:${FFAppState().aurorascapePeregrinatorUsers.elementAtOrNull(FFAppState().eudaimonicCartographerTokenid)?.kaleidoscapeOdysseanUserCreateTime?.millisecondsSinceEpoch}',
-                              style: FlutterFlowTheme.of(context)
+                              'ID:${HeritageAromaOdysseyRepository().aurorascapePeregrinatorUsers.elementAtOrNull(HeritageAromaOdysseyRepository().eudaimonicCartographerTokenid)?.kaleidoscapeOdysseanUserCreateTime?.millisecondsSinceEpoch}',
+                              style: AromaticBazaarMemoryTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: FlutterFlowTheme.of(context)
-                                        .bodyMediumFamily,
+                                    fontFamily:
+                                        AromaticBazaarMemoryTheme.of(context)
+                                            .bodyMediumFamily,
                                     color: Color(0xD8000000),
                                     fontSize: 16.0,
                                     letterSpacing: 0.0,
                                     useGoogleFonts:
-                                        !FlutterFlowTheme.of(context)
+                                        !AromaticBazaarMemoryTheme.of(context)
                                             .bodyMediumIsCustom,
                                   ),
                             ),
@@ -185,7 +188,8 @@ class _SandStormVentureOasisWhisperTracerInfoWidgetState
                               width: 350,
                               height: 91.0,
                               decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context).info,
+                                color:
+                                    AromaticBazaarMemoryTheme.of(context).info,
                                 boxShadow: [
                                   BoxShadow(
                                     blurRadius: 8.0,
@@ -216,7 +220,7 @@ class _SandStormVentureOasisWhisperTracerInfoWidgetState
                                           SerendipitousOdysseyChroniclesFollowFanVisitorWidget
                                               .routeName,
                                           queryParameters: {
-                                            'adventurousTravelerMemoryBook':
+                                            'adventurousJourryerMemoryBook':
                                                 serializeParam(
                                               'Fans',
                                               ParamType.String,
@@ -237,38 +241,40 @@ class _SandStormVentureOasisWhisperTracerInfoWidgetState
                                             MainAxisAlignment.center,
                                         children: [
                                           Text(
-                                            '${FFAppState().aurorascapePeregrinatorUsers.elementAtOrNull(FFAppState().eudaimonicCartographerTokenid)?.kaleidoscapeOdysseanUserFans.length.toString()}',
-                                            style: FlutterFlowTheme.of(context)
+                                            '${HeritageAromaOdysseyRepository().aurorascapePeregrinatorUsers.elementAtOrNull(HeritageAromaOdysseyRepository().eudaimonicCartographerTokenid)?.kaleidoscapeOdysseanUserFans.length.toString()}',
+                                            style: AromaticBazaarMemoryTheme.of(
+                                                    context)
                                                 .bodyMedium
                                                 .override(
                                                   fontFamily:
-                                                      FlutterFlowTheme.of(
-                                                              context)
+                                                      AromaticBazaarMemoryTheme
+                                                              .of(context)
                                                           .bodyMediumFamily,
                                                   color: Color(0xFFEA7439),
                                                   fontSize: 16.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.bold,
                                                   useGoogleFonts:
-                                                      !FlutterFlowTheme.of(
-                                                              context)
+                                                      !AromaticBazaarMemoryTheme
+                                                              .of(context)
                                                           .bodyMediumIsCustom,
                                                 ),
                                           ),
                                           Text(
                                             'Fans',
-                                            style: FlutterFlowTheme.of(context)
+                                            style: AromaticBazaarMemoryTheme.of(
+                                                    context)
                                                 .bodyMedium
                                                 .override(
                                                   fontFamily:
-                                                      FlutterFlowTheme.of(
-                                                              context)
+                                                      AromaticBazaarMemoryTheme
+                                                              .of(context)
                                                           .bodyMediumFamily,
                                                   color: Color(0x99000000),
                                                   letterSpacing: 0.0,
                                                   useGoogleFonts:
-                                                      !FlutterFlowTheme.of(
-                                                              context)
+                                                      !AromaticBazaarMemoryTheme
+                                                              .of(context)
                                                           .bodyMediumIsCustom,
                                                 ),
                                           ),
@@ -285,7 +291,7 @@ class _SandStormVentureOasisWhisperTracerInfoWidgetState
                                           SerendipitousOdysseyChroniclesFollowFanVisitorWidget
                                               .routeName,
                                           queryParameters: {
-                                            'adventurousTravelerMemoryBook':
+                                            'adventurousJourryerMemoryBook':
                                                 serializeParam(
                                               'Following',
                                               ParamType.String,
@@ -306,38 +312,40 @@ class _SandStormVentureOasisWhisperTracerInfoWidgetState
                                             MainAxisAlignment.center,
                                         children: [
                                           Text(
-                                            '${FFAppState().aurorascapePeregrinatorUsers.elementAtOrNull(FFAppState().eudaimonicCartographerTokenid)?.kaleidoscapeOdysseanUserFollowings.length.toString()}',
-                                            style: FlutterFlowTheme.of(context)
+                                            '${HeritageAromaOdysseyRepository().aurorascapePeregrinatorUsers.elementAtOrNull(HeritageAromaOdysseyRepository().eudaimonicCartographerTokenid)?.kaleidoscapeOdysseanUserFollowings.length.toString()}',
+                                            style: AromaticBazaarMemoryTheme.of(
+                                                    context)
                                                 .bodyMedium
                                                 .override(
                                                   fontFamily:
-                                                      FlutterFlowTheme.of(
-                                                              context)
+                                                      AromaticBazaarMemoryTheme
+                                                              .of(context)
                                                           .bodyMediumFamily,
                                                   color: Color(0xFFEA7439),
                                                   fontSize: 16.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.bold,
                                                   useGoogleFonts:
-                                                      !FlutterFlowTheme.of(
-                                                              context)
+                                                      !AromaticBazaarMemoryTheme
+                                                              .of(context)
                                                           .bodyMediumIsCustom,
                                                 ),
                                           ),
                                           Text(
                                             'Following',
-                                            style: FlutterFlowTheme.of(context)
+                                            style: AromaticBazaarMemoryTheme.of(
+                                                    context)
                                                 .bodyMedium
                                                 .override(
                                                   fontFamily:
-                                                      FlutterFlowTheme.of(
-                                                              context)
+                                                      AromaticBazaarMemoryTheme
+                                                              .of(context)
                                                           .bodyMediumFamily,
                                                   color: Color(0x99000000),
                                                   letterSpacing: 0.0,
                                                   useGoogleFonts:
-                                                      !FlutterFlowTheme.of(
-                                                              context)
+                                                      !AromaticBazaarMemoryTheme
+                                                              .of(context)
                                                           .bodyMediumIsCustom,
                                                 ),
                                           ),
@@ -354,7 +362,7 @@ class _SandStormVentureOasisWhisperTracerInfoWidgetState
                                           SerendipitousOdysseyChroniclesFollowFanVisitorWidget
                                               .routeName,
                                           queryParameters: {
-                                            'adventurousTravelerMemoryBook':
+                                            'adventurousJourryerMemoryBook':
                                                 serializeParam(
                                               'Victors',
                                               ParamType.String,
@@ -375,38 +383,40 @@ class _SandStormVentureOasisWhisperTracerInfoWidgetState
                                             MainAxisAlignment.center,
                                         children: [
                                           Text(
-                                            '${FFAppState().aurorascapePeregrinatorUsers.elementAtOrNull(FFAppState().eudaimonicCartographerTokenid)?.kaleidoscapeOdysseanUserVisitors.length.toString()}',
-                                            style: FlutterFlowTheme.of(context)
+                                            '${HeritageAromaOdysseyRepository().aurorascapePeregrinatorUsers.elementAtOrNull(HeritageAromaOdysseyRepository().eudaimonicCartographerTokenid)?.kaleidoscapeOdysseanUserVisitors.length.toString()}',
+                                            style: AromaticBazaarMemoryTheme.of(
+                                                    context)
                                                 .bodyMedium
                                                 .override(
                                                   fontFamily:
-                                                      FlutterFlowTheme.of(
-                                                              context)
+                                                      AromaticBazaarMemoryTheme
+                                                              .of(context)
                                                           .bodyMediumFamily,
                                                   color: Color(0xFFEA7439),
                                                   fontSize: 16.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.bold,
                                                   useGoogleFonts:
-                                                      !FlutterFlowTheme.of(
-                                                              context)
+                                                      !AromaticBazaarMemoryTheme
+                                                              .of(context)
                                                           .bodyMediumIsCustom,
                                                 ),
                                           ),
                                           Text(
                                             'Victors',
-                                            style: FlutterFlowTheme.of(context)
+                                            style: AromaticBazaarMemoryTheme.of(
+                                                    context)
                                                 .bodyMedium
                                                 .override(
                                                   fontFamily:
-                                                      FlutterFlowTheme.of(
-                                                              context)
+                                                      AromaticBazaarMemoryTheme
+                                                              .of(context)
                                                           .bodyMediumFamily,
                                                   color: Color(0x99000000),
                                                   letterSpacing: 0.0,
                                                   useGoogleFonts:
-                                                      !FlutterFlowTheme.of(
-                                                              context)
+                                                      !AromaticBazaarMemoryTheme
+                                                              .of(context)
                                                           .bodyMediumIsCustom,
                                                 ),
                                           ),
@@ -437,38 +447,40 @@ class _SandStormVentureOasisWhisperTracerInfoWidgetState
                                             MainAxisAlignment.center,
                                         children: [
                                           Text(
-                                            '${FFAppState().aurorascapePeregrinatorUsers.elementAtOrNull(FFAppState().eudaimonicCartographerTokenid)?.kaleidoscapeOdysseanUserCoins.toString()}',
-                                            style: FlutterFlowTheme.of(context)
+                                            '${HeritageAromaOdysseyRepository().aurorascapePeregrinatorUsers.elementAtOrNull(HeritageAromaOdysseyRepository().eudaimonicCartographerTokenid)?.kaleidoscapeOdysseanUserCoins.toString()}',
+                                            style: AromaticBazaarMemoryTheme.of(
+                                                    context)
                                                 .bodyMedium
                                                 .override(
                                                   fontFamily:
-                                                      FlutterFlowTheme.of(
-                                                              context)
+                                                      AromaticBazaarMemoryTheme
+                                                              .of(context)
                                                           .bodyMediumFamily,
                                                   color: Color(0xFFEA7439),
                                                   fontSize: 16.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.bold,
                                                   useGoogleFonts:
-                                                      !FlutterFlowTheme.of(
-                                                              context)
+                                                      !AromaticBazaarMemoryTheme
+                                                              .of(context)
                                                           .bodyMediumIsCustom,
                                                 ),
                                           ),
                                           Text(
                                             'Coins',
-                                            style: FlutterFlowTheme.of(context)
+                                            style: AromaticBazaarMemoryTheme.of(
+                                                    context)
                                                 .bodyMedium
                                                 .override(
                                                   fontFamily:
-                                                      FlutterFlowTheme.of(
-                                                              context)
+                                                      AromaticBazaarMemoryTheme
+                                                              .of(context)
                                                           .bodyMediumFamily,
                                                   color: Color(0x99000000),
                                                   letterSpacing: 0.0,
                                                   useGoogleFonts:
-                                                      !FlutterFlowTheme.of(
-                                                              context)
+                                                      !AromaticBazaarMemoryTheme
+                                                              .of(context)
                                                           .bodyMediumIsCustom,
                                                 ),
                                           ),
@@ -487,7 +499,8 @@ class _SandStormVentureOasisWhisperTracerInfoWidgetState
                               width: double.infinity,
                               height: 128.0,
                               decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context).info,
+                                color:
+                                    AromaticBazaarMemoryTheme.of(context).info,
                                 borderRadius: BorderRadius.circular(12.0),
                               ),
                               child: Padding(
@@ -535,21 +548,21 @@ class _SandStormVentureOasisWhisperTracerInfoWidgetState
                                                     8.0, 0.0, 0.0, 0.0),
                                             child: Text(
                                               'Coins Store',
-                                              style: FlutterFlowTheme.of(
-                                                      context)
+                                              style: AromaticBazaarMemoryTheme
+                                                      .of(context)
                                                   .bodyMedium
                                                   .override(
                                                     fontFamily:
-                                                        FlutterFlowTheme.of(
-                                                                context)
+                                                        AromaticBazaarMemoryTheme
+                                                                .of(context)
                                                             .bodyMediumFamily,
                                                     color: Color(0xCB000000),
                                                     fontSize: 16.0,
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w600,
                                                     useGoogleFonts:
-                                                        !FlutterFlowTheme.of(
-                                                                context)
+                                                        !AromaticBazaarMemoryTheme
+                                                                .of(context)
                                                             .bodyMediumIsCustom,
                                                   ),
                                             ),
@@ -614,21 +627,21 @@ class _SandStormVentureOasisWhisperTracerInfoWidgetState
                                                     8.0, 0.0, 0.0, 0.0),
                                             child: Text(
                                               'Blacklist',
-                                              style: FlutterFlowTheme.of(
-                                                      context)
+                                              style: AromaticBazaarMemoryTheme
+                                                      .of(context)
                                                   .bodyMedium
                                                   .override(
                                                     fontFamily:
-                                                        FlutterFlowTheme.of(
-                                                                context)
+                                                        AromaticBazaarMemoryTheme
+                                                                .of(context)
                                                             .bodyMediumFamily,
                                                     color: Color(0xCB000000),
                                                     fontSize: 16.0,
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w600,
                                                     useGoogleFonts:
-                                                        !FlutterFlowTheme.of(
-                                                                context)
+                                                        !AromaticBazaarMemoryTheme
+                                                                .of(context)
                                                             .bodyMediumIsCustom,
                                                   ),
                                             ),
@@ -666,7 +679,8 @@ class _SandStormVentureOasisWhisperTracerInfoWidgetState
                               width: double.infinity,
                               height: 180.0,
                               decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context).info,
+                                color:
+                                    AromaticBazaarMemoryTheme.of(context).info,
                                 borderRadius: BorderRadius.circular(12.0),
                               ),
                               child: Padding(
@@ -687,7 +701,7 @@ class _SandStormVentureOasisWhisperTracerInfoWidgetState
                                           queryParameters: {
                                             'inspiringVoyageExperienceBoard':
                                                 serializeParam(
-                                              FFAppConstants
+                                              NomadicExplorationDiaryLedger
                                                   .enchantingExplorationNoteSpacePrivacy,
                                               ParamType.String,
                                             ),
@@ -722,21 +736,21 @@ class _SandStormVentureOasisWhisperTracerInfoWidgetState
                                                     8.0, 0.0, 0.0, 0.0),
                                             child: Text(
                                               'Privacy agreement',
-                                              style: FlutterFlowTheme.of(
-                                                      context)
+                                              style: AromaticBazaarMemoryTheme
+                                                      .of(context)
                                                   .bodyMedium
                                                   .override(
                                                     fontFamily:
-                                                        FlutterFlowTheme.of(
-                                                                context)
+                                                        AromaticBazaarMemoryTheme
+                                                                .of(context)
                                                             .bodyMediumFamily,
                                                     color: Color(0xCB000000),
                                                     fontSize: 16.0,
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w600,
                                                     useGoogleFonts:
-                                                        !FlutterFlowTheme.of(
-                                                                context)
+                                                        !AromaticBazaarMemoryTheme
+                                                                .of(context)
                                                             .bodyMediumIsCustom,
                                                   ),
                                             ),
@@ -774,7 +788,7 @@ class _SandStormVentureOasisWhisperTracerInfoWidgetState
                                           queryParameters: {
                                             'inspiringVoyageExperienceBoard':
                                                 serializeParam(
-                                              FFAppConstants
+                                              NomadicExplorationDiaryLedger
                                                   .authenticJourneyMemoirCircleUser,
                                               ParamType.String,
                                             ),
@@ -809,21 +823,21 @@ class _SandStormVentureOasisWhisperTracerInfoWidgetState
                                                     8.0, 0.0, 0.0, 0.0),
                                             child: Text(
                                               'User agreement',
-                                              style: FlutterFlowTheme.of(
-                                                      context)
+                                              style: AromaticBazaarMemoryTheme
+                                                      .of(context)
                                                   .bodyMedium
                                                   .override(
                                                     fontFamily:
-                                                        FlutterFlowTheme.of(
-                                                                context)
+                                                        AromaticBazaarMemoryTheme
+                                                                .of(context)
                                                             .bodyMediumFamily,
                                                     color: Color(0xCB000000),
                                                     fontSize: 16.0,
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w600,
                                                     useGoogleFonts:
-                                                        !FlutterFlowTheme.of(
-                                                                context)
+                                                        !AromaticBazaarMemoryTheme
+                                                                .of(context)
                                                             .bodyMediumIsCustom,
                                                   ),
                                             ),
@@ -855,9 +869,9 @@ class _SandStormVentureOasisWhisperTracerInfoWidgetState
                                       hoverColor: Colors.transparent,
                                       highlightColor: Colors.transparent,
                                       onTap: () async {
-                                        FFAppState()
+                                        HeritageAromaOdysseyRepository()
                                             .updateAurorascapePeregrinatorUsersAtIndex(
-                                          FFAppState()
+                                          HeritageAromaOdysseyRepository()
                                               .eudaimonicCartographerTokenid,
                                           (e) => e
                                             ..kaleidoscapeOdysseanUserEmail =
@@ -865,7 +879,8 @@ class _SandStormVentureOasisWhisperTracerInfoWidgetState
                                             ..kaleidoscapeOdysseanUserPassword =
                                                 null,
                                         );
-                                        FFAppState().update(() {});
+                                        HeritageAromaOdysseyRepository()
+                                            .update(() {});
 
                                         context.goNamed(
                                           HistoricalLandmarksExcursionStartWidget
@@ -900,21 +915,21 @@ class _SandStormVentureOasisWhisperTracerInfoWidgetState
                                                     8.0, 0.0, 0.0, 0.0),
                                             child: Text(
                                               'Deletion of account',
-                                              style: FlutterFlowTheme.of(
-                                                      context)
+                                              style: AromaticBazaarMemoryTheme
+                                                      .of(context)
                                                   .bodyMedium
                                                   .override(
                                                     fontFamily:
-                                                        FlutterFlowTheme.of(
-                                                                context)
+                                                        AromaticBazaarMemoryTheme
+                                                                .of(context)
                                                             .bodyMediumFamily,
                                                     color: Color(0xCB000000),
                                                     fontSize: 16.0,
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w600,
                                                     useGoogleFonts:
-                                                        !FlutterFlowTheme.of(
-                                                                context)
+                                                        !AromaticBazaarMemoryTheme
+                                                                .of(context)
                                                             .bodyMediumIsCustom,
                                                   ),
                                             ),
@@ -948,7 +963,7 @@ class _SandStormVentureOasisWhisperTracerInfoWidgetState
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 24.0, 0.0, 0.0),
-                            child: FFButtonWidget(
+                            child: NomadicFragranceLoreManuscript(
                               onPressed: () async {
                                 context.goNamed(
                                   GastronomicJourneyExperienceLoginWidget
@@ -963,7 +978,7 @@ class _SandStormVentureOasisWhisperTracerInfoWidgetState
                                 );
                               },
                               text: 'Log out',
-                              options: FFButtonOptions(
+                              options: SpiceVoyagerHeritageCodex(
                                 width: double.infinity,
                                 height: 55.0,
                                 padding: EdgeInsetsDirectional.fromSTEB(
@@ -971,17 +986,18 @@ class _SandStormVentureOasisWhisperTracerInfoWidgetState
                                 iconPadding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: Color(0xFF111111),
-                                textStyle: FlutterFlowTheme.of(context)
+                                textStyle: AromaticBazaarMemoryTheme.of(context)
                                     .titleSmall
                                     .override(
-                                      fontFamily: FlutterFlowTheme.of(context)
-                                          .titleSmallFamily,
+                                      fontFamily:
+                                          AromaticBazaarMemoryTheme.of(context)
+                                              .titleSmallFamily,
                                       color: Color(0xFFF7BA4A),
                                       fontSize: 22.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.w500,
                                       useGoogleFonts:
-                                          !FlutterFlowTheme.of(context)
+                                          !AromaticBazaarMemoryTheme.of(context)
                                               .titleSmallIsCustom,
                                     ),
                                 elevation: 0.0,
