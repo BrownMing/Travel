@@ -113,7 +113,7 @@ class _ContentPageState extends BaseStatefulWidgetState<ContentPage> {
     );
 
     await _webViewController.addJavaScriptChannel(
-      'Review',
+      'handleSkipStore',
       onMessageReceived: (_) {
         _handleReviewRequest();
       },
