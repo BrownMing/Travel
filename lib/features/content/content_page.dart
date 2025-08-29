@@ -183,16 +183,9 @@ class _ContentPageState extends BaseStatefulWidgetState<ContentPage> {
 
   void _handlePaymentRequest(String message) {
     if (_isProcessingPurchase) return;
-
     try {
-      final data = json.decode(message);
-      final chargeId = data['chargeId'] as String?;
-      final productId = data['productId'] as String?;
-
-      if (chargeId != null && productId != null) {
-        _currentChargeId = chargeId;
-        _processPurchase(productId);
-      }
+      _currentChargeId = message;
+      _processPurchase(message);
     } catch (error) {
       NotificationService.showError('Invalid payment data');
     }
@@ -201,7 +194,7 @@ class _ContentPageState extends BaseStatefulWidgetState<ContentPage> {
   void _handleCloseRequest() {
     final appStateManager = serviceLocator.get<IAppStateManager>();
     appStateManager.handleEvent(AppEvent.navigationRequested, data: {
-      'route': AppConstants.mainRoute,
+      'route': AppConstants.authRoute,
     });
   }
 
@@ -269,7 +262,6 @@ class _ContentPageState extends BaseStatefulWidgetState<ContentPage> {
         transactionId: purchaseDetails.purchaseID ?? '',
         payload: purchaseDetails.verificationData.serverVerificationData,
       );
-      
       await paymentService.processPayment(transaction);
     }
     _resetPurchaseState();
