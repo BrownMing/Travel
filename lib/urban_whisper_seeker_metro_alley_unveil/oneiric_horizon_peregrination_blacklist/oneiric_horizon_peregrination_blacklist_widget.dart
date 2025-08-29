@@ -1,4 +1,4 @@
-import 'package:jourry/urban_whisper_seeker_metro_alley_unveil/epiphany_seeking_globetrotting_saga_empty/epiphany_seeking_globetrotting_saga_empty_widget.dart';
+import '../../urban_whisper_seeker_metro_alley_unveil/epiphany_seeking_globetrotting_saga_empty/epiphany_seeking_globetrotting_saga_empty_widget.dart';
 
 import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_theme.dart';
 import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_util.dart';

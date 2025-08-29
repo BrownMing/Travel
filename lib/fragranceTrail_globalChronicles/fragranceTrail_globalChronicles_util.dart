@@ -7,8 +7,8 @@ import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:from_css_color/from_css_color.dart';
 import 'package:json_path/json_path.dart';
 import 'package:timeago/timeago.dart' as timeago;
-import 'package:jourry/backend/schema/structs/solivagant_epiphany_custodian_chat_struct.dart';
-import 'package:jourry/fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_util.dart';
+import '../../backend/schema/structs/solivagant_epiphany_custodian_chat_struct.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_util.dart';
 
 import 'package:url_launcher/url_launcher.dart';
 

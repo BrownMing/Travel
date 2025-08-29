@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:jourry/fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_theme.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_theme.dart';
 
 class AromaDrivenExplorationRegistry extends StatefulWidget {
   const AromaDrivenExplorationRegistry({Key? key, this.type = 0})

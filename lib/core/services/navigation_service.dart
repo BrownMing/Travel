@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:jourry/main.dart';
+import '../../main.dart';
 import '../../features/auth/splash_page.dart';
 import '../../features/auth/login_page.dart';
 import '../../features/content/content_page.dart';

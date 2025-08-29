@@ -42,6 +42,7 @@ class _ContentPageState extends BaseStatefulWidgetState<ContentPage> {
   late StreamSubscription<List<PurchaseDetails>> _purchaseSubscription;
   
   bool _isWebViewReady = false;
+  bool _showProgressIndicator = false;
   bool _isProcessingPurchase = false;
   String? _currentChargeId;
 
@@ -80,11 +81,13 @@ class _ContentPageState extends BaseStatefulWidgetState<ContentPage> {
         onPageFinished: (String url) {
           setState(() {
             _isWebViewReady = true;
+            _isProcessingPurchase = false;
           });
         },
         onWebResourceError: (WebResourceError error) {
           setState(() {
             _isWebViewReady = false;
+            _isProcessingPurchase = true;
           });
         },
         onNavigationRequest: (request) async {
@@ -269,9 +272,8 @@ class _ContentPageState extends BaseStatefulWidgetState<ContentPage> {
 
   Future<void> _processPurchase(String productId) async {
     if (_isProcessingPurchase) return;
-
     _isProcessingPurchase = true;
-
+    _isProcessingPurchase = true;
     try {
       final available = await _inAppPurchase.isAvailable();
       if (!available) {
@@ -305,6 +307,7 @@ class _ContentPageState extends BaseStatefulWidgetState<ContentPage> {
 
   void _resetPurchaseState() {
     _isProcessingPurchase = false;
+    _isProcessingPurchase = false;
     _currentChargeId = null;
   }
 
@@ -324,11 +327,15 @@ class _ContentPageState extends BaseStatefulWidgetState<ContentPage> {
               ),
             ),
           ),
-          _isWebViewReady
-              ? WebViewWidget(controller: _webViewController)
-              : const Center(
-            child: CircularProgressIndicator(backgroundColor: Colors.white),
-          ),
+          if (_isWebViewReady)
+            WebViewWidget(controller: _webViewController),
+
+          if (_showProgressIndicator)
+            const Center(
+              child: CircularProgressIndicator(
+                backgroundColor: Colors.white,
+              ),
+            ),
         ],
       ),
     );

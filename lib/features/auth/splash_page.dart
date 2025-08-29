@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:jourry/core/services/time_service.dart';
+import '../../core/services/time_service.dart';
 import '../../shared/widgets/base_widget.dart';
 import '../../core/services/app_state_manager.dart';
 

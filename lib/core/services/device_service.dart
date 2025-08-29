@@ -2,10 +2,9 @@ import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:flutter/foundation.dart';
-import 'package:jourry/core/services/time_service.dart';
 import '../models/device_info_model.dart';
 import '../constants/app_constants.dart';
-
+import '../services/time_service.dart';
 // Device Information Service Interface
 abstract class IDeviceService {
   Future<DeviceInfoModel> getDeviceInformation();

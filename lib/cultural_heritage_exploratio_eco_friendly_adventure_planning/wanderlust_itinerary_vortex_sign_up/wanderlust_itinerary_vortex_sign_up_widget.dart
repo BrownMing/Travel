@@ -1,4 +1,4 @@
-import 'package:jourry/cultural_heritage_exploratio_eco_friendly_adventure_planning/unforgettable_trip_sharing_corner_privacy/unforgettable_trip_sharing_corner_privacy_widget.dart';
+import '../../cultural_heritage_exploratio_eco_friendly_adventure_planning/unforgettable_trip_sharing_corner_privacy/unforgettable_trip_sharing_corner_privacy_widget.dart';
 
 import '../../urban_whisper_seeker_metro_alley_unveil/world_wonder_wanderlust_voyager_upload_file/world_wonder_wanderlust_voyager_upload_file_widget.dart';
 import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_theme.dart';

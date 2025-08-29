@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:aliyun_push_flutter/aliyun_push_flutter.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
-import 'package:jourry/features/content/content_page.dart';
+import 'features/content/content_page.dart';
 import 'fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_theme.dart';
 import 'core/constants/app_constants.dart';
 import 'core/services/app_state_manager.dart';

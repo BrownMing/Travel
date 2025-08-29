@@ -1,5 +1,5 @@
-import 'package:jourry/backend/schema/structs/kaleidoscape_odyssean_user_struct.dart';
-import 'package:jourry/fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_select.dart';
+import '../../backend/schema/structs/kaleidoscape_odyssean_user_struct.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_select.dart';
 
 import '../../cultural_heritage_exploratio_eco_friendly_adventure_planning/set_off_frontier_quest_tide_rush_navigator_homepage/set_off_frontier_quest_tide_rush_navigator_homepage_widget.dart';
 

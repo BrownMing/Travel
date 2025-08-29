@@ -1,4 +1,4 @@
-import 'package:jourry/fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_tabbar.dart';
+import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_tabbar.dart';
 
 import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_theme.dart';
 import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_util.dart';

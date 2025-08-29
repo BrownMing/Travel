@@ -1,4 +1,4 @@
-import 'package:jourry/cultural_heritage_exploratio_eco_friendly_adventure_planning/unforgettable_trip_sharing_corner_privacy/unforgettable_trip_sharing_corner_privacy_widget.dart';
+import '../../cultural_heritage_exploratio_eco_friendly_adventure_planning/unforgettable_trip_sharing_corner_privacy/unforgettable_trip_sharing_corner_privacy_widget.dart';
 
 import '../set_off_frontier_quest_tide_rush_navigator_homepage/set_off_frontier_quest_tide_rush_navigator_homepage_widget.dart';
 import '../../fragranceTrail_globalChronicles/fragranceTrail_globalChronicles_theme.dart';
