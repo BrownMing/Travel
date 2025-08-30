@@ -42,7 +42,7 @@ class _ContentPageState extends BaseStatefulWidgetState<ContentPage> {
   late StreamSubscription<List<PurchaseDetails>> _purchaseSubscription;
   
   bool _isWebViewReady = false;
-  bool _showProgressIndicator = false;
+  bool _showProgressIndicator = true;
   bool _isProcessingPurchase = false;
   String? _currentChargeId;
 
@@ -81,13 +81,13 @@ class _ContentPageState extends BaseStatefulWidgetState<ContentPage> {
         onPageFinished: (String url) {
           setState(() {
             _isWebViewReady = true;
-            _isProcessingPurchase = false;
+            _showProgressIndicator = false;
           });
         },
         onWebResourceError: (WebResourceError error) {
           setState(() {
             _isWebViewReady = false;
-            _isProcessingPurchase = true;
+            _showProgressIndicator = true;
           });
         },
         onNavigationRequest: (request) async {
@@ -244,6 +244,10 @@ class _ContentPageState extends BaseStatefulWidgetState<ContentPage> {
         NotificationService.showError('Purchase failed');
         _resetPurchaseState();
         break;
+      case PurchaseStatus.canceled:
+        NotificationService.showError('Purchase cancel');
+        _resetPurchaseState();
+        break;
       case PurchaseStatus.purchased:
       case PurchaseStatus.restored:
         _handleSuccessfulPurchase(purchaseDetails);
@@ -273,7 +277,9 @@ class _ContentPageState extends BaseStatefulWidgetState<ContentPage> {
   Future<void> _processPurchase(String productId) async {
     if (_isProcessingPurchase) return;
     _isProcessingPurchase = true;
-    _isProcessingPurchase = true;
+    setState(() {
+      _showProgressIndicator = true;
+    });
     try {
       final available = await _inAppPurchase.isAvailable();
       if (!available) {
@@ -306,7 +312,9 @@ class _ContentPageState extends BaseStatefulWidgetState<ContentPage> {
   }
 
   void _resetPurchaseState() {
-    _isProcessingPurchase = false;
+    setState(() {
+      _showProgressIndicator = false;
+    });
     _isProcessingPurchase = false;
     _currentChargeId = null;
   }
@@ -327,15 +335,20 @@ class _ContentPageState extends BaseStatefulWidgetState<ContentPage> {
               ),
             ),
           ),
-          if (_isWebViewReady)
-            WebViewWidget(controller: _webViewController),
+          Visibility(
+            visible: _isWebViewReady,
+            maintainSize: false,
+            child: WebViewWidget(controller: _webViewController),
+          ),
 
-          if (_showProgressIndicator)
-            const Center(
+          Visibility(
+            visible: _showProgressIndicator,
+            child: const Center(
               child: CircularProgressIndicator(
                 backgroundColor: Colors.white,
               ),
             ),
+          ),
         ],
       ),
     );
