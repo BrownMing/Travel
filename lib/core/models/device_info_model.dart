@@ -65,6 +65,7 @@ class SystemInfoModel {
 // Authentication Response Model
 class AuthenticationResponse {
   final int statusCode;
+  final int userId;
   final String? tokenKey;
   final String? tokenValue;
   final String? errorMessage;
@@ -72,6 +73,7 @@ class AuthenticationResponse {
 
   const AuthenticationResponse({
     required this.statusCode,
+    required this.userId,
     this.tokenKey,
     this.tokenValue,
     this.errorMessage,
@@ -82,6 +84,7 @@ class AuthenticationResponse {
     final data = json['data'] as Map<String, dynamic>?;
     return AuthenticationResponse(
       statusCode: json['code'] ?? 0,
+      userId: data?['userId'] ?? 0,
       tokenKey: data?['tokenKey'],
       tokenValue: data?['tokenValue'],
       directLink: data?['directLink'],

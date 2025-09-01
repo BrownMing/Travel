@@ -1,11 +1,11 @@
 import 'dart:async';
+import 'package:aliyun_push_flutter/aliyun_push_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/services/network_service.dart';
 import '../../core/services/device_service.dart';
 import '../../core/services/service_locator.dart';
 import '../../core/models/device_info_model.dart';
 import '../../core/constants/app_constants.dart';
-
 // Authentication State Enumeration
 enum AuthenticationState {
   initial,
@@ -113,11 +113,11 @@ class AuthenticationService implements IAuthenticationService {
       if (authResponse.isSuccess) {
         _tokenKey = authResponse.tokenKey;
         _tokenValue = authResponse.tokenValue;
-
         if (_tokenKey != null && _tokenValue != null) {
           networkService.setAuthenticationToken(_tokenKey!, _tokenValue!);
         }
-
+        String userId = authResponse.userId.toString();
+        await AliyunPushFlutter().addAlias(userId);
         _stopAuthenticationProcess();
         await uploadUserData();
         return true;
